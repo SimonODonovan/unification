@@ -9,7 +9,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
   :root {
-    --bg:#f7f5f1;--surface:#ffffff;--surface2:#f0ede8;--border:#e2ddd6;
+    --bg:#f7f5f1;--surface:#fff;--surface2:#f0ede8;--border:#e2ddd6;
     --ink:#1a1814;--ink2:#4a4640;--ink3:#8a857d;
     --amber:#b5762a;--amber-bg:#fdf6ec;--amber-bd:#e8d0a0;
     --green:#2a6e4a;--radius:10px;
@@ -18,6 +18,7 @@
   html{scroll-behavior:smooth;}
   body{background:var(--bg);color:var(--ink);font-family:'Inter',sans-serif;font-weight:400;line-height:1.65;}
 
+  /* HERO */
   .hero{background:#1a1814;padding:5rem 5vw 4rem;position:relative;overflow:hidden;}
   .hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 80% at 85% 40%,rgba(181,118,42,.18) 0%,transparent 60%),radial-gradient(ellipse 50% 60% at 15% 85%,rgba(42,78,138,.12) 0%,transparent 55%);pointer-events:none;}
   .hero-inner{max-width:820px;position:relative;}
@@ -32,18 +33,22 @@
   .hs-l{font-size:10px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:#5a5248;display:block;margin-bottom:3px;}
   .hs-v{font-family:'Playfair Display',serif;font-size:1.3rem;color:#f0ebe0;display:block;}
 
+  /* NAV */
   .nav{background:var(--surface);border-bottom:1px solid var(--border);padding:0 5vw;position:sticky;top:0;z-index:50;}
   .nav-inner{max-width:820px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;}
   .nav-brand{font-family:'Playfair Display',serif;font-size:.9rem;color:var(--amber);padding:13px 0;}
   .nav-meta{font-size:12px;color:var(--ink3);font-weight:500;}
 
+  /* MAIN */
   .main{max-width:820px;margin:0 auto;padding:2.5rem 5vw 6rem;}
 
+  /* STAT BAR */
   .statbar{display:flex;gap:1px;background:var(--border);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;margin-bottom:2.5rem;}
   .sb{flex:1;background:var(--surface);padding:1rem .5rem;text-align:center;min-width:0;}
   .sb-n{font-family:'Playfair Display',serif;font-size:1.85rem;color:var(--amber);line-height:1;}
   .sb-l{font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink3);margin-top:3px;font-weight:500;}
 
+  /* CITY CARD */
   .city{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;}
   .city-head{display:flex;align-items:flex-start;gap:.9rem;padding:1.25rem 1.5rem;border-bottom:1px solid var(--border);position:relative;}
   .cbar{position:absolute;top:0;left:0;width:4px;height:100%;}
@@ -55,29 +60,32 @@
   .c-nights{font-family:'Playfair Display',serif;font-size:1.7rem;color:var(--amber);text-align:right;flex-shrink:0;line-height:1;}
   .c-nights small{display:block;font-family:'Inter',sans-serif;font-size:9.5px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--ink3);margin-top:3px;}
 
+  /* DAY ROW */
   .day{display:grid;grid-template-columns:72px 1fr;border-bottom:1px solid var(--border);}
   .day:last-child{border-bottom:none;}
   .day-label{padding:1rem 0 1rem 1.5rem;}
   .d-tag{font-size:10px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--amber);display:block;margin-bottom:1px;}
-  .d-date{font-size:11px;font-weight:500;color:var(--ink2);display:block;margin-bottom:2px;}
+  .d-date{font-size:11px;font-weight:500;color:var(--ink2);display:block;margin-bottom:1px;}
   .d-dow{font-size:10px;color:var(--ink3);display:block;}
   .day-body{padding:1rem 1.5rem 1rem 0;}
-  .d-title{font-size:14px;font-weight:600;color:var(--ink);margin-bottom:.35rem;}
+  .d-title{font-size:14px;font-weight:600;color:var(--ink);margin-bottom:.4rem;}
   .slots{display:flex;flex-direction:column;gap:6px;}
   .slot{display:flex;gap:8px;font-size:13px;color:var(--ink2);line-height:1.65;}
-  .st{font-size:10px;font-weight:600;letter-spacing:.04em;color:var(--ink3);min-width:56px;padding-top:2px;flex-shrink:0;text-transform:uppercase;}
+  .st{font-size:10px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;color:var(--ink3);min-width:56px;padding-top:2px;flex-shrink:0;}
   .slot b{color:var(--ink);font-weight:500;}
-  .tags{margin-top:8px;display:flex;flex-wrap:wrap;gap:5px;}
+  .tags{display:flex;flex-wrap:wrap;gap:5px;margin-top:8px;}
   .tag{font-size:10.5px;font-weight:500;padding:2px 7px;border-radius:20px;background:var(--surface2);border:1px solid var(--border);color:var(--ink3);}
   .tag.hi{background:#fdf6ec;border-color:#e8d0a0;color:#8a5015;}
   .tag.free{background:#eef6f1;border-color:#b8dfc8;color:#1d6040;}
   .tag.note{background:#f0eefa;border-color:#c8b8e8;color:#5a3a8a;}
 
+  /* TRANSPORT */
   .transit{display:flex;align-items:flex-start;gap:11px;padding:.85rem 1.5rem;background:var(--surface2);border-left:1px solid var(--border);border-right:1px solid var(--border);}
   .transit-ico{font-size:1rem;width:32px;height:32px;background:var(--surface);border:1px solid var(--border);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px;}
   .transit-txt{font-size:12.5px;color:var(--ink2);line-height:1.55;}
   .transit-txt strong{font-weight:600;color:var(--ink);display:block;margin-bottom:1px;}
 
+  /* HOTELS */
   .section-title{font-size:10px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--ink3);margin:2.5rem 0 .9rem;}
   .hotels{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:1px;background:var(--border);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;}
   .hotel{background:var(--surface);padding:1.1rem 1.25rem;}
@@ -86,11 +94,13 @@
   .hotel-desc{font-size:12px;color:var(--ink3);line-height:1.6;}
   .hotel-price{display:inline-block;margin-top:7px;font-size:11px;font-weight:600;background:#eef6f1;color:var(--green);border:1px solid #b8dfc8;border-radius:20px;padding:2px 9px;}
 
+  /* NOTICE */
   .notice{background:var(--amber-bg);border:1px solid var(--amber-bd);border-radius:var(--radius);padding:1.4rem 1.5rem;margin-top:1.75rem;}
   .notice-title{font-family:'Playfair Display',serif;font-size:1rem;color:var(--amber);margin-bottom:.5rem;}
   .notice-text{font-size:13px;color:var(--ink2);line-height:1.78;}
   .notice-text strong{color:var(--ink);font-weight:600;}
 
+  /* FOOTER */
   footer{border-top:1px solid var(--border);padding:1.75rem 5vw;max-width:820px;margin:0 auto;display:flex;justify-content:space-between;flex-wrap:wrap;gap:.4rem;}
   .f-name{font-family:'Playfair Display',serif;font-size:.95rem;color:var(--ink2);}
   .f-note{font-size:11px;color:var(--ink3);font-weight:500;letter-spacing:.05em;}
@@ -98,14 +108,14 @@
   @media(max-width:560px){
     .hero{padding:3rem 1.25rem 2.5rem;}
     .main{padding:1.75rem 1.25rem 4rem;}
-    .nav,.footer{padding-left:1.25rem;padding-right:1.25rem;}
+    .nav{padding:0 1.25rem;}
     footer{padding:1.5rem 1.25rem;}
     .statbar{flex-wrap:wrap;}
     .sb{min-width:calc(33.333% - 1px);}
     .city-head{padding:1rem;}
-    .transit{padding:.75rem 1rem;}
     .day-label{padding-left:1rem;}
     .day-body{padding-right:1rem;}
+    .transit{padding:.75rem 1rem;}
     .hero-stats{gap:1.5rem;}
     .d-dow{display:none;}
   }
@@ -151,7 +161,8 @@
     <div class="sb"><div class="sb-n">3</div><div class="sb-l">Train legs</div></div>
   </div>
 
-  <!-- ═══ LONDON ═══ -->
+
+  <!-- ════════════════ LONDON ════════════════ -->
   <div class="city">
     <div class="city-head">
       <div class="cbar" style="background:#2a4e8a"></div>
@@ -160,7 +171,7 @@
         <div class="c-name">London</div>
         <div class="c-sub">Stay: <b>Premier Inn London Southwark (Tate Modern)</b> &nbsp;&middot;&nbsp; Getting around: <b>Tube &amp; Elizabeth Line</b></div>
       </div>
-      <div class="c-nights">4<small>Nights</small></div>
+      <div class="c-nights">5<small>Nights</small></div>
     </div>
 
     <div class="day">
@@ -172,8 +183,8 @@
       <div class="day-body">
         <div class="d-title">Arrival &amp; South Bank</div>
         <div class="slots">
-          <div class="slot"><span class="st">Daytime</span><span>Jenifer arrives Heathrow on a long-haul flight from Manila; Simon arrives from Belfast International. Both take the <b>Elizabeth Line</b> directly into central London &mdash; easiest connection, no changes needed. Check in, drop bags, get oriented.</span></div>
-          <div class="slot"><span class="st">Evening</span><span>Short <b>South Bank walk</b> to stretch the legs &mdash; Tate Modern exterior, Millennium Bridge, Southbank Centre. Dinner at a pub along the river. Early night; it is a very long travel day for Jenifer.</span></div>
+          <div class="slot"><span class="st">Daytime</span><span>Jenifer arrives Heathrow on the long-haul flight from Manila; Simon arrives from Belfast International. Both take the <b>Elizabeth Line</b> directly into central London &mdash; simplest connection, no changes. Check in, drop bags, get settled.</span></div>
+          <div class="slot"><span class="st">Evening</span><span>Short <b>South Bank walk</b> to stretch the legs after the flight &mdash; Tate Modern exterior, Millennium Bridge, the riverfront. Dinner at a riverside restaurant. Early night; it is a very long travel day for Jenifer.</span></div>
         </div>
         <div class="tags"><span class="tag free">Tate Modern &mdash; free</span><span class="tag">Elizabeth Line from LHR: ~&pound;14pp</span></div>
       </div>
@@ -188,12 +199,12 @@
       <div class="day-body">
         <div class="d-title">Westminster &amp; the West End</div>
         <div class="slots">
-          <div class="slot"><span class="st">Morning</span><span><b>Westminster walk.</b> Start at Westminster Bridge for the Parliament and Big Ben view. <b>St James&rsquo;s Park</b> &mdash; pelicans, deck chairs, the palace at the far end. Buckingham Palace exterior, Horse Guards Parade. No rush.</span></div>
-          <div class="slot"><span class="st">Lunch</span><span>Head north into Soho &mdash; Wardour Street or Greek Street for a relaxed pub lunch.</span></div>
-          <div class="slot"><span class="st">Afternoon</span><span><b>National Gallery</b> on Trafalgar Square (free, 1.5&ndash;2hrs). Pick one or two rooms rather than trying to cover everything. Trafalgar Square, then wander down to <b>Covent Garden</b>.</span></div>
-          <div class="slot"><span class="st">Evening</span><span>Dinner in Covent Garden or Seven Dials &mdash; good range of restaurants at every price point.</span></div>
+          <div class="slot"><span class="st">Morning</span><span><b>Westminster walk.</b> Start at Westminster Bridge for the Parliament and Big Ben view. <b>St James&rsquo;s Park</b> &mdash; pelicans, deck chairs, the palace at the far end. Buckingham Palace exterior, Horse Guards Parade. No rush; this is a Sunday morning.</span></div>
+          <div class="slot"><span class="st">Lunch</span><span>Head north through Soho &mdash; Wardour Street or Greek Street for a relaxed lunch.</span></div>
+          <div class="slot"><span class="st">Afternoon</span><span><b>National Gallery</b> on Trafalgar Square (free, open Sundays, 1.5&ndash;2hrs). Choose one or two rooms to explore properly. Trafalgar Square itself, then wander into <b>Covent Garden</b> for the afternoon.</span></div>
+          <div class="slot"><span class="st">Evening</span><span>Dinner in Covent Garden or Seven Dials &mdash; a wide range of good restaurants at every price point.</span></div>
         </div>
-        <div class="tags"><span class="tag free">National Gallery &mdash; free &amp; open Sundays</span><span class="tag">All walkable from Westminster Tube</span></div>
+        <div class="tags"><span class="tag free">National Gallery &mdash; free, open Sundays</span><span class="tag">All walkable from Westminster Tube</span></div>
       </div>
     </div>
 
@@ -206,12 +217,12 @@
       <div class="day-body">
         <div class="d-title">East London</div>
         <div class="slots">
-          <div class="slot"><span class="st">Morning</span><span><b>Tower Bridge area.</b> Walk from London Bridge station. Tower Bridge exterior, the riverfront walk east past St Katharine Docks. Good views back across to the City.</span></div>
-          <div class="slot"><span class="st">Lunch</span><span><b>Brick Lane</b> &mdash; a salt beef bagel from Beigel Bake (open 24hrs, a true London institution at the north end of the street) or lunch at one of the many cafes along the road.</span></div>
-          <div class="slot"><span class="st">Afternoon</span><span><b>Shoreditch &amp; Spitalfields.</b> Street art around Hanbury Street and Princelet Street. Spitalfields Market for a browse. This area rewards slow walking with no fixed agenda.</span></div>
-          <div class="slot"><span class="st">Evening</span><span>Dinner in Shoreditch &mdash; one of the best areas in London for independent restaurants. Or get the Overground back to Soho.</span></div>
+          <div class="slot"><span class="st">Morning</span><span><b>Tower Bridge &amp; the Thames.</b> Walk from London Bridge station. Tower Bridge exterior and the riverfront east past St Katharine Docks. Good views back across to the City skyline.</span></div>
+          <div class="slot"><span class="st">Lunch</span><span><b>Brick Lane.</b> A salt beef bagel from Beigel Bake at the north end of the street &mdash; open 24hrs, a genuine London institution. Or one of the many cafes along the road.</span></div>
+          <div class="slot"><span class="st">Afternoon</span><span><b>Shoreditch &amp; Spitalfields.</b> Street art around Hanbury Street and Princelet Street. Spitalfields Market for a browse. This area rewards slow walking with no fixed plan.</span></div>
+          <div class="slot"><span class="st">Evening</span><span>Dinner in Shoreditch &mdash; one of London&rsquo;s best areas for independent restaurants.</span></div>
         </div>
-        <div class="tags"><span class="tag hi">Beigel Bake &mdash; open 24hrs, north end of Brick Lane</span><span class="tag">Overground from Shoreditch High St</span></div>
+        <div class="tags"><span class="tag hi">Beigel Bake &mdash; north end of Brick Lane, open 24hrs</span><span class="tag">Overground from Shoreditch High St</span></div>
       </div>
     </div>
 
@@ -224,12 +235,12 @@
       <div class="day-body">
         <div class="d-title">Bloomsbury &amp; Borough Market</div>
         <div class="slots">
-          <div class="slot"><span class="st">Morning</span><span><b>British Museum</b> (free &mdash; arrive at opening, 10am). The Great Court is remarkable before the crowds arrive. Choose one or two wings to explore properly rather than rushing through everything. Allow 2.5hrs.</span></div>
-          <div class="slot"><span class="st">Lunch</span><span>Walk south across the river to <b>Borough Market.</b> Open Tuesday &mdash; good range of stalls for lunch. This is the meal of the day; take your time with it.</span></div>
+          <div class="slot"><span class="st">Morning</span><span><b>British Museum</b> (free &mdash; arrive at opening, 10am). The Great Court is remarkable before the crowds arrive. Choose one or two wings to focus on rather than rushing everywhere. Allow 2.5hrs minimum.</span></div>
+          <div class="slot"><span class="st">Lunch</span><span>Walk south across the river to <b>Borough Market</b> for lunch. Open Tuesdays &mdash; a wide range of stalls. This is the meal of the day; take time with it.</span></div>
           <div class="slot"><span class="st">Afternoon</span><span>Relaxed <b>South Bank walk</b> east from Borough &mdash; Tate Modern galleries (free), Millennium Bridge, Shakespeare&rsquo;s Globe exterior. A good hour&rsquo;s wander with no agenda.</span></div>
-          <div class="slot"><span class="st">Evening</span><span>Dinner in Borough or Bermondsey area, or cross back into Soho. Early start tomorrow: train to York.</span></div>
+          <div class="slot"><span class="st">Evening</span><span>Dinner in Bermondsey or back in Soho. Early start is not needed tomorrow &mdash; the Windsor trip works best mid-morning.</span></div>
         </div>
-        <div class="tags"><span class="tag free">British Museum &mdash; free</span><span class="tag free">Tate Modern &mdash; free</span><span class="tag hi">Borough Market: busiest Thu&ndash;Sat but good on Tue</span></div>
+        <div class="tags"><span class="tag free">British Museum &mdash; free</span><span class="tag free">Tate Modern &mdash; free</span><span class="tag hi">Borough Market: busiest Thu&ndash;Sat, good on Tue</span></div>
       </div>
     </div>
 
@@ -240,28 +251,29 @@
         <span class="d-dow">Wednesday</span>
       </div>
       <div class="day-body">
-        <div class="d-title">Slow Morning &mdash; Train to York</div>
+        <div class="d-title">Windsor Castle Day Trip</div>
         <div class="slots">
-          <div class="slot"><span class="st">Morning</span><span>Relaxed last London morning. Check out, store bags at the hotel, get a coffee. No sightseeing agenda &mdash; just a gentle final few hours in the city.</span></div>
-          <div class="slot"><span class="st">Midday</span><span>Collect bags and take the Tube to <b>Kings Cross.</b> <b>LNER train north to York</b> &mdash; ~2hrs. The 11am&ndash;1pm trains work well. Sit back and watch England roll past.</span></div>
-          <div class="slot"><span class="st">Afternoon</span><span>Arrive York 1&ndash;3pm. Check in. Walk to the <b>Shambles</b> &mdash; the famous medieval street. No ticket, no queue, just a wander. Explore the lanes off it.</span></div>
-          <div class="slot"><span class="st">Evening</span><span>Dinner in York &mdash; Gillygate and Micklegate have a good range of independent restaurants. The city is compact and very pleasant to walk after dark.</span></div>
+          <div class="slot"><span class="st">Morning</span><span>Take the <b>Elizabeth Line</b> from Paddington to Windsor &amp; Eton Central &mdash; about 40 minutes direct. <b>Windsor Castle</b> is the oldest and largest occupied castle in the world &mdash; home to the Royal Family for over 900 years. Pre-book timed entry. St George&rsquo;s Chapel inside the castle grounds is one of the finest examples of Gothic architecture in England. Allow 2.5&ndash;3hrs for the castle.</span></div>
+          <div class="slot"><span class="st">Lunch</span><span>Lunch in Windsor town &mdash; the streets around the castle have a good range of cafes and restaurants. The town is small and very easy to walk.</span></div>
+          <div class="slot"><span class="st">Afternoon</span><span>Walk along the <b>Long Walk</b> &mdash; a three-mile avenue of trees stretching from the castle gates into Windsor Great Park. You do not need to walk the whole thing; even 20&ndash;30 minutes along it gives a sense of the extraordinary scale. Or explore the town itself before heading back.</span></div>
+          <div class="slot"><span class="st">Evening</span><span>Train back to London (~40 min). Quiet evening and pack for the move north to York tomorrow.</span></div>
         </div>
-        <div class="tags"><span class="tag hi">Book advance train: &pound;20&ndash;40pp</span><span class="tag">Kings Cross &rarr; York: ~2hrs</span></div>
+        <div class="tags"><span class="tag hi">Pre-book Windsor Castle timed entry</span><span class="tag">Elizabeth Line to Windsor: ~40min from Paddington</span><span class="tag free">Long Walk &amp; Windsor Great Park &mdash; free</span></div>
       </div>
     </div>
 
-  </div><!-- end London -->
+  </div><!-- /London -->
 
   <div class="transit">
     <div class="transit-ico">🚆</div>
     <div class="transit-txt">
       <strong>LNER &mdash; London Kings Cross &rarr; York</strong>
-      ~2hrs &nbsp;&middot;&nbsp; Book in advance for &pound;20&ndash;40 pp &nbsp;&middot;&nbsp; Scenic run north through Hertfordshire and into Yorkshire
+      ~2hrs &nbsp;&middot;&nbsp; Book advance for &pound;20&ndash;40 pp &nbsp;&middot;&nbsp; Scenic run north through Hertfordshire and into Yorkshire
     </div>
   </div>
 
-  <!-- ═══ YORK ═══ -->
+
+  <!-- ════════════════ YORK ════════════════ -->
   <div class="city">
     <div class="city-head">
       <div class="cbar" style="background:#7a5a2a"></div>
@@ -270,7 +282,7 @@
         <div class="c-name">York</div>
         <div class="c-sub">Stay: <b>ibis York Centre</b> &nbsp;&middot;&nbsp; Getting around: <b>Walking &mdash; everything is within 20 minutes on foot</b></div>
       </div>
-      <div class="c-nights">1<small>Night</small></div>
+      <div class="c-nights">2<small>Nights</small></div>
     </div>
 
     <div class="day">
@@ -280,29 +292,48 @@
         <span class="d-dow">Thursday</span>
       </div>
       <div class="day-body">
-        <div class="d-title">York Morning &mdash; Train to Edinburgh</div>
+        <div class="d-title">Arrive York &mdash; Medieval Streets</div>
         <div class="slots">
-          <div class="slot"><span class="st">Morning</span><span><b>York Minster.</b> Pre-book the tower climb for panoramic views over the city. The cathedral itself is extraordinary &mdash; one of the finest Gothic buildings in Northern Europe. Allow 1.5hrs inside without rushing.</span></div>
-          <div class="slot"><span class="st">Late AM</span><span><b>National Railway Museum</b> (free). Genuinely one of the best free museums in Britain &mdash; the Flying Scotsman, a Japanese bullet train, royal carriages. Allow 1.5hrs. Sit on the benches and just look up.</span></div>
-          <div class="slot"><span class="st">Lunch</span><span><b>Betty&rsquo;s Tea Room</b> on St Helen&rsquo;s Square. Expect a 15&ndash;20 minute queue outside &mdash; it moves steadily and it is absolutely worth it. A proper Yorkshire institution.</span></div>
-          <div class="slot"><span class="st">Afternoon</span><span><b>Train to Edinburgh Waverley</b> &mdash; ~2hrs 30min. The Northumberland coast stretch has sea views; sit on the right-hand (east) side of the train. Arrive Edinburgh ~5&ndash;6pm.</span></div>
-          <div class="slot"><span class="st">Evening</span><span>Check in to the Royal Mile hotel. Short walk to explore a close or two. Dinner in the <b>Grassmarket</b> &mdash; a lively square at the foot of the castle rock.</span></div>
+          <div class="slot"><span class="st">Morning</span><span>Check out of the London hotel. Tube to <b>Kings Cross</b> and board the LNER north. ~2hrs to York &mdash; a comfortable journey. Arrive early afternoon.</span></div>
+          <div class="slot"><span class="st">Afternoon</span><span>Check in at the hotel (5-min walk from the station). Head straight to <b>The Shambles</b> &mdash; the most famous medieval street in England, so narrow in places the overhanging buildings nearly touch. No ticket, no queue. Walk the surrounding lanes: Whip-Ma-Whop-Ma-Gate, the Shambles Market, the snickleways (York&rsquo;s network of tiny alleyways).</span></div>
+          <div class="slot"><span class="st">Late PM</span><span>Walk the <b>City Walls</b> &mdash; a free 3km circuit of the original Roman and medieval walls around the city. The stretch from Bootham Bar to Monk Bar has the best views over the Minster. Allow 1&ndash;1.5hrs.</span></div>
+          <div class="slot"><span class="st">Evening</span><span>Dinner in York. Gillygate and Micklegate have a good range of independent restaurants.</span></div>
         </div>
-        <div class="tags"><span class="tag free">National Railway Museum &mdash; free</span><span class="tag hi">Pre-book York Minster tower climb</span><span class="tag hi">Betty&rsquo;s: short queue, worth every minute</span><span class="tag">York &rarr; Edinburgh: ~2hrs 30min</span></div>
+        <div class="tags"><span class="tag free">The Shambles &mdash; free</span><span class="tag free">City Walls walk &mdash; free</span><span class="tag hi">Book advance train: &pound;20&ndash;40pp</span></div>
       </div>
     </div>
 
-  </div><!-- end York -->
+    <div class="day">
+      <div class="day-label">
+        <span class="d-tag">Day 7</span>
+        <span class="d-date">12 Sep</span>
+        <span class="d-dow">Friday</span>
+      </div>
+      <div class="day-body">
+        <div class="d-title">York Minster, Museums &amp; Betty&rsquo;s</div>
+        <div class="slots">
+          <div class="slot"><span class="st">Morning</span><span><b>York Minster.</b> Pre-book the tower climb for a panoramic view over the whole city &mdash; it is the best vantage point in York. The cathedral itself is one of the finest Gothic buildings in Northern Europe; allow 1.5hrs inside without hurrying.</span></div>
+          <div class="slot"><span class="st">Late AM</span><span><b>National Railway Museum</b> (free, a 10-min walk from the Minster). One of the genuinely great free museums in Britain &mdash; the Flying Scotsman, a Japanese bullet train, the royal carriages. Allow 1.5hrs; it is more engaging than it sounds.</span></div>
+          <div class="slot"><span class="st">Lunch</span><span><b>Betty&rsquo;s Tea Room</b> on St Helen&rsquo;s Square. Expect a queue of 15&ndash;20 minutes &mdash; it moves steadily and is worth every minute. A proper Yorkshire institution that has been in the same building since 1936.</span></div>
+          <div class="slot"><span class="st">Afternoon</span><span>Relaxed afternoon in the city. <b>Clifford&rsquo;s Tower</b> (the remains of York&rsquo;s Norman castle, with views over the city) is worth the short climb. Or a slow walk along the <b>River Ouse</b> and the riverside gardens.</span></div>
+          <div class="slot"><span class="st">Evening</span><span>Final York dinner. Early night &mdash; the train to Edinburgh leaves tomorrow morning.</span></div>
+        </div>
+        <div class="tags"><span class="tag free">National Railway Museum &mdash; free</span><span class="tag hi">Pre-book York Minster tower climb</span><span class="tag hi">Betty&rsquo;s: short queue, absolutely worth it</span></div>
+      </div>
+    </div>
+
+  </div><!-- /York -->
 
   <div class="transit">
     <div class="transit-ico">🚆</div>
     <div class="transit-txt">
       <strong>LNER &mdash; York &rarr; Edinburgh Waverley</strong>
-      ~2hrs 30min &nbsp;&middot;&nbsp; The coastal stretch through Northumberland is one of the great British rail journeys &mdash; sit on the east side for sea views
+      ~2hrs 30min &nbsp;&middot;&nbsp; Sit on the east side of the train for sea views along the Northumberland coast &mdash; one of the great British rail journeys
     </div>
   </div>
 
-  <!-- ═══ EDINBURGH ═══ -->
+
+  <!-- ════════════════ EDINBURGH ════════════════ -->
   <div class="city">
     <div class="city-head">
       <div class="cbar" style="background:#2a6e4a"></div>
@@ -316,38 +347,18 @@
 
     <div class="day">
       <div class="day-label">
-        <span class="d-tag">Day 7</span>
-        <span class="d-date">12 Sep</span>
-        <span class="d-dow">Friday</span>
-      </div>
-      <div class="day-body">
-        <div class="d-title">Old Town &amp; the Castle</div>
-        <div class="slots">
-          <div class="slot"><span class="st">Morning</span><span><b>Edinburgh Castle.</b> Pre-book a timed entry and arrive at opening. The Crown Jewels, the Stone of Destiny, the One O&rsquo;Clock Gun at 1pm. The views from the ramparts over the city and out to the Firth of Forth are remarkable. Allow 2.5&ndash;3hrs &mdash; there is more here than most people expect.</span></div>
-          <div class="slot"><span class="st">Lunch</span><span>Descend the Royal Mile. Pub lunch at one of the older pubs just off the Mile &mdash; The Jolly Judge (down a close near the castle) is a good quiet option away from the main tourist flow.</span></div>
-          <div class="slot"><span class="st">Afternoon</span><span><b>Old Town wander.</b> <b>St Giles&rsquo; Cathedral</b> (free &mdash; beautiful interior, the Thistle Chapel is extraordinary). <b>Victoria Street</b> &mdash; the curved, colourful street said to have inspired Diagon Alley. Greyfriars Kirkyard. The Grassmarket. This is a neighbourhood to explore slowly, not a checklist.</span></div>
-          <div class="slot"><span class="st">Evening</span><span>Dinner in the Old Town. Grassmarket has a good range &mdash; Maxie&rsquo;s Bistro has outdoor seating on the square when the weather allows.</span></div>
-        </div>
-        <div class="tags"><span class="tag hi">Pre-book Edinburgh Castle: sells out in Sep</span><span class="tag free">St Giles&rsquo; Cathedral &mdash; free</span><span class="tag free">Greyfriars Kirkyard &mdash; free</span></div>
-      </div>
-    </div>
-
-    <div class="day">
-      <div class="day-label">
         <span class="d-tag">Day 8</span>
         <span class="d-date">13 Sep</span>
         <span class="d-dow">Saturday</span>
       </div>
       <div class="day-body">
-        <div class="d-title">Arthur&rsquo;s Seat &amp; New Town</div>
+        <div class="d-title">Arrive Edinburgh &mdash; First Evening on the Royal Mile</div>
         <div class="slots">
-          <div class="slot"><span class="st">Morning</span><span><b>Arthur&rsquo;s Seat.</b> Start early (8&ndash;9am) before the day gets busy &mdash; especially important on a Saturday. The main path from Holyrood is well-marked and straightforward. About 1.5hrs up and back. The summit views over the city, the Firth of Forth, and the Pentlands are extraordinary on a clear September morning. Bring a layer; it is always windy at the top.</span></div>
-          <div class="slot"><span class="st">Late AM</span><span>Walk back past <b>Holyrood Palace</b> exterior. Coffee and a sit-down at a caf&eacute; nearby &mdash; you have earned it after the hike.</span></div>
-          <div class="slot"><span class="st">Lunch</span><span><b>Scottish National Gallery</b> (free, 1.5hrs). Walk up through the Mound &mdash; the gallery sits at the junction of Old and New Town with fine views. Lunch at the gallery caf&eacute; or on Princes Street.</span></div>
-          <div class="slot"><span class="st">Afternoon</span><span><b>New Town.</b> Princes Street Gardens (the view up to the castle from here is one of the best in the city). George Street, Rose Street. Browse and decompress &mdash; the Georgian New Town is a strong contrast to the medieval Old Town.</span></div>
-          <div class="slot"><span class="st">Evening</span><span><b>The Bow Bar</b> on Victoria Street &mdash; one of the finest selections of Scottish malt whisky in Edinburgh, no music, no gimmicks. Just good whisky and conversation.</span></div>
+          <div class="slot"><span class="st">Morning</span><span>Train from York. ~2hrs 30min, arriving Edinburgh Waverley early-to-mid afternoon. The hotel is a 10-minute walk up the Royal Mile from the station.</span></div>
+          <div class="slot"><span class="st">Afternoon</span><span>Check in, drop bags. First walk along the <b>Royal Mile</b> &mdash; explore the closes (the narrow alleyways branching off either side). Each one leads somewhere unexpected: a hidden courtyard, a staircase, a view. No plan needed.</span></div>
+          <div class="slot"><span class="st">Evening</span><span>Dinner in the <b>Grassmarket</b> &mdash; a lively square at the foot of the castle rock, surrounded by restaurants. A good introduction to the Old Town atmosphere.</span></div>
         </div>
-        <div class="tags"><span class="tag free">Arthur&rsquo;s Seat &mdash; free</span><span class="tag free">National Gallery &mdash; free</span><span class="tag">Wear walking shoes for the hike</span><span class="tag hi">Start early on Saturdays to avoid crowds</span></div>
+        <div class="tags"><span class="tag">York &rarr; Edinburgh Waverley: ~2hrs 30min</span><span class="tag">Hotel: 10-min walk from Waverley</span></div>
       </div>
     </div>
 
@@ -358,14 +369,14 @@
         <span class="d-dow">Sunday</span>
       </div>
       <div class="day-body">
-        <div class="d-title">Leith &amp; the Royal Yacht Britannia</div>
+        <div class="d-title">Edinburgh Castle &amp; Old Town</div>
         <div class="slots">
-          <div class="slot"><span class="st">Morning</span><span>Bus 16 or tram from Princes Street down to <b>Leith</b> &mdash; about 20 minutes. The <b>Royal Yacht Britannia</b> is one of the most fascinating things to visit in Scotland (pre-book; allow 2hrs). The royal family&rsquo;s private floating home from 1954 to 1997 &mdash; every room is preserved exactly as it was.</span></div>
-          <div class="slot"><span class="st">Lunch</span><span>Lunch in Leith. The area around <b>The Shore</b> &mdash; Leith&rsquo;s old waterfront street &mdash; has several excellent restaurants and caf&eacute;s, a different and more local feel than the Old Town.</span></div>
-          <div class="slot"><span class="st">Afternoon</span><span>Relaxed afternoon back in the city. <b>Calton Hill</b> is a short walk from the east end of Princes Street &mdash; five minutes to climb, excellent 360&deg; views over the city. An easy and rewarding end to the Edinburgh days.</span></div>
-          <div class="slot"><span class="st">Evening</span><span>Final Edinburgh dinner. The area around the Royal Mile has plenty of options &mdash; try something with Scottish ingredients if you have not already.</span></div>
+          <div class="slot"><span class="st">Morning</span><span><b>Edinburgh Castle.</b> Pre-book a timed entry and arrive at opening. The Crown Jewels, the Stone of Destiny, the One O&rsquo;Clock Gun. The views from the castle ramparts over the city, Arthur&rsquo;s Seat, and out to the Firth of Forth are extraordinary. Allow 2.5&ndash;3hrs &mdash; there is considerably more to see here than most people expect.</span></div>
+          <div class="slot"><span class="st">Lunch</span><span>Descend the Royal Mile for lunch at one of the older pubs just off the Mile &mdash; The Jolly Judge (down a close near the castle) is a quiet, unpretentious option away from the main tourist flow.</span></div>
+          <div class="slot"><span class="st">Afternoon</span><span><b>Old Town wander.</b> <b>St Giles&rsquo; Cathedral</b> (free &mdash; the Thistle Chapel inside is extraordinary). <b>Victoria Street</b> &mdash; the curved, colourful street said to have inspired Diagon Alley. <b>Greyfriars Kirkyard</b> and the Greyfriars Bobby statue. This is a neighbourhood to explore slowly rather than tick off.</span></div>
+          <div class="slot"><span class="st">Evening</span><span><b>Calton Hill at sunset.</b> A 5-minute walk from the east end of Princes Street &mdash; a short climb to a hilltop with 360&deg; views over the entire city. One of Edinburgh&rsquo;s best kept free secrets. The light on a clear September evening is remarkable.</span></div>
         </div>
-        <div class="tags"><span class="tag hi">Pre-book Royal Yacht Britannia (open Sundays)</span><span class="tag free">Calton Hill &mdash; free, 5-min climb</span><span class="tag">Bus 16 from Princes St to Leith</span></div>
+        <div class="tags"><span class="tag hi">Pre-book Edinburgh Castle: sells out in September</span><span class="tag free">St Giles&rsquo; Cathedral &mdash; free</span><span class="tag free">Greyfriars Kirkyard &mdash; free</span><span class="tag free">Calton Hill &mdash; free</span></div>
       </div>
     </div>
 
@@ -376,37 +387,16 @@
         <span class="d-dow">Monday</span>
       </div>
       <div class="day-body">
-        <div class="d-title">Whisky Experience &mdash; Fly to Belfast</div>
+        <div class="d-title">Arthur&rsquo;s Seat &amp; New Town</div>
         <div class="slots">
-          <div class="slot"><span class="st">Morning</span><span><b>Scotch Whisky Experience</b> on Castlehill, right next to the castle. A proper guided tour through the history and craft of Scotch whisky with a tasting. About 1hr &mdash; a good last-morning activity before leaving Edinburgh.</span></div>
-          <div class="slot"><span class="st">Lunch</span><span>Quick lunch near the Royal Mile. Check out and collect bags.</span></div>
-          <div class="slot"><span class="st">Afternoon</span><span>Tram from <b>St Andrew Square</b> direct to Edinburgh Airport &mdash; ~30min. <b>Fly Edinburgh &rarr; Belfast International.</b> ~1hr flight. Simon collects the car from BFS long-stay (parked since Day 1). Short drive into Belfast city centre.</span></div>
-          <div class="slot"><span class="st">Evening</span><span>Check in. Cathedral Quarter walk to stretch the legs. A pint at the <b>Duke of York</b> &mdash; one of Belfast&rsquo;s oldest bars, tucked down a narrow lane off Hill Street.</span></div>
+          <div class="slot"><span class="st">Morning</span><span><b>Arthur&rsquo;s Seat.</b> Start early (8&ndash;9am) before the day heats up. The main path from Holyrood is clearly marked and not technically difficult &mdash; about 45 minutes to the summit at a comfortable pace. The views from the top over Edinburgh, the Firth of Forth, and the Pentland Hills are extraordinary on a clear September morning. Bring a layer; it is always windy at the top.</span></div>
+          <div class="slot"><span class="st">Late AM</span><span>Walk back down past <b>Holyrood Palace</b> exterior. Coffee and a sit-down at a caf&eacute; at the foot of the Royal Mile &mdash; well earned after the hike.</span></div>
+          <div class="slot"><span class="st">Lunch</span><span><b>Scottish National Gallery</b> (free, on the Mound between Old and New Town). A manageable highlights visit of 45&ndash;60 minutes. Lunch at the gallery caf&eacute; or on Princes Street.</span></div>
+          <div class="slot"><span class="st">Afternoon</span><span><b>New Town.</b> Princes Street Gardens &mdash; the view up to the castle from here is one of the best in the city. George Street for a browse. The Georgian New Town is a complete contrast to the medieval Old Town; quieter and more elegant.</span></div>
+          <div class="slot"><span class="st">Evening</span><span>Dinner in the New Town &mdash; George Street and Thistle Street have a strong selection of independent restaurants.</span></div>
         </div>
-        <div class="tags"><span class="tag hi">Scotch Whisky Experience: book in advance</span><span class="tag">Tram: St Andrew Sq &rarr; Airport ~30min</span><span class="tag">EDI &rarr; BFS: ~1hr, Loganair / easyJet</span></div>
+        <div class="tags"><span class="tag free">Arthur&rsquo;s Seat &mdash; free</span><span class="tag free">National Gallery &mdash; free</span><span class="tag">Good walking shoes for the hike</span></div>
       </div>
-    </div>
-
-  </div><!-- end Edinburgh -->
-
-  <div class="transit">
-    <div class="transit-ico">✈️</div>
-    <div class="transit-txt">
-      <strong>Fly &mdash; Edinburgh (EDI) &rarr; Belfast International (BFS)</strong>
-      ~1hr &nbsp;&middot;&nbsp; Loganair or easyJet &nbsp;&middot;&nbsp; Simon&rsquo;s car collected from BFS long-stay parking on arrival &nbsp;&middot;&nbsp; ~&pound;5&ndash;8/day parking
-    </div>
-  </div>
-
-  <!-- ═══ BELFAST ═══ -->
-  <div class="city">
-    <div class="city-head">
-      <div class="cbar" style="background:#b5762a"></div>
-      <span class="c-num">04</span>
-      <div class="c-info">
-        <div class="c-name">Belfast</div>
-        <div class="c-sub">Stay: <b>Premier Inn Belfast City Centre</b> &nbsp;&middot;&nbsp; Getting around: <b>Walking / Simon&rsquo;s car for day trips</b></div>
-      </div>
-      <div class="c-nights">5<small>Nights</small></div>
     </div>
 
     <div class="day">
@@ -416,15 +406,38 @@
         <span class="d-dow">Tuesday</span>
       </div>
       <div class="day-body">
-        <div class="d-title">Titanic Belfast</div>
+        <div class="d-title">Leith &amp; the Royal Yacht Britannia</div>
         <div class="slots">
-          <div class="slot"><span class="st">Morning</span><span><b>Titanic Belfast.</b> Pre-book the first entry slot (9am). Drive or take a short taxi from the hotel &mdash; about 10 minutes. Allow 3 full hours. This is genuinely one of the best museums in Europe, not just a Belfast attraction. The building itself &mdash; shaped like the prow of four ships &mdash; is extraordinary before you even go inside.</span></div>
-          <div class="slot"><span class="st">Lunch</span><span>Lunch near the Titanic Quarter. The Titanic Hotel bar is a relaxed option in a beautiful Edwardian building. Or drive back into the city centre.</span></div>
-          <div class="slot"><span class="st">Afternoon</span><span>Relaxed afternoon. Walk along the River Lagan, or explore the <b>Cathedral Quarter</b> at a quieter pace. Good coffee shops and independent bookshops around Commercial Court.</span></div>
-          <div class="slot"><span class="st">Evening</span><span><b>Crown Liquor Saloon</b> on Great Victoria Street &mdash; a Victorian gin palace owned by the National Trust, unlike anything else in Britain or Ireland. One drink here is not optional. Dinner nearby on the same street.</span></div>
+          <div class="slot"><span class="st">Morning</span><span>Bus 16 or the tram from Princes Street down to <b>Leith</b> &mdash; about 20 minutes. <b>Royal Yacht Britannia</b> (pre-book; allow 2hrs). The royal family&rsquo;s private floating home from 1954 to 1997, preserved exactly as it was. One of the most quietly fascinating things to visit in Scotland &mdash; the scale of it, the attention to detail in every cabin, the contrast between the formal state rooms and the tiny crew quarters.</span></div>
+          <div class="slot"><span class="st">Lunch</span><span>Lunch along <b>The Shore</b> &mdash; Leith&rsquo;s old waterfront street, lined with good independent restaurants and cafes with outdoor seating. A completely different feel from the tourist centre of Edinburgh.</span></div>
+          <div class="slot"><span class="st">Afternoon</span><span>Back to the city. <b>National Museum of Scotland</b> (free, on Chambers Street near the Royal Mile &mdash; one of the best free museums in the UK). Covers everything from ancient Scotland to modern design. Allow 1.5&ndash;2hrs and just follow what interests you.</span></div>
+          <div class="slot"><span class="st">Evening</span><span>Final Edinburgh dinner. Pack bags tonight &mdash; flying to Belfast tomorrow.</span></div>
         </div>
-        <div class="tags"><span class="tag hi">Pre-book Titanic Belfast: book the 9am slot</span><span class="tag note">Crown Liquor Saloon &mdash; National Trust</span></div>
+        <div class="tags"><span class="tag hi">Pre-book Royal Yacht Britannia</span><span class="tag free">National Museum of Scotland &mdash; free</span><span class="tag">Bus 16 from Princes St to Leith: ~20min</span></div>
       </div>
+    </div>
+
+  </div><!-- /Edinburgh -->
+
+  <div class="transit">
+    <div class="transit-ico">✈️</div>
+    <div class="transit-txt">
+      <strong>Fly &mdash; Edinburgh (EDI) &rarr; Belfast International (BFS)</strong>
+      ~1hr &nbsp;&middot;&nbsp; Loganair or easyJet &nbsp;&middot;&nbsp; Tram from city centre to airport ~30min &nbsp;&middot;&nbsp; Simon collects his car from BFS long-stay on arrival
+    </div>
+  </div>
+
+
+  <!-- ════════════════ BELFAST ════════════════ -->
+  <div class="city">
+    <div class="city-head">
+      <div class="cbar" style="background:#b5762a"></div>
+      <span class="c-num">04</span>
+      <div class="c-info">
+        <div class="c-name">Belfast</div>
+        <div class="c-sub">Stay: <b>Premier Inn Belfast City Centre</b> &nbsp;&middot;&nbsp; Getting around: <b>Walking / Simon&rsquo;s car for the Causeway day trip</b></div>
+      </div>
+      <div class="c-nights">3<small>Nights</small></div>
     </div>
 
     <div class="day">
@@ -434,14 +447,13 @@
         <span class="d-dow">Wednesday</span>
       </div>
       <div class="day-body">
-        <div class="d-title">The Murals &amp; Cathedral Quarter</div>
+        <div class="d-title">Arrive Belfast &mdash; Cathedral Quarter</div>
         <div class="slots">
-          <div class="slot"><span class="st">Morning</span><span><b>Black taxi political murals tour.</b> Book through one of the well-reviewed local taxi companies. About 1.5hrs covering the Falls Road and Shankill Road murals &mdash; both sides of the peace wall. Essential Belfast: a moving and genuinely illuminating experience of the city&rsquo;s recent history. Nothing quite prepares you for it, and hearing it from a local who lived through it is unlike any museum.</span></div>
-          <div class="slot"><span class="st">Lunch</span><span>Back into the Cathedral Quarter for lunch. Good independent caf&eacute;s around Dunbar Link and Exchange Street.</span></div>
-          <div class="slot"><span class="st">Afternoon</span><span><b>St Anne&rsquo;s Cathedral</b> (free &mdash; striking modern interior with a stainless steel spire). Walk the Cathedral Quarter lanes &mdash; Commercial Court, the narrow entries off High Street. This part of Belfast has a very different character to the Titanic Quarter; it is old, compact, and full of history.</span></div>
-          <div class="slot"><span class="st">Evening</span><span>Dinner in the Cathedral Quarter. The area around Hill Street and Exchange Street has a good mix of restaurants.</span></div>
+          <div class="slot"><span class="st">Morning</span><span>Morning free in Edinburgh before check-out. Tram from St Andrew Square to the airport (~30min). Fly Edinburgh to Belfast (~1hr). Simon collects the car from BFS long-stay parking. Short drive into the city centre.</span></div>
+          <div class="slot"><span class="st">Afternoon</span><span>Check in. Walk the <b>Cathedral Quarter</b> &mdash; the oldest part of the city, centred around St Anne&rsquo;s Cathedral. The narrow entries (Belfast&rsquo;s historic alleyways) off High Street and Donegall Street are worth exploring slowly. A very different character to anything seen so far on the trip.</span></div>
+          <div class="slot"><span class="st">Evening</span><span><b>St Anne&rsquo;s Cathedral</b> (free, worth going inside &mdash; the interior is striking, particularly the mosaic ceiling). Dinner in the Cathedral Quarter &mdash; Hill Street and Exchange Street have a good selection.</span></div>
         </div>
-        <div class="tags"><span class="tag hi">Book black taxi murals tour in advance</span><span class="tag free">St Anne&rsquo;s Cathedral &mdash; free</span></div>
+        <div class="tags"><span class="tag free">St Anne&rsquo;s Cathedral &mdash; free</span><span class="tag">EDI &rarr; BFS: ~1hr flight</span></div>
       </div>
     </div>
 
@@ -454,13 +466,13 @@
       <div class="day-body">
         <div class="d-title">Giant&rsquo;s Causeway Day Trip</div>
         <div class="slots">
-          <div class="slot"><span class="st">Morning</span><span>Drive north from Belfast on the A2 coastal road &mdash; about 1hr 30min to the <b>Giant&rsquo;s Causeway.</b> A UNESCO World Heritage Site and one of the most spectacular natural landscapes in the British Isles: 40,000 interlocking basalt columns formed by ancient volcanic activity, stepping down into the North Atlantic. Arrive early to beat the tour groups.</span></div>
-          <div class="slot"><span class="st">Midday</span><span>Walk the coastal path above and below the columns. The cliffside walk back up to the visitor centre gives the best views. Allow 2&ndash;2.5hrs on the causeway itself.</span></div>
-          <div class="slot"><span class="st">Lunch</span><span>Lunch at the <b>Giant&rsquo;s Causeway Visitor Centre</b> caf&eacute;, or drive a few minutes to the village of <b>Bushmills</b> &mdash; a proper lunch pub and home to the oldest licensed whiskey distillery in the world (Old Bushmills, established 1608).</span></div>
-          <div class="slot"><span class="st">Afternoon</span><span>Optional: a short drive along the <b>Causeway Coastal Route</b> on the return &mdash; the views of the Antrim coast, the Carrick-a-Rede rope bridge area, and the cliffs are outstanding. Or drive straight back to Belfast (~1hr 30min). Either way, a full and beautiful day.</span></div>
-          <div class="slot"><span class="st">Evening</span><span>Easy dinner back in Belfast &mdash; a quieter evening after a full day outdoors.</span></div>
+          <div class="slot"><span class="st">Morning</span><span>Drive north from Belfast on the A2 coastal road &mdash; about 1hr 30min to the <b>Giant&rsquo;s Causeway.</b> Pre-book a timed entry and arrive early before the day-tripper coaches. A UNESCO World Heritage Site: 40,000 interlocking basalt columns formed by volcanic activity 60 million years ago, stepping down into the North Atlantic. Completely unlike anything else in the British Isles.</span></div>
+          <div class="slot"><span class="st">Midday</span><span>Walk the coastal path both above and below the columns &mdash; the cliff-top trail gives a completely different perspective. Allow 2&ndash;2.5hrs on site. The signage is good; just follow the coastal path at your own pace.</span></div>
+          <div class="slot"><span class="st">Lunch</span><span>Lunch at the Causeway visitor centre caf&eacute;, or a short drive to the village of <b>Ballintoy Harbour</b> for something quieter and more scenic.</span></div>
+          <div class="slot"><span class="st">Afternoon</span><span>Drive back along the <b>Causeway Coastal Route</b> &mdash; the cliff scenery on the return through Cushendall and Larne is outstanding. Stop whenever something catches your eye. Back in Belfast by early evening.</span></div>
+          <div class="slot"><span class="st">Evening</span><span>Easy dinner back in the city &mdash; a quieter evening after a full day outdoors.</span></div>
         </div>
-        <div class="tags"><span class="tag hi">Pre-book Giant&rsquo;s Causeway timed entry (NTS)</span><span class="tag">Drive from Belfast: ~1hr 30min each way</span><span class="tag note">Bushmills Distillery &mdash; world&rsquo;s oldest</span></div>
+        <div class="tags"><span class="tag hi">Pre-book Giant&rsquo;s Causeway timed entry</span><span class="tag">Drive from Belfast: ~1hr 30min each way</span><span class="tag">Full day &mdash; start by 9am</span></div>
       </div>
     </div>
 
@@ -471,14 +483,15 @@
         <span class="d-dow">Friday</span>
       </div>
       <div class="day-body">
-        <div class="d-title">St George&rsquo;s Market &amp; Last Day in Belfast</div>
+        <div class="d-title">St George&rsquo;s Market, Titanic &amp; The Murals</div>
         <div class="slots">
-          <div class="slot"><span class="st">Morning</span><span><b>St George&rsquo;s Market</b> &mdash; Friday is the &ldquo;Food &amp; Garden Market&rdquo; (opens 8am, closes 2pm). A beautiful Victorian covered market with street food, local produce, arts and crafts. Widely regarded as the best market in Ireland. Perfect for a leisurely last morning, a proper breakfast from a stall, and a browse.</span></div>
-          <div class="slot"><span class="st">Lunch</span><span>Eat at the market, or walk the short distance to the city centre for a sit-down lunch.</span></div>
-          <div class="slot"><span class="st">Afternoon</span><span>Free afternoon &mdash; no agenda. Belfast city centre is compact and walkable. Good for a last slow wander, any final shopping on Royal Avenue, or simply sitting in a caf&eacute;. This is the last full day together on this trip.</span></div>
-          <div class="slot"><span class="st">Evening</span><span>Farewell dinner. The Cathedral Quarter has the best choice of restaurants &mdash; book in advance for somewhere worth the occasion.</span></div>
+          <div class="slot"><span class="st">8am</span><span><b>St George&rsquo;s Market</b> opens (Friday is the Food &amp; Garden Market &mdash; the best day to visit). A beautiful Victorian covered market with street food, local produce, arts and crafts. Widely regarded as the best market in Ireland. A proper breakfast from a stall, a browse, no rush. Closes at 2pm but go early for the full atmosphere.</span></div>
+          <div class="slot"><span class="st">10am</span><span><b>Titanic Belfast.</b> Pre-book the 10am slot. A 10-minute drive or taxi from the market. Allow 3 hours &mdash; this is genuinely one of the best museums in Europe. The building itself (shaped like the prows of four ships) is remarkable before you even go inside. The exhibition covers the design, construction, launch, sinking, and legacy of the Titanic in full.</span></div>
+          <div class="slot"><span class="st">Lunch</span><span>Lunch in the Titanic Quarter &mdash; the Titanic Hotel&rsquo;s bar and restaurant is a good option in a beautifully restored Edwardian building.</span></div>
+          <div class="slot"><span class="st">Afternoon</span><span><b>Black taxi political murals tour.</b> Book through one of the well-reviewed local taxi companies. ~1.5hrs covering the Falls Road and Shankill Road murals and the Peace Wall. Essential Belfast &mdash; hearing the story of the Troubles from a local who lived through it is unlike any museum or documentary. Nothing else on the trip will stay with you quite like this.</span></div>
+          <div class="slot"><span class="st">Evening</span><span>Farewell dinner &mdash; book somewhere worth the occasion in the Cathedral Quarter.</span></div>
         </div>
-        <div class="tags"><span class="tag hi">St George&rsquo;s Market: Fri 8am&ndash;2pm &mdash; arrive early</span><span class="tag note">Last full day together</span></div>
+        <div class="tags"><span class="tag hi">St George&rsquo;s Market: Fri 8am&ndash;2pm &mdash; arrive early</span><span class="tag hi">Pre-book Titanic Belfast: 10am slot</span><span class="tag hi">Book black taxi murals tour in advance</span></div>
       </div>
     </div>
 
@@ -491,39 +504,40 @@
       <div class="day-body">
         <div class="d-title">Departure</div>
         <div class="slots">
-          <div class="slot"><span class="st">Morning</span><span>Check out of the hotel. Drive to <b>Belfast International Airport (BFS)</b> &mdash; about 30 minutes from the city centre. Jenifer departs for Manila. Simon returns the long-stay parking and drives back to Cork.</span></div>
+          <div class="slot"><span class="st">Morning</span><span>Check out of the hotel. Drive to <b>Belfast International Airport (BFS)</b> &mdash; about 30 minutes from the city centre. Jenifer departs on the flight back to Manila. Simon exits long-stay parking and drives back to Cork.</span></div>
         </div>
         <div class="tags"><span class="tag">BFS: ~30min drive from city centre</span></div>
       </div>
     </div>
 
-  </div><!-- end Belfast -->
+  </div><!-- /Belfast -->
+
 
   <!-- HOTELS -->
   <p class="section-title">Accommodation</p>
   <div class="hotels">
     <div class="hotel">
-      <div class="hotel-city">London &mdash; 4 nights (6&ndash;9 Sep)</div>
+      <div class="hotel-city">London &mdash; 5 nights (6&ndash;10 Sep)</div>
       <div class="hotel-name">Premier Inn London Southwark (Tate Modern)</div>
-      <div class="hotel-desc">Bankside, SE1. Steps from Tate Modern and the South Bank. Excellent location for the entire London itinerary. Consistent quality and good value for London.</div>
+      <div class="hotel-desc">Bankside, SE1. Steps from Tate Modern and the South Bank. Excellent location for the entire London itinerary. Consistent quality and good value for central London.</div>
       <span class="hotel-price">~&pound;90&ndash;130 / night</span>
     </div>
     <div class="hotel">
-      <div class="hotel-city">York &mdash; 1 night (10 Sep)</div>
+      <div class="hotel-city">York &mdash; 2 nights (11&ndash;12 Sep)</div>
       <div class="hotel-name">ibis York Centre</div>
-      <div class="hotel-desc">Rougier Street, YO1. 5-min walk from York train station and the Shambles. Clean, modern, very central &mdash; exactly right for a single overnight stop.</div>
+      <div class="hotel-desc">Rougier Street, YO1. 5-min walk from York station and the Shambles. Clean, modern, perfectly central &mdash; exactly right for two nights in a compact city.</div>
       <span class="hotel-price">~&pound;70&ndash;100 / night</span>
     </div>
     <div class="hotel">
-      <div class="hotel-city">Edinburgh &mdash; 4 nights (11&ndash;14 Sep)</div>
+      <div class="hotel-city">Edinburgh &mdash; 4 nights (13&ndash;16 Sep)</div>
       <div class="hotel-name">ibis Edinburgh Centre Royal Mile</div>
-      <div class="hotel-desc">Hunter Square, EH1. On the Royal Mile, 8-min walk from Waverley Station. Best possible location for the Old Town itinerary. Well reviewed for the price.</div>
+      <div class="hotel-desc">Hunter Square, EH1. On the Royal Mile itself, 8-min walk from Waverley Station. Best possible location for the Old Town itinerary. Well reviewed for the price point.</div>
       <span class="hotel-price">~&pound;80&ndash;120 / night</span>
     </div>
     <div class="hotel">
-      <div class="hotel-city">Belfast &mdash; 5 nights (15&ndash;19 Sep)</div>
+      <div class="hotel-city">Belfast &mdash; 3 nights (17&ndash;19 Sep)</div>
       <div class="hotel-name">Premier Inn Belfast City Centre</div>
-      <div class="hotel-desc">Waring Street, BT1. Cathedral Quarter location, walking distance to all city sights, 10-min drive to Titanic Quarter. Good breakfast. Simon&rsquo;s car parked nearby for the Giant&rsquo;s Causeway day trip.</div>
+      <div class="hotel-desc">Waring Street, BT1. Cathedral Quarter location, walking distance to all city sights, 10-min drive to Titanic Quarter. Good breakfast. Parking nearby for the Giant&rsquo;s Causeway day trip.</div>
       <span class="hotel-price">~&pound;70&ndash;100 / night</span>
     </div>
   </div>
@@ -531,7 +545,7 @@
   <div class="notice">
     <div class="notice-title">Visa note &mdash; UK Standard Visitor Visa</div>
     <div class="notice-text">
-      Jenifer will need a <strong>UK Standard Visitor Visa</strong> before travelling. For the application, this itinerary works as a key supporting document: it shows a clear route with exact dates (<strong>6&ndash;20 September 2025</strong>), named hotels, realistic travel connections, and a defined return flight on 20 September. The most important supporting documents are Jenifer&rsquo;s <strong>IBM employment letter</strong> confirming her role, salary, and approved leave, plus 3 months of bank statements. Simon&rsquo;s invitation letter as the sponsoring contact in the UK also strengthens the application. If the trip later extends into the Republic of Ireland, the <strong>British-Irish Visa Scheme (BIVS)</strong> means no separate Irish visa is needed, provided the UK was the first port of entry.
+      Jenifer will need a <strong>UK Standard Visitor Visa</strong> before travelling. This itinerary works as a key supporting document: it shows a clear route with exact dates (<strong>6&ndash;20 September 2025</strong>), named hotels, realistic travel connections, and a confirmed return flight on 20 September. The most important supporting documents alongside it are Jenifer&rsquo;s <strong>IBM employment letter</strong> (confirming role, salary, and approved leave) and 3 months of bank statements. Simon&rsquo;s invitation letter as the UK-based contact also strengthens the application. If the trip later extends into the Republic of Ireland, the <strong>British-Irish Visa Scheme (BIVS)</strong> means no separate Irish visa is needed &mdash; provided the UK was the first port of entry.
     </div>
   </div>
 
