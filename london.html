@@ -1,0 +1,923 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>London — Simon & Jenifer, September 2025</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg:#f7f5f1; --surface:#fff; --surface2:#f0ede8; --border:#e2ddd6;
+    --ink:#1a1814; --ink2:#4a4640; --ink3:#8a857d;
+    --amber:#b5762a; --amber-bg:#fdf6ec; --amber-bd:#e8d0a0;
+    --green:#2a6e4a; --blue:#2a4e8a; --radius:10px;
+    --city-color:#2a4e8a;
+  }
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{background:var(--bg);color:var(--ink);font-family:'Inter',sans-serif;font-weight:400;line-height:1.65;}
+
+  /* BACK NAV */
+  .back-nav{background:var(--surface);border-bottom:1px solid var(--border);padding:0 5vw;}
+  .back-nav-inner{max-width:860px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:10px 0;}
+  .back-link{font-size:12px;font-weight:500;color:var(--ink3);text-decoration:none;display:flex;align-items:center;gap:6px;}
+  .back-link:hover{color:var(--amber);}
+  .trip-crumb{font-size:12px;color:var(--ink3);}
+  .trip-crumb a{color:var(--ink3);text-decoration:none;}
+  .trip-crumb a:hover{color:var(--amber);}
+
+  /* HERO */
+  .hero{background:#1a1814;padding:3.5rem 5vw 3rem;position:relative;overflow:hidden;}
+  .hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 80% at 85% 40%,rgba(42,78,138,.25) 0%,transparent 60%),radial-gradient(ellipse 40% 60% at 10% 80%,rgba(181,118,42,.1) 0%,transparent 55%);pointer-events:none;}
+  .hero-inner{max-width:860px;margin:0 auto;position:relative;}
+  .hero-label{font-size:11px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:#6a85c8;margin-bottom:.75rem;}
+  .hero-title{font-family:'Playfair Display',serif;font-size:clamp(2.2rem,6vw,4rem);font-weight:400;line-height:1.05;color:#f0ebe0;margin-bottom:.75rem;}
+  .hero-meta{font-size:.9rem;color:#9a9288;line-height:1.7;}
+  .hero-stats{display:flex;gap:2rem;flex-wrap:wrap;margin-top:1.75rem;padding-top:1.75rem;border-top:1px solid rgba(255,255,255,.09);}
+  .hs-l{font-size:10px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:#5a5248;display:block;margin-bottom:2px;}
+  .hs-v{font-family:'Playfair Display',serif;font-size:1.2rem;color:#f0ebe0;}
+
+  /* DAY NAV */
+  .day-nav{background:var(--surface);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:50;overflow-x:auto;}
+  .day-nav-inner{max-width:860px;margin:0 auto;display:flex;align-items:center;padding:0 5vw;min-width:max-content;}
+  .day-nav a{display:block;padding:12px 16px;font-size:12px;font-weight:500;color:var(--ink3);text-decoration:none;white-space:nowrap;border-bottom:2px solid transparent;transition:all .2s;}
+  .day-nav a:hover{color:var(--ink);border-bottom-color:var(--border);}
+  .day-nav a.active{color:var(--city-color);border-bottom-color:var(--city-color);}
+
+  /* MAIN */
+  .main{max-width:860px;margin:0 auto;padding:0 5vw 6rem;}
+
+  /* DAY SECTION */
+  .day-section{padding-top:3rem;}
+  .day-section-header{display:flex;align-items:flex-start;gap:1rem;margin-bottom:1.75rem;padding-bottom:1.25rem;border-bottom:2px solid var(--city-color);}
+  .day-number{font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--city-color);background:rgba(42,78,138,.08);padding:3px 8px;border-radius:4px;white-space:nowrap;margin-top:4px;}
+  .day-title-block{}
+  .day-title{font-family:'Playfair Display',serif;font-size:1.6rem;font-weight:400;color:var(--ink);line-height:1.1;}
+  .day-date{font-size:12px;color:var(--ink3);margin-top:3px;font-weight:500;}
+
+  /* SLOT GROUP */
+  .slot-group{margin-bottom:0;}
+  .slot-label{font-size:10px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--amber);margin:1.5rem 0 .75rem;display:flex;align-items:center;gap:8px;}
+  .slot-label::after{content:'';flex:1;height:1px;background:var(--border);}
+
+  /* ACTIVITY CARD */
+  .activity-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;margin-bottom:.75rem;}
+  .activity-card-body{display:grid;grid-template-columns:1fr 300px;gap:0;}
+  .activity-info{padding:1.25rem 1.5rem;}
+  .activity-type{font-size:10px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--ink3);margin-bottom:.4rem;}
+  .activity-name{font-family:'Playfair Display',serif;font-size:1.25rem;font-weight:400;color:var(--ink);margin-bottom:.5rem;line-height:1.2;}
+  .activity-address{font-size:12px;color:var(--ink3);margin-bottom:.75rem;display:flex;align-items:flex-start;gap:5px;}
+  .activity-address svg{flex-shrink:0;margin-top:2px;}
+  .practical-row{display:flex;gap:1rem;flex-wrap:wrap;margin-bottom:.75rem;}
+  .prac-item{font-size:11.5px;color:var(--ink2);display:flex;align-items:center;gap:4px;}
+  .prac-item .pric-free{color:var(--green);font-weight:600;}
+  .activity-desc{font-size:13px;color:var(--ink2);line-height:1.7;margin-bottom:.75rem;}
+  .highlights{list-style:none;margin:0;padding:0;}
+  .highlights li{font-size:12.5px;color:var(--ink2);padding:3px 0 3px 16px;position:relative;line-height:1.5;}
+  .highlights li::before{content:"→";position:absolute;left:0;color:var(--amber);font-size:11px;}
+  .highlights li b{color:var(--ink);font-weight:500;}
+  .tip-box{background:var(--amber-bg);border:1px solid var(--amber-bd);border-radius:6px;padding:.6rem .85rem;margin-top:.75rem;font-size:12px;color:var(--ink2);line-height:1.6;}
+  .tip-box strong{color:var(--amber);font-weight:600;}
+  .map-area{position:relative;height:100%;min-height:240px;background:#eee;border-left:1px solid var(--border);}
+  .map-area iframe{display:block;width:100%;height:100%;min-height:240px;border:0;}
+  .map-open-link{display:block;padding:8px 12px;background:var(--surface2);border-top:1px solid var(--border);font-size:11px;font-weight:500;color:var(--blue);text-decoration:none;text-align:center;}
+  .map-open-link:hover{background:var(--border);}
+
+  /* TRANSPORT BETWEEN STOPS */
+  .transport-between{display:flex;align-items:center;gap:12px;padding:.8rem 1.25rem;background:var(--surface2);border:1px solid var(--border);border-radius:var(--radius);margin:.75rem 0;font-size:13px;color:var(--ink2);}
+  .transport-between-icon{width:32px;height:32px;background:var(--surface);border:1px solid var(--border);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.9rem;flex-shrink:0;}
+  .transport-between-text{flex:1;}
+  .transport-between-text strong{display:block;font-size:13px;font-weight:600;color:var(--ink);margin-bottom:2px;}
+  .transport-between-text span{font-size:12px;color:var(--ink3);}
+  .transport-badge{font-size:10.5px;font-weight:600;padding:2px 8px;border-radius:20px;background:rgba(42,78,138,.08);color:var(--blue);white-space:nowrap;flex-shrink:0;}
+
+  /* ARRIVAL CARD */
+  .arrival-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;margin-bottom:.75rem;}
+  .arrival-card-header{padding:.85rem 1.25rem;border-bottom:1px solid var(--border);background:rgba(42,78,138,.04);}
+  .arrival-card-header h3{font-size:13px;font-weight:600;color:var(--ink);}
+  .arrival-rows{padding:.85rem 1.25rem;display:flex;flex-direction:column;gap:.75rem;}
+  .arrival-row{display:flex;gap:12px;align-items:flex-start;}
+  .arrival-row-icon{width:28px;height:28px;background:var(--surface2);border:1px solid var(--border);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.8rem;flex-shrink:0;margin-top:2px;}
+  .arrival-row-content{font-size:13px;color:var(--ink2);line-height:1.6;}
+  .arrival-row-content strong{color:var(--ink);font-weight:500;}
+  .arrival-row-content .step{display:block;padding:2px 0;}
+
+  /* HOTEL CARD */
+  .hotel-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;margin-bottom:.75rem;}
+  .hotel-card-body{display:grid;grid-template-columns:1fr 300px;gap:0;}
+  .hotel-info{padding:1.25rem 1.5rem;}
+  .hotel-badge{font-size:10px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--ink3);margin-bottom:.4rem;}
+  .hotel-name{font-family:'Playfair Display',serif;font-size:1.2rem;color:var(--ink);margin-bottom:.5rem;}
+  .hotel-address{font-size:12px;color:var(--ink3);margin-bottom:.75rem;}
+  .hotel-detail{font-size:13px;color:var(--ink2);line-height:1.7;}
+  .hotel-detail li{padding:2px 0 2px 14px;position:relative;}
+  .hotel-detail li::before{content:"·";position:absolute;left:0;color:var(--amber);}
+
+  /* DINNER CARD */
+  .dinner-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:1.1rem 1.5rem;margin-bottom:.75rem;}
+  .dinner-title{font-size:13px;font-weight:600;color:var(--ink);margin-bottom:.5rem;}
+  .dinner-options{display:flex;flex-direction:column;gap:5px;}
+  .dinner-opt{font-size:12.5px;color:var(--ink2);line-height:1.6;}
+  .dinner-opt b{color:var(--ink);font-weight:500;}
+
+  /* FOOTER */
+  .page-footer{border-top:1px solid var(--border);padding:1.75rem 5vw;max-width:860px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;}
+  .footer-brand{font-family:'Playfair Display',serif;font-size:.9rem;color:var(--ink2);}
+  .next-city-link{font-size:13px;font-weight:500;color:var(--blue);text-decoration:none;display:flex;align-items:center;gap:6px;}
+  .next-city-link:hover{color:var(--amber);}
+
+  @media(max-width:700px){
+    .activity-card-body,.hotel-card-body{grid-template-columns:1fr;}
+    .map-area{min-height:200px;border-left:none;border-top:1px solid var(--border);}
+    .map-area iframe{min-height:200px;}
+    .back-nav,.hero,.main{padding-left:1.25rem;padding-right:1.25rem;}
+    .back-nav-inner{padding-left:0;padding-right:0;}
+    .day-nav-inner{padding-left:1.25rem;padding-right:1.25rem;}
+    .hero-stats{gap:1.25rem;}
+    .page-footer{padding-left:1.25rem;padding-right:1.25rem;}
+    .practical-row{gap:.6rem;}
+  }
+</style>
+</head>
+<body>
+
+<!-- BACK NAV -->
+<div class="back-nav">
+  <div class="back-nav-inner">
+    <a href="index.html" class="back-link">&#8592; Full itinerary</a>
+    <span class="trip-crumb">
+      <strong>London</strong> &nbsp;&middot;&nbsp;
+      <a href="york.html">York</a> &nbsp;&middot;&nbsp;
+      <a href="edinburgh.html">Edinburgh</a> &nbsp;&middot;&nbsp;
+      <a href="belfast.html">Belfast</a>
+    </span>
+  </div>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <p class="hero-label">City 1 of 4 &nbsp;&middot;&nbsp; Days 1&ndash;5</p>
+    <h1 class="hero-title">London</h1>
+    <p class="hero-meta">6&ndash;10 September 2025 &nbsp;&middot;&nbsp; 5 nights &nbsp;&middot;&nbsp; Premier Inn London Southwark</p>
+    <div class="hero-stats">
+      <div><span class="hs-l">Arrives</span><span class="hs-v">Sat 6 Sep</span></div>
+      <div><span class="hs-l">Moves on</span><span class="hs-v">Wed 10 Sep</span></div>
+      <div><span class="hs-l">Getting around</span><span class="hs-v">Tube &amp; walk</span></div>
+      <div><span class="hs-l">Transport card</span><span class="hs-v">Oyster / contactless</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- DAY NAV -->
+<div class="day-nav">
+  <div class="day-nav-inner">
+    <a href="#day1">Day 1 &nbsp;·&nbsp; 6 Sep</a>
+    <a href="#day2">Day 2 &nbsp;·&nbsp; 7 Sep</a>
+    <a href="#day3">Day 3 &nbsp;·&nbsp; 8 Sep</a>
+    <a href="#day4">Day 4 &nbsp;·&nbsp; 9 Sep</a>
+    <a href="#day5">Day 5 &nbsp;·&nbsp; 10 Sep</a>
+  </div>
+</div>
+
+<main class="main">
+
+<!-- ═══════════════════════════════ DAY 1 ═══════════════════════════════ -->
+<section class="day-section" id="day1">
+  <div class="day-section-header">
+    <span class="day-number">Day 1</span>
+    <div class="day-title-block">
+      <div class="day-title">Arrival &amp; South Bank</div>
+      <div class="day-date">Saturday, 6 September 2025</div>
+    </div>
+  </div>
+
+  <div class="slot-label">Arrival &amp; getting to the hotel</div>
+
+  <!-- ARRIVAL LOGISTICS -->
+  <div class="arrival-card">
+    <div class="arrival-card-header">
+      <h3>&#9992;&#65039;&nbsp; Getting from the airport to the hotel</h3>
+    </div>
+    <div class="arrival-rows">
+      <div class="arrival-row">
+        <div class="arrival-row-icon">&#9992;&#65039;</div>
+        <div class="arrival-row-content">
+          <strong>Jenifer &mdash; arriving at Heathrow (LHR)</strong>
+          <span class="step">At the airport: follow signs for the <strong>Elizabeth Line</strong> (also called Crossrail). It runs from Terminals 2&amp;3 and Terminal 5. No need to book &mdash; just tap your contactless card or get an Oyster card from the machines in arrivals.</span>
+          <span class="step">Board any eastbound Elizabeth Line train. Direction: <strong>Abbey Wood</strong> or <strong>Shenfield</strong>.</span>
+          <span class="step">Exit at <strong>Blackfriars</strong> station (about 40&ndash;45 minutes from Heathrow). Follow signs out. The hotel is an 8-minute walk south across the Millennium Bridge &mdash; or stay on the north side and walk east along the Thames path.</span>
+          <span class="step"><strong>Cost:</strong> ~&pound;13.80 with contactless / Oyster &nbsp;&middot;&nbsp; Trains run every 5&ndash;10 min &nbsp;&middot;&nbsp; No reservation needed</span>
+        </div>
+      </div>
+      <div class="arrival-row">
+        <div class="arrival-row-icon">&#9992;&#65039;</div>
+        <div class="arrival-row-content">
+          <strong>Simon &mdash; arriving from Belfast International (BFS)</strong>
+          <span class="step">Short flight to Heathrow or Gatwick. If landing at <strong>Heathrow</strong>: follow the same Elizabeth Line route as Jenifer above.</span>
+          <span class="step">If landing at <strong>Gatwick</strong>: take the <strong>Thameslink</strong> train from Gatwick Airport station to <strong>Blackfriars</strong> (direct, ~45 min, ~&pound;19). Walk south 8 min to hotel.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- HOTEL -->
+  <div class="hotel-card">
+    <div class="hotel-card-body">
+      <div class="hotel-info">
+        <div class="hotel-badge">&#127968;&nbsp; Base for nights 1&ndash;5</div>
+        <div class="hotel-name">Premier Inn London Southwark (Tate Modern)</div>
+        <div class="hotel-address">&#128205;&nbsp; Bankside, London SE1 &nbsp;&middot;&nbsp; Near Tate Modern</div>
+        <ul class="hotel-detail">
+          <li>Check-in from <strong>3pm</strong> &nbsp;|&nbsp; Check-out by <strong>noon</strong> on 11 Sep</li>
+          <li>Luggage storage available if arriving before 3pm &mdash; drop bags and go exploring</li>
+          <li>Nearest tube: <strong>Southwark</strong> (Jubilee Line, 10-min walk) or <strong>Blackfriars</strong> (12-min walk)</li>
+          <li>The Thames riverfront is a 3-minute walk from the front door</li>
+        </ul>
+      </div>
+      <div class="map-area">
+        <iframe src="https://maps.google.com/maps?q=Premier+Inn+London+Bankside+SE1&output=embed" loading="lazy" title="Premier Inn Bankside map"></iframe>
+        <a class="map-open-link" href="https://www.google.com/maps/search/?api=1&query=Premier+Inn+London+Bankside+SE1" target="_blank">Open in Google Maps &#8599;</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="slot-label">Evening</div>
+
+  <!-- TATE MODERN / SOUTH BANK WALK -->
+  <div class="activity-card">
+    <div class="activity-card-body">
+      <div class="activity-info">
+        <div class="activity-type">&#127748;&nbsp; Riverside walk &mdash; evening stroll</div>
+        <div class="activity-name">South Bank &amp; Tate Modern</div>
+        <div class="activity-address">&#128205;&nbsp; Bankside, London SE1 9TG &nbsp;&middot;&nbsp; 3-min walk from hotel</div>
+        <div class="practical-row">
+          <span class="prac-item">&#128336;&nbsp; Tate Modern open until 10pm Fri&ndash;Sat; 6pm Sun&ndash;Thu</span>
+          <span class="prac-item"><span class="pric-free">Free</span>&nbsp; (main collection)</span>
+          <span class="prac-item">&#9201;&nbsp; Allow 1&ndash;1.5hrs for the walk</span>
+        </div>
+        <p class="activity-desc">This evening is about acclimatising, not sightseeing. A walk along the South Bank is the best possible arrival into London &mdash; the city presents itself at its most dramatic from the riverside.</p>
+        <ul class="highlights">
+          <li><b>Tate Modern exterior:</b> The old Bankside Power Station is worth walking around even without going in. The Turbine Hall inside is free and often has a large-scale installation.</li>
+          <li><b>Millennium Bridge:</b> Walk across to St Paul&rsquo;s Cathedral and back. The view of St Paul&rsquo;s from the south bank is one of London&rsquo;s classic sights.</li>
+          <li><b>Southbank Centre:</b> Walk east &mdash; the Royal Festival Hall, the BFI cinema, the undercroft skate park under Waterloo Bridge. Book stalls on the terrace most evenings.</li>
+        </ul>
+        <div class="tip-box"><strong>Tip:</strong> Do not over-plan tonight. It is a very long travel day for Jenifer. The walk is enough. Pick a riverside restaurant for dinner and call it early &mdash; there is plenty of time for everything else.</div>
+      </div>
+      <div class="map-area">
+        <iframe src="https://maps.google.com/maps?q=Tate+Modern+London+Bankside&output=embed" loading="lazy" title="Tate Modern map"></iframe>
+        <a class="map-open-link" href="https://www.google.com/maps/search/?api=1&query=Tate+Modern+London" target="_blank">Open in Google Maps &#8599;</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- DINNER -->
+  <div class="dinner-card">
+    <div class="dinner-title">&#127374;&nbsp; Dinner options &mdash; South Bank, 5-min walk</div>
+    <div class="dinner-options">
+      <div class="dinner-opt"><b>Flat Iron Square</b> &mdash; Southwark St, SE1. A street food yard with several vendors under one roof. Relaxed and varied. Perfect for a first evening.</div>
+      <div class="dinner-opt"><b>The Anchor Bankside</b> &mdash; 34 Park St, SE1. A 17th-century riverside pub with food. One of the oldest pubs on the Thames. Good atmosphere without being a tourist trap.</div>
+      <div class="dinner-opt"><b>Tas Pide</b> &mdash; 20&ndash;22 New Globe Walk, SE1. Turkish pide (flatbread pizza), very good value, a 5-min walk from the hotel.</div>
+    </div>
+  </div>
+
+</section><!-- end day 1 -->
+
+<!-- ═══════════════════════════════ DAY 2 ═══════════════════════════════ -->
+<section class="day-section" id="day2">
+  <div class="day-section-header">
+    <span class="day-number">Day 2</span>
+    <div class="day-title-block">
+      <div class="day-title">Westminster &amp; the West End</div>
+      <div class="day-date">Sunday, 7 September 2025</div>
+    </div>
+  </div>
+
+  <div class="slot-label">Getting there</div>
+
+  <div class="transport-between">
+    <div class="transport-between-icon">&#128665;</div>
+    <div class="transport-between-text">
+      <strong>Hotel &#8594; Westminster Bridge</strong>
+      <span>Option A (recommended): <strong>Walk west along the South Bank</strong> ~25 min &mdash; flat, riverside the whole way, free, best views. &nbsp;|&nbsp; Option B: Walk to Southwark station (10 min) &#8594; Jubilee Line &#8594; Westminster (1 stop, 3 min, ~&pound;2.80)</span>
+    </div>
+    <span class="transport-badge">25 min walk or 15 min tube</span>
+  </div>
+
+  <div class="slot-label">Morning</div>
+
+  <div class="activity-card">
+    <div class="activity-card-body">
+      <div class="activity-info">
+        <div class="activity-type">&#127963;&nbsp; Landmark &mdash; exterior &amp; walk</div>
+        <div class="activity-name">Westminster Bridge &amp; Parliament</div>
+        <div class="activity-address">&#128205;&nbsp; Westminster Bridge, London SW1 &nbsp;&middot;&nbsp; Westminster station (Jubilee/Circle/District)</div>
+        <div class="practical-row">
+          <span class="prac-item"><span class="pric-free">Free</span>&nbsp; (exterior)</span>
+          <span class="prac-item">&#9201;&nbsp; 30&ndash;45 min</span>
+        </div>
+        <p class="activity-desc">Start on the south side of Westminster Bridge for the classic view of the Houses of Parliament and Big Ben (Elizabeth Tower). This is the photograph that is on every postcard and it is genuinely better in person.</p>
+        <ul class="highlights">
+          <li><b>Westminster Bridge:</b> Stand at the south (Lambeth) end for the Parliament view. Morning light is best &mdash; sun behind you.</li>
+          <li><b>Elizabeth Tower (Big Ben):</b> The clock face is visible from the bridge. Tours of the tower itself are available to UK residents only &mdash; not applicable here.</li>
+          <li><b>Jewel Tower:</b> Small, often-missed medieval tower opposite the Houses of Parliament (free, English Heritage). Takes 20 minutes.</li>
+        </ul>
+      </div>
+      <div class="map-area">
+        <iframe src="https://maps.google.com/maps?q=Westminster+Bridge+London&output=embed" loading="lazy" title="Westminster Bridge map"></iframe>
+        <a class="map-open-link" href="https://www.google.com/maps/search/?api=1&query=Westminster+Bridge+London" target="_blank">Open in Google Maps &#8599;</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="activity-card">
+    <div class="activity-card-body">
+      <div class="activity-info">
+        <div class="activity-type">&#127807;&nbsp; Royal park</div>
+        <div class="activity-name">St James&rsquo;s Park</div>
+        <div class="activity-address">&#128205;&nbsp; St James&rsquo;s Park, London SW1A 2BJ &nbsp;&middot;&nbsp; 10-min walk from Westminster Bridge</div>
+        <div class="practical-row">
+          <span class="prac-item"><span class="pric-free">Free</span></span>
+          <span class="prac-item">&#128336;&nbsp; Open 5am&ndash;midnight daily</span>
+          <span class="prac-item">&#9201;&nbsp; Allow 45&ndash;60 min</span>
+        </div>
+        <p class="activity-desc">The most central and arguably the most beautiful of London&rsquo;s royal parks. Walk through it at any pace &mdash; there is no wrong way.</p>
+        <ul class="highlights">
+          <li><b>The Blue Bridge:</b> The view from the central bridge of the park &mdash; Buckingham Palace one way, Horse Guards Parade the other &mdash; is one of the most photogenic in London.</li>
+          <li><b>Pelicans:</b> The park has had a resident flock since 1664 (a gift from the Russian ambassador). They are fed daily around <strong>2:30pm</strong> near Duck Island.</li>
+          <li><b>Deck chairs:</b> Available to hire in summer for a small fee. Worth it for a 20-minute sit-down.</li>
+        </ul>
+      </div>
+      <div class="map-area">
+        <iframe src="https://maps.google.com/maps?q=St+James+Park+London&output=embed" loading="lazy" title="St James's Park map"></iframe>
+        <a class="map-open-link" href="https://www.google.com/maps/search/?api=1&query=St+James+Park+London" target="_blank">Open in Google Maps &#8599;</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="activity-card">
+    <div class="activity-card-body">
+      <div class="activity-info">
+        <div class="activity-type">&#127963;&nbsp; Royal residence &mdash; exterior</div>
+        <div class="activity-name">Buckingham Palace &amp; Horse Guards</div>
+        <div class="activity-address">&#128205;&nbsp; Buckingham Palace, London SW1A 1AA &nbsp;&middot;&nbsp; Exit the park west</div>
+        <div class="practical-row">
+          <span class="prac-item"><span class="pric-free">Free</span>&nbsp; (exterior)</span>
+          <span class="prac-item">&#9201;&nbsp; 20&ndash;30 min</span>
+        </div>
+        <p class="activity-desc">Walk to the end of The Mall for the palace exterior. Then double back via Horse Guards Parade &mdash; the mounted sentries are there 10am&ndash;4pm daily, much more accessible than the palace gates.</p>
+        <ul class="highlights">
+          <li><b>Changing of the Guard:</b> Happens at 11am on Monday, Wednesday, Friday and Sunday (check for changes). Free to watch from the gates. Arrives 10:45am &mdash; be in place before then.</li>
+          <li><b>Horse Guards Parade:</b> Two mounted sentries stand guard in the archway &mdash; you can stand right in front of them for a photo. More interesting than the palace gates.</li>
+        </ul>
+        <div class="tip-box"><strong>Today is Sunday</strong> &mdash; Changing of the Guard is confirmed for Sundays. Aim to be at the palace gates by 10:40am if you want a good position.</div>
+      </div>
+      <div class="map-area">
+        <iframe src="https://maps.google.com/maps?q=Buckingham+Palace+London&output=embed" loading="lazy" title="Buckingham Palace map"></iframe>
+        <a class="map-open-link" href="https://www.google.com/maps/search/?api=1&query=Buckingham+Palace+London" target="_blank">Open in Google Maps &#8599;</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="slot-label">Lunch</div>
+
+  <div class="transport-between">
+    <div class="transport-between-icon">&#127947;</div>
+    <div class="transport-between-text">
+      <strong>Buckingham Palace area &#8594; Soho</strong>
+      <span>Walk north through Green Park (10 min) or take the Jubilee/Victoria Line one stop from Green Park station &#8594; Oxford Circus (~3 min, ~&pound;2.80). Soho starts immediately south of Oxford Street.</span>
+    </div>
+    <span class="transport-badge">15 min walk</span>
+  </div>
+
+  <div class="dinner-card">
+    <div class="dinner-title">&#127829;&nbsp; Lunch &mdash; Soho</div>
+    <div class="dinner-options">
+      <div class="dinner-opt"><b>Berwick Street Market:</b> An open-air street market running Mon&ndash;Sat on Berwick Street, W1 &mdash; produce, street food stalls. Good for a quick lunch if the weather is decent.</div>
+      <div class="dinner-opt"><b>Bao Soho</b> &mdash; 53 Lexington St, W1. Taiwanese bao buns. Expect a short queue (they don&rsquo;t take reservations). Very good, not expensive.</div>
+      <div class="dinner-opt"><b>Cafe Monico</b> &mdash; 22 Shaftesbury Ave, W1. An all-day brasserie. Good for a proper sit-down lunch without being rushed. Good value set menu on Sundays.</div>
+    </div>
+  </div>
+
+  <div class="slot-label">Afternoon</div>
+
+  <div class="transport-between">
+    <div class="transport-between-icon">&#128666;</div>
+    <div class="transport-between-text">
+      <strong>Soho &#8594; National Gallery / Trafalgar Square</strong>
+      <span>Walk south down any street &mdash; Wardour St, Dean St, Frith St &mdash; all lead to Shaftesbury Avenue, then 5 more minutes to Trafalgar Square. Total: ~12 min walk.</span>
+    </div>
+    <span class="transport-badge">12 min walk</span>
+  </div>
+
+  <div class="activity-card">
+    <div class="activity-card-body">
+      <div class="activity-info">
+        <div class="activity-type">&#127912;&nbsp; Art museum &mdash; world-class collection</div>
+        <div class="activity-name">National Gallery</div>
+        <div class="activity-address">&#128205;&nbsp; Trafalgar Square, London WC2N 5DN &nbsp;&middot;&nbsp; Trafalgar Square (Jubilee/Northern/Bakerloo)</div>
+        <div class="practical-row">
+          <span class="prac-item"><span class="pric-free">Free</span>&nbsp; (permanent collection)</span>
+          <span class="prac-item">&#128336;&nbsp; 10am&ndash;6pm daily</span>
+          <span class="prac-item">&#9201;&nbsp; 1.5&ndash;2hrs</span>
+        </div>
+        <p class="activity-desc">One of the great art museums of the world, entirely free. Do not try to see everything &mdash; pick two or three rooms and look properly.</p>
+        <ul class="highlights">
+          <li><b>Van Gogh &mdash; Sunflowers</b> (Room 43): One of the most recognisable paintings in the world. It is more textured and alive in person than any reproduction suggests.</li>
+          <li><b>Vermeer &mdash; The Virgin of the Rocks, and others</b> (Rooms 25&ndash;26): The Dutch and Flemish collection is extraordinary.</li>
+          <li><b>Turner seascapes</b> (Room 34): The atmospheric light in Turner&rsquo;s sea paintings is unlike anything else.</li>
+          <li><b>The central hall:</b> Worth walking through even if you do not stop &mdash; the scale of the building is impressive.</li>
+        </ul>
+        <div class="tip-box"><strong>Practical:</strong> Bag check is free. The gallery caf&eacute; in the basement is good for a coffee stop. Toilets are in the basement. No photography restrictions on the permanent collection.</div>
+      </div>
+      <div class="map-area">
+        <iframe src="https://maps.google.com/maps?q=National+Gallery+Trafalgar+Square+London&output=embed" loading="lazy" title="National Gallery map"></iframe>
+        <a class="map-open-link" href="https://www.google.com/maps/search/?api=1&query=National+Gallery+London+Trafalgar+Square" target="_blank">Open in Google Maps &#8599;</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="transport-between">
+    <div class="transport-between-icon">&#128694;</div>
+    <div class="transport-between-text">
+      <strong>National Gallery &#8594; Covent Garden</strong>
+      <span>Walk north-east from Trafalgar Square: up St Martin&rsquo;s Lane, or through Chandos Place. ~10 min walk. Or take the Northern Line one stop from Charing Cross to Leicester Square, then walk 5 min east.</span>
+    </div>
+    <span class="transport-badge">10 min walk</span>
+  </div>
+
+  <div class="activity-card">
+    <div class="activity-card-body">
+      <div class="activity-info">
+        <div class="activity-type">&#127978;&nbsp; Market &amp; neighbourhood</div>
+        <div class="activity-name">Covent Garden &amp; Seven Dials</div>
+        <div class="activity-address">&#128205;&nbsp; Covent Garden, London WC2E &nbsp;&middot;&nbsp; Covent Garden station (Piccadilly Line)</div>
+        <div class="practical-row">
+          <span class="prac-item"><span class="pric-free">Free</span>&nbsp; to explore</span>
+          <span class="prac-item">&#128336;&nbsp; Market building open 10am&ndash;8pm daily</span>
+          <span class="prac-item">&#9201;&nbsp; 1&ndash;2hrs</span>
+        </div>
+        <p class="activity-desc">The market piazza has street performers throughout the afternoon. Seven Dials &mdash; a short walk west &mdash; has independent shops and is far less crowded.</p>
+        <ul class="highlights">
+          <li><b>The Piazza:</b> Street performers at the lower level (juggling, mime, opera &mdash; it varies). Free, good for a 20-min watch.</li>
+          <li><b>Apple Market:</b> Inside the market building. Antiques on Monday, crafts Tuesday&ndash;Sunday.</li>
+          <li><b>Seven Dials:</b> The seven-way junction a few minutes&rsquo; walk west. Independent shops, less touristy. Neal&rsquo;s Yard (a hidden colourful courtyard) is through an alleyway off Short&rsquo;s Gardens.</li>
+        </ul>
+      </div>
+      <div class="map-area">
+        <iframe src="https://maps.google.com/maps?q=Covent+Garden+London+WC2E&output=embed" loading="lazy" title="Covent Garden map"></iframe>
+        <a class="map-open-link" href="https://www.google.com/maps/search/?api=1&query=Covent+Garden+London" target="_blank">Open in Google Maps &#8599;</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="slot-label">Evening &mdash; dinner in Covent Garden</div>
+  <div class="dinner-card">
+    <div class="dinner-title">&#127374;&nbsp; Dinner options</div>
+    <div class="dinner-options">
+      <div class="dinner-opt"><b>Dishoom Covent Garden</b> &mdash; 12 Upper St Martin&rsquo;s Lane, WC2H. Brilliant Bombay-style caf&eacute; food. Expect a 30&ndash;45 min queue on a Sunday evening &mdash; it moves steadily and is worth it. <strong>Cannot book for dinner.</strong></div>
+      <div class="dinner-opt"><b>Scoop Gelato</b> &mdash; 40 Shorts Gardens, WC2H. For dessert after dinner &mdash; genuinely excellent Italian gelato.</div>
+      <div class="dinner-opt"><b>Balthazar</b> &mdash; 4&ndash;6 Russell St, WC2B. French brasserie. More upmarket but good quality and reliably good on a Sunday evening.</div>
+    </div>
+  </div>
+
+  <div class="transport-between">
+    <div class="transport-between-icon">&#128666;</div>
+    <div class="transport-between-text">
+      <strong>Covent Garden &#8594; Hotel</strong>
+      <span>Piccadilly Line from Covent Garden &#8594; Blackfriars (via City, ~15 min, ~&pound;2.80). Or take Northern Line from Leicester Square &#8594; London Bridge, then walk 12 min along the river.</span>
+    </div>
+    <span class="transport-badge">~20 min</span>
+  </div>
+
+</section><!-- end day 2 -->
+
+<!-- ═══════════════════════════════ DAY 3 ═══════════════════════════════ -->
+<section class="day-section" id="day3">
+  <div class="day-section-header">
+    <span class="day-number">Day 3</span>
+    <div class="day-title-block">
+      <div class="day-title">East London</div>
+      <div class="day-date">Monday, 8 September 2025</div>
+    </div>
+  </div>
+
+  <div class="slot-label">Getting there</div>
+
+  <div class="transport-between">
+    <div class="transport-between-icon">&#128666;</div>
+    <div class="transport-between-text">
+      <strong>Hotel &#8594; Tower Bridge</strong>
+      <span><strong>Walk east along the Thames Path</strong> (recommended): 20&ndash;25 min, flat, follows the river the whole way &mdash; pass the Clink Prison museum, the Anchor pub, Southwark Cathedral. OR: Jubilee Line from Southwark &#8594; London Bridge (1 stop, 3 min, ~&pound;2.80), then walk 12 min east to the bridge.</span>
+    </div>
+    <span class="transport-badge">25 min walk</span>
+  </div>
+
+  <div class="slot-label">Morning</div>
+
+  <div class="activity-card">
+    <div class="activity-card-body">
+      <div class="activity-info">
+        <div class="activity-type">&#127963;&nbsp; Landmark bridge</div>
+        <div class="activity-name">Tower Bridge</div>
+        <div class="activity-address">&#128205;&nbsp; Tower Bridge Rd, London SE1 2UP &nbsp;&middot;&nbsp; Tower Hill station (Circle/District)</div>
+        <div class="practical-row">
+          <span class="prac-item"><span class="pric-free">Free</span>&nbsp; to cross on foot</span>
+          <span class="prac-item">&#128178;&nbsp; Exhibition: ~&pound;14pp (optional, book online)</span>
+          <span class="prac-item">&#9201;&nbsp; 30 min exterior, 1.5hrs with exhibition</span>
+        </div>
+        <p class="activity-desc">The Victorian Gothic towers and blue bascule bridge are extraordinary up close. Walking across is free &mdash; the paid exhibition lets you walk the glass-floored high walkways between the towers.</p>
+        <ul class="highlights">
+          <li><b>South bank view:</b> Stand on the south approach for the iconic photo with both towers. Early morning means fewer people.</li>
+          <li><b>Bridge lifts:</b> The bridge opens for tall ships. The schedule is on the Tower Bridge website &mdash; a lift takes about 5 minutes and is free to watch from either bank.</li>
+          <li><b>Glass walkway (paid):</b> 42m above the Thames. Worth it if heights are not a problem. Pre-book &mdash; tickets at towerbridge.org.uk</li>
+        </ul>
+      </div>
+      <div class="map-area">
+        <iframe src="https://maps.google.com/maps?q=Tower+Bridge+London+SE1&output=embed" loading="lazy" title="Tower Bridge map"></iframe>
+        <a class="map-open-link" href="https://www.google.com/maps/search/?api=1&query=Tower+Bridge+London" target="_blank">Open in Google Maps &#8599;</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="transport-between">
+    <div class="transport-between-icon">&#128666;</div>
+    <div class="transport-between-text">
+      <strong>Tower Bridge &#8594; Brick Lane</strong>
+      <span>Walk north from Tower Bridge via East Smithfield and Whitechapel Road: ~25 min. OR: District/H&amp;C Line from Tower Hill &#8594; Aldgate East (1 stop, 3 min, ~&pound;2.80), then walk north 10 min up Brick Lane.</span>
+    </div>
+    <span class="transport-badge">10 min tube or 25 min walk</span>
+  </div>
+
+  <div class="slot-label">Lunch</div>
+
+  <div class="activity-card">
+    <div class="activity-card-body">
+      <div class="activity-info">
+        <div class="activity-type">&#127829;&nbsp; Lunch &mdash; a London institution</div>
+        <div class="activity-name">Beigel Bake, Brick Lane</div>
+        <div class="activity-address">&#128205;&nbsp; 159 Brick Lane, London E1 6SB &nbsp;&middot;&nbsp; North end of Brick Lane</div>
+        <div class="practical-row">
+          <span class="prac-item">&#128336;&nbsp; Open 24 hours, every day</span>
+          <span class="prac-item">&#128178;&nbsp; Salt beef bagel ~&pound;4&ndash;5</span>
+          <span class="prac-item">&#9201;&nbsp; 10 min queue + eat</span>
+        </div>
+        <p class="activity-desc">One of the most genuine London food experiences that has nothing to do with fine dining. Beigel Bake has been in this spot since 1974. The queue moves fast.</p>
+        <ul class="highlights">
+          <li><b>Salt beef bagel:</b> The one to order. Thick-cut salt beef, mustard, optional pickles. Handed to you in paper. Eat outside on the street.</li>
+          <li><b>Plain cream cheese bagel:</b> The other classic. About &pound;1.50. The bagels are made on site &mdash; hot and chewy.</li>
+          <li><b>Note:</b> This is the <em>original</em> Beigel Bake at number 159. There is another bagel shop at number 155 &mdash; both are fine but 159 is the one.</li>
+        </ul>
+      </div>
+      <div class="map-area">
+        <iframe src="https://maps.google.com/maps?q=Beigel+Bake+159+Brick+Lane+London&output=embed" loading="lazy" title="Beigel Bake map"></iframe>
+        <a class="map-open-link" href="https://www.google.com/maps/search/?api=1&query=Beigel+Bake+159+Brick+Lane+London+E1" target="_blank">Open in Google Maps &#8599;</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="slot-label">Afternoon</div>
+
+  <div class="activity-card">
+    <div class="activity-card-body">
+      <div class="activity-info">
+        <div class="activity-type">&#127912;&nbsp; Street art &amp; market</div>
+        <div class="activity-name">Shoreditch Street Art &amp; Spitalfields Market</div>
+        <div class="activity-address">&#128205;&nbsp; Hanbury Street, London E1 &nbsp;&middot;&nbsp; 5-min walk west from Brick Lane</div>
+        <div class="practical-row">
+          <span class="prac-item"><span class="pric-free">Free</span>&nbsp; (street art)</span>
+          <span class="prac-item">&#128336;&nbsp; Spitalfields Market: Mon&ndash;Fri 10am&ndash;5pm</span>
+          <span class="prac-item">&#9201;&nbsp; 1.5&ndash;2hrs</span>
+        </div>
+        <p class="activity-desc">This neighbourhood changes faster than anywhere in London &mdash; the murals are updated constantly and you will not see the same street twice. No agenda needed: just walk.</p>
+        <ul class="highlights">
+          <li><b>Hanbury Street:</b> The best concentration of large-format murals. Walk west from Brick Lane &mdash; the walls on both sides are painted floor to ceiling.</li>
+          <li><b>Princelet Street:</b> One of the best-preserved Georgian streets in London, surrounded by the modern murals. A strange and beautiful contrast.</li>
+          <li><b>Old Spitalfields Market:</b> A 17th-century covered market (16 Horner Square, E1 6EW). Fashion, vintage, street food stalls. Good for a 30-min browse.</li>
+          <li><b>Rough Trade East</b> (91 Brick Lane, E1): A legendary independent record shop. Free to browse &mdash; good coffee inside.</li>
+        </ul>
+      </div>
+      <div class="map-area">
+        <iframe src="https://maps.google.com/maps?q=Spitalfields+Market+London+E1&output=embed" loading="lazy" title="Spitalfields map"></iframe>
+        <a class="map-open-link" href="https://www.google.com/maps/search/?api=1&query=Old+Spitalfields+Market+London+E1" target="_blank">Open in Google Maps &#8599;</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="transport-between">
+    <div class="transport-between-icon">&#128666;</div>
+    <div class="transport-between-text">
+      <strong>Shoreditch &#8594; Hotel</strong>
+      <span>London Overground from Shoreditch High Street &#8594; Shadwell, then change to DLR/Overground toward London Bridge. Or walk south through the City (~30 min, very interesting route through the financial district after hours).</span>
+    </div>
+    <span class="transport-badge">~25 min</span>
+  </div>
+
+  <div class="slot-label">Evening</div>
+  <div class="dinner-card">
+    <div class="dinner-title">&#127374;&nbsp; Dinner options &mdash; Shoreditch or return to Soho</div>
+    <div class="dinner-options">
+      <div class="dinner-opt"><b>Hawksmoor Spitalfields</b> &mdash; 157a Commercial St, E1. One of the best steakhouses in London. Book in advance. A treat-yourself dinner if the budget allows.</div>
+      <div class="dinner-opt"><b>Smoking Goat</b> &mdash; 64 Shoreditch High St, E1. Thai barbeque in a loud, fun room. Very good and not expensive. Does not take reservations &mdash; walk in.</div>
+      <div class="dinner-opt"><b>Padella</b> &mdash; 6 Southwark St, SE1 (near the hotel). Handmade pasta. One of the best value dinners in London. Expect a queue. Worth it.</div>
+    </div>
+  </div>
+
+</section><!-- end day 3 -->
+
+<!-- ═══════════════════════════════ DAY 4 ═══════════════════════════════ -->
+<section class="day-section" id="day4">
+  <div class="day-section-header">
+    <span class="day-number">Day 4</span>
+    <div class="day-title-block">
+      <div class="day-title">Bloomsbury &amp; Borough Market</div>
+      <div class="day-date">Tuesday, 9 September 2025</div>
+    </div>
+  </div>
+
+  <div class="slot-label">Getting there</div>
+
+  <div class="transport-between">
+    <div class="transport-between-icon">&#128666;</div>
+    <div class="transport-between-text">
+      <strong>Hotel &#8594; British Museum</strong>
+      <span>Northern Line from London Bridge &#8594; Tottenham Court Road (3 stops, ~10 min, ~&pound;2.80), then 8-min walk east along New Oxford Street. OR: Central Line from St Paul&rsquo;s (walk to Blackfriars, 12 min) &#8594; Holborn (3 min), then 3-min walk.</span>
+    </div>
+    <span class="transport-badge">20 min total</span>
+  </div>
+
+  <div class="slot-label">Morning</div>
+
+  <div class="activity-card">
+    <div class="activity-card-body">
+      <div class="activity-info">
+        <div class="activity-type">&#127981;&nbsp; World museum &mdash; do not miss</div>
+        <div class="activity-name">The British Museum</div>
+        <div class="activity-address">&#128205;&nbsp; Great Russell St, London WC1B 3DG &nbsp;&middot;&nbsp; Holborn or Tottenham Court Road (Central Line)</div>
+        <div class="practical-row">
+          <span class="prac-item"><span class="pric-free">Free</span>&nbsp; (permanent collection)</span>
+          <span class="prac-item">&#128336;&nbsp; 10am&ndash;5:30pm daily</span>
+          <span class="prac-item">&#9201;&nbsp; 2.5hrs minimum</span>
+        </div>
+        <p class="activity-desc">Arrive at 10am when the doors open &mdash; the Great Court is remarkable in the first hour before it fills. Spend 2.5hrs here; do not try to cover everything.</p>
+        <ul class="highlights">
+          <li><b>The Great Court:</b> The glass-roofed central atrium designed by Norman Foster. The Reading Room in the centre is extraordinary. This alone is worth arriving for.</li>
+          <li><b>Rosetta Stone</b> (Room 4): The most important single object in the museum &mdash; the key that unlocked the Egyptian hieroglyphic language. It is smaller than most people expect, and almost always surrounded by people. Go early.</li>
+          <li><b>Egyptian Mummies</b> (Rooms 62&ndash;63): The best mummy collection outside Egypt. The rooms are large and the preservation is remarkable.</li>
+          <li><b>Elgin Marbles / Parthenon sculptures</b> (Room 18): Half of the surviving marble sculptures from the Parthenon in Athens. Large, beautiful, and the subject of ongoing political controversy. Worth seeing regardless of where you stand on the debate.</li>
+          <li><b>Sutton Hoo Helmet</b> (Room 41): A 7th-century Anglo-Saxon iron helmet. The original is here; the replica is in every history textbook. More imposing in person.</li>
+        </ul>
+        <div class="tip-box"><strong>Strategy:</strong> Pick three rooms maximum and spend 30&ndash;40 minutes in each. The ground floor Egyptian and Greek collections are unmissable. Upper floors have the clocks, coins, and Japanese collection if time allows.</div>
+      </div>
+      <div class="map-area">
+        <iframe src="https://maps.google.com/maps?q=British+Museum+Great+Russell+Street+London&output=embed" loading="lazy" title="British Museum map"></iframe>
+        <a class="map-open-link" href="https://www.google.com/maps/search/?api=1&query=British+Museum+London+WC1B+3DG" target="_blank">Open in Google Maps &#8599;</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="transport-between">
+    <div class="transport-between-icon">&#128666;</div>
+    <div class="transport-between-text">
+      <strong>British Museum &#8594; Borough Market</strong>
+      <span>Central Line from Holborn &#8594; Bank (2 stops, 5 min), then Northern Line &#8594; London Bridge (1 stop, 2 min). Walk south from London Bridge station: 5 min to the market entrance. Total: ~20 min door to door.</span>
+    </div>
+    <span class="transport-badge">20 min</span>
+  </div>
+
+  <div class="slot-label">Lunch &mdash; make this the meal of the day</div>
+
+  <div class="activity-card">
+    <div class="activity-card-body">
+      <div class="activity-info">
+        <div class="activity-type">&#127826;&nbsp; Food market</div>
+        <div class="activity-name">Borough Market</div>
+        <div class="activity-address">&#128205;&nbsp; 8 Southwark Street, London SE1 1TL &nbsp;&middot;&nbsp; London Bridge station (Jubilee/Northern), 5-min walk</div>
+        <div class="practical-row">
+          <span class="prac-item">&#128336;&nbsp; Tuesday: 10am&ndash;5pm (less busy than Thu&ndash;Sat but fully open)</span>
+          <span class="prac-item"><span class="pric-free">Free</span>&nbsp; to enter</span>
+          <span class="prac-item">&#9201;&nbsp; Allow 1&ndash;1.5hrs</span>
+        </div>
+        <p class="activity-desc">One of the oldest and best food markets in Europe. Come hungry. Tuesday is quieter than the weekend &mdash; you can actually stop and look at things. This is the meal of the day; do not eat a big lunch beforehand.</p>
+        <ul class="highlights">
+          <li><b>Kappacasein:</b> The cheese toastie or raclette stall. One of the most famous market stalls in London. The queue is part of the experience.</li>
+          <li><b>Monmouth Coffee:</b> The roastery is here. Queue for a cup and a pastry first thing &mdash; this is the best coffee in London.</li>
+          <li><b>Padella pasta</b> (6 Southwark St, just outside the market): Handmade pasta, very cheap, very good. Doors open at noon &mdash; queue outside beforehand.</li>
+          <li><b>Neal&rsquo;s Yard Dairy:</b> An entire shop dedicated to British farmhouse cheese. No obligation to buy &mdash; they offer tastes freely.</li>
+          <li><b>Bar Tozino:</b> Spanish charcuterie stall with outdoor seating. Iberico ham, manchego, good bread.</li>
+        </ul>
+        <div class="tip-box"><strong>Navigation:</strong> The market has two main sections &mdash; the covered Green Market (produce stalls) and the outdoor area under the railway arches along Stoney Street. Both are open Tuesdays. Enter from Borough High Street or Southwark Street.</div>
+      </div>
+      <div class="map-area">
+        <iframe src="https://maps.google.com/maps?q=Borough+Market+London+SE1+1TL&output=embed" loading="lazy" title="Borough Market map"></iframe>
+        <a class="map-open-link" href="https://www.google.com/maps/search/?api=1&query=Borough+Market+London+SE1" target="_blank">Open in Google Maps &#8599;</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="slot-label">Afternoon</div>
+
+  <div class="activity-card">
+    <div class="activity-card-body">
+      <div class="activity-info">
+        <div class="activity-type">&#127912;&nbsp; Free art museum</div>
+        <div class="activity-name">Tate Modern (inside)</div>
+        <div class="activity-address">&#128205;&nbsp; Bankside, London SE1 9TG &nbsp;&middot;&nbsp; 8-min walk west from Borough Market along the river</div>
+        <div class="practical-row">
+          <span class="prac-item"><span class="pric-free">Free</span>&nbsp; (permanent collection)</span>
+          <span class="prac-item">&#128336;&nbsp; Open until 6pm on Tuesday</span>
+          <span class="prac-item">&#9201;&nbsp; 1&ndash;1.5hrs</span>
+        </div>
+        <p class="activity-desc">The permanent modern art collection is free. The Turbine Hall on the ground floor often has a major commissioned installation. Take the lift to the top floor viewing terrace for free views over the Thames and the City.</p>
+        <ul class="highlights">
+          <li><b>Turbine Hall:</b> The vast former power station hall is used for large-scale art installations. Check what is showing &mdash; it changes each autumn.</li>
+          <li><b>Viewing terrace (Level 10):</b> Free. 360&deg; views: St Paul&rsquo;s Cathedral, the City skyscrapers, the Millennium Bridge, the Thames. One of the best free views in London.</li>
+          <li><b>South Tank galleries:</b> Usually have the most striking pieces from the permanent collection. Go here first.</li>
+        </ul>
+      </div>
+      <div class="map-area">
+        <iframe src="https://maps.google.com/maps?q=Tate+Modern+Bankside+London&output=embed" loading="lazy" title="Tate Modern map"></iframe>
+        <a class="map-open-link" href="https://www.google.com/maps/search/?api=1&query=Tate+Modern+London" target="_blank">Open in Google Maps &#8599;</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="activity-card">
+    <div class="activity-card-body">
+      <div class="activity-info">
+        <div class="activity-type">&#127963;&nbsp; Landmark</div>
+        <div class="activity-name">Shakespeare&rsquo;s Globe Theatre</div>
+        <div class="activity-address">&#128205;&nbsp; 21 New Globe Walk, London SE1 9DT &nbsp;&middot;&nbsp; 3-min walk east of Tate Modern</div>
+        <div class="practical-row">
+          <span class="prac-item"><span class="pric-free">Free</span>&nbsp; to walk past; Exhibition: ~&pound;25pp</span>
+          <span class="prac-item">&#9201;&nbsp; 15 min exterior, 1.5hrs with exhibition</span>
+        </div>
+        <p class="activity-desc">A faithful reconstruction of the original 1599 open-air theatre where Shakespeare&rsquo;s plays were first performed. The exterior is worth seeing even if you do not go in.</p>
+        <ul class="highlights">
+          <li><b>Exhibition &amp; tour</b> (paid, ~&pound;25pp): Goes through the history of the Globe and allows access to the theatre itself. Worth it if Shakespeare or theatre is of interest.</li>
+          <li><b>Performances:</b> The season runs April&ndash;October &mdash; Sep 9 falls in the season. Groundling tickets (standing in the yard) are &pound;5 and one of the great cheap experiences in London. Check shakespearesglobe.com.</li>
+        </ul>
+      </div>
+      <div class="map-area">
+        <iframe src="https://maps.google.com/maps?q=Shakespeare+Globe+Theatre+London+SE1&output=embed" loading="lazy" title="Shakespeare's Globe map"></iframe>
+        <a class="map-open-link" href="https://www.google.com/maps/search/?api=1&query=Shakespeare+Globe+Theatre+London" target="_blank">Open in Google Maps &#8599;</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="slot-label">Evening</div>
+  <div class="dinner-card">
+    <div class="dinner-title">&#127374;&nbsp; Dinner options &mdash; near hotel</div>
+    <div class="dinner-options">
+      <div class="dinner-opt"><b>Padella</b> &mdash; 6 Southwark St, SE1. If you did not eat here at lunch, go tonight. Handmade pasta, very reasonable prices, always a queue but moves fast. Pici cacio e pepe is the one to order.</div>
+      <div class="dinner-opt"><b>Jose Tapas Bar</b> &mdash; 104 Bermondsey St, SE1. A tiny Spanish tapas bar that is one of the best in London. No reservations &mdash; early evening to get a spot. The ham croquetas are famous.</div>
+      <div class="dinner-opt"><b>Arabica Bar &amp; Kitchen</b> &mdash; Borough Market, SE1. Middle Eastern food in a beautiful space. Slightly pricier but very good for a proper dinner.</div>
+    </div>
+  </div>
+
+</section><!-- end day 4 -->
+
+<!-- ═══════════════════════════════ DAY 5 ═══════════════════════════════ -->
+<section class="day-section" id="day5">
+  <div class="day-section-header">
+    <span class="day-number">Day 5</span>
+    <div class="day-title-block">
+      <div class="day-title">Windsor Castle Day Trip</div>
+      <div class="day-date">Wednesday, 10 September 2025 &nbsp;&middot;&nbsp; Last day in London</div>
+    </div>
+  </div>
+
+  <div class="slot-label">Getting to Windsor</div>
+
+  <div class="transport-between">
+    <div class="transport-between-icon">&#128666;</div>
+    <div class="transport-between-text">
+      <strong>Hotel &#8594; Windsor &amp; Eton Riverside station</strong>
+      <span><strong>Simplest route (recommended):</strong> Walk to Southwark station (10 min) &#8594; Jubilee Line to Waterloo (2 min) &#8594; <strong>South Western Railway</strong> from Waterloo to Windsor &amp; Eton Riverside (direct, no changes, ~55 min). Return tickets: ~&pound;15pp. Trains run every 30 min. Aim to leave by 9:30am for a 10am arrival.</span>
+    </div>
+    <span class="transport-badge">~70 min total</span>
+  </div>
+
+  <div class="tip-box" style="margin-bottom:.75rem;padding:.75rem 1rem;background:var(--amber-bg);border:1px solid var(--amber-bd);border-radius:var(--radius);font-size:12.5px;color:var(--ink2);line-height:1.6;">
+    <strong>Booking Windsor Castle:</strong> Tickets must be pre-booked online at <strong>rct.uk/windsor-castle</strong>. Select a timed entry &mdash; the 10am slot is the best (quietest). Ticket price: <strong>~&pound;28pp</strong>. The ticket is valid for the full day so you can leave and come back in.
+  </div>
+
+  <div class="slot-label">Morning</div>
+
+  <div class="activity-card">
+    <div class="activity-card-body">
+      <div class="activity-info">
+        <div class="activity-type">&#127963;&nbsp; Royal castle &mdash; pre-book required</div>
+        <div class="activity-name">Windsor Castle</div>
+        <div class="activity-address">&#128205;&nbsp; Windsor, SL4 1NJ &nbsp;&middot;&nbsp; 5-min walk uphill from Windsor &amp; Eton Riverside station</div>
+        <div class="practical-row">
+          <span class="prac-item">&#128178;&nbsp; ~&pound;28pp &nbsp;|&nbsp; Book: rct.uk/windsor-castle</span>
+          <span class="prac-item">&#128336;&nbsp; 10am&ndash;5:15pm (last entry 4pm)</span>
+          <span class="prac-item">&#9201;&nbsp; Allow 2.5&ndash;3hrs</span>
+        </div>
+        <p class="activity-desc">The oldest and largest occupied castle in the world. Has been a royal residence for over 900 years. There is significantly more to see here than most people expect.</p>
+        <ul class="highlights">
+          <li><b>St George&rsquo;s Chapel:</b> One of the finest examples of Perpendicular Gothic architecture in England. Ten monarchs are buried here including Henry VIII and Prince Philip. The fan-vaulted ceiling is extraordinary.</li>
+          <li><b>State Apartments:</b> A sequence of lavishly decorated rooms used for royal ceremonies. The Queen&rsquo;s Ballroom, the King&rsquo;s Dining Room, and the Grand Reception Room.</li>
+          <li><b>Queen Mary&rsquo;s Dolls&rsquo; House:</b> A 1:12 scale replica of a palace, built in 1924. Every detail functions &mdash; the lifts, the plumbing, the tiny books written by real authors. Sounds trivial; it is genuinely remarkable.</li>
+          <li><b>The Round Tower:</b> The original Norman motte. Views over the Great Park from the top (if open).</li>
+        </ul>
+        <div class="tip-box"><strong>Practical:</strong> Large bags must be checked in &mdash; there are free lockers. No photography inside the State Apartments. The audioguide is included in the ticket price and genuinely good &mdash; use it.</div>
+      </div>
+      <div class="map-area">
+        <iframe src="https://maps.google.com/maps?q=Windsor+Castle+Windsor+SL4+1NJ&output=embed" loading="lazy" title="Windsor Castle map"></iframe>
+        <a class="map-open-link" href="https://www.google.com/maps/search/?api=1&query=Windsor+Castle+Windsor" target="_blank">Open in Google Maps &#8599;</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="slot-label">Lunch</div>
+  <div class="dinner-card">
+    <div class="dinner-title">&#127829;&nbsp; Lunch in Windsor town</div>
+    <div class="dinner-options">
+      <div class="dinner-opt"><b>The Crooked House of Windsor</b> &mdash; 51 High St, Windsor SL4 1LP. A 16th-century building that visibly leans. Good for a coffee and a light lunch &mdash; more novelty than cuisine but the atmosphere is fun.</div>
+      <div class="dinner-opt"><b>The Duchess of Cambridge</b> &mdash; 11 Thames St, Windsor. A well-reviewed pub on the high street with standard pub food done well. Good for a lunch stop between castle and the Long Walk.</div>
+      <div class="dinner-opt"><b>Bel and the Dragon</b> &mdash; Thames St, Windsor. A more upmarket option for a proper sit-down lunch. Reliable quality.</div>
+    </div>
+  </div>
+
+  <div class="slot-label">Afternoon</div>
+
+  <div class="activity-card">
+    <div class="activity-card-body">
+      <div class="activity-info">
+        <div class="activity-type">&#127807;&nbsp; Royal park &mdash; free</div>
+        <div class="activity-name">The Long Walk &amp; Windsor Great Park</div>
+        <div class="activity-address">&#128205;&nbsp; The Long Walk, Windsor SL4 1NJ &nbsp;&middot;&nbsp; Enter through King George IV Gate on the south side of the castle</div>
+        <div class="practical-row">
+          <span class="prac-item"><span class="pric-free">Free</span></span>
+          <span class="prac-item">&#128336;&nbsp; Open daily, dawn to dusk</span>
+          <span class="prac-item">&#9201;&nbsp; 20&ndash;30 min (partial) or 1.5hrs (to the Copper Horse)</span>
+        </div>
+        <p class="activity-desc">A dead-straight, tree-lined avenue running 2.65 miles from the castle south gate to the Copper Horse statue of George III at the top of Snow Hill. You do not need to walk the whole thing &mdash; even walking 15&ndash;20 minutes along it gives a sense of the extraordinary scale.</p>
+        <ul class="highlights">
+          <li><b>View back to the castle:</b> Turn around 10 minutes in and look back &mdash; the castle on its hill with the Long Walk stretching toward it is one of the most photographed views in England.</li>
+          <li><b>Copper Horse statue:</b> At the far end &mdash; a large equestrian statue of George III with the best possible view back down to the castle. The full walk there and back is 5.3 miles and takes about 2hrs at a comfortable pace.</li>
+          <li><b>Frogmore House &amp; Gardens:</b> Open on certain days in September &mdash; a royal garden on the eastern edge of the park. Check separately if interested.</li>
+        </ul>
+      </div>
+      <div class="map-area">
+        <iframe src="https://maps.google.com/maps?q=The+Long+Walk+Windsor+Great+Park&output=embed" loading="lazy" title="Long Walk Windsor map"></iframe>
+        <a class="map-open-link" href="https://www.google.com/maps/search/?api=1&query=The+Long+Walk+Windsor+Great+Park" target="_blank">Open in Google Maps &#8599;</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="transport-between">
+    <div class="transport-between-icon">&#128666;</div>
+    <div class="transport-between-text">
+      <strong>Windsor &#8594; Hotel (London)</strong>
+      <span>Train from Windsor &amp; Eton Riverside &#8594; Waterloo (direct, ~55 min). Then Jubilee Line from Waterloo &#8594; Southwark (2 min). Walk 10 min to hotel. Allow 1hr 20min total. Aim to be back by 6&ndash;7pm.</span>
+    </div>
+    <span class="transport-badge">~80 min</span>
+  </div>
+
+  <div class="slot-label">Evening &mdash; final night in London</div>
+  <div class="dinner-card">
+    <div class="dinner-title">&#127374;&nbsp; Dinner options &mdash; make tonight count</div>
+    <div class="dinner-options">
+      <div class="dinner-opt"><b>Padella</b> &mdash; 6 Southwark St, SE1 (near hotel). If you have not been yet, tonight is the night. A last proper London dinner.</div>
+      <div class="dinner-opt"><b>Roast</b> &mdash; The Floral Hall, Borough Market, SE1. A restaurant above Borough Market specialising in British roasts and seasonal produce. Book in advance. A proper send-off meal.</div>
+      <div class="dinner-opt"><b>Keep it simple:</b> Borough Market area has good options for a relaxed final evening. You have a train to York to catch in the morning &mdash; pack bags tonight.</div>
+    </div>
+  </div>
+
+  <div class="tip-box" style="margin-top:1.25rem;padding:1rem 1.25rem;background:var(--amber-bg);border:1px solid var(--amber-bd);border-radius:var(--radius);font-size:13px;color:var(--ink2);line-height:1.75;">
+    <strong>Tomorrow (Thu 11 Sep):</strong> Check out of the hotel by noon. Train from <strong>Kings Cross</strong> to York &mdash; allow 40 min to get to Kings Cross from the hotel (Jubilee Line from Southwark &rarr; change at Waterloo &rarr; Northern Line to Kings Cross, or simply take a taxi). The LNER journey is ~2hrs. Pack tonight.
+  </div>
+
+</section><!-- end day 5 -->
+
+</main>
+
+<!-- FOOTER -->
+<div class="page-footer">
+  <span class="footer-brand">London &nbsp;&middot;&nbsp; Days 1&ndash;5 &nbsp;&middot;&nbsp; 6&ndash;10 Sep</span>
+  <a href="york.html" class="next-city-link">Next: York &#8594;</a>
+</div>
+
+<script>
+  // Highlight active day in nav on scroll
+  const sections = document.querySelectorAll('.day-section');
+  const navLinks = document.querySelectorAll('.day-nav a');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        navLinks.forEach(l => l.classList.remove('active'));
+        const active = document.querySelector(`.day-nav a[href="#${e.target.id}"]`);
+        if (active) active.classList.add('active');
+      }
+    });
+  }, { rootMargin: '-40% 0px -55% 0px' });
+  sections.forEach(s => observer.observe(s));
+</script>
+
+</body>
+</html>
