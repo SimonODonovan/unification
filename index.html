@@ -119,6 +119,16 @@
     .hero-stats{gap:1.5rem;}
     .d-dow{display:none;}
   }
+
+  /* CITY GUIDE NAV */
+  .cg-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(175px,1fr));gap:1px;background:var(--border);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;margin-bottom:2.5rem;}
+  .cg-card{background:var(--surface);padding:1rem 1.1rem;text-decoration:none;display:flex;align-items:center;gap:.75rem;transition:background .15s;}
+  .cg-card:hover{background:var(--surface2);}
+  .cg-dot{width:10px;height:10px;border-radius:50%;flex-shrink:0;}
+  .cg-info{flex:1;min-width:0;}
+  .cg-name{font-family:'Playfair Display',serif;font-size:1.05rem;color:var(--ink);line-height:1.2;}
+  .cg-meta{font-size:10px;color:var(--ink3);margin-top:2px;font-weight:500;}
+  .cg-arrow{font-size:13px;color:var(--ink3);font-weight:300;}
 </style>
 </head>
 <body>
@@ -161,6 +171,30 @@
     <div class="sb"><div class="sb-n">3</div><div class="sb-l">Train legs</div></div>
   </div>
 
+  <p class="section-title">Day-by-day city guides</p>
+  <div class="cg-grid">
+    <a href="london.html" class="cg-card">
+      <div class="cg-dot" style="background:#2a4e8a"></div>
+      <div class="cg-info"><div class="cg-name">London</div><div class="cg-meta">Days 1&ndash;5 &nbsp;&middot;&nbsp; 6&ndash;10 Sep &nbsp;&middot;&nbsp; 5 nights</div></div>
+      <span class="cg-arrow">&#8594;</span>
+    </a>
+    <a href="york.html" class="cg-card">
+      <div class="cg-dot" style="background:#7a5a2a"></div>
+      <div class="cg-info"><div class="cg-name">York</div><div class="cg-meta">Days 6&ndash;7 &nbsp;&middot;&nbsp; 11&ndash;12 Sep &nbsp;&middot;&nbsp; 2 nights</div></div>
+      <span class="cg-arrow">&#8594;</span>
+    </a>
+    <a href="edinburgh.html" class="cg-card">
+      <div class="cg-dot" style="background:#2a6e4a"></div>
+      <div class="cg-info"><div class="cg-name">Edinburgh</div><div class="cg-meta">Days 8&ndash;11 &nbsp;&middot;&nbsp; 13&ndash;16 Sep &nbsp;&middot;&nbsp; 4 nights</div></div>
+      <span class="cg-arrow">&#8594;</span>
+    </a>
+    <a href="belfast.html" class="cg-card">
+      <div class="cg-dot" style="background:#b5762a"></div>
+      <div class="cg-info"><div class="cg-name">Belfast</div><div class="cg-meta">Days 12&ndash;14 &nbsp;&middot;&nbsp; 17&ndash;19 Sep &nbsp;&middot;&nbsp; 3 nights</div></div>
+      <span class="cg-arrow">&#8594;</span>
+    </a>
+  </div>
+
 
   <!-- ════════════════ LONDON ════════════════ -->
   <div class="city">
@@ -170,7 +204,6 @@
       <div class="c-info">
         <div class="c-name">London</div>
         <div class="c-sub">Stay: <b>Premier Inn London Southwark (Tate Modern)</b> &nbsp;&middot;&nbsp; Getting around: <b>Tube &amp; Elizabeth Line</b></div>
-        <a href="london.html" style="display:inline-block;margin-top:6px;font-size:11px;font-weight:600;color:#2a4e8a;text-decoration:none;letter-spacing:.04em;">View day-by-day guide &rarr;</a>
       </div>
       <div class="c-nights">5<small>Nights</small></div>
     </div>
@@ -282,7 +315,6 @@
       <div class="c-info">
         <div class="c-name">York</div>
         <div class="c-sub">Stay: <b>ibis York Centre</b> &nbsp;&middot;&nbsp; Getting around: <b>Walking &mdash; everything is within 20 minutes on foot</b></div>
-        <a href="york.html" style="display:inline-block;margin-top:6px;font-size:11px;font-weight:600;color:#7a5a2a;text-decoration:none;letter-spacing:.04em;">View day-by-day guide &rarr;</a>
       </div>
       <div class="c-nights">2<small>Nights</small></div>
     </div>
@@ -343,7 +375,6 @@
       <div class="c-info">
         <div class="c-name">Edinburgh</div>
         <div class="c-sub">Stay: <b>ibis Edinburgh Centre Royal Mile</b> &nbsp;&middot;&nbsp; Getting around: <b>Walking / Lothian Buses</b></div>
-        <a href="edinburgh.html" style="display:inline-block;margin-top:6px;font-size:11px;font-weight:600;color:#2a6e4a;text-decoration:none;letter-spacing:.04em;">View day-by-day guide &rarr;</a>
       </div>
       <div class="c-nights">4<small>Nights</small></div>
     </div>
@@ -439,7 +470,6 @@
       <div class="c-info">
         <div class="c-name">Belfast</div>
         <div class="c-sub">Stay: <b>Premier Inn Belfast City Centre</b> &nbsp;&middot;&nbsp; Getting around: <b>Walking / Simon&rsquo;s car for the Causeway day trip</b></div>
-        <a href="belfast.html" style="display:inline-block;margin-top:6px;font-size:11px;font-weight:600;color:#b5762a;text-decoration:none;letter-spacing:.04em;">View day-by-day guide &rarr;</a>
       </div>
       <div class="c-nights">3<small>Nights</small></div>
     </div>
@@ -547,9 +577,9 @@
   </div>
 
   <div class="notice">
-    <div class="notice-title">Visa note &mdash; UK Standard Visitor Visa</div>
+    <div class="notice-title">Visa note &mdash; UK Standard Visitor Visa &amp; Short Stay Visa Waiver Programme (SSVWP)</div>
     <div class="notice-text">
-      Jenifer will need a <strong>UK Standard Visitor Visa</strong> before travelling. This itinerary works as a key supporting document: it shows a clear route with exact dates (<strong>6&ndash;20 September 2025</strong>), named hotels, realistic travel connections, and a confirmed return flight on 20 September. The most important supporting documents alongside it are Jenifer&rsquo;s <strong>IBM employment letter</strong> (confirming role, salary, and approved leave) and 3 months of bank statements. Simon&rsquo;s invitation letter as the UK-based contact also strengthens the application. If the trip later extends into the Republic of Ireland, the <strong>British-Irish Visa Scheme (BIVS)</strong> means no separate Irish visa is needed &mdash; provided the UK was the first port of entry.
+      Jenifer will need a <strong>UK Standard Visitor Visa</strong> before travelling. This itinerary works as a key supporting document: it shows a clear route with exact dates (<strong>6&ndash;20 September 2025</strong>), named hotels, realistic travel connections, and a confirmed return flight on 20 September. The most important supporting documents are Jenifer&rsquo;s <strong>IBM employment letter</strong> (confirming role, salary, and approved leave), 3 months of bank statements, and Simon&rsquo;s invitation letter as the UK-based contact.<br><br>As a <strong>Philippine national</strong>, Jenifer qualifies for Ireland&rsquo;s <strong>Short Stay Visa Waiver Programme (SSVWP)</strong>. This means a valid UK Standard Visitor Visa also permits entry to the Republic of Ireland for up to 90 days &mdash; no separate Irish visa is required. The SSVWP is open to nationals of the Philippines (among other countries) and is distinct from the British-Irish Visa Scheme (BIVS), which applies only to Chinese and Indian nationals and does not apply here.
     </div>
   </div>
 
