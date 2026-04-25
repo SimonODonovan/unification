@@ -3,30 +3,24 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Belfast — Simon & Jenifer, September 2025</title>
+<title>Belfast &mdash; Simon &amp; Jenifer, September 2025</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
-  :root {
-    --bg:#f7f5f1;--surface:#fff;--surface2:#f0ede8;--border:#e2ddd6;
-    --ink:#1a1814;--ink2:#4a4640;--ink3:#8a857d;
-    --amber:#b5762a;--amber-bg:#fdf6ec;--amber-bd:#e8d0a0;
-    --green:#2a6e4a;--radius:10px;--city-color:#b5762a;
-  }
+  :root{--bg:#f7f5f1;--surface:#fff;--surface2:#f0ede8;--border:#e2ddd6;--ink:#1a1814;--ink2:#4a4640;--ink3:#8a857d;--amber:#b5762a;--amber-bg:#fdf6ec;--amber-bd:#e8d0a0;--green:#2a6e4a;--radius:10px;--city-color:#b5762a;}
   *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
   html{scroll-behavior:smooth;}
   body{background:var(--bg);color:var(--ink);font-family:'Inter',sans-serif;font-weight:400;line-height:1.65;}
   .back-nav{background:var(--surface);border-bottom:1px solid var(--border);padding:0 5vw;}
   .back-nav-inner{max-width:860px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:10px 0;}
-  .back-link{font-size:12px;font-weight:500;color:var(--ink3);text-decoration:none;display:flex;align-items:center;gap:6px;}
+  .back-link{font-size:12px;font-weight:500;color:var(--ink3);text-decoration:none;}
   .back-link:hover{color:var(--amber);}
   .trip-crumb{font-size:12px;color:var(--ink3);}
   .trip-crumb a{color:var(--ink3);text-decoration:none;}
   .trip-crumb a:hover{color:var(--amber);}
-  .trip-crumb strong{color:var(--ink2);}
   .hero{background:#1a1814;padding:3.5rem 5vw 3rem;position:relative;overflow:hidden;}
-  .hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 80% at 85% 40%,rgba(181,118,42,.2) 0%,transparent 60%);pointer-events:none;}
+  .hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 80% at 85% 40%,rgba(181,118,42,.22) 0%,transparent 60%);pointer-events:none;}
   .hero-inner{max-width:860px;margin:0 auto;position:relative;}
   .hero-label{font-size:11px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:#c9963a;margin-bottom:.75rem;}
   .hero-title{font-family:'Playfair Display',serif;font-size:clamp(2.2rem,6vw,4rem);font-weight:400;line-height:1.05;color:#f0ebe0;margin-bottom:.75rem;}
@@ -35,26 +29,80 @@
   .hs-l{font-size:10px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:#5a5248;display:block;margin-bottom:2px;}
   .hs-v{font-family:'Playfair Display',serif;font-size:1.2rem;color:#f0ebe0;}
   .day-nav{background:var(--surface);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:50;overflow-x:auto;}
-  .day-nav-inner{max-width:860px;margin:0 auto;display:flex;align-items:center;padding:0 5vw;min-width:max-content;}
-  .day-nav a{display:block;padding:12px 16px;font-size:12px;font-weight:500;color:var(--ink3);text-decoration:none;white-space:nowrap;border-bottom:2px solid transparent;}
+  .day-nav-inner{max-width:860px;margin:0 auto;display:flex;padding:0 5vw;min-width:max-content;}
+  .day-nav a{display:block;padding:12px 16px;font-size:12px;font-weight:500;color:var(--ink3);text-decoration:none;white-space:nowrap;border-bottom:2px solid transparent;transition:all .2s;}
   .day-nav a:hover{color:var(--ink);}
+  .day-nav a.active{color:var(--city-color);border-bottom-color:var(--city-color);}
   .main{max-width:860px;margin:0 auto;padding:0 5vw 6rem;}
   .day-section{padding-top:3rem;}
   .day-section-header{display:flex;align-items:flex-start;gap:1rem;margin-bottom:1.75rem;padding-bottom:1.25rem;border-bottom:2px solid var(--city-color);}
-  .day-number{font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--city-color);background:rgba(0,0,0,.06);padding:3px 8px;border-radius:4px;white-space:nowrap;margin-top:4px;}
+  .day-number{font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--city-color);background:rgba(181,118,42,.08);padding:3px 8px;border-radius:4px;white-space:nowrap;margin-top:4px;}
   .day-title{font-family:'Playfair Display',serif;font-size:1.6rem;font-weight:400;color:var(--ink);line-height:1.1;}
   .day-date{font-size:12px;color:var(--ink3);margin-top:3px;font-weight:500;}
-  .stub-placeholder{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:2rem 1.75rem;text-align:center;}
-  .stub-placeholder p{font-size:14px;color:var(--ink3);margin-bottom:.5rem;}
-  .stub-placeholder strong{color:var(--ink2);}
-  .coming-badge{display:inline-block;font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;padding:4px 12px;border-radius:20px;background:var(--surface2);border:1px solid var(--border);color:var(--ink3);margin-bottom:1rem;}
-  .summary-pills{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:1rem;}
-  .spill{font-size:12px;padding:4px 12px;border-radius:20px;background:var(--amber-bg);border:1px solid var(--amber-bd);color:#8a5015;font-weight:500;}
+  .slot-label{font-size:10px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--amber);margin:1.5rem 0 .75rem;display:flex;align-items:center;gap:8px;}
+  .slot-label::after{content:'';flex:1;height:1px;background:var(--border);}
+  .activity-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;margin-bottom:.75rem;}
+  .activity-card-body{display:grid;grid-template-columns:1fr 300px;gap:0;}
+  .activity-info{padding:1.25rem 1.5rem;}
+  .activity-type{font-size:10px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--ink3);margin-bottom:.4rem;}
+  .activity-name{font-family:'Playfair Display',serif;font-size:1.25rem;font-weight:400;color:var(--ink);margin-bottom:.5rem;line-height:1.2;}
+  .activity-address{font-size:12px;color:var(--ink3);margin-bottom:.75rem;}
+  .practical-row{display:flex;gap:1rem;flex-wrap:wrap;margin-bottom:.75rem;}
+  .prac-item{font-size:11.5px;color:var(--ink2);display:flex;align-items:center;gap:4px;}
+  .pric-free{color:var(--green);font-weight:600;}
+  .activity-desc{font-size:13px;color:var(--ink2);line-height:1.7;margin-bottom:.75rem;}
+  .highlights{list-style:none;margin:0;padding:0;}
+  .highlights li{font-size:12.5px;color:var(--ink2);padding:3px 0 3px 16px;position:relative;line-height:1.5;}
+  .highlights li::before{content:"\2192";position:absolute;left:0;color:var(--amber);font-size:11px;}
+  .highlights li b{color:var(--ink);font-weight:500;}
+  .tip-box{background:var(--amber-bg);border:1px solid var(--amber-bd);border-radius:6px;padding:.6rem .85rem;margin-top:.75rem;font-size:12px;color:var(--ink2);line-height:1.6;}
+  .tip-box strong{color:var(--amber);font-weight:600;}
+  .map-area{position:relative;height:100%;min-height:240px;background:#eee;border-left:1px solid var(--border);}
+  .map-area iframe{display:block;width:100%;height:100%;min-height:240px;border:0;}
+  .map-open-link{display:block;padding:8px 12px;background:var(--surface2);border-top:1px solid var(--border);font-size:11px;font-weight:500;color:var(--city-color);text-decoration:none;text-align:center;}
+  .map-open-link:hover{background:var(--border);}
+  .transport-between{display:flex;align-items:center;gap:12px;padding:.8rem 1.25rem;background:var(--surface2);border:1px solid var(--border);border-radius:var(--radius);margin:.75rem 0;}
+  .transport-between-icon{width:32px;height:32px;background:var(--surface);border:1px solid var(--border);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.9rem;flex-shrink:0;}
+  .transport-between-text{flex:1;font-size:13px;color:var(--ink2);}
+  .transport-between-text strong{display:block;font-size:13px;font-weight:600;color:var(--ink);margin-bottom:2px;}
+  .transport-between-text span{font-size:12px;color:var(--ink3);}
+  .transport-badge{font-size:10.5px;font-weight:600;padding:2px 8px;border-radius:20px;background:rgba(181,118,42,.1);color:var(--city-color);white-space:nowrap;flex-shrink:0;}
+  .arrival-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;margin-bottom:.75rem;}
+  .arrival-card-header{padding:.85rem 1.25rem;border-bottom:1px solid var(--border);background:rgba(181,118,42,.04);}
+  .arrival-card-header h3{font-size:13px;font-weight:600;color:var(--ink);}
+  .arrival-rows{padding:.85rem 1.25rem;display:flex;flex-direction:column;gap:.75rem;}
+  .arrival-row{display:flex;gap:12px;align-items:flex-start;}
+  .arrival-row-icon{width:28px;height:28px;background:var(--surface2);border:1px solid var(--border);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.8rem;flex-shrink:0;margin-top:2px;}
+  .arrival-row-content{font-size:13px;color:var(--ink2);line-height:1.6;}
+  .arrival-row-content strong{color:var(--ink);font-weight:500;}
+  .arrival-row-content .step{display:block;padding:2px 0;}
+  .hotel-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;margin-bottom:.75rem;}
+  .hotel-card-body{display:grid;grid-template-columns:1fr 300px;gap:0;}
+  .hotel-info{padding:1.25rem 1.5rem;}
+  .hotel-badge{font-size:10px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--ink3);margin-bottom:.4rem;}
+  .hotel-name{font-family:'Playfair Display',serif;font-size:1.2rem;color:var(--ink);margin-bottom:.5rem;}
+  .hotel-address{font-size:12px;color:var(--ink3);margin-bottom:.75rem;}
+  .hotel-detail{font-size:13px;color:var(--ink2);line-height:1.7;list-style:none;}
+  .hotel-detail li{padding:2px 0 2px 14px;position:relative;}
+  .hotel-detail li::before{content:"\00B7";position:absolute;left:0;color:var(--amber);}
+  .dinner-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:1.1rem 1.5rem;margin-bottom:.75rem;}
+  .dinner-title{font-size:13px;font-weight:600;color:var(--ink);margin-bottom:.5rem;}
+  .dinner-options{display:flex;flex-direction:column;gap:6px;}
+  .dinner-opt{font-size:12.5px;color:var(--ink2);line-height:1.6;}
+  .dinner-opt b{color:var(--ink);font-weight:500;}
   .page-footer{border-top:1px solid var(--border);padding:1.75rem 5vw;max-width:860px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;}
   .footer-brand{font-family:'Playfair Display',serif;font-size:.9rem;color:var(--ink2);}
-  .next-city-link{font-size:13px;font-weight:500;color:var(--city-color);text-decoration:none;}
   .prev-city-link{font-size:13px;font-weight:500;color:var(--ink3);text-decoration:none;}
-  @media(max-width:700px){.back-nav,.hero,.main{padding-left:1.25rem;padding-right:1.25rem;}.back-nav-inner{padding-left:0;padding-right:0;}.page-footer{padding-left:1.25rem;padding-right:1.25rem;}}
+  .home-link{font-size:13px;font-weight:500;color:var(--city-color);text-decoration:none;}
+  @media(max-width:700px){
+    .activity-card-body,.hotel-card-body{grid-template-columns:1fr;}
+    .map-area{min-height:200px;border-left:none;border-top:1px solid var(--border);}
+    .map-area iframe{min-height:200px;}
+    .back-nav,.hero,.main{padding-left:1.25rem;padding-right:1.25rem;}
+    .back-nav-inner{padding-left:0;padding-right:0;}
+    .day-nav-inner{padding-left:1.25rem;}
+    .page-footer{padding-left:1.25rem;padding-right:1.25rem;}
+  }
 </style>
 </head>
 <body>
@@ -64,7 +112,9 @@
     <a href="index.html" class="back-link">&#8592; Full itinerary</a>
     <span class="trip-crumb">
       <a href="london.html">London</a> &nbsp;&middot;&nbsp;
-      <a href="york.html">York</a> &nbsp;&middot;&nbsp; <a href="edinburgh.html">Edinburgh</a> &nbsp;&middot;&nbsp; <a href="belfast.html"><strong>Belfast</strong></a>
+      <a href="york.html">York</a> &nbsp;&middot;&nbsp;
+      <a href="edinburgh.html">Edinburgh</a> &nbsp;&middot;&nbsp;
+      <strong>Belfast</strong>
     </span>
   </div>
 </div>
@@ -75,74 +125,425 @@
     <h1 class="hero-title">Belfast</h1>
     <p class="hero-meta">17&ndash;19 September 2025 &nbsp;&middot;&nbsp; 3 nights &nbsp;&middot;&nbsp; Premier Inn Belfast City Centre</p>
     <div class="hero-stats">
-      <div><span class="hs-l">Arrives</span><span class="hs-v">Wed 17 Sep</span></div>
-      <div><span class="hs-l">Moves on</span><span class="hs-v">Sat 20 Sep (depart BFS)</span></div>
-      <div><span class="hs-l">Getting around</span><span class="hs-v">Walking / Simon&rsquo;s car for day trips</span></div>
+      <div><span class="hs-l">Arrives from</span><span class="hs-v">Edinburgh (fly)</span></div>
+      <div><span class="hs-l">Departs</span><span class="hs-v">Sat 20 Sep</span></div>
+      <div><span class="hs-l">Getting around</span><span class="hs-v">Walk + Simon&rsquo;s car</span></div>
+      <div><span class="hs-l">Car park</span><span class="hs-v">BFS long-stay</span></div>
     </div>
   </div>
 </section>
 
 <div class="day-nav">
   <div class="day-nav-inner">
-    <a href="#day12">Day 12 &nbsp;&middot;&nbsp; 17 Sep</a>
-    <a href="#day13">Day 13 &nbsp;&middot;&nbsp; 18 Sep</a>
-    <a href="#day14">Day 14 &nbsp;&middot;&nbsp; 19 Sep</a>
+    <a href="#day12">Day 12 &nbsp;&middot;&nbsp; 17 Sep (Wed)</a>
+    <a href="#day13">Day 13 &nbsp;&middot;&nbsp; 18 Sep (Thu)</a>
+    <a href="#day14">Day 14 &nbsp;&middot;&nbsp; 19 Sep (Fri)</a>
   </div>
 </div>
 
 <main class="main">
 
-  <section class="day-section" id="day12">
-    <div class="day-section-header">
-      <span class="day-number">Day 12</span>
-      <div>
-        <div class="day-title">Arrive Belfast &mdash; Cathedral Quarter</div>
-        <div class="day-date">Wednesday, 17 Sep</div>
+<!-- ═══ DAY 12 ═══ -->
+<section class="day-section" id="day12">
+  <div class="day-section-header">
+    <span class="day-number">Day 12</span>
+    <div>
+      <div class="day-title">Arrive Belfast &mdash; Cathedral Quarter</div>
+      <div class="day-date">Wednesday, 17 September 2025</div>
+    </div>
+  </div>
+
+  <div class="slot-label">Arrival at Belfast International</div>
+
+  <div class="arrival-card">
+    <div class="arrival-card-header"><h3>&#9992;&#65039;&nbsp; Flying in from Edinburgh &mdash; collecting Simon&rsquo;s car</h3></div>
+    <div class="arrival-rows">
+      <div class="arrival-row">
+        <div class="arrival-row-icon">&#9992;&#65039;</div>
+        <div class="arrival-row-content">
+          <strong>Edinburgh (EDI) &#8594; Belfast International (BFS)</strong>
+          <span class="step">Flight time: ~1hr. Loganair or easyJet. Arrive Belfast International Airport (BFS), not Belfast City Airport &mdash; these are different airports.</span>
+          <span class="step">At arrivals: Simon goes straight to the <strong>BFS long-stay car park</strong> to collect the car (it has been there since Day 1 of the trip). The long-stay car park is connected to the terminal by a short shuttle bus or a 5-min walk. Follow signs for &ldquo;Long Stay Parking&rdquo; or ask at the information desk.</span>
+        </div>
+      </div>
+      <div class="arrival-row">
+        <div class="arrival-row-icon">&#128663;</div>
+        <div class="arrival-row-content">
+          <strong>BFS Airport &#8594; Premier Inn Belfast City Centre</strong>
+          <span class="step">Drive: Follow signs for Belfast City Centre (M2 motorway south). About <strong>25&ndash;30 min</strong> from the airport to the hotel depending on traffic. The hotel is on Waring Street in the Cathedral Quarter &mdash; postcode BT1 2DX for satnav.</span>
+          <span class="step">Parking: The hotel does not have its own car park. The nearest public car park is <strong>Queen Street NCP</strong> (15-min walk from hotel, ~&pound;8&ndash;12/day). Alternatively, the <strong>Laganside Courts car park</strong> on Oxford Street is closer. On-street parking is limited in the city centre.</span>
+        </div>
       </div>
     </div>
-    <div class="stub-placeholder">
-      <div class="coming-badge">&#9997;&#65039; Detailed guide coming soon</div>
-      <p><strong>What&rsquo;s planned for this day:</strong></p>
-      <div class="summary-pills"><span class="spill">Fly from Edinburgh</span><span class="spill">Simon collects car from BFS long-stay</span><span class="spill">Cathedral Quarter walk</span><span class="spill">St Anne&rsquo;s Cathedral (free)</span></div>
-    </div>
-  </section>
-  <section class="day-section" id="day13">
-    <div class="day-section-header">
-      <span class="day-number">Day 13</span>
-      <div>
-        <div class="day-title">Giant&rsquo;s Causeway Day Trip</div>
-        <div class="day-date">Thursday, 18 Sep</div>
+  </div>
+
+  <div class="hotel-card">
+    <div class="hotel-card-body">
+      <div class="hotel-info">
+        <div class="hotel-badge">&#127968;&nbsp; Base for nights 12&ndash;14</div>
+        <div class="hotel-name">Premier Inn Belfast City Centre</div>
+        <div class="hotel-address">&#128205;&nbsp; Waring Street, Belfast BT1 2DX &nbsp;&middot;&nbsp; Cathedral Quarter</div>
+        <ul class="hotel-detail">
+          <li>Check-in from <strong>3pm</strong> &nbsp;|&nbsp; Check-out by <strong>noon</strong> on 20 Sep</li>
+          <li>Waring Street is in the Cathedral Quarter, a 2-min walk from St Anne&rsquo;s Cathedral</li>
+          <li>Walking distance to all city sights: Titanic Quarter is a 15-min walk or 5-min drive</li>
+          <li>St George&rsquo;s Market is a 10-min walk south along Oxford Street</li>
+        </ul>
+      </div>
+      <div class="map-area">
+        <iframe src="https://maps.google.com/maps?q=Premier+Inn+Belfast+City+Centre+Waring+Street+BT1&output=embed" loading="lazy" title="Premier Inn Belfast"></iframe>
+        <a class="map-open-link" href="https://www.google.com/maps/search/?api=1&query=Premier+Inn+Belfast+City+Centre+Waring+Street+BT1" target="_blank">Open in Google Maps &#8599;</a>
       </div>
     </div>
-    <div class="stub-placeholder">
-      <div class="coming-badge">&#9997;&#65039; Detailed guide coming soon</div>
-      <p><strong>What&rsquo;s planned for this day:</strong></p>
-      <div class="summary-pills"><span class="spill">Drive north on A2 coastal road</span><span class="spill">Giant&rsquo;s Causeway (pre-book)</span><span class="spill">Coastal path walk</span><span class="spill">Ballintoy Harbour lunch</span><span class="spill">Causeway Coastal Route return</span></div>
-    </div>
-  </section>
-  <section class="day-section" id="day14">
-    <div class="day-section-header">
-      <span class="day-number">Day 14</span>
-      <div>
-        <div class="day-title">St George&rsquo;s Market, Titanic &amp; Murals</div>
-        <div class="day-date">Friday, 19 Sep</div>
+  </div>
+
+  <div class="slot-label">Afternoon</div>
+
+  <div class="activity-card">
+    <div class="activity-card-body">
+      <div class="activity-info">
+        <div class="activity-type">&#127981;&nbsp; Historic quarter &mdash; free to explore</div>
+        <div class="activity-name">Cathedral Quarter</div>
+        <div class="activity-address">&#128205;&nbsp; Cathedral Quarter, Belfast BT1 &nbsp;&middot;&nbsp; Hotel front door</div>
+        <div class="practical-row">
+          <span class="prac-item"><span class="pric-free">Free</span></span>
+          <span class="prac-item">&#9201;&nbsp; 45&ndash;60 min walk</span>
+        </div>
+        <p class="activity-desc">The oldest surviving part of Belfast, centred on St Anne&rsquo;s Cathedral. The narrow entries (Belfast&rsquo;s historic alleyways) off Donegall Street and High Street are worth exploring. Very different character to anything seen on the trip so far.</p>
+        <ul class="highlights">
+          <li><b>The entries:</b> Belfast&rsquo;s equivalent of Edinburgh&rsquo;s closes &mdash; narrow alleyways cutting between streets. Crown Entry, Pottinger&rsquo;s Entry, and Joy&rsquo;s Entry off High Street are the most atmospheric.</li>
+          <li><b>Commercial Court:</b> A cobbled square lined with murals and independent bars. One of the most photographed spots in Belfast &mdash; the paving and painted walls are distinctive.</li>
+          <li><b>Writer&rsquo;s Square:</b> A modern public square in the Cathedral Quarter with benches and a good view of St Anne&rsquo;s facade.</li>
+          <li><b>Hill Street and Exchange Street:</b> The Cathedral Quarter&rsquo;s main restaurant streets. Good for gauging options for dinner tonight and tomorrow.</li>
+        </ul>
+      </div>
+      <div class="map-area">
+        <iframe src="https://maps.google.com/maps?q=Cathedral+Quarter+Belfast+BT1&output=embed" loading="lazy" title="Cathedral Quarter Belfast"></iframe>
+        <a class="map-open-link" href="https://www.google.com/maps/search/?api=1&query=Cathedral+Quarter+Belfast" target="_blank">Open in Google Maps &#8599;</a>
       </div>
     </div>
-    <div class="stub-placeholder">
-      <div class="coming-badge">&#9997;&#65039; Detailed guide coming soon</div>
-      <p><strong>What&rsquo;s planned for this day:</strong></p>
-      <div class="summary-pills"><span class="spill">St George&rsquo;s Market 8am (pre-book Titanic)</span><span class="spill">Titanic Belfast 10am slot</span><span class="spill">Black taxi murals tour (pre-book)</span><span class="spill">Farewell dinner</span></div>
+  </div>
+
+  <div class="activity-card">
+    <div class="activity-card-body">
+      <div class="activity-info">
+        <div class="activity-type">&#9962;&nbsp; Cathedral &mdash; free</div>
+        <div class="activity-name">St Anne&rsquo;s Cathedral (Belfast Cathedral)</div>
+        <div class="activity-address">&#128205;&nbsp; Donegall Street, Belfast BT1 2HB &nbsp;&middot;&nbsp; 2-min walk from hotel</div>
+        <div class="practical-row">
+          <span class="prac-item"><span class="pric-free">Free</span>&nbsp; entry</span>
+          <span class="prac-item">&#128336;&nbsp; Mon&ndash;Sat 9am&ndash;5pm, Sun 1pm&ndash;3pm</span>
+          <span class="prac-item">&#9201;&nbsp; 20&ndash;30 min</span>
+        </div>
+        <p class="activity-desc">A Church of Ireland cathedral built in 1899, with a striking interior quite unlike the Gothic cathedrals seen in York and Edinburgh. The mosaic ceiling in the nave is the main draw.</p>
+        <ul class="highlights">
+          <li><b>The nave mosaic ceiling:</b> A vast ceiling mosaic covering the entire nave vault &mdash; gold, blue, and green tessera in an abstract early-Christian style. More Byzantine than Gothic; very striking.</li>
+          <li><b>The Spire of Hope:</b> A 40-metre stainless steel spire added in 2007 &mdash; visible from across the quarter and particularly dramatic at dusk.</li>
+          <li><b>Lord Carson&rsquo;s tomb:</b> Edward Carson, the barrister who prosecuted Oscar Wilde and who founded modern Ulster unionism, is buried in the south transept.</li>
+        </ul>
+      </div>
+      <div class="map-area">
+        <iframe src="https://maps.google.com/maps?q=St+Annes+Cathedral+Donegall+Street+Belfast+BT1+2HB&output=embed" loading="lazy" title="St Anne's Cathedral Belfast"></iframe>
+        <a class="map-open-link" href="https://www.google.com/maps/search/?api=1&query=St+Annes+Cathedral+Belfast+BT1" target="_blank">Open in Google Maps &#8599;</a>
+      </div>
     </div>
-  </section>
+  </div>
+
+  <div class="slot-label">Evening</div>
+  <div class="dinner-card">
+    <div class="dinner-title">&#127374;&nbsp; Dinner &mdash; Cathedral Quarter</div>
+    <div class="dinner-options">
+      <div class="dinner-opt"><b>The Muddlers Club</b> &mdash; Warehouse Lane, BT1 2DX. Hidden down an entry in the Cathedral Quarter. One of Belfast&rsquo;s best restaurants &mdash; Northern Irish produce, creative cooking. Book in advance.</div>
+      <div class="dinner-opt"><b>OX</b> &mdash; 1 Oxford Street, BT1 3LA. A Michelin-starred restaurant overlooking the River Lagan. Set menu, seasonal produce. The best restaurant in Belfast &mdash; book months ahead for weekend dates.</div>
+      <div class="dinner-opt"><b>Deanes at Queens</b> &mdash; 1 College Gardens, BT9 6BQ. Michael Deane&rsquo;s flagship restaurant in the university area (10-min taxi). Reliable fine dining at accessible prices.</div>
+    </div>
+  </div>
+
+</section>
+
+<!-- ═══ DAY 13 ═══ -->
+<section class="day-section" id="day13">
+  <div class="day-section-header">
+    <span class="day-number">Day 13</span>
+    <div>
+      <div class="day-title">Giant&rsquo;s Causeway Day Trip</div>
+      <div class="day-date">Thursday, 18 September 2025 &nbsp;&middot;&nbsp; Start by 9am</div>
+    </div>
+  </div>
+
+  <div class="slot-label">Drive north &mdash; depart by 9am</div>
+
+  <div class="transport-between">
+    <div class="transport-between-icon">&#128663;</div>
+    <div class="transport-between-text">
+      <strong>Belfast &#8594; Giant&rsquo;s Causeway via A2 Coastal Road</strong>
+      <span>Distance: ~60 miles &nbsp;&middot;&nbsp; Drive time: ~1hr 30min. Take the M2 north from Belfast, then follow signs for the A2 Antrim Coast Road through Larne, Carnlough, Cushendall and along the Causeway Coast. This is a scenic drive in its own right &mdash; the road hugs the Antrim coast with cliffs and sea views the whole way. Aim to arrive at the Causeway by 10:30am.</span>
+    </div>
+    <span class="transport-badge">~1hr 30min drive</span>
+  </div>
+
+  <div class="slot-label">Morning</div>
+
+  <div class="activity-card">
+    <div class="activity-card-body">
+      <div class="activity-info">
+        <div class="activity-type">&#127807;&nbsp; UNESCO World Heritage Site &mdash; pre-book entry</div>
+        <div class="activity-name">Giant&rsquo;s Causeway</div>
+        <div class="activity-address">&#128205;&nbsp; 44 Causeway Road, Bushmills BT57 8SU &nbsp;&middot;&nbsp; Near Bushmills village</div>
+        <div class="practical-row">
+          <span class="prac-item">&#128178;&nbsp; ~&pound;14pp &nbsp;|&nbsp; Book: nationaltrust.org.uk/giants-causeway</span>
+          <span class="prac-item">&#128336;&nbsp; 9am&ndash;6pm daily in September</span>
+          <span class="prac-item">&#9201;&nbsp; Allow 2&ndash;2.5hrs on site</span>
+        </div>
+        <p class="activity-desc">40,000 interlocking basalt columns formed by a volcanic eruption 60 million years ago, stepping from the cliff base down into the North Atlantic. A UNESCO World Heritage Site and one of the most spectacular natural landscapes in the British Isles. Nothing quite prepares you for the scale and strangeness of the columns up close.</p>
+        <ul class="highlights">
+          <li><b>The Grand Causeway:</b> The most accessible area &mdash; a wide platform of columns at sea level. Arrive early to have this space before the tour group coaches (which typically arrive from 11am onward).</li>
+          <li><b>The Honeycomb:</b> A section where the hexagonal columns are tightly packed and particularly regular. The geometry is extraordinary &mdash; it looks entirely artificial.</li>
+          <li><b>The Organ:</b> A section where the columns rise 12 metres high in a curved formation resembling organ pipes. Visible from the cliff-top path above.</li>
+          <li><b>The Coastal Path:</b> The path above the causeway gives a completely different perspective &mdash; looking down onto the columns and out to sea. Walk as far as the Chimney Stacks headland if time allows (30 min extra).</li>
+          <li><b>The Giant&rsquo;s Boot:</b> A single column worn into the shape of a giant&rsquo;s footprint. Your guide map shows the location &mdash; a good detail to look for among the hundreds of columns.</li>
+        </ul>
+        <div class="tip-box"><strong>Practical:</strong> The car park at the visitor centre is where you start. A shuttle bus runs from the visitor centre down to the causeway level (included in ticket). The walk down is 10&ndash;15 min &mdash; take the shuttle down and walk back up for a different perspective. Toilets are at the visitor centre only. The rocks are wet and slippery &mdash; wear shoes with grip.</div>
+      </div>
+      <div class="map-area">
+        <iframe src="https://maps.google.com/maps?q=Giants+Causeway+Bushmills+BT57+8SU&output=embed" loading="lazy" title="Giant's Causeway"></iframe>
+        <a class="map-open-link" href="https://www.google.com/maps/search/?api=1&query=Giants+Causeway+Northern+Ireland+BT57" target="_blank">Open in Google Maps &#8599;</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="slot-label">Lunch</div>
+
+  <div class="activity-card">
+    <div class="activity-card-body">
+      <div class="activity-info">
+        <div class="activity-type">&#127758;&nbsp; Scenic lunch stop &mdash; 5-min drive from Causeway</div>
+        <div class="activity-name">Ballintoy Harbour</div>
+        <div class="activity-address">&#128205;&nbsp; Ballintoy, BT54 6NA &nbsp;&middot;&nbsp; 5 miles east of the Giant&rsquo;s Causeway on the B15</div>
+        <div class="practical-row">
+          <span class="prac-item">&#9201;&nbsp; 30&ndash;45 min</span>
+        </div>
+        <p class="activity-desc">A tiny whitewashed harbour village a few miles east of the Causeway. Much quieter than the main visitor centre, with a small harbour caf&eacute; and dramatic cliff scenery. Used as a filming location for Game of Thrones (the Iron Islands).</p>
+        <ul class="highlights">
+          <li><b>Ballintoy Harbour Caf&eacute;:</b> A small seasonal caf&eacute; at the harbour serving chowder, sandwiches, and hot drinks. Exactly the right level of simple after a morning on the causeway.</li>
+          <li><b>The harbour itself:</b> A tiny protected bay with white-painted fishing boats and dark basalt cliffs rising behind. A good 15-min walk along the cliff path either direction.</li>
+          <li><b>Alternative &mdash; The Fullerton Arms, Ballintoy village:</b> A pub 1 mile inland from the harbour. Good lunch menu, warm and comfortable.</li>
+        </ul>
+      </div>
+      <div class="map-area">
+        <iframe src="https://maps.google.com/maps?q=Ballintoy+Harbour+BT54+6NA&output=embed" loading="lazy" title="Ballintoy Harbour"></iframe>
+        <a class="map-open-link" href="https://www.google.com/maps/search/?api=1&query=Ballintoy+Harbour+Northern+Ireland" target="_blank">Open in Google Maps &#8599;</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="slot-label">Afternoon &mdash; return via coastal route</div>
+
+  <div class="transport-between">
+    <div class="transport-between-icon">&#128663;</div>
+    <div class="transport-between-text">
+      <strong>Return: Ballintoy &#8594; Belfast via the Causeway Coastal Route</strong>
+      <span>Rather than returning on the motorway, follow the <strong>A2 Causeway Coastal Route</strong> south: through Ballycastle, along the Torr Head coast road (dramatic cliff road &mdash; narrow, allow more time), through Cushendun and Cushendall, through Carnlough and Larne, then the A8 back to Belfast. Distance: ~80 miles. Drive time: ~2hrs 30min&ndash;3hrs with stops. <strong>Or take the faster A26/M2 return: ~1hr 30min direct.</strong></span>
+    </div>
+    <span class="transport-badge">1.5&ndash;3hrs depending on route</span>
+  </div>
+
+  <div class="activity-card">
+    <div class="activity-card-body">
+      <div class="activity-info">
+        <div class="activity-type">&#128663;&nbsp; Scenic drive stop</div>
+        <div class="activity-name">Carrick-a-Rede Rope Bridge (optional)</div>
+        <div class="activity-address">&#128205;&nbsp; 119a Whitepark Road, Ballintoy BT54 6LS &nbsp;&middot;&nbsp; 1 mile east of Ballintoy Harbour</div>
+        <div class="practical-row">
+          <span class="prac-item">&#128178;&nbsp; ~&pound;10pp &nbsp;|&nbsp; Book: nationaltrust.org.uk/carrick-a-rede</span>
+          <span class="prac-item">&#128336;&nbsp; 9:30am&ndash;5:30pm in September</span>
+          <span class="prac-item">&#9201;&nbsp; 45&ndash;60 min</span>
+        </div>
+        <p class="activity-desc">A rope bridge spanning a 30-metre chasm between the mainland cliffs and a small island, 30 metres above the sea. Originally erected by salmon fishermen in the 18th century. Pre-book &mdash; daily numbers are strictly limited.</p>
+        <ul class="highlights">
+          <li><b>The crossing:</b> The bridge sways slightly as you cross. The drop to the sea below is vertiginous but the bridge is perfectly safe. Not recommended for anyone with significant fear of heights.</li>
+          <li><b>The island:</b> A small rocky island with a fisherman&rsquo;s cottage (now a visitor hut). The views back to the mainland cliffs from the island are the best part.</li>
+          <li><b>The cliff path:</b> A 1km walk each way from the car park through coastal grassland. The coastal scenery is impressive even before you reach the bridge.</li>
+        </ul>
+        <div class="tip-box"><strong>Note:</strong> Only do this if Carrick-a-Rede is of genuine interest and you have time. It adds 1&ndash;1.5hrs to the day. If the day is already feeling full after the Causeway and lunch, skip it and take the coastal drive back to Belfast instead.</div>
+      </div>
+      <div class="map-area">
+        <iframe src="https://maps.google.com/maps?q=Carrick-a-Rede+Rope+Bridge+BT54+6LS&output=embed" loading="lazy" title="Carrick-a-Rede"></iframe>
+        <a class="map-open-link" href="https://www.google.com/maps/search/?api=1&query=Carrick+a+Rede+Rope+Bridge+Northern+Ireland" target="_blank">Open in Google Maps &#8599;</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="slot-label">Evening &mdash; easy night in Belfast</div>
+  <div class="dinner-card">
+    <div class="dinner-title">&#127374;&nbsp; Dinner &mdash; relaxed after a full outdoor day</div>
+    <div class="dinner-options">
+      <div class="dinner-opt"><b>Home</b> &mdash; 22 Wellington Place, BT1 6GE. A relaxed, Irish produce-focused restaurant near the city centre. Good value, no fuss. Perfect for an easy dinner after a long day outside.</div>
+      <div class="dinner-opt"><b>Established Coffee</b> &mdash; 54 Hill Street, BT1 2LB. Better known as a coffee shop but serves a good evening menu. Very relaxed, Cathedral Quarter.</div>
+      <div class="dinner-opt"><b>Cathedral Quarter hotel bars:</b> The hotel area has several good casual restaurant-bar options on Donegall Street and Waring Street. Sometimes the best plan after a long day is somewhere very close to the hotel.</div>
+    </div>
+  </div>
+
+</section>
+
+<!-- ═══ DAY 14 ═══ -->
+<section class="day-section" id="day14">
+  <div class="day-section-header">
+    <span class="day-number">Day 14</span>
+    <div>
+      <div class="day-title">St George&rsquo;s Market, Titanic Belfast &amp; The Murals</div>
+      <div class="day-date">Friday, 19 September 2025 &nbsp;&middot;&nbsp; Final full day</div>
+    </div>
+  </div>
+
+  <div class="slot-label">8am &mdash; market opens</div>
+
+  <div class="activity-card">
+    <div class="activity-card-body">
+      <div class="activity-info">
+        <div class="activity-type">&#127978;&nbsp; Victorian market &mdash; Friday Food &amp; Garden</div>
+        <div class="activity-name">St George&rsquo;s Market</div>
+        <div class="activity-address">&#128205;&nbsp; 12&ndash;20 East Bridge Street, Belfast BT1 3NQ &nbsp;&middot;&nbsp; 10-min walk south of hotel</div>
+        <div class="practical-row">
+          <span class="prac-item">&#128336;&nbsp; Friday 8am&ndash;2pm &mdash; <strong>arrive before 9:30am</strong></span>
+          <span class="prac-item"><span class="pric-free">Free</span>&nbsp; entry</span>
+          <span class="prac-item">&#9201;&nbsp; 1&ndash;1.5hrs</span>
+        </div>
+        <p class="activity-desc">A beautiful Victorian covered market in continuous use since 1890. Friday is the &ldquo;Food and Garden Market&rdquo; &mdash; widely considered the best market in Ireland. Arrive early; the atmosphere and the stalls are at their best before 10am.</p>
+        <ul class="highlights">
+          <li><b>The building:</b> Three interconnected market halls under a glass and iron roof. The structure itself is worth seeing before you look at any of the stalls.</li>
+          <li><b>Breakfast at the market:</b> Several stalls serve hot breakfast &mdash; full Ulster fry (the Northern Irish equivalent of a full English, with soda bread and potato bread instead of toast), pastries, and excellent coffee. Eat here before Titanic Belfast.</li>
+          <li><b>Hannan Meats:</b> A legendary Northern Irish butcher with a market stall. The dry-aged beef and black bacon are famous.</li>
+          <li><b>Irwin&rsquo;s Bakery:</b> Soda bread, veda bread (a dark malt bread unique to Northern Ireland), and wheaten bread &mdash; all Northern Irish specialities. Buy a loaf for the road.</li>
+          <li><b>Fresh fish:</b> Several stalls selling fish from the Northern Irish coast &mdash; herring, haddock, and local shellfish.</li>
+        </ul>
+        <div class="tip-box"><strong>Route:</strong> Walk south from the hotel down Victoria Street, left onto Oxford Street, then left onto East Bridge Street. The market entrance is on the right, 10-min walk. Open until 2pm but the best atmosphere and fullest stalls are 8&ndash;11am.</div>
+      </div>
+      <div class="map-area">
+        <iframe src="https://maps.google.com/maps?q=St+Georges+Market+East+Bridge+Street+Belfast+BT1+3NQ&output=embed" loading="lazy" title="St George's Market Belfast"></iframe>
+        <a class="map-open-link" href="https://www.google.com/maps/search/?api=1&query=St+Georges+Market+Belfast+BT1+3NQ" target="_blank">Open in Google Maps &#8599;</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="transport-between">
+    <div class="transport-between-icon">&#128663;</div>
+    <div class="transport-between-text">
+      <strong>St George&rsquo;s Market &#8594; Titanic Belfast</strong>
+      <span>Drive or taxi from the market: ~5&ndash;10 min. Follow signs for &ldquo;Titanic Quarter&rdquo; from the city centre. The Titanic Belfast building is unmistakable &mdash; four silver angular prows rising from the harbourside. Free parking in the Titanic Quarter car park adjacent to the building.</span>
+    </div>
+    <span class="transport-badge">5&ndash;10 min drive</span>
+  </div>
+
+  <div class="slot-label">10am &mdash; pre-book this slot</div>
+
+  <div class="activity-card">
+    <div class="activity-card-body">
+      <div class="activity-info">
+        <div class="activity-type">&#9875;&nbsp; Museum &mdash; pre-book 10am slot</div>
+        <div class="activity-name">Titanic Belfast</div>
+        <div class="activity-address">&#128205;&nbsp; 1 Olympic Way, Queen&rsquo;s Road, Belfast BT3 9EP &nbsp;&middot;&nbsp; Titanic Quarter</div>
+        <div class="practical-row">
+          <span class="prac-item">&#128178;&nbsp; ~&pound;27pp &nbsp;|&nbsp; Book: titanicbelfast.com</span>
+          <span class="prac-item">&#128336;&nbsp; 10am&ndash;5pm daily (last entry 3:30pm)</span>
+          <span class="prac-item">&#9201;&nbsp; Allow 3 hours</span>
+        </div>
+        <p class="activity-desc">Built on the exact site where the Titanic was designed, constructed, and launched, on Belfast&rsquo;s Harland and Wolff shipyard. This is not a standard tourist attraction &mdash; it is genuinely one of the best museums in Europe, covering the full story from the design drawings to the wreck on the ocean floor.</p>
+        <ul class="highlights">
+          <li><b>The building (exterior):</b> Four angular silver prows representing the four ships built on this site. The building is itself a work of architecture. Approach on foot from the car park for the full effect.</li>
+          <li><b>Gallery 1 &mdash; Belfast:</b> Belfast at the turn of the 20th century &mdash; the industrial city that built the ship. Maps, photographs, and scale models of the shipyard.</li>
+          <li><b>Gallery 2 &mdash; The Ship:</b> An extraordinary ride through a scale model of the Titanic&rsquo;s construction &mdash; dark, loud, and immersive. Do not skip this.</li>
+          <li><b>Gallery 5 &mdash; The Sinking:</b> The sequence of events on the night of 14 April 1912, minute by minute. Survivor testimonies and contemporary newspaper reports.</li>
+          <li><b>Gallery 9 &mdash; The Wreck:</b> Live footage from the actual wreck, 3,821 metres below the surface. The Titanic was not found until 1985. This gallery is the most moving.</li>
+          <li><b>The SS Nomadic:</b> The last surviving White Star Line vessel, a tender ship that transported first-class passengers to the Titanic on her maiden voyage. Berthed outside the museum &mdash; included in the ticket.</li>
+        </ul>
+        <div class="tip-box"><strong>Strategy:</strong> Pre-book the 10am entry at titanicbelfast.com. This follows naturally from the market (which closes at 2pm but best done 8&ndash;10am). Allow the full 3 hours &mdash; do not rush the last two galleries. The cafe inside is good for a mid-museum coffee stop.</div>
+      </div>
+      <div class="map-area">
+        <iframe src="https://maps.google.com/maps?q=Titanic+Belfast+Queens+Road+Belfast+BT3+9EP&output=embed" loading="lazy" title="Titanic Belfast"></iframe>
+        <a class="map-open-link" href="https://www.google.com/maps/search/?api=1&query=Titanic+Belfast+BT3+9EP" target="_blank">Open in Google Maps &#8599;</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="slot-label">Lunch</div>
+
+  <div class="dinner-card">
+    <div class="dinner-title">&#127829;&nbsp; Lunch &mdash; Titanic Quarter</div>
+    <div class="dinner-options">
+      <div class="dinner-opt"><b>Titanic Hotel Restaurant</b> &mdash; 4 Queens Road, BT3 9DT. The old Harland and Wolff headquarters, now a hotel. The Drawing Office bar and restaurant has lunch. A beautiful Edwardian building right next to the museum &mdash; worth going in even for a coffee.</div>
+      <div class="dinner-opt"><b>Coppi</b> &mdash; 1 St Anne&rsquo;s Square, BT1 2LR. An Italian restaurant back in the Cathedral Quarter (10-min drive). Very good pasta. A better option if you prefer to return to the city centre for lunch before the taxi tour.</div>
+    </div>
+  </div>
+
+  <div class="slot-label">Afternoon &mdash; pre-book in advance</div>
+
+  <div class="activity-card">
+    <div class="activity-card-body">
+      <div class="activity-info">
+        <div class="activity-type">&#128663;&nbsp; Historical tour &mdash; essential Belfast</div>
+        <div class="activity-name">Black Taxi Political Murals Tour</div>
+        <div class="activity-address">&#128205;&nbsp; Departures from city centre hotels &nbsp;&middot;&nbsp; Covers Falls Road, Shankill Road &amp; Peace Wall</div>
+        <div class="practical-row">
+          <span class="prac-item">&#128178;&nbsp; ~&pound;35&ndash;40pp &nbsp;|&nbsp; Book: blacktaxitours.com or Belfast Black Taxi Tours</span>
+          <span class="prac-item">&#9201;&nbsp; ~1.5&ndash;2hrs</span>
+        </div>
+        <p class="activity-desc">A guided tour of the murals of the Falls Road (republican) and Shankill Road (loyalist) in a black London-style taxi, driven and narrated by a local guide who lived through the Troubles. This is the single most important thing to do in Belfast to understand the city. Nothing &mdash; no book, no documentary, no museum &mdash; explains the Troubles like hearing it directly from someone who was there.</p>
+        <ul class="highlights">
+          <li><b>The Falls Road murals:</b> Large-scale painted murals on the gable walls of republican West Belfast &mdash; political figures, historical events, international solidarity. The Bobby Sands mural on the Sinn F&eacute;in headquarters is the most visited.</li>
+          <li><b>The Shankill Road murals:</b> The loyalist equivalent on the other side of the peace wall &mdash; a completely different visual vocabulary, different references, different history told from a different perspective.</li>
+          <li><b>The Peace Wall (Peace Line):</b> The corrugated iron and brick wall separating republican and loyalist communities &mdash; in places 30 feet high. Taller than the Berlin Wall. You can sign it. The gates are locked at night.</li>
+          <li><b>The guide:</b> The driver is both guide and narrator. Ask questions freely. They have heard everything and will answer honestly. This is the most important part of the experience.</li>
+        </ul>
+        <div class="tip-box"><strong>Booking:</strong> Book directly at blacktaxitours.com or via your hotel concierge &mdash; these tours fill up, especially on Fridays. Ask for a pickup from the hotel (Waring Street). Tours run throughout the day; a 2pm pickup allows time after Titanic Belfast. Duration is typically 1.5&ndash;2hrs.</div>
+      </div>
+      <div class="map-area">
+        <iframe src="https://maps.google.com/maps?q=Falls+Road+Murals+Belfast&output=embed" loading="lazy" title="Falls Road Belfast"></iframe>
+        <a class="map-open-link" href="https://www.google.com/maps/search/?api=1&query=Falls+Road+Murals+Belfast" target="_blank">Open in Google Maps &#8599;</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="slot-label">Evening &mdash; farewell dinner</div>
+
+  <div class="dinner-card">
+    <div class="dinner-title">&#127374;&nbsp; Farewell dinner &mdash; make tonight count &nbsp;&middot;&nbsp; book in advance</div>
+    <div class="dinner-options">
+      <div class="dinner-opt"><b>The Muddlers Club</b> &mdash; Warehouse Lane, BT1 2DX. Hidden down an entry in the Cathedral Quarter. Creative Northern Irish tasting menu. One of the best restaurants in the city. Book as far in advance as possible.</div>
+      <div class="dinner-opt"><b>OX</b> &mdash; 1 Oxford Street, BT1 3LA. Michelin-starred, overlooking the Lagan. The best special-occasion restaurant in Belfast. Book months ahead for a Friday table.</div>
+      <div class="dinner-opt"><b>Saphyre</b> &mdash; 135 Lisburn Road, BT9 7AF. A converted church on the Lisburn Road. Elegant setting, Northern Irish produce, a proper occasion restaurant at a slightly lower price point than OX. 10-min taxi from the hotel.</div>
+    </div>
+  </div>
+
+  <div class="tip-box" style="margin-top:1.25rem;padding:1rem 1.25rem;background:var(--amber-bg);border:1px solid var(--amber-bd);border-radius:var(--radius);font-size:13px;color:var(--ink2);line-height:1.75;">
+    <strong>Tomorrow &mdash; Saturday 20 Sep (Departure day):</strong> Check out of the hotel by noon. Drive to <strong>Belfast International Airport (BFS)</strong> &mdash; ~30 minutes from the city centre. Follow M2 north, signs for International Airport (not Belfast City Airport). Jenifer departs for Manila. Simon exits long-stay parking and drives back to Cork.
+  </div>
+
+</section>
+
 </main>
 
 <div class="page-footer">
   <span class="footer-brand">Belfast &nbsp;&middot;&nbsp; Days 12&ndash;14 &nbsp;&middot;&nbsp; 17&ndash;19 Sep</span>
   <div style="display:flex;gap:1.5rem;">
     <a href="edinburgh.html" class="prev-city-link">&#8592; Edinburgh</a>
-    <a href="index.html" class="next-city-link" style="color:var(--amber)">Full itinerary &#8599;</a>
+    <a href="index.html" class="home-link">Full itinerary &#8599;</a>
   </div>
 </div>
 
+<script>
+  const sections = document.querySelectorAll('.day-section');
+  const navLinks = document.querySelectorAll('.day-nav a');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        navLinks.forEach(l => l.classList.remove('active'));
+        const active = document.querySelector('.day-nav a[href="#' + e.target.id + '"]');
+        if (active) active.classList.add('active');
+      }
+    });
+  }, { rootMargin: '-40% 0px -55% 0px' });
+  sections.forEach(s => observer.observe(s));
+</script>
 </body>
 </html>

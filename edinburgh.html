@@ -3,28 +3,22 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Edinburgh — Simon & Jenifer, September 2025</title>
+<title>Edinburgh &mdash; Simon &amp; Jenifer, September 2025</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
-  :root {
-    --bg:#f7f5f1;--surface:#fff;--surface2:#f0ede8;--border:#e2ddd6;
-    --ink:#1a1814;--ink2:#4a4640;--ink3:#8a857d;
-    --amber:#b5762a;--amber-bg:#fdf6ec;--amber-bd:#e8d0a0;
-    --green:#2a6e4a;--radius:10px;--city-color:#2a6e4a;
-  }
+  :root{--bg:#f7f5f1;--surface:#fff;--surface2:#f0ede8;--border:#e2ddd6;--ink:#1a1814;--ink2:#4a4640;--ink3:#8a857d;--amber:#b5762a;--amber-bg:#fdf6ec;--amber-bd:#e8d0a0;--green:#2a6e4a;--radius:10px;--city-color:#2a6e4a;}
   *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
   html{scroll-behavior:smooth;}
   body{background:var(--bg);color:var(--ink);font-family:'Inter',sans-serif;font-weight:400;line-height:1.65;}
   .back-nav{background:var(--surface);border-bottom:1px solid var(--border);padding:0 5vw;}
   .back-nav-inner{max-width:860px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:10px 0;}
-  .back-link{font-size:12px;font-weight:500;color:var(--ink3);text-decoration:none;display:flex;align-items:center;gap:6px;}
+  .back-link{font-size:12px;font-weight:500;color:var(--ink3);text-decoration:none;}
   .back-link:hover{color:var(--amber);}
   .trip-crumb{font-size:12px;color:var(--ink3);}
   .trip-crumb a{color:var(--ink3);text-decoration:none;}
   .trip-crumb a:hover{color:var(--amber);}
-  .trip-crumb strong{color:var(--ink2);}
   .hero{background:#1a1814;padding:3.5rem 5vw 3rem;position:relative;overflow:hidden;}
   .hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 80% at 85% 40%,rgba(42,110,74,.2) 0%,transparent 60%);pointer-events:none;}
   .hero-inner{max-width:860px;margin:0 auto;position:relative;}
@@ -35,26 +29,71 @@
   .hs-l{font-size:10px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:#5a5248;display:block;margin-bottom:2px;}
   .hs-v{font-family:'Playfair Display',serif;font-size:1.2rem;color:#f0ebe0;}
   .day-nav{background:var(--surface);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:50;overflow-x:auto;}
-  .day-nav-inner{max-width:860px;margin:0 auto;display:flex;align-items:center;padding:0 5vw;min-width:max-content;}
-  .day-nav a{display:block;padding:12px 16px;font-size:12px;font-weight:500;color:var(--ink3);text-decoration:none;white-space:nowrap;border-bottom:2px solid transparent;}
+  .day-nav-inner{max-width:860px;margin:0 auto;display:flex;padding:0 5vw;min-width:max-content;}
+  .day-nav a{display:block;padding:12px 16px;font-size:12px;font-weight:500;color:var(--ink3);text-decoration:none;white-space:nowrap;border-bottom:2px solid transparent;transition:all .2s;}
   .day-nav a:hover{color:var(--ink);}
+  .day-nav a.active{color:var(--city-color);border-bottom-color:var(--city-color);}
   .main{max-width:860px;margin:0 auto;padding:0 5vw 6rem;}
   .day-section{padding-top:3rem;}
   .day-section-header{display:flex;align-items:flex-start;gap:1rem;margin-bottom:1.75rem;padding-bottom:1.25rem;border-bottom:2px solid var(--city-color);}
-  .day-number{font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--city-color);background:rgba(0,0,0,.06);padding:3px 8px;border-radius:4px;white-space:nowrap;margin-top:4px;}
+  .day-number{font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--city-color);background:rgba(42,110,74,.08);padding:3px 8px;border-radius:4px;white-space:nowrap;margin-top:4px;}
   .day-title{font-family:'Playfair Display',serif;font-size:1.6rem;font-weight:400;color:var(--ink);line-height:1.1;}
   .day-date{font-size:12px;color:var(--ink3);margin-top:3px;font-weight:500;}
-  .stub-placeholder{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:2rem 1.75rem;text-align:center;}
-  .stub-placeholder p{font-size:14px;color:var(--ink3);margin-bottom:.5rem;}
-  .stub-placeholder strong{color:var(--ink2);}
-  .coming-badge{display:inline-block;font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;padding:4px 12px;border-radius:20px;background:var(--surface2);border:1px solid var(--border);color:var(--ink3);margin-bottom:1rem;}
-  .summary-pills{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:1rem;}
-  .spill{font-size:12px;padding:4px 12px;border-radius:20px;background:var(--amber-bg);border:1px solid var(--amber-bd);color:#8a5015;font-weight:500;}
+  .slot-label{font-size:10px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--amber);margin:1.5rem 0 .75rem;display:flex;align-items:center;gap:8px;}
+  .slot-label::after{content:'';flex:1;height:1px;background:var(--border);}
+  .activity-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;margin-bottom:.75rem;}
+  .activity-card-body{display:grid;grid-template-columns:1fr 300px;gap:0;}
+  .activity-info{padding:1.25rem 1.5rem;}
+  .activity-type{font-size:10px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--ink3);margin-bottom:.4rem;}
+  .activity-name{font-family:'Playfair Display',serif;font-size:1.25rem;font-weight:400;color:var(--ink);margin-bottom:.5rem;line-height:1.2;}
+  .activity-address{font-size:12px;color:var(--ink3);margin-bottom:.75rem;}
+  .practical-row{display:flex;gap:1rem;flex-wrap:wrap;margin-bottom:.75rem;}
+  .prac-item{font-size:11.5px;color:var(--ink2);display:flex;align-items:center;gap:4px;}
+  .pric-free{color:var(--green);font-weight:600;}
+  .activity-desc{font-size:13px;color:var(--ink2);line-height:1.7;margin-bottom:.75rem;}
+  .highlights{list-style:none;margin:0;padding:0;}
+  .highlights li{font-size:12.5px;color:var(--ink2);padding:3px 0 3px 16px;position:relative;line-height:1.5;}
+  .highlights li::before{content:"\2192";position:absolute;left:0;color:var(--amber);font-size:11px;}
+  .highlights li b{color:var(--ink);font-weight:500;}
+  .tip-box{background:var(--amber-bg);border:1px solid var(--amber-bd);border-radius:6px;padding:.6rem .85rem;margin-top:.75rem;font-size:12px;color:var(--ink2);line-height:1.6;}
+  .tip-box strong{color:var(--amber);font-weight:600;}
+  .map-area{position:relative;height:100%;min-height:240px;background:#eee;border-left:1px solid var(--border);}
+  .map-area iframe{display:block;width:100%;height:100%;min-height:240px;border:0;}
+  .map-open-link{display:block;padding:8px 12px;background:var(--surface2);border-top:1px solid var(--border);font-size:11px;font-weight:500;color:var(--city-color);text-decoration:none;text-align:center;}
+  .map-open-link:hover{background:var(--border);}
+  .transport-between{display:flex;align-items:center;gap:12px;padding:.8rem 1.25rem;background:var(--surface2);border:1px solid var(--border);border-radius:var(--radius);margin:.75rem 0;}
+  .transport-between-icon{width:32px;height:32px;background:var(--surface);border:1px solid var(--border);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.9rem;flex-shrink:0;}
+  .transport-between-text{flex:1;font-size:13px;color:var(--ink2);}
+  .transport-between-text strong{display:block;font-size:13px;font-weight:600;color:var(--ink);margin-bottom:2px;}
+  .transport-between-text span{font-size:12px;color:var(--ink3);}
+  .transport-badge{font-size:10.5px;font-weight:600;padding:2px 8px;border-radius:20px;background:rgba(42,110,74,.08);color:var(--city-color);white-space:nowrap;flex-shrink:0;}
+  .hotel-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;margin-bottom:.75rem;}
+  .hotel-card-body{display:grid;grid-template-columns:1fr 300px;gap:0;}
+  .hotel-info{padding:1.25rem 1.5rem;}
+  .hotel-badge{font-size:10px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--ink3);margin-bottom:.4rem;}
+  .hotel-name{font-family:'Playfair Display',serif;font-size:1.2rem;color:var(--ink);margin-bottom:.5rem;}
+  .hotel-address{font-size:12px;color:var(--ink3);margin-bottom:.75rem;}
+  .hotel-detail{font-size:13px;color:var(--ink2);line-height:1.7;list-style:none;}
+  .hotel-detail li{padding:2px 0 2px 14px;position:relative;}
+  .hotel-detail li::before{content:"\00B7";position:absolute;left:0;color:var(--amber);}
+  .dinner-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:1.1rem 1.5rem;margin-bottom:.75rem;}
+  .dinner-title{font-size:13px;font-weight:600;color:var(--ink);margin-bottom:.5rem;}
+  .dinner-options{display:flex;flex-direction:column;gap:6px;}
+  .dinner-opt{font-size:12.5px;color:var(--ink2);line-height:1.6;}
+  .dinner-opt b{color:var(--ink);font-weight:500;}
   .page-footer{border-top:1px solid var(--border);padding:1.75rem 5vw;max-width:860px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;}
   .footer-brand{font-family:'Playfair Display',serif;font-size:.9rem;color:var(--ink2);}
   .next-city-link{font-size:13px;font-weight:500;color:var(--city-color);text-decoration:none;}
   .prev-city-link{font-size:13px;font-weight:500;color:var(--ink3);text-decoration:none;}
-  @media(max-width:700px){.back-nav,.hero,.main{padding-left:1.25rem;padding-right:1.25rem;}.back-nav-inner{padding-left:0;padding-right:0;}.page-footer{padding-left:1.25rem;padding-right:1.25rem;}}
+  @media(max-width:700px){
+    .activity-card-body,.hotel-card-body{grid-template-columns:1fr;}
+    .map-area{min-height:200px;border-left:none;border-top:1px solid var(--border);}
+    .map-area iframe{min-height:200px;}
+    .back-nav,.hero,.main{padding-left:1.25rem;padding-right:1.25rem;}
+    .back-nav-inner{padding-left:0;padding-right:0;}
+    .day-nav-inner{padding-left:1.25rem;}
+    .page-footer{padding-left:1.25rem;padding-right:1.25rem;}
+  }
 </style>
 </head>
 <body>
@@ -64,7 +103,9 @@
     <a href="index.html" class="back-link">&#8592; Full itinerary</a>
     <span class="trip-crumb">
       <a href="london.html">London</a> &nbsp;&middot;&nbsp;
-      <a href="york.html">York</a> &nbsp;&middot;&nbsp; <a href="edinburgh.html"><strong>Edinburgh</strong></a> &nbsp;&middot;&nbsp; <a href="belfast.html">Belfast</a>
+      <a href="york.html">York</a> &nbsp;&middot;&nbsp;
+      <strong>Edinburgh</strong> &nbsp;&middot;&nbsp;
+      <a href="belfast.html">Belfast</a>
     </span>
   </div>
 </div>
@@ -75,80 +116,503 @@
     <h1 class="hero-title">Edinburgh</h1>
     <p class="hero-meta">13&ndash;16 September 2025 &nbsp;&middot;&nbsp; 4 nights &nbsp;&middot;&nbsp; ibis Edinburgh Centre Royal Mile</p>
     <div class="hero-stats">
-      <div><span class="hs-l">Arrives</span><span class="hs-v">Sat 13 Sep</span></div>
-      <div><span class="hs-l">Moves on</span><span class="hs-v">Tue 16 Sep (fly to Belfast)</span></div>
-      <div><span class="hs-l">Getting around</span><span class="hs-v">Walking / Lothian Buses</span></div>
+      <div><span class="hs-l">Arrives from</span><span class="hs-v">York (train)</span></div>
+      <div><span class="hs-l">Moves on to</span><span class="hs-v">Belfast (fly)</span></div>
+      <div><span class="hs-l">Getting around</span><span class="hs-v">Walking / bus</span></div>
+      <div><span class="hs-l">Bus card</span><span class="hs-v">Contactless works</span></div>
     </div>
   </div>
 </section>
 
 <div class="day-nav">
   <div class="day-nav-inner">
-    <a href="#day8">Day 8 &nbsp;&middot;&nbsp; 13 Sep</a>
-    <a href="#day9">Day 9 &nbsp;&middot;&nbsp; 14 Sep</a>
-    <a href="#day10">Day 10 &nbsp;&middot;&nbsp; 15 Sep</a>
-    <a href="#day11">Day 11 &nbsp;&middot;&nbsp; 16 Sep</a>
+    <a href="#day8">Day 8 &nbsp;&middot;&nbsp; 13 Sep (Sat)</a>
+    <a href="#day9">Day 9 &nbsp;&middot;&nbsp; 14 Sep (Sun)</a>
+    <a href="#day10">Day 10 &nbsp;&middot;&nbsp; 15 Sep (Mon)</a>
+    <a href="#day11">Day 11 &nbsp;&middot;&nbsp; 16 Sep (Tue)</a>
   </div>
 </div>
 
 <main class="main">
 
-  <section class="day-section" id="day8">
-    <div class="day-section-header">
-      <span class="day-number">Day 8</span>
-      <div>
-        <div class="day-title">Arrive Edinburgh &mdash; Royal Mile Evening</div>
-        <div class="day-date">Saturday, 13 Sep</div>
+<!-- ═══ DAY 8 ═══ -->
+<section class="day-section" id="day8">
+  <div class="day-section-header">
+    <span class="day-number">Day 8</span>
+    <div>
+      <div class="day-title">Arrive Edinburgh &mdash; Royal Mile Evening</div>
+      <div class="day-date">Saturday, 13 September 2025 &nbsp;&middot;&nbsp; (arriving from York)</div>
+    </div>
+  </div>
+
+  <p style="font-size:13px;color:var(--ink3);margin-bottom:1.25rem;">The train from York arrives at Edinburgh Waverley in the late afternoon. Check in, explore the Royal Mile, dinner in the Grassmarket. Day 9 is the first full day in Edinburgh.</p>
+
+  <div class="slot-label">Hotel</div>
+  <div class="hotel-card">
+    <div class="hotel-card-body">
+      <div class="hotel-info">
+        <div class="hotel-badge">&#127968;&nbsp; Base for nights 8&ndash;11</div>
+        <div class="hotel-name">ibis Edinburgh Centre Royal Mile</div>
+        <div class="hotel-address">&#128205;&nbsp; Hunter Square, Edinburgh EH1 1QW &nbsp;&middot;&nbsp; On the Royal Mile, 10-min walk from Waverley</div>
+        <ul class="hotel-detail">
+          <li>Check-in from <strong>2pm</strong> &nbsp;|&nbsp; Check-out by <strong>noon</strong> on 17 Sep</li>
+          <li>Hunter Square is directly off the Royal Mile, adjacent to the Tron Kirk</li>
+          <li>From Waverley: exit at Waverley Bridge, walk up the Mound and left along the Mile &mdash; 10 min, mostly uphill</li>
+          <li>Lothian Bus stops are on the Royal Mile outside the hotel door</li>
+        </ul>
+      </div>
+      <div class="map-area">
+        <iframe src="https://maps.google.com/maps?q=ibis+Edinburgh+Centre+Royal+Mile+Hunter+Square&output=embed" loading="lazy" title="ibis Edinburgh Royal Mile"></iframe>
+        <a class="map-open-link" href="https://www.google.com/maps/search/?api=1&query=ibis+Edinburgh+Centre+Hunter+Square+EH1" target="_blank">Open in Google Maps &#8599;</a>
       </div>
     </div>
-    <div class="stub-placeholder">
-      <div class="coming-badge">&#9997;&#65039; Detailed guide coming soon</div>
-      <p><strong>What&rsquo;s planned for this day:</strong></p>
-      <div class="summary-pills"><span class="spill">Train from York</span><span class="spill">Royal Mile closes &amp; courtyards</span><span class="spill">Grassmarket dinner</span></div>
-    </div>
-  </section>
-  <section class="day-section" id="day9">
-    <div class="day-section-header">
-      <span class="day-number">Day 9</span>
-      <div>
-        <div class="day-title">Edinburgh Castle &amp; Old Town</div>
-        <div class="day-date">Sunday, 14 Sep</div>
+  </div>
+
+  <div class="slot-label">Evening</div>
+  <div class="activity-card">
+    <div class="activity-card-body">
+      <div class="activity-info">
+        <div class="activity-type">&#127981;&nbsp; First evening &mdash; Old Town orientation</div>
+        <div class="activity-name">Royal Mile closes &amp; Grassmarket</div>
+        <div class="activity-address">&#128205;&nbsp; Royal Mile, Edinburgh EH1 &nbsp;&middot;&nbsp; Hotel front door</div>
+        <div class="practical-row">
+          <span class="prac-item"><span class="pric-free">Free</span></span>
+          <span class="prac-item">&#9201;&nbsp; 45 min walk, then dinner</span>
+        </div>
+        <p class="activity-desc">Walk the Royal Mile from the hotel south to the Grassmarket. Explore at least two or three closes (alleyways) as you go &mdash; each one reveals something unexpected.</p>
+        <ul class="highlights">
+          <li><b>Advocates Close:</b> Steps down from the Royal Mile with views of the city below and Princes Street Gardens. Atmospheric in the evening light.</li>
+          <li><b>Dunbar&rsquo;s Close Garden:</b> A hidden 17th-century walled garden hidden behind a close door. Free to enter, usually quiet in the evenings.</li>
+          <li><b>Victoria Street:</b> A short walk off the Mile &mdash; the curved, colourful street with independent shops. The Grassmarket is at the bottom.</li>
+          <li><b>Grassmarket:</b> A wide square surrounded by restaurants and pubs at the foot of Castle Rock. Very lively on a Saturday evening.</li>
+        </ul>
+      </div>
+      <div class="map-area">
+        <iframe src="https://maps.google.com/maps?q=Grassmarket+Edinburgh+EH1+2JR&output=embed" loading="lazy" title="Grassmarket Edinburgh"></iframe>
+        <a class="map-open-link" href="https://www.google.com/maps/search/?api=1&query=Grassmarket+Edinburgh+EH1" target="_blank">Open in Google Maps &#8599;</a>
       </div>
     </div>
-    <div class="stub-placeholder">
-      <div class="coming-badge">&#9997;&#65039; Detailed guide coming soon</div>
-      <p><strong>What&rsquo;s planned for this day:</strong></p>
-      <div class="summary-pills"><span class="spill">Edinburgh Castle (pre-book)</span><span class="spill">St Giles&rsquo; Cathedral (free)</span><span class="spill">Victoria Street</span><span class="spill">Greyfriars Kirkyard (free)</span><span class="spill">Calton Hill at sunset (free)</span></div>
+  </div>
+  <div class="dinner-card">
+    <div class="dinner-title">&#127374;&nbsp; Dinner &mdash; Grassmarket area</div>
+    <div class="dinner-options">
+      <div class="dinner-opt"><b>Maxie&rsquo;s Bistro</b> &mdash; 5B Johnston Terrace, EH1 2PW. Overlooking the Grassmarket. Reliable Edinburgh institution &mdash; good fish, good salads, outdoor terrace. Booking recommended on a Saturday.</div>
+      <div class="dinner-opt"><b>La Favorita</b> &mdash; 325&ndash;331 Leith Walk, EH6 8SA. The best pizza in Edinburgh, wood-fired. A short taxi ride from the Grassmarket but very good value.</div>
+      <div class="dinner-opt"><b>The Grain Store</b> &mdash; 30 Victoria Street, EH1 2JW. Scottish seasonal produce above Victoria Street. More upmarket but worth it for a first Edinburgh dinner.</div>
     </div>
-  </section>
-  <section class="day-section" id="day10">
-    <div class="day-section-header">
-      <span class="day-number">Day 10</span>
-      <div>
-        <div class="day-title">Arthur&rsquo;s Seat &amp; New Town</div>
-        <div class="day-date">Monday, 15 Sep</div>
+  </div>
+</section>
+
+<!-- ═══ DAY 9 ═══ -->
+<section class="day-section" id="day9">
+  <div class="day-section-header">
+    <span class="day-number">Day 9</span>
+    <div>
+      <div class="day-title">Edinburgh Castle &amp; Old Town</div>
+      <div class="day-date">Sunday, 14 September 2025</div>
+    </div>
+  </div>
+
+  <div class="slot-label">Morning &mdash; the castle</div>
+
+  <div class="activity-card">
+    <div class="activity-card-body">
+      <div class="activity-info">
+        <div class="activity-type">&#127963;&nbsp; Castle &mdash; pre-book timed entry</div>
+        <div class="activity-name">Edinburgh Castle</div>
+        <div class="activity-address">&#128205;&nbsp; Castlehill, Edinburgh EH1 2NG &nbsp;&middot;&nbsp; 10-min walk uphill from hotel</div>
+        <div class="practical-row">
+          <span class="prac-item">&#128178;&nbsp; ~&pound;22pp &nbsp;|&nbsp; Book: edinburghcastle.scot</span>
+          <span class="prac-item">&#128336;&nbsp; Open 9:30am daily</span>
+          <span class="prac-item">&#9201;&nbsp; Allow 2.5&ndash;3hrs</span>
+        </div>
+        <p class="activity-desc">Built on a volcanic plug of rock that rises 130m above the city, the castle dominates Edinburgh from every angle. There is considerably more inside than most visitors expect. Pre-book a timed entry &mdash; September dates sell out.</p>
+        <ul class="highlights">
+          <li><b>The Scottish Crown Jewels (Honours of Scotland):</b> The oldest crown jewels in the British Isles &mdash; the crown, sword, and sceptre of Scotland, used at coronations since the 15th century.</li>
+          <li><b>The Stone of Destiny:</b> The ancient coronation stone on which Scottish (and later British) monarchs were crowned. It was held in Westminster Abbey for 700 years and returned to Scotland in 1996.</li>
+          <li><b>The One O&rsquo;Clock Gun:</b> Fired daily at 1pm (Monday&ndash;Saturday) from the Half Moon Battery. A tradition since 1861, originally to help ships in the Firth of Forth set their chronometers. Stand on the esplanade at 12:58pm to be in position.</li>
+          <li><b>The Great Hall:</b> A 16th-century banqueting hall with one of the finest original timber hammer-beam roofs in Scotland. The armour displays are remarkable.</li>
+          <li><b>Mons Meg:</b> A medieval siege cannon from 1449, one of the largest medieval guns in existence. It is outside the Great Hall &mdash; the barrel is 15 feet long.</li>
+          <li><b>The views:</b> From the Half Moon Battery, 360&deg; views of the city &mdash; Arthur&rsquo;s Seat, the Firth of Forth, the New Town, and south to the Pentland Hills.</li>
+        </ul>
+        <div class="tip-box"><strong>Strategy:</strong> Arrive at opening (9:30am) to avoid queues at the Crown Jewels (they build up fast). Do the Crown Jewels first, then the Great Hall, then walk the ramparts. Use the included audio guide for the Crown Jewels room &mdash; it adds significant context.</div>
+      </div>
+      <div class="map-area">
+        <iframe src="https://maps.google.com/maps?q=Edinburgh+Castle+Castlehill+Edinburgh+EH1+2NG&output=embed" loading="lazy" title="Edinburgh Castle"></iframe>
+        <a class="map-open-link" href="https://www.google.com/maps/search/?api=1&query=Edinburgh+Castle+EH1+2NG" target="_blank">Open in Google Maps &#8599;</a>
       </div>
     </div>
-    <div class="stub-placeholder">
-      <div class="coming-badge">&#9997;&#65039; Detailed guide coming soon</div>
-      <p><strong>What&rsquo;s planned for this day:</strong></p>
-      <div class="summary-pills"><span class="spill">Arthur&rsquo;s Seat hike (free)</span><span class="spill">Holyrood Palace exterior</span><span class="spill">Scottish National Gallery (free)</span><span class="spill">Princes Street Gardens</span><span class="spill">New Town</span></div>
+  </div>
+
+  <div class="slot-label">Lunch</div>
+  <div class="dinner-card">
+    <div class="dinner-title">&#127829;&nbsp; Lunch near the castle</div>
+    <div class="dinner-options">
+      <div class="dinner-opt"><b>The Jolly Judge</b> &mdash; 7A James Court, off Lawnmarket, EH1 2PB. Down a close just below the castle esplanade. A small, old pub with low ceilings and a quiet atmosphere &mdash; away from the main tourist flow. Good for soup and a sandwich.</div>
+      <div class="dinner-opt"><b>Amber Restaurant</b> &mdash; 354 Castlehill, EH1 2NE. Right at the castle entrance. Scottish produce menu. More of a restaurant than a quick lunch stop but very convenient after the castle.</div>
+      <div class="dinner-opt"><b>Cannonball Restaurant</b> &mdash; 356 Castlehill, EH1 2NE. Next to Amber, with good views over the Esplanade. Reliable Scottish food, good scone and soup lunch option.</div>
     </div>
-  </section>
-  <section class="day-section" id="day11">
-    <div class="day-section-header">
-      <span class="day-number">Day 11</span>
-      <div>
-        <div class="day-title">Leith &amp; Royal Yacht Britannia</div>
-        <div class="day-date">Tuesday, 16 Sep</div>
+  </div>
+
+  <div class="slot-label">Afternoon &mdash; Old Town</div>
+
+  <div class="activity-card">
+    <div class="activity-card-body">
+      <div class="activity-info">
+        <div class="activity-type">&#9962;&nbsp; Cathedral &mdash; free</div>
+        <div class="activity-name">St Giles&rsquo; Cathedral</div>
+        <div class="activity-address">&#128205;&nbsp; High Street, Edinburgh EH1 1RE &nbsp;&middot;&nbsp; On the Royal Mile, 5-min walk from castle</div>
+        <div class="practical-row">
+          <span class="prac-item"><span class="pric-free">Free</span>&nbsp; entry</span>
+          <span class="prac-item">&#128336;&nbsp; Mon&ndash;Fri 9am&ndash;7pm, Sat 9am&ndash;5pm, Sun 1pm&ndash;5pm</span>
+          <span class="prac-item">&#9201;&nbsp; 30&ndash;45 min</span>
+        </div>
+        <p class="activity-desc">The High Kirk of Edinburgh &mdash; the church at the centre of Scottish religious history. The nave is impressive, but the Thistle Chapel at the far end is extraordinary: a tiny, ornately carved chapel crammed with heraldic detail.</p>
+        <ul class="highlights">
+          <li><b>The Thistle Chapel (1911):</b> Scotland&rsquo;s equivalent of the Order of the Garter chapel in Windsor. 16 stalls, each one carved with the personal heraldry of its knight. The craftsmanship is astonishing in a space this small.</li>
+          <li><b>The John Knox statue:</b> The reformer who shaped Scottish Protestantism stands in one of the side chapels. His pulpit is preserved here.</li>
+          <li><b>The Parliament Square side:</b> Exit through the south door to Parliament Square &mdash; the old Scottish Parliament building (now law courts) and the mercat cross where royal proclamations were made.</li>
+        </ul>
+      </div>
+      <div class="map-area">
+        <iframe src="https://maps.google.com/maps?q=St+Giles+Cathedral+High+Street+Edinburgh+EH1+1RE&output=embed" loading="lazy" title="St Giles Cathedral"></iframe>
+        <a class="map-open-link" href="https://www.google.com/maps/search/?api=1&query=St+Giles+Cathedral+Edinburgh" target="_blank">Open in Google Maps &#8599;</a>
       </div>
     </div>
-    <div class="stub-placeholder">
-      <div class="coming-badge">&#9997;&#65039; Detailed guide coming soon</div>
-      <p><strong>What&rsquo;s planned for this day:</strong></p>
-      <div class="summary-pills"><span class="spill">Bus to Leith</span><span class="spill">Royal Yacht Britannia (pre-book)</span><span class="spill">The Shore waterfront lunch</span><span class="spill">National Museum of Scotland (free)</span></div>
+  </div>
+
+  <div class="transport-between">
+    <div class="transport-between-icon">&#128694;</div>
+    <div class="transport-between-text">
+      <strong>St Giles&rsquo; &#8594; Victoria Street &#8594; Greyfriars</strong>
+      <span>Walk west along the Mile past the Cathedral, turn left down George IV Bridge, then left onto Victoria Street (the curved colourful street). Walk to the bottom &mdash; the Grassmarket &mdash; then back up and left on Candlemaker Row to Greyfriars. About 15 min total.</span>
     </div>
-  </section>
+    <span class="transport-badge">15 min walk</span>
+  </div>
+
+  <div class="activity-card">
+    <div class="activity-card-body">
+      <div class="activity-info">
+        <div class="activity-type">&#127981;&nbsp; Street &amp; graveyard &mdash; free</div>
+        <div class="activity-name">Victoria Street &amp; Greyfriars Kirkyard</div>
+        <div class="activity-address">&#128205;&nbsp; Greyfriars Pl, Edinburgh EH1 2QQ &nbsp;&middot;&nbsp; 5-min walk south of the Royal Mile</div>
+        <div class="practical-row">
+          <span class="prac-item"><span class="pric-free">Free</span></span>
+          <span class="prac-item">&#9201;&nbsp; 45&ndash;60 min for both</span>
+        </div>
+        <p class="activity-desc">Victoria Street is the curved, colourful medieval street most often cited as an inspiration for Diagon Alley. Greyfriars Kirkyard below it is one of the most atmospheric graveyards in Europe.</p>
+        <ul class="highlights">
+          <li><b>Victoria Street:</b> Walk slowly. The buildings are 3&ndash;4 storeys of different-coloured painted stone. Independent shops on both levels. The view back up the curve of the street is particularly good.</li>
+          <li><b>Greyfriars Bobby statue:</b> At the top of Candlemaker Row &mdash; the bronze terrier said to have guarded his owner&rsquo;s grave for 14 years. The nose is worn bright from being touched by tourists.</li>
+          <li><b>Greyfriars Kirkyard:</b> The graveyard itself is free and open. The covenanter&rsquo;s prison (an outdoor enclosure) is in the far corner. Many of the names on the gravestones appear in the Harry Potter books.</li>
+          <li><b>George Mackenzie mausoleum:</b> The baroque round tomb of the man who imprisoned the Covenanters. A focal point of the graveyard&rsquo;s dark history.</li>
+        </ul>
+      </div>
+      <div class="map-area">
+        <iframe src="https://maps.google.com/maps?q=Greyfriars+Kirkyard+Edinburgh+EH1+2QQ&output=embed" loading="lazy" title="Greyfriars Kirkyard"></iframe>
+        <a class="map-open-link" href="https://www.google.com/maps/search/?api=1&query=Greyfriars+Kirkyard+Edinburgh" target="_blank">Open in Google Maps &#8599;</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="slot-label">Evening &mdash; Calton Hill at sunset</div>
+
+  <div class="activity-card">
+    <div class="activity-card-body">
+      <div class="activity-info">
+        <div class="activity-type">&#9968;&nbsp; Viewpoint &mdash; free, 5-min climb</div>
+        <div class="activity-name">Calton Hill</div>
+        <div class="activity-address">&#128205;&nbsp; Calton Hill, Edinburgh EH7 5AA &nbsp;&middot;&nbsp; East end of Princes Street</div>
+        <div class="practical-row">
+          <span class="prac-item"><span class="pric-free">Free</span></span>
+          <span class="prac-item">&#9201;&nbsp; 5 min climb, 30&ndash;45 min on top</span>
+          <span class="prac-item">&#128336;&nbsp; Open at all times</span>
+        </div>
+        <p class="activity-desc">A small hill at the east end of Princes Street with a 5-minute path to the summit. The 360&deg; views from the top are arguably the best free view in Edinburgh &mdash; castle, Arthur&rsquo;s Seat, the Firth of Forth, the New Town grid, the Old Town skyline all visible at once. Especially good at dusk in September.</p>
+        <ul class="highlights">
+          <li><b>National Monument:</b> A partial replica of the Parthenon, begun in 1826 and never finished due to lack of funds. Known locally as &ldquo;Scotland&rsquo;s Disgrace.&rdquo; Striking against the sky.</li>
+          <li><b>Nelson Monument:</b> A tower with a time ball that drops at 1pm daily (same tradition as the Castle gun). You can climb it for a small fee.</li>
+          <li><b>The view west:</b> The castle, the spire of the Balmoral Hotel, Arthur&rsquo;s Seat behind it &mdash; the whole of Edinburgh&rsquo;s skyline from the east. The light at 7&ndash;8pm in September is warm and long.</li>
+        </ul>
+        <div class="tip-box"><strong>Getting there:</strong> Walk east from the Royal Mile along Canongate, then north up Calton Road, then up the steps to the hill. About 15 min from the hotel. Or walk along Princes Street to the east end and take the path up from Waterloo Place.</div>
+      </div>
+      <div class="map-area">
+        <iframe src="https://maps.google.com/maps?q=Calton+Hill+Edinburgh+EH7+5AA&output=embed" loading="lazy" title="Calton Hill Edinburgh"></iframe>
+        <a class="map-open-link" href="https://www.google.com/maps/search/?api=1&query=Calton+Hill+Edinburgh" target="_blank">Open in Google Maps &#8599;</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="dinner-card">
+    <div class="dinner-title">&#127374;&nbsp; Dinner &mdash; Old Town or Princes Street area</div>
+    <div class="dinner-options">
+      <div class="dinner-opt"><b>Dishoom Edinburgh</b> &mdash; 3A St Andrew Square, EH2 2BD. Brilliant Bombay caf&eacute; food. May have a wait on Sunday evenings; worth it. The black dal is the thing to order.</div>
+      <div class="dinner-opt"><b>The Witchery by the Castle</b> &mdash; Castlehill, EH1 2NF. An Edinburgh institution &mdash; dramatically decorated, beside the castle. More expensive but a memorable evening out. Book in advance.</div>
+      <div class="dinner-opt"><b>Waldorf Astoria (The Caledonian) Pompadour</b> &mdash; Princes St, EH1 2AB. The grand old railway hotel on Princes Street. Sunday dinner is a particular occasion here.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ DAY 10 ═══ -->
+<section class="day-section" id="day10">
+  <div class="day-section-header">
+    <span class="day-number">Day 10</span>
+    <div>
+      <div class="day-title">Arthur&rsquo;s Seat &amp; New Town</div>
+      <div class="day-date">Monday, 15 September 2025</div>
+    </div>
+  </div>
+
+  <div class="slot-label">Early morning &mdash; start by 8am</div>
+
+  <div class="activity-card">
+    <div class="activity-card-body">
+      <div class="activity-info">
+        <div class="activity-type">&#9968;&nbsp; Hike &mdash; free, allow 1.5&ndash;2hrs</div>
+        <div class="activity-name">Arthur&rsquo;s Seat</div>
+        <div class="activity-address">&#128205;&nbsp; Holyrood Park, Edinburgh EH8 8HG &nbsp;&middot;&nbsp; 20-min walk from hotel</div>
+        <div class="practical-row">
+          <span class="prac-item"><span class="pric-free">Free</span></span>
+          <span class="prac-item">&#9201;&nbsp; 45 min to summit, 30 min down &nbsp;&middot;&nbsp; total 1.5&ndash;2hrs</span>
+          <span class="prac-item">&#128336;&nbsp; Open at all times &mdash; start early</span>
+        </div>
+        <p class="activity-desc">An ancient volcano in the middle of the city, rising 251m above sea level. The views from the summit are the finest in Edinburgh by a considerable margin. The climb is not technically difficult &mdash; good footwear is sufficient. Start early on a Monday to have the path mostly to yourself.</p>
+        <ul class="highlights">
+          <li><b>Getting to the start:</b> Walk east down the Royal Mile, past Holyrood Palace, into Holyrood Park. The main path to the summit (Volunteer&rsquo;s Walk) starts from the car park near St Margaret&rsquo;s Loch. About 20 min walk from the hotel.</li>
+          <li><b>The path:</b> Follow the wide path south-west from St Margaret&rsquo;s Loch. It climbs steadily through open grassland &mdash; no scrambling required on the main route. The ridge becomes steeper near the top. Allow 45 min at a comfortable pace.</li>
+          <li><b>The summit:</b> 360&deg; views &mdash; the full Edinburgh skyline to the west, the Firth of Forth and Fife to the north, the Pentland Hills to the south, the North Sea to the east. On a clear September morning this is extraordinary.</li>
+          <li><b>Wind:</b> It is almost always windy at the top. Bring a layer even if it is warm in the city below.</li>
+          <li><b>Descent:</b> Return by the same path, or take the alternate route down past Salisbury Crags (the dramatic cliff face on the west side) &mdash; adds 20 min but spectacular.</li>
+        </ul>
+        <div class="tip-box"><strong>Practical:</strong> Wear trainers with a decent grip &mdash; the path is rocky near the top. There are no facilities on the hill. Bring water. The summit is exposed &mdash; September mornings can be cold even if Edinburgh below is mild.</div>
+      </div>
+      <div class="map-area">
+        <iframe src="https://maps.google.com/maps?q=Arthur+Seat+Holyrood+Park+Edinburgh&output=embed" loading="lazy" title="Arthur's Seat Edinburgh"></iframe>
+        <a class="map-open-link" href="https://www.google.com/maps/search/?api=1&query=Arthur+Seat+Edinburgh+Holyrood+Park" target="_blank">Open in Google Maps &#8599;</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="activity-card">
+    <div class="activity-card-body">
+      <div class="activity-info">
+        <div class="activity-type">&#127963;&nbsp; Royal Palace &mdash; exterior</div>
+        <div class="activity-name">Palace of Holyroodhouse</div>
+        <div class="activity-address">&#128205;&nbsp; Canongate, Edinburgh EH8 8DX &nbsp;&middot;&nbsp; Foot of the Royal Mile, at the park entrance</div>
+        <div class="practical-row">
+          <span class="prac-item"><span class="pric-free">Free</span>&nbsp; exterior &nbsp;|&nbsp; &#128178;&nbsp; ~&pound;18pp for the interior</span>
+          <span class="prac-item">&#128336;&nbsp; 9:30am&ndash;4:30pm (check seasonal hours)</span>
+          <span class="prac-item">&#9201;&nbsp; 20 min exterior / 1.5hrs interior</span>
+        </div>
+        <p class="activity-desc">The official Scottish residence of the monarch. You will pass it at the base of the hill on the return from Arthur&rsquo;s Seat. Worth seeing from the forecourt gates even if not going inside.</p>
+        <ul class="highlights">
+          <li><b>Exterior &amp; gates:</b> The baroque facade and forecourt are impressive. The ruins of Holyrood Abbey are visible on the right side of the palace &mdash; a roofless 12th-century church.</li>
+          <li><b>Interior (paid):</b> The State Apartments, the historic apartments of Mary Queen of Scots, and the gallery of Scottish monarchs. Worth it if Scottish royal history is of interest.</li>
+        </ul>
+      </div>
+      <div class="map-area">
+        <iframe src="https://maps.google.com/maps?q=Palace+of+Holyroodhouse+Edinburgh+EH8+8DX&output=embed" loading="lazy" title="Holyrood Palace"></iframe>
+        <a class="map-open-link" href="https://www.google.com/maps/search/?api=1&query=Palace+Holyroodhouse+Edinburgh" target="_blank">Open in Google Maps &#8599;</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="slot-label">Late morning &mdash; coffee and gallery</div>
+
+  <div class="transport-between">
+    <div class="transport-between-icon">&#128694;</div>
+    <div class="transport-between-text">
+      <strong>Holyrood &#8594; Scottish National Gallery</strong>
+      <span>Walk up the Royal Mile from Holyrood &mdash; uphill, about 15 min to the Mound. The gallery sits on the Mound at the junction of Old and New Town. Or: Lothian Bus 35 from outside Holyrood Palace north to the Mound (5 min, ~&pound;2 contactless).</span>
+    </div>
+    <span class="transport-badge">15 min walk</span>
+  </div>
+
+  <div class="activity-card">
+    <div class="activity-card-body">
+      <div class="activity-info">
+        <div class="activity-type">&#127912;&nbsp; Art gallery &mdash; free</div>
+        <div class="activity-name">Scottish National Gallery</div>
+        <div class="activity-address">&#128205;&nbsp; The Mound, Edinburgh EH2 2EL &nbsp;&middot;&nbsp; Between Old and New Town</div>
+        <div class="practical-row">
+          <span class="prac-item"><span class="pric-free">Free</span></span>
+          <span class="prac-item">&#128336;&nbsp; 10am&ndash;5pm daily</span>
+          <span class="prac-item">&#9201;&nbsp; 45&ndash;60 min</span>
+        </div>
+        <p class="activity-desc">Scotland&rsquo;s national collection of art, from the Renaissance to the 19th century. A manageable, beautifully presented collection in a neoclassical building. Good cafe in the basement for coffee after the hike.</p>
+        <ul class="highlights">
+          <li><b>Velazquez, Titian, Raphael:</b> The European Old Masters collection is strong for a gallery this size.</li>
+          <li><b>The Scottish collection:</b> The national portrait collection includes striking paintings of Mary Queen of Scots and the Jacobite court.</li>
+          <li><b>Canova&rsquo;s Three Graces:</b> A shared acquisition with the V&amp;A &mdash; the marble sculpture is in this gallery on alternating periods. Check if it is currently here.</li>
+          <li><b>The Mound views:</b> From outside the gallery, the view down Princes Street with the castle behind is one of Edinburgh&rsquo;s best.</li>
+        </ul>
+      </div>
+      <div class="map-area">
+        <iframe src="https://maps.google.com/maps?q=Scottish+National+Gallery+The+Mound+Edinburgh+EH2+2EL&output=embed" loading="lazy" title="Scottish National Gallery"></iframe>
+        <a class="map-open-link" href="https://www.google.com/maps/search/?api=1&query=Scottish+National+Gallery+Edinburgh" target="_blank">Open in Google Maps &#8599;</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="slot-label">Afternoon &mdash; New Town</div>
+
+  <div class="activity-card">
+    <div class="activity-card-body">
+      <div class="activity-info">
+        <div class="activity-type">&#127981;&nbsp; Georgian neighbourhood &mdash; free to explore</div>
+        <div class="activity-name">Princes Street Gardens &amp; New Town</div>
+        <div class="activity-address">&#128205;&nbsp; Princes Street Gardens, Edinburgh EH2 2AB &nbsp;&middot;&nbsp; North side of the Old Town</div>
+        <div class="practical-row">
+          <span class="prac-item"><span class="pric-free">Free</span></span>
+          <span class="prac-item">&#9201;&nbsp; 1.5&ndash;2hrs</span>
+        </div>
+        <p class="activity-desc">Princes Street Gardens runs along the base of the castle rock. The view looking up to Edinburgh Castle from the gardens is one of the most photographed in Scotland. The New Town beyond is a complete contrast to the Old Town &mdash; Georgian grid streets, grand terraces, a very different Edinburgh.</p>
+        <ul class="highlights">
+          <li><b>The gardens:</b> A long park at the foot of the castle rock. The Ross Fountain, the Scott Monument (a Gothic spire to Sir Walter Scott &mdash; you can climb it for &pound;12), and the flower clock.</li>
+          <li><b>The castle view:</b> From the central path in the gardens, the castle sits directly above you on the rock. The best stationary photograph of Edinburgh Castle is from here.</li>
+          <li><b>George Street:</b> A block north of Princes Street &mdash; the main shopping and restaurant street of the New Town. More relaxed and upmarket than Princes Street itself.</li>
+          <li><b>Rose Street:</b> A pedestrian lane between Princes Street and George Street &mdash; bars, boutiques, good for a coffee stop.</li>
+        </ul>
+      </div>
+      <div class="map-area">
+        <iframe src="https://maps.google.com/maps?q=Princes+Street+Gardens+Edinburgh+EH2+2AB&output=embed" loading="lazy" title="Princes Street Gardens"></iframe>
+        <a class="map-open-link" href="https://www.google.com/maps/search/?api=1&query=Princes+Street+Gardens+Edinburgh" target="_blank">Open in Google Maps &#8599;</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="dinner-card">
+    <div class="dinner-title">&#127374;&nbsp; Dinner &mdash; New Town, George Street</div>
+    <div class="dinner-options">
+      <div class="dinner-opt"><b>The Gardener&rsquo;s Cottage</b> &mdash; 1 Royal Terrace Gardens, EH7 5DX. A small restaurant in a 19th-century cottage, one communal table, set menu of seasonal Scottish produce. Book months in advance &mdash; one of Edinburgh&rsquo;s best restaurants.</div>
+      <div class="dinner-opt"><b>Contini</b> &mdash; 103 George Street, EH2 3ES. Italian family cooking, good pasta, consistently excellent. A reliable and enjoyable mid-range dinner on George Street.</div>
+      <div class="dinner-opt"><b>The Ivy Edinburgh</b> &mdash; 4 St Andrew Square, EH2 2BD. The Edinburgh branch of the London restaurant. Good all-day menu, smart but not stuffy. Convenient for the New Town end of the day.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ DAY 11 ═══ -->
+<section class="day-section" id="day11">
+  <div class="day-section-header">
+    <span class="day-number">Day 11</span>
+    <div>
+      <div class="day-title">Leith &amp; Royal Yacht Britannia &mdash; Fly to Belfast</div>
+      <div class="day-date">Tuesday, 16 September 2025</div>
+    </div>
+  </div>
+
+  <div class="slot-label">Getting to Leith</div>
+  <div class="transport-between">
+    <div class="transport-between-icon">&#128652;</div>
+    <div class="transport-between-text">
+      <strong>Hotel &#8594; Leith (Royal Yacht Britannia)</strong>
+      <span><strong>Lothian Bus 16</strong> from St Andrew Square (5-min walk from hotel) &rarr; Ocean Terminal, Leith. About 25 min, ~&pound;2 contactless. Buses run every 10&ndash;12 min. Get off at Ocean Terminal stop &mdash; the Britannia is inside the Ocean Terminal building.</span>
+    </div>
+    <span class="transport-badge">25 min by bus</span>
+  </div>
+
+  <div class="slot-label">Morning</div>
+
+  <div class="activity-card">
+    <div class="activity-card-body">
+      <div class="activity-info">
+        <div class="activity-type">&#9875;&nbsp; Museum ship &mdash; pre-book required</div>
+        <div class="activity-name">Royal Yacht Britannia</div>
+        <div class="activity-address">&#128205;&nbsp; Ocean Drive, Leith, Edinburgh EH6 6JJ &nbsp;&middot;&nbsp; Inside Ocean Terminal shopping centre</div>
+        <div class="practical-row">
+          <span class="prac-item">&#128178;&nbsp; ~&pound;20pp &nbsp;|&nbsp; Book: royalyachtbritannia.co.uk</span>
+          <span class="prac-item">&#128336;&nbsp; 9:30am&ndash;3:30pm (last entry)</span>
+          <span class="prac-item">&#9201;&nbsp; Allow 2hrs</span>
+        </div>
+        <p class="activity-desc">The royal family&rsquo;s private yacht from 1954 to 1997, when she was decommissioned. The yacht is preserved exactly as she was on her last voyage, and the contrast between the formal State Apartments and the practical crew quarters is striking. One of the most quietly fascinating visits in Scotland.</p>
+        <ul class="highlights">
+          <li><b>The State Dining Room:</b> Where the royal family hosted heads of state. The table is set exactly as it was for a formal banquet &mdash; the original china, crystal, and cutlery.</li>
+          <li><b>The Royal Bedrooms:</b> Surprisingly modest for a royal residence &mdash; single beds, simple furniture. The contrast with the state rooms is remarkable.</li>
+          <li><b>The Engine Room:</b> Three decks below, the original 1953 turbine engines. The engineering is impressive in scale.</li>
+          <li><b>The Sun Lounge:</b> Where the family relaxed privately. The 1950s decor is perfectly preserved.</li>
+          <li><b>The crew quarters:</b> The 220 crew lived in very compact conditions one deck below the royals. The contrast in scale is the most thought-provoking thing on board.</li>
+        </ul>
+        <div class="tip-box"><strong>Booking:</strong> Pre-book at royalyachtbritannia.co.uk &mdash; a 9:30am or 10am timed slot works best for this day. The audioguide is included in the ticket price and is very good &mdash; narrated by former royal household staff.</div>
+      </div>
+      <div class="map-area">
+        <iframe src="https://maps.google.com/maps?q=Royal+Yacht+Britannia+Ocean+Drive+Leith+Edinburgh&output=embed" loading="lazy" title="Royal Yacht Britannia Leith"></iframe>
+        <a class="map-open-link" href="https://www.google.com/maps/search/?api=1&query=Royal+Yacht+Britannia+Leith+Edinburgh+EH6+6JJ" target="_blank">Open in Google Maps &#8599;</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="slot-label">Lunch &mdash; The Shore, Leith</div>
+
+  <div class="activity-card">
+    <div class="activity-card-body">
+      <div class="activity-info">
+        <div class="activity-type">&#127758;&nbsp; Waterfront &mdash; 10-min walk from Britannia</div>
+        <div class="activity-name">The Shore, Leith</div>
+        <div class="activity-address">&#128205;&nbsp; The Shore, Leith, Edinburgh EH6 6QW &nbsp;&middot;&nbsp; 10-min walk from Ocean Terminal</div>
+        <div class="practical-row">
+          <span class="prac-item">&#9201;&nbsp; 45&ndash;60 min browse and lunch</span>
+        </div>
+        <p class="activity-desc">The Shore is Leith&rsquo;s old waterfront street &mdash; the Water of Leith running alongside, sandstone warehouses converted into restaurants, a very different character from the Old Town tourist centre. Good for a slow lunch before heading to the airport.</p>
+        <ul class="highlights">
+          <li><b>The Shore Bar &amp; Restaurant</b> &mdash; 3 The Shore, EH6 6QW. An Edinburgh institution. Fresh seafood and Scottish produce, excellent lunch menu, indoor and outdoor seating by the water.</li>
+          <li><b>Fishers Bistro</b> &mdash; 1 The Shore, EH6 6QW. A seafood restaurant in a converted 17th-century signal tower. One of the best fish restaurants in Edinburgh.</li>
+          <li><b>Martin Wishart</b> &mdash; 54 The Shore, EH6 6RA. A Michelin-starred restaurant for a special occasion lunch. Expensive; book ahead if this appeals.</li>
+        </ul>
+      </div>
+      <div class="map-area">
+        <iframe src="https://maps.google.com/maps?q=The+Shore+Leith+Edinburgh+EH6+6QW&output=embed" loading="lazy" title="The Shore Leith"></iframe>
+        <a class="map-open-link" href="https://www.google.com/maps/search/?api=1&query=The+Shore+Leith+Edinburgh" target="_blank">Open in Google Maps &#8599;</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="slot-label">Afternoon &mdash; back to city, then airport</div>
+
+  <div class="transport-between">
+    <div class="transport-between-icon">&#128652;</div>
+    <div class="transport-between-text">
+      <strong>Leith &#8594; Hotel &#8594; Edinburgh Airport</strong>
+      <span>Bus 16 back to city centre (25 min). Collect bags from hotel. Walk or taxi to <strong>St Andrew Square tram stop</strong> (5 min from hotel) &rarr; Edinburgh Tram direct to the airport (30 min, ~&pound;8pp). Trams run every 7&ndash;10 min. <strong>Allow 90 min</strong> from hotel to airport gate for domestic flights &mdash; leave by 3pm for a 5:30pm flight.</span>
+    </div>
+    <span class="transport-badge">Tram: 30 min to airport</span>
+  </div>
+
+  <div class="activity-card">
+    <div class="activity-card-body">
+      <div class="activity-info">
+        <div class="activity-type">&#128247;&nbsp; Optional &mdash; if time allows before airport</div>
+        <div class="activity-name">National Museum of Scotland</div>
+        <div class="activity-address">&#128205;&nbsp; Chambers Street, Edinburgh EH1 1JF &nbsp;&middot;&nbsp; 5-min walk from hotel</div>
+        <div class="practical-row">
+          <span class="prac-item"><span class="pric-free">Free</span></span>
+          <span class="prac-item">&#128336;&nbsp; 10am&ndash;5pm daily</span>
+          <span class="prac-item">&#9201;&nbsp; 1&ndash;1.5hrs minimum</span>
+        </div>
+        <p class="activity-desc">One of the best free museums in the UK. If there is 1.5&ndash;2hrs before leaving for the airport, this is an excellent use of it. Covers Scottish history from prehistory through the industrial age to the modern era, plus world cultures and science.</p>
+        <ul class="highlights">
+          <li><b>Dolly the Sheep:</b> The world&rsquo;s first cloned mammal, preserved and on display. A remarkable scientific artefact.</li>
+          <li><b>The Lewis Chessmen:</b> Some of the original 12th-century Norse chessmen found on the Isle of Lewis &mdash; extraordinary carved walrus ivory figures, more expressive than you expect.</li>
+          <li><b>The Grand Gallery:</b> The Victorian cast-iron atrium at the centre of the building &mdash; remarkable architecture and a good orientation point.</li>
+        </ul>
+      </div>
+      <div class="map-area">
+        <iframe src="https://maps.google.com/maps?q=National+Museum+of+Scotland+Chambers+Street+Edinburgh&output=embed" loading="lazy" title="National Museum Scotland"></iframe>
+        <a class="map-open-link" href="https://www.google.com/maps/search/?api=1&query=National+Museum+Scotland+Edinburgh+EH1+1JF" target="_blank">Open in Google Maps &#8599;</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="transport-between">
+    <div class="transport-between-icon">&#9992;&#65039;</div>
+    <div class="transport-between-text">
+      <strong>Fly &mdash; Edinburgh (EDI) &#8594; Belfast International (BFS)</strong>
+      <span>Flight time: <strong>~1hr</strong> &nbsp;&middot;&nbsp; Loganair or easyJet &nbsp;&middot;&nbsp; Edinburgh Airport: Tram from St Andrew Square, 30 min &nbsp;&middot;&nbsp; Arrive Belfast: Simon collects the car from BFS long-stay parking (it has been there since Day 1 of the trip)</span>
+    </div>
+    <span class="transport-badge">~1hr flight</span>
+  </div>
+
+</section>
+
 </main>
 
 <div class="page-footer">
@@ -159,5 +623,19 @@
   </div>
 </div>
 
+<script>
+  const sections = document.querySelectorAll('.day-section');
+  const navLinks = document.querySelectorAll('.day-nav a');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        navLinks.forEach(l => l.classList.remove('active'));
+        const active = document.querySelector('.day-nav a[href="#' + e.target.id + '"]');
+        if (active) active.classList.add('active');
+      }
+    });
+  }, { rootMargin: '-40% 0px -55% 0px' });
+  sections.forEach(s => observer.observe(s));
+</script>
 </body>
 </html>

@@ -3,30 +3,24 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>York — Simon & Jenifer, September 2025</title>
+<title>York &mdash; Simon &amp; Jenifer, September 2025</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
-  :root {
-    --bg:#f7f5f1;--surface:#fff;--surface2:#f0ede8;--border:#e2ddd6;
-    --ink:#1a1814;--ink2:#4a4640;--ink3:#8a857d;
-    --amber:#b5762a;--amber-bg:#fdf6ec;--amber-bd:#e8d0a0;
-    --green:#2a6e4a;--radius:10px;--city-color:#7a5a2a;
-  }
+  :root{--bg:#f7f5f1;--surface:#fff;--surface2:#f0ede8;--border:#e2ddd6;--ink:#1a1814;--ink2:#4a4640;--ink3:#8a857d;--amber:#b5762a;--amber-bg:#fdf6ec;--amber-bd:#e8d0a0;--green:#2a6e4a;--radius:10px;--city-color:#7a5a2a;}
   *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
   html{scroll-behavior:smooth;}
   body{background:var(--bg);color:var(--ink);font-family:'Inter',sans-serif;font-weight:400;line-height:1.65;}
   .back-nav{background:var(--surface);border-bottom:1px solid var(--border);padding:0 5vw;}
   .back-nav-inner{max-width:860px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:10px 0;}
-  .back-link{font-size:12px;font-weight:500;color:var(--ink3);text-decoration:none;display:flex;align-items:center;gap:6px;}
+  .back-link{font-size:12px;font-weight:500;color:var(--ink3);text-decoration:none;}
   .back-link:hover{color:var(--amber);}
   .trip-crumb{font-size:12px;color:var(--ink3);}
   .trip-crumb a{color:var(--ink3);text-decoration:none;}
   .trip-crumb a:hover{color:var(--amber);}
-  .trip-crumb strong{color:var(--ink2);}
   .hero{background:#1a1814;padding:3.5rem 5vw 3rem;position:relative;overflow:hidden;}
-  .hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 80% at 85% 40%,rgba(122,90,42,.2) 0%,transparent 60%);pointer-events:none;}
+  .hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 80% at 85% 40%,rgba(122,90,42,.22) 0%,transparent 60%);pointer-events:none;}
   .hero-inner{max-width:860px;margin:0 auto;position:relative;}
   .hero-label{font-size:11px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:#c9963a;margin-bottom:.75rem;}
   .hero-title{font-family:'Playfair Display',serif;font-size:clamp(2.2rem,6vw,4rem);font-weight:400;line-height:1.05;color:#f0ebe0;margin-bottom:.75rem;}
@@ -35,26 +29,80 @@
   .hs-l{font-size:10px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:#5a5248;display:block;margin-bottom:2px;}
   .hs-v{font-family:'Playfair Display',serif;font-size:1.2rem;color:#f0ebe0;}
   .day-nav{background:var(--surface);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:50;overflow-x:auto;}
-  .day-nav-inner{max-width:860px;margin:0 auto;display:flex;align-items:center;padding:0 5vw;min-width:max-content;}
-  .day-nav a{display:block;padding:12px 16px;font-size:12px;font-weight:500;color:var(--ink3);text-decoration:none;white-space:nowrap;border-bottom:2px solid transparent;}
+  .day-nav-inner{max-width:860px;margin:0 auto;display:flex;padding:0 5vw;min-width:max-content;}
+  .day-nav a{display:block;padding:12px 16px;font-size:12px;font-weight:500;color:var(--ink3);text-decoration:none;white-space:nowrap;border-bottom:2px solid transparent;transition:all .2s;}
   .day-nav a:hover{color:var(--ink);}
+  .day-nav a.active{color:var(--city-color);border-bottom-color:var(--city-color);}
   .main{max-width:860px;margin:0 auto;padding:0 5vw 6rem;}
   .day-section{padding-top:3rem;}
   .day-section-header{display:flex;align-items:flex-start;gap:1rem;margin-bottom:1.75rem;padding-bottom:1.25rem;border-bottom:2px solid var(--city-color);}
-  .day-number{font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--city-color);background:rgba(0,0,0,.06);padding:3px 8px;border-radius:4px;white-space:nowrap;margin-top:4px;}
+  .day-number{font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--city-color);background:rgba(122,90,42,.08);padding:3px 8px;border-radius:4px;white-space:nowrap;margin-top:4px;}
   .day-title{font-family:'Playfair Display',serif;font-size:1.6rem;font-weight:400;color:var(--ink);line-height:1.1;}
   .day-date{font-size:12px;color:var(--ink3);margin-top:3px;font-weight:500;}
-  .stub-placeholder{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:2rem 1.75rem;text-align:center;}
-  .stub-placeholder p{font-size:14px;color:var(--ink3);margin-bottom:.5rem;}
-  .stub-placeholder strong{color:var(--ink2);}
-  .coming-badge{display:inline-block;font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;padding:4px 12px;border-radius:20px;background:var(--surface2);border:1px solid var(--border);color:var(--ink3);margin-bottom:1rem;}
-  .summary-pills{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:1rem;}
-  .spill{font-size:12px;padding:4px 12px;border-radius:20px;background:var(--amber-bg);border:1px solid var(--amber-bd);color:#8a5015;font-weight:500;}
+  .slot-label{font-size:10px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--amber);margin:1.5rem 0 .75rem;display:flex;align-items:center;gap:8px;}
+  .slot-label::after{content:'';flex:1;height:1px;background:var(--border);}
+  .activity-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;margin-bottom:.75rem;}
+  .activity-card-body{display:grid;grid-template-columns:1fr 300px;gap:0;}
+  .activity-info{padding:1.25rem 1.5rem;}
+  .activity-type{font-size:10px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--ink3);margin-bottom:.4rem;}
+  .activity-name{font-family:'Playfair Display',serif;font-size:1.25rem;font-weight:400;color:var(--ink);margin-bottom:.5rem;line-height:1.2;}
+  .activity-address{font-size:12px;color:var(--ink3);margin-bottom:.75rem;}
+  .practical-row{display:flex;gap:1rem;flex-wrap:wrap;margin-bottom:.75rem;}
+  .prac-item{font-size:11.5px;color:var(--ink2);display:flex;align-items:center;gap:4px;}
+  .pric-free{color:var(--green);font-weight:600;}
+  .activity-desc{font-size:13px;color:var(--ink2);line-height:1.7;margin-bottom:.75rem;}
+  .highlights{list-style:none;margin:0;padding:0;}
+  .highlights li{font-size:12.5px;color:var(--ink2);padding:3px 0 3px 16px;position:relative;line-height:1.5;}
+  .highlights li::before{content:"\2192";position:absolute;left:0;color:var(--amber);font-size:11px;}
+  .highlights li b{color:var(--ink);font-weight:500;}
+  .tip-box{background:var(--amber-bg);border:1px solid var(--amber-bd);border-radius:6px;padding:.6rem .85rem;margin-top:.75rem;font-size:12px;color:var(--ink2);line-height:1.6;}
+  .tip-box strong{color:var(--amber);font-weight:600;}
+  .map-area{position:relative;height:100%;min-height:240px;background:#eee;border-left:1px solid var(--border);}
+  .map-area iframe{display:block;width:100%;height:100%;min-height:240px;border:0;}
+  .map-open-link{display:block;padding:8px 12px;background:var(--surface2);border-top:1px solid var(--border);font-size:11px;font-weight:500;color:var(--city-color);text-decoration:none;text-align:center;}
+  .map-open-link:hover{background:var(--border);}
+  .transport-between{display:flex;align-items:center;gap:12px;padding:.8rem 1.25rem;background:var(--surface2);border:1px solid var(--border);border-radius:var(--radius);margin:.75rem 0;font-size:13px;color:var(--ink2);}
+  .transport-between-icon{width:32px;height:32px;background:var(--surface);border:1px solid var(--border);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.9rem;flex-shrink:0;}
+  .transport-between-text{flex:1;}
+  .transport-between-text strong{display:block;font-size:13px;font-weight:600;color:var(--ink);margin-bottom:2px;}
+  .transport-between-text span{font-size:12px;color:var(--ink3);}
+  .transport-badge{font-size:10.5px;font-weight:600;padding:2px 8px;border-radius:20px;background:rgba(122,90,42,.08);color:var(--city-color);white-space:nowrap;flex-shrink:0;}
+  .arrival-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;margin-bottom:.75rem;}
+  .arrival-card-header{padding:.85rem 1.25rem;border-bottom:1px solid var(--border);background:rgba(122,90,42,.04);}
+  .arrival-card-header h3{font-size:13px;font-weight:600;color:var(--ink);}
+  .arrival-rows{padding:.85rem 1.25rem;display:flex;flex-direction:column;gap:.75rem;}
+  .arrival-row{display:flex;gap:12px;align-items:flex-start;}
+  .arrival-row-icon{width:28px;height:28px;background:var(--surface2);border:1px solid var(--border);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.8rem;flex-shrink:0;margin-top:2px;}
+  .arrival-row-content{font-size:13px;color:var(--ink2);line-height:1.6;}
+  .arrival-row-content strong{color:var(--ink);font-weight:500;}
+  .arrival-row-content .step{display:block;padding:2px 0;}
+  .hotel-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;margin-bottom:.75rem;}
+  .hotel-card-body{display:grid;grid-template-columns:1fr 300px;gap:0;}
+  .hotel-info{padding:1.25rem 1.5rem;}
+  .hotel-badge{font-size:10px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--ink3);margin-bottom:.4rem;}
+  .hotel-name{font-family:'Playfair Display',serif;font-size:1.2rem;color:var(--ink);margin-bottom:.5rem;}
+  .hotel-address{font-size:12px;color:var(--ink3);margin-bottom:.75rem;}
+  .hotel-detail{font-size:13px;color:var(--ink2);line-height:1.7;list-style:none;}
+  .hotel-detail li{padding:2px 0 2px 14px;position:relative;}
+  .hotel-detail li::before{content:"\00B7";position:absolute;left:0;color:var(--amber);}
+  .dinner-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:1.1rem 1.5rem;margin-bottom:.75rem;}
+  .dinner-title{font-size:13px;font-weight:600;color:var(--ink);margin-bottom:.5rem;}
+  .dinner-options{display:flex;flex-direction:column;gap:6px;}
+  .dinner-opt{font-size:12.5px;color:var(--ink2);line-height:1.6;}
+  .dinner-opt b{color:var(--ink);font-weight:500;}
   .page-footer{border-top:1px solid var(--border);padding:1.75rem 5vw;max-width:860px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;}
   .footer-brand{font-family:'Playfair Display',serif;font-size:.9rem;color:var(--ink2);}
   .next-city-link{font-size:13px;font-weight:500;color:var(--city-color);text-decoration:none;}
   .prev-city-link{font-size:13px;font-weight:500;color:var(--ink3);text-decoration:none;}
-  @media(max-width:700px){.back-nav,.hero,.main{padding-left:1.25rem;padding-right:1.25rem;}.back-nav-inner{padding-left:0;padding-right:0;}.page-footer{padding-left:1.25rem;padding-right:1.25rem;}}
+  @media(max-width:700px){
+    .activity-card-body,.hotel-card-body{grid-template-columns:1fr;}
+    .map-area{min-height:200px;border-left:none;border-top:1px solid var(--border);}
+    .map-area iframe{min-height:200px;}
+    .back-nav,.hero,.main{padding-left:1.25rem;padding-right:1.25rem;}
+    .back-nav-inner{padding-left:0;padding-right:0;}
+    .day-nav-inner{padding-left:1.25rem;}
+    .page-footer{padding-left:1.25rem;padding-right:1.25rem;}
+  }
 </style>
 </head>
 <body>
@@ -64,7 +112,9 @@
     <a href="index.html" class="back-link">&#8592; Full itinerary</a>
     <span class="trip-crumb">
       <a href="london.html">London</a> &nbsp;&middot;&nbsp;
-      <a href="york.html"><strong>York</strong></a> &nbsp;&middot;&nbsp; <a href="edinburgh.html">Edinburgh</a> &nbsp;&middot;&nbsp; <a href="belfast.html">Belfast</a>
+      <strong>York</strong> &nbsp;&middot;&nbsp;
+      <a href="edinburgh.html">Edinburgh</a> &nbsp;&middot;&nbsp;
+      <a href="belfast.html">Belfast</a>
     </span>
   </div>
 </div>
@@ -75,50 +125,351 @@
     <h1 class="hero-title">York</h1>
     <p class="hero-meta">11&ndash;12 September 2025 &nbsp;&middot;&nbsp; 2 nights &nbsp;&middot;&nbsp; ibis York Centre</p>
     <div class="hero-stats">
-      <div><span class="hs-l">Arrives</span><span class="hs-v">Thu 11 Sep</span></div>
-      <div><span class="hs-l">Moves on</span><span class="hs-v">Fri 12 Sep (pm, train to Edinburgh)</span></div>
-      <div><span class="hs-l">Getting around</span><span class="hs-v">Walking &mdash; everything within 20 min</span></div>
+      <div><span class="hs-l">Arrives from</span><span class="hs-v">London KGX</span></div>
+      <div><span class="hs-l">Moves on to</span><span class="hs-v">Edinburgh</span></div>
+      <div><span class="hs-l">Getting around</span><span class="hs-v">Walking only</span></div>
+      <div><span class="hs-l">Oyster card</span><span class="hs-v">Not needed</span></div>
     </div>
   </div>
 </section>
 
 <div class="day-nav">
   <div class="day-nav-inner">
-    <a href="#day6">Day 6 &nbsp;&middot;&nbsp; 11 Sep</a>
-    <a href="#day7">Day 7 &nbsp;&middot;&nbsp; 12 Sep</a>
+    <a href="#day6">Day 6 &nbsp;&middot;&nbsp; 11 Sep (Thu)</a>
+    <a href="#day7">Day 7 &nbsp;&middot;&nbsp; 12 Sep (Fri)</a>
   </div>
 </div>
 
 <main class="main">
 
-  <section class="day-section" id="day6">
-    <div class="day-section-header">
-      <span class="day-number">Day 6</span>
-      <div>
-        <div class="day-title">Arrive York &mdash; Medieval Streets</div>
-        <div class="day-date">Thursday, 11 Sep</div>
+<!-- ═══ DAY 6 ═══ -->
+<section class="day-section" id="day6">
+  <div class="day-section-header">
+    <span class="day-number">Day 6</span>
+    <div>
+      <div class="day-title">Arrive York &mdash; Medieval Streets</div>
+      <div class="day-date">Thursday, 11 September 2025</div>
+    </div>
+  </div>
+
+  <div class="slot-label">Morning &mdash; train from London</div>
+
+  <div class="arrival-card">
+    <div class="arrival-card-header"><h3>&#128646;&nbsp; Getting from London to York</h3></div>
+    <div class="arrival-rows">
+      <div class="arrival-row">
+        <div class="arrival-row-icon">&#128649;</div>
+        <div class="arrival-row-content">
+          <strong>Hotel (Southwark) &#8594; Kings Cross station</strong>
+          <span class="step">Walk to Southwark station (10 min) &#8594; Jubilee Line toward Stratford &#8594; change at Waterloo (1 stop) &#8594; Northern Line toward High Barnet &#8594; Kings Cross St Pancras (3 stops). Total journey: ~25 min, ~&pound;2.80.</span>
+          <span class="step"><strong>Allow 35 minutes</strong> from hotel door to Kings Cross platform. The LNER departure boards are in the main concourse &mdash; check your train and platform number before heading down.</span>
+        </div>
+      </div>
+      <div class="arrival-row">
+        <div class="arrival-row-icon">&#128646;</div>
+        <div class="arrival-row-content">
+          <strong>LNER train &mdash; Kings Cross &#8594; York</strong>
+          <span class="step">Direct train, no changes. Journey time: <strong>~2hrs</strong>. Trains depart roughly every 30 min &mdash; a 10am or 11am departure is ideal, arriving York 12&ndash;1pm.</span>
+          <span class="step"><strong>Cost:</strong> ~&pound;20&ndash;40pp advance (booked online at lner.co.uk) &nbsp;&middot;&nbsp; Book in advance, fares rise as the date approaches &nbsp;&middot;&nbsp; Standard class is perfectly comfortable</span>
+          <span class="step">York station is right at the edge of the city walls &mdash; the hotel is a 5-min walk straight ahead.</span>
+        </div>
       </div>
     </div>
-    <div class="stub-placeholder">
-      <div class="coming-badge">&#9997;&#65039; Detailed guide coming soon</div>
-      <p><strong>What&rsquo;s planned for this day:</strong></p>
-      <div class="summary-pills"><span class="spill">The Shambles</span><span class="spill">City Walls walk (free, 3km)</span><span class="spill">Dinner in York</span></div>
-    </div>
-  </section>
-  <section class="day-section" id="day7">
-    <div class="day-section-header">
-      <span class="day-number">Day 7</span>
-      <div>
-        <div class="day-title">York Minster, Museums &amp; Betty&rsquo;s</div>
-        <div class="day-date">Friday, 12 Sep</div>
+  </div>
+
+  <div class="hotel-card">
+    <div class="hotel-card-body">
+      <div class="hotel-info">
+        <div class="hotel-badge">&#127968;&nbsp; Base for nights 6&ndash;7</div>
+        <div class="hotel-name">ibis York Centre</div>
+        <div class="hotel-address">&#128205;&nbsp; Rougier Street, York YO1 6JB &nbsp;&middot;&nbsp; 5-min walk from York station</div>
+        <ul class="hotel-detail">
+          <li>Check-in from <strong>2pm</strong> &nbsp;|&nbsp; Check-out by <strong>noon</strong> on 13 Sep</li>
+          <li>If you arrive before 2pm, drop bags at reception and head straight out</li>
+          <li>Station exit &rarr; turn left over the footbridge &rarr; Rougier St is immediately ahead</li>
+          <li>Everything in York is within a 20-min walk &mdash; no transport needed</li>
+        </ul>
+      </div>
+      <div class="map-area">
+        <iframe src="https://maps.google.com/maps?q=ibis+York+Centre+Rougier+Street+York&output=embed" loading="lazy" title="ibis York map"></iframe>
+        <a class="map-open-link" href="https://www.google.com/maps/search/?api=1&query=ibis+York+Centre+Rougier+Street" target="_blank">Open in Google Maps &#8599;</a>
       </div>
     </div>
-    <div class="stub-placeholder">
-      <div class="coming-badge">&#9997;&#65039; Detailed guide coming soon</div>
-      <p><strong>What&rsquo;s planned for this day:</strong></p>
-      <div class="summary-pills"><span class="spill">York Minster tower climb</span><span class="spill">National Railway Museum (free)</span><span class="spill">Betty&rsquo;s Tea Room</span><span class="spill">Clifford&rsquo;s Tower</span><span class="spill">Train to Edinburgh afternoon</span></div>
+  </div>
+
+  <div class="slot-label">Afternoon</div>
+
+  <div class="activity-card">
+    <div class="activity-card-body">
+      <div class="activity-info">
+        <div class="activity-type">&#127981;&nbsp; Medieval street &mdash; free to explore</div>
+        <div class="activity-name">The Shambles</div>
+        <div class="activity-address">&#128205;&nbsp; The Shambles, York YO1 7LZ &nbsp;&middot;&nbsp; 15-min walk from hotel</div>
+        <div class="practical-row">
+          <span class="prac-item"><span class="pric-free">Free</span>&nbsp; to walk</span>
+          <span class="prac-item">&#9201;&nbsp; Allow 45&ndash;60 min for the street and surroundings</span>
+          <span class="prac-item">&#128336;&nbsp; Shops open ~10am&ndash;5pm</span>
+        </div>
+        <p class="activity-desc">The most famous medieval street in England. The overhanging timber-framed buildings lean so far across the narrow lane they nearly touch at the top. No ticket, no queue &mdash; just walk in. The surrounding lanes are equally worth exploring.</p>
+        <ul class="highlights">
+          <li><b>The street itself:</b> Walk from the south end (near Pavement) north to King&rsquo;s Square. Then return via the parallel alleyways &mdash; Whip-Ma-Whop-Ma-Gate (the shortest street in England), the snickleways.</li>
+          <li><b>Shambles Market:</b> A small market in the square at the north end. Open daily with food, crafts, and local produce.</li>
+          <li><b>Little Shambles:</b> A tiny alley running parallel &mdash; often missed by tourists and more atmospheric than the main street.</li>
+          <li><b>Independent shops:</b> The Shambles is lined with small independent shops. No chain shops &mdash; everything from handmade chocolates to vintage books.</li>
+        </ul>
+        <div class="tip-box"><strong>Route from hotel:</strong> Walk east along Rougier St, through Museum Gardens gate, east on Duncombe Place past the Minster, then south on Goodramgate &rarr; right on Petergate &rarr; left down to the Shambles. 15 min, pleasant walk through the old city.</div>
+      </div>
+      <div class="map-area">
+        <iframe src="https://maps.google.com/maps?q=The+Shambles+York+YO1+7LZ&output=embed" loading="lazy" title="The Shambles York"></iframe>
+        <a class="map-open-link" href="https://www.google.com/maps/search/?api=1&query=The+Shambles+York+YO1+7LZ" target="_blank">Open in Google Maps &#8599;</a>
+      </div>
     </div>
-  </section>
+  </div>
+
+  <div class="slot-label">Late afternoon</div>
+
+  <div class="activity-card">
+    <div class="activity-card-body">
+      <div class="activity-info">
+        <div class="activity-type">&#127963;&nbsp; Historic walls &mdash; free circuit walk</div>
+        <div class="activity-name">York City Walls</div>
+        <div class="activity-address">&#128205;&nbsp; Bootham Bar, York YO30 7BH &nbsp;&middot;&nbsp; Best start point for Minster views</div>
+        <div class="practical-row">
+          <span class="prac-item"><span class="pric-free">Free</span></span>
+          <span class="prac-item">&#9201;&nbsp; Full circuit: ~1.5hrs &nbsp;&middot;&nbsp; Partial (best section): 30&ndash;45 min</span>
+          <span class="prac-item">&#128336;&nbsp; Open dawn to dusk</span>
+        </div>
+        <p class="activity-desc">A 3km circuit of the original Roman and medieval walls that still completely surround York&rsquo;s old city. The walls are walkable on top and give the best views of the Minster and the city rooftops.</p>
+        <ul class="highlights">
+          <li><b>Best section &mdash; Bootham Bar to Monk Bar:</b> Start at Bootham Bar (the gate near the Minster) and walk east along the north wall. The views of York Minster from the wall walk are the finest in the city.</li>
+          <li><b>Monk Bar:</b> The best-preserved of the four medieval gates. The portcullis is still in working order. Richard III Museum is inside (small, optional).</li>
+          <li><b>Walmgate Bar:</b> The only gate in England that still has its barbican (outer defensive structure) intact.</li>
+          <li><b>The four bars (gates):</b> Bootham Bar, Monk Bar, Walmgate Bar, Micklegate Bar &mdash; each has a different character.</li>
+        </ul>
+        <div class="tip-box"><strong>Practical:</strong> The steps up to the wall are steep in places but the walking on top is flat. Not all sections are accessible &mdash; follow the yellow waymarker signs. September light on the Minster from the north wall at 4&ndash;5pm is particularly good.</div>
+      </div>
+      <div class="map-area">
+        <iframe src="https://maps.google.com/maps?q=Bootham+Bar+York+City+Walls&output=embed" loading="lazy" title="York City Walls"></iframe>
+        <a class="map-open-link" href="https://www.google.com/maps/search/?api=1&query=Bootham+Bar+York+City+Walls" target="_blank">Open in Google Maps &#8599;</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="slot-label">Evening</div>
+  <div class="dinner-card">
+    <div class="dinner-title">&#127374;&nbsp; Dinner options in York</div>
+    <div class="dinner-options">
+      <div class="dinner-opt"><b>Roots York</b> &mdash; 68 Marygate, YO30 7BH. A Michelin-starred restaurant in a relaxed setting. Seasonal Yorkshire produce, tasting menu style. Book well in advance if this appeals.</div>
+      <div class="dinner-opt"><b>The Star Inn the City</b> &mdash; Museum St, YO1 7DR. Andrew Pern&rsquo;s relaxed riverside restaurant. Yorkshire produce, good lunch and dinner menu, pleasant outdoor terrace. No fuss, very good.</div>
+      <div class="dinner-opt"><b>Skosh</b> &mdash; 98 Micklegate, YO1 6JX. Small plates, seasonal and creative. Very well reviewed and informal. On Micklegate &mdash; one of York&rsquo;s best independent restaurant streets.</div>
+    </div>
+  </div>
+
+</section>
+
+<!-- ═══ DAY 7 ═══ -->
+<section class="day-section" id="day7">
+  <div class="day-section-header">
+    <span class="day-number">Day 7</span>
+    <div>
+      <div class="day-title">York Minster, Museums &amp; Betty&rsquo;s &mdash; then Edinburgh</div>
+      <div class="day-date">Friday, 12 September 2025</div>
+    </div>
+  </div>
+
+  <div class="slot-label">Morning</div>
+
+  <div class="activity-card">
+    <div class="activity-card-body">
+      <div class="activity-info">
+        <div class="activity-type">&#9962;&nbsp; Cathedral &mdash; pre-book tower climb</div>
+        <div class="activity-name">York Minster</div>
+        <div class="activity-address">&#128205;&nbsp; Minster Yard, York YO1 7HH &nbsp;&middot;&nbsp; 15-min walk from hotel</div>
+        <div class="practical-row">
+          <span class="prac-item">&#128178;&nbsp; Minster entry ~&pound;14pp &nbsp;&middot;&nbsp; Tower climb ~&pound;15pp extra</span>
+          <span class="prac-item">&#128336;&nbsp; Open 9am daily</span>
+          <span class="prac-item">&#9201;&nbsp; Allow 1.5&ndash;2hrs</span>
+        </div>
+        <p class="activity-desc">One of the largest Gothic cathedrals in Northern Europe, and the finest building in York. The tower climb gives the best vantage point in the city &mdash; 275 steps, but worth every one. Book both tickets online before you travel.</p>
+        <ul class="highlights">
+          <li><b>The Great East Window:</b> The largest area of medieval stained glass in Britain. It is the size of a tennis court and dates from 1405. The colours are extraordinary in morning light.</li>
+          <li><b>The Nave:</b> The sheer scale of the interior is the first thing that hits you. Walk the full length slowly before looking at any individual detail.</li>
+          <li><b>Chapter House:</b> A separate octagonal room off the north transept &mdash; fan-vaulted ceiling, medieval carved heads. Often overlooked and usually quiet.</li>
+          <li><b>Tower climb (275 steps):</b> The central tower gives 360&deg; views over all of York, the surrounding plain, and on clear days the North Yorkshire Moors. The city walls and the Shambles are visible. Do this first, before the Minster gets busy.</li>
+          <li><b>The Undercroft:</b> Below the Minster &mdash; Roman remains, Norman foundations, Saxon artefacts. Included in the ticket.</li>
+        </ul>
+        <div class="tip-box"><strong>Booking:</strong> Book at yorkminster.org &mdash; select timed entry. A 9am entry slot means you have the building largely to yourself for the first hour. The tower climb is a separate add-on &mdash; select this at the same time.</div>
+      </div>
+      <div class="map-area">
+        <iframe src="https://maps.google.com/maps?q=York+Minster+Minster+Yard+York+YO1+7HH&output=embed" loading="lazy" title="York Minster"></iframe>
+        <a class="map-open-link" href="https://www.google.com/maps/search/?api=1&query=York+Minster+York+YO1+7HH" target="_blank">Open in Google Maps &#8599;</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="transport-between">
+    <div class="transport-between-icon">&#128694;</div>
+    <div class="transport-between-text">
+      <strong>York Minster &#8594; National Railway Museum</strong>
+      <span>Walk west from the Minster along Duncombe Place, through the Museum Gardens, and along Museum Street. About 12 min on foot, flat the whole way. Follow signs for the NRM &mdash; it is well signposted from the city centre.</span>
+    </div>
+    <span class="transport-badge">12 min walk</span>
+  </div>
+
+  <div class="activity-card">
+    <div class="activity-card-body">
+      <div class="activity-info">
+        <div class="activity-type">&#128649;&nbsp; Museum &mdash; free, genuinely world-class</div>
+        <div class="activity-name">National Railway Museum</div>
+        <div class="activity-address">&#128205;&nbsp; Leeman Road, York YO26 4XJ &nbsp;&middot;&nbsp; 12-min walk from the Minster</div>
+        <div class="practical-row">
+          <span class="prac-item"><span class="pric-free">Free</span>&nbsp; entry</span>
+          <span class="prac-item">&#128336;&nbsp; 10am&ndash;5pm daily</span>
+          <span class="prac-item">&#9201;&nbsp; Allow 1.5hrs</span>
+        </div>
+        <p class="activity-desc">One of the finest free museums in Britain, and far more engaging than the name suggests. Two vast halls full of original locomotives &mdash; from Stephenson&rsquo;s Rocket to a Japanese bullet train &mdash; plus royal carriages, the history of British railways, and the engineering that made it all possible.</p>
+        <ul class="highlights">
+          <li><b>Flying Scotsman:</b> The most famous steam locomotive in the world &mdash; the first to officially reach 100mph. It is enormous up close. Usually on display in the Great Hall.</li>
+          <li><b>Mallard:</b> Holds the world speed record for a steam locomotive (126mph, 1938). The streamlined design is stunning.</li>
+          <li><b>Japanese Shinkansen 0 Series:</b> The original bullet train, donated by Japan Rail. A complete contrast to the Victorian steam engines beside it.</li>
+          <li><b>Royal carriages:</b> Queen Victoria&rsquo;s ornate railway saloon, complete with its original furnishings and decoration.</li>
+          <li><b>Workshop viewing gallery:</b> Live restoration work on historic locomotives &mdash; engineers at work on the original machines.</li>
+        </ul>
+      </div>
+      <div class="map-area">
+        <iframe src="https://maps.google.com/maps?q=National+Railway+Museum+Leeman+Road+York&output=embed" loading="lazy" title="National Railway Museum York"></iframe>
+        <a class="map-open-link" href="https://www.google.com/maps/search/?api=1&query=National+Railway+Museum+York" target="_blank">Open in Google Maps &#8599;</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="transport-between">
+    <div class="transport-between-icon">&#128694;</div>
+    <div class="transport-between-text">
+      <strong>National Railway Museum &#8594; Betty&rsquo;s Tea Room</strong>
+      <span>Walk back into the city centre: east along Museum Street, north on Duncombe Place, right on Stonegate. Betty&rsquo;s is on St Helen&rsquo;s Square at the far end of Stonegate. About 12 min walk.</span>
+    </div>
+    <span class="transport-badge">12 min walk</span>
+  </div>
+
+  <div class="slot-label">Lunch</div>
+
+  <div class="activity-card">
+    <div class="activity-card-body">
+      <div class="activity-info">
+        <div class="activity-type">&#127861;&nbsp; Tearoom &mdash; a Yorkshire institution</div>
+        <div class="activity-name">Betty&rsquo;s Tea Room</div>
+        <div class="activity-address">&#128205;&nbsp; 6&ndash;8 St Helen&rsquo;s Square, York YO1 8QP &nbsp;&middot;&nbsp; Central York</div>
+        <div class="practical-row">
+          <span class="prac-item">&#128178;&nbsp; Lunch ~&pound;15&ndash;25pp</span>
+          <span class="prac-item">&#128336;&nbsp; 9am&ndash;6pm daily, no reservations</span>
+          <span class="prac-item">&#9201;&nbsp; Queue 15&ndash;25 min, then allow 1hr to eat</span>
+        </div>
+        <p class="activity-desc">In the same building since 1936. A proper Yorkshire tea room &mdash; proper loose-leaf tea, fat rascals (a signature fruit scone), sandwiches and cakes made on the premises. The queue outside is part of the experience and it moves steadily.</p>
+        <ul class="highlights">
+          <li><b>Fat Rascal:</b> Betty&rsquo;s signature bake &mdash; a large fruit scone with a face made from cherries and almonds. Order one regardless of what else you have.</li>
+          <li><b>Yorkshire Rarebit:</b> The savoury option &mdash; a more substantial cheese dish on toast, a Yorkshire institution.</li>
+          <li><b>Loose-leaf tea:</b> Order the Yorkshire blend. It comes in a proper pot with a strainer, which is the point.</li>
+          <li><b>The basement:</b> A VJ Day mirror in the basement bar was signed by WWII servicemen during the war and is still there. Ask the staff about it.</li>
+        </ul>
+        <div class="tip-box"><strong>The queue:</strong> Join at the door &mdash; a member of staff manages it. Tell them how many in your party. Average wait on a Friday lunchtime is 15&ndash;20 minutes. Do not skip this &mdash; it is genuinely one of the best lunches you will have on the trip.</div>
+      </div>
+      <div class="map-area">
+        <iframe src="https://maps.google.com/maps?q=Bettys+Tea+Room+St+Helens+Square+York&output=embed" loading="lazy" title="Betty's York"></iframe>
+        <a class="map-open-link" href="https://www.google.com/maps/search/?api=1&query=Bettys+Tea+Room+York+YO1+8QP" target="_blank">Open in Google Maps &#8599;</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="slot-label">Early afternoon (optional)</div>
+
+  <div class="activity-card">
+    <div class="activity-card-body">
+      <div class="activity-info">
+        <div class="activity-type">&#127963;&nbsp; Norman castle keep</div>
+        <div class="activity-name">Clifford&rsquo;s Tower</div>
+        <div class="activity-address">&#128205;&nbsp; Tower Street, York YO1 9SA &nbsp;&middot;&nbsp; 10-min walk south from Betty&rsquo;s</div>
+        <div class="practical-row">
+          <span class="prac-item">&#128178;&nbsp; ~&pound;9pp (English Heritage, book online)</span>
+          <span class="prac-item">&#128336;&nbsp; 10am&ndash;5pm</span>
+          <span class="prac-item">&#9201;&nbsp; 30&ndash;45 min</span>
+        </div>
+        <p class="activity-desc">The remains of York&rsquo;s original Norman castle, sitting on a grassy motte with excellent views over the city. Small but worthwhile if you have time before the train &mdash; skip it if the train timing is tight.</p>
+        <ul class="highlights">
+          <li><b>The views:</b> From the top of the keep, you can see over the city walls and across the rooftops. The view of the Minster from here is different from any other angle.</li>
+          <li><b>The history:</b> Scene of the 1190 massacre of York&rsquo;s Jewish community. The exhibition inside deals with this honestly and movingly.</li>
+        </ul>
+      </div>
+      <div class="map-area">
+        <iframe src="https://maps.google.com/maps?q=Cliffords+Tower+Tower+Street+York+YO1+9SA&output=embed" loading="lazy" title="Clifford's Tower York"></iframe>
+        <a class="map-open-link" href="https://www.google.com/maps/search/?api=1&query=Cliffords+Tower+York" target="_blank">Open in Google Maps &#8599;</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="slot-label">Afternoon &mdash; train to Edinburgh</div>
+
+  <div class="transport-between">
+    <div class="transport-between-icon">&#128646;</div>
+    <div class="transport-between-text">
+      <strong>York station &#8594; Edinburgh Waverley &nbsp;·&nbsp; LNER direct</strong>
+      <span>Walk to York station from the city centre: 10 min from Betty&rsquo;s / Clifford&rsquo;s Tower. Journey time: <strong>~2hrs 30min</strong>, no changes. Aim for a 2pm or 3pm departure &mdash; arriving Edinburgh 4:30&ndash;5:30pm. <strong>Sit on the right-hand (east) side of the train</strong> for the dramatic Northumberland coast sea views between Berwick-upon-Tweed and Edinburgh &mdash; one of the great rail journeys in Britain.</span>
+    </div>
+    <span class="transport-badge">~2hr 30min</span>
+  </div>
+
+  <div class="slot-label">Evening &mdash; arriving Edinburgh</div>
+
+  <div class="arrival-card">
+    <div class="arrival-card-header"><h3>&#128652;&nbsp; Arriving at Edinburgh Waverley</h3></div>
+    <div class="arrival-rows">
+      <div class="arrival-row">
+        <div class="arrival-row-icon">&#128652;</div>
+        <div class="arrival-row-content">
+          <strong>Edinburgh Waverley &#8594; ibis Edinburgh Centre Royal Mile</strong>
+          <span class="step">Exit Waverley station at the <strong>Market Street exit</strong> (street level, north side). Walk up the Waverley Steps onto Princes Street. Turn right, then right again up the Mound. Or: follow signs for the Royal Mile &mdash; the hotel is on Hunter Square, a 10-min walk from the station.</span>
+          <span class="step">Alternative: exit Waverley at the <strong>Waverley Bridge exit</strong> and walk directly up to the Royal Mile (8 min uphill).</span>
+          <span class="step">Check-in from 2pm &mdash; rooms will be ready by the time you arrive.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="activity-card">
+    <div class="activity-card-body">
+      <div class="activity-info">
+        <div class="activity-type">&#127968;&nbsp; First evening &mdash; explore the closes</div>
+        <div class="activity-name">Royal Mile &amp; Old Town closes</div>
+        <div class="activity-address">&#128205;&nbsp; Royal Mile, Edinburgh EH1 &nbsp;&middot;&nbsp; From hotel front door</div>
+        <div class="practical-row">
+          <span class="prac-item"><span class="pric-free">Free</span>&nbsp; to explore</span>
+          <span class="prac-item">&#9201;&nbsp; 45&ndash;60 min wander</span>
+        </div>
+        <p class="activity-desc">The hotel is right on the Royal Mile. A first evening walk along the Mile and into a few closes is the best introduction to Edinburgh. No agenda &mdash; just explore.</p>
+        <ul class="highlights">
+          <li><b>The closes:</b> Narrow alleyways (called closes) branch off both sides of the Royal Mile. Each one leads somewhere &mdash; a courtyard, a staircase, a sudden view of the city below. Try Advocates Close, Dunbar&rsquo;s Close Garden (a secret walled garden), and Mary King&rsquo;s Close (exterior only tonight).</li>
+          <li><b>Looking up:</b> The tenement buildings on either side of the Royal Mile are 5&ndash;8 storeys high. The sense of vertical scale in the Old Town is unlike any other British city.</li>
+          <li><b>Castlehill:</b> Walk uphill to the castle esplanade &mdash; even without going into the castle, the view west from here at dusk is worth the 5-min walk.</li>
+        </ul>
+      </div>
+      <div class="map-area">
+        <iframe src="https://maps.google.com/maps?q=Royal+Mile+Edinburgh+EH1&output=embed" loading="lazy" title="Royal Mile Edinburgh"></iframe>
+        <a class="map-open-link" href="https://www.google.com/maps/search/?api=1&query=Royal+Mile+Edinburgh+EH1" target="_blank">Open in Google Maps &#8599;</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="dinner-card">
+    <div class="dinner-title">&#127374;&nbsp; Dinner &mdash; Grassmarket, 10-min walk from hotel</div>
+    <div class="dinner-options">
+      <div class="dinner-opt"><b>Maxie&rsquo;s Bistro</b> &mdash; 5B Johnston Terrace, EH1 2PW. An Edinburgh institution overlooking the Grassmarket. Reliable food, good atmosphere, outdoor terrace when dry. Booking recommended on a Friday.</div>
+      <div class="dinner-opt"><b>Elephant House</b> &mdash; 21 George IV Bridge, EH1 1EN. The caf&eacute; where J.K. Rowling wrote early parts of Harry Potter. Famous for its castle views. A good, relaxed dinner option, more caf&eacute; than restaurant.</div>
+      <div class="dinner-opt"><b>The Grassmarket itself:</b> A wide square lined with restaurants. Walk down and see what appeals &mdash; there are good Italian, Scottish, and pub-food options at various price points.</div>
+    </div>
+  </div>
+
+</section>
+
 </main>
 
 <div class="page-footer">
@@ -129,5 +480,19 @@
   </div>
 </div>
 
+<script>
+  const sections = document.querySelectorAll('.day-section');
+  const navLinks = document.querySelectorAll('.day-nav a');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        navLinks.forEach(l => l.classList.remove('active'));
+        const active = document.querySelector('.day-nav a[href="#' + e.target.id + '"]');
+        if (active) active.classList.add('active');
+      }
+    });
+  }, { rootMargin: '-40% 0px -55% 0px' });
+  sections.forEach(s => observer.observe(s));
+</script>
 </body>
 </html>
