@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>UK Visitor Itinerary - Visa Application</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink:#111; --ink2:#333; --ink3:#666;
+    --border:#bbb; --border-light:#ddd;
+    --header-bg:#f0f0f0; --stripe:#fafafa;
+    --accent:#1a3a6b; --red:#b00;
+    --radius:3px;
+  }
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+  html{font-size:14px;}
+  body{background:#d8d8d8;color:var(--ink);font-family:"Inter",sans-serif;font-weight:400;line-height:1.6;padding:2rem 1rem;}
+  .page{background:#fff;max-width:794px;margin:0 auto;padding:3rem 3.5rem;box-shadow:0 2px 16px rgba(0,0,0,.14);}
+
+  /* HEADER */
+  .doc-header{border-bottom:3px solid var(--accent);padding-bottom:1.5rem;margin-bottom:1.75rem;}
+  .doc-type{font-size:10px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--ink3);margin-bottom:.5rem;}
+  .doc-title{font-family:"Playfair Display",serif;font-size:1.75rem;font-weight:400;color:var(--accent);line-height:1.15;margin-bottom:.35rem;}
+  .doc-subtitle{font-size:13px;color:var(--ink3);margin-bottom:1rem;}
+  .doc-meta{display:flex;gap:2rem;flex-wrap:wrap;border-top:1px solid var(--border-light);padding-top:.75rem;margin-top:.75rem;}
+  .doc-meta-item{font-size:12px;color:var(--ink3);}
+  .doc-meta-item strong{color:var(--ink2);display:block;font-size:10.5px;text-transform:uppercase;letter-spacing:.05em;margin-bottom:1px;}
+
+  /* PLACEHOLDER */
+  .ph{color:var(--red);font-style:italic;background:#fff5f5;border:1px dashed #f88;border-radius:2px;padding:0 4px;font-weight:400;}
+
+  /* SECTION */
+  .section{margin-bottom:2rem;}
+  .section-heading{font-size:10px;font-weight:600;letter-spacing:.15em;text-transform:uppercase;color:#fff;background:var(--accent);padding:5px 10px;border-radius:var(--radius) var(--radius) 0 0;}
+  .section-body{border:1px solid var(--border);border-top:none;border-radius:0 0 var(--radius) var(--radius);overflow:hidden;}
+
+  /* FIELD TABLE */
+  .ft{width:100%;border-collapse:collapse;}
+  .ft tr:nth-child(even){background:var(--stripe);}
+  .ft td{padding:7px 12px;font-size:13px;border-bottom:1px solid var(--border-light);vertical-align:top;}
+  .ft tr:last-child td{border-bottom:none;}
+  .ft td:first-child{font-weight:600;color:var(--ink2);width:210px;white-space:nowrap;}
+
+  /* DATA TABLE */
+  .dt{width:100%;border-collapse:collapse;font-size:12.5px;}
+  .dt thead tr{background:var(--header-bg);}
+  .dt th{padding:7px 9px;text-align:left;font-weight:600;font-size:11px;text-transform:uppercase;letter-spacing:.04em;color:var(--ink2);border-bottom:2px solid var(--border);}
+  .dt td{padding:7px 9px;border-bottom:1px solid var(--border-light);vertical-align:top;line-height:1.5;}
+  .dt tbody tr:nth-child(even){background:var(--stripe);}
+  .dt tbody tr:last-child td{border-bottom:none;}
+  .itin-date{font-weight:600;white-space:nowrap;color:var(--accent);width:88px;}
+  .itin-dow{white-space:nowrap;width:68px;color:var(--ink3);}
+  .itin-city{font-weight:600;width:110px;}
+  .itin-hotel{color:var(--ink3);font-size:12px;width:165px;}
+
+  /* NOTICE BOX */
+  .notice{border:1px solid var(--border);border-left:4px solid var(--accent);border-radius:var(--radius);padding:.75rem 1rem;font-size:12.5px;color:var(--ink2);line-height:1.7;margin-bottom:1.75rem;background:#f6f8ff;}
+  .notice strong{color:var(--accent);}
+
+  /* DECLARATION */
+  .declaration{border:1px solid var(--border);border-radius:var(--radius);padding:1.25rem 1.5rem;margin-bottom:2rem;background:var(--stripe);}
+  .declaration p{font-size:12.5px;color:var(--ink2);line-height:1.8;}
+  .sig-block{display:flex;gap:3rem;margin-top:1.5rem;flex-wrap:wrap;}
+  .sig-line{flex:1;min-width:180px;}
+  .sig-label{font-size:10.5px;text-transform:uppercase;letter-spacing:.08em;color:var(--ink3);margin-bottom:.5rem;}
+  .sig-rule{border:none;border-bottom:1px solid var(--ink);margin:2rem 0 .25rem;}
+  .sig-name{font-size:11.5px;color:var(--ink2);}
+
+  /* FOOTER */
+  .doc-footer{border-top:1px solid var(--border-light);padding-top:1rem;margin-top:2rem;font-size:11px;color:var(--ink3);display:flex;justify-content:space-between;flex-wrap:wrap;gap:.5rem;}
+
+  @media print{
+    body{background:#fff;padding:0;}
+    .page{box-shadow:none;padding:0;margin:0;max-width:100%;}
+    .section{page-break-inside:avoid;}
+    .dt tr{page-break-inside:avoid;}
+    .doc-footer{display:none;}
+    @page{size:A4 portrait;margin:2cm 2.5cm;}
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <div class="doc-header">
+    <p class="doc-type">Supporting Document - UK Standard Visitor Visa Application</p>
+    <h1 class="doc-title">Visitor Travel Itinerary</h1>
+    <p class="doc-subtitle">United Kingdom only &nbsp;|&nbsp; Purpose: Tourism &nbsp;|&nbsp; 6 September 2025 to 20 September 2025</p>
+    <div class="doc-meta">
+      <div class="doc-meta-item"><strong>Applicant</strong><span class="ph">[FULL NAME - as on passport]</span></div>
+      <div class="doc-meta-item"><strong>Nationality</strong>Filipino</div>
+      <div class="doc-meta-item"><strong>Passport No.</strong><span class="ph">[PASSPORT NUMBER]</span></div>
+      <div class="doc-meta-item"><strong>Date prepared</strong><span class="ph">[DATE]</span></div>
+    </div>
+  </div>
+
+  <div class="notice">
+    <strong>Note to visa officer:</strong> This document supports a Standard Visitor Visa application for a tourism visit to the United Kingdom. All accommodation listed is pre-booked. The applicant is in full-time employment in the Philippines and returns to that employment on 20 September 2025. Confirmed flight booking references, hotel booking confirmations, and bank statements are attached separately.
+  </div>
+
+
+  <div class="section">
+    <div class="section-heading">1. Applicant Details</div>
+    <div class="section-body">
+      <table class="ft">
+        <tr><td>Full Name</td><td><span class="ph">[FULL NAME - as on passport]</span></td></tr>
+        <tr><td>Date of Birth</td><td><span class="ph">[DD/MM/YYYY]</span></td></tr>
+        <tr><td>Nationality</td><td>Filipino (Republic of the Philippines)</td></tr>
+        <tr><td>Passport Number</td><td><span class="ph">[PASSPORT NUMBER]</span></td></tr>
+        <tr><td>Passport Expiry Date</td><td><span class="ph">[DD/MM/YYYY]</span></td></tr>
+        <tr><td>Home Address</td><td><span class="ph">[FULL HOME ADDRESS]</span>, Camarines Norte, Philippines</td></tr>
+        <tr><td>Phone Number</td><td><span class="ph">[PHONE NUMBER]</span></td></tr>
+        <tr><td>Email Address</td><td><span class="ph">[EMAIL ADDRESS]</span></td></tr>
+        <tr><td>Occupation</td><td>Record to Report Analyst</td></tr>
+        <tr><td>Employer Name</td><td>IBM Philippines</td></tr>
+        <tr><td>Employer Address</td><td>Naga, Bicol Region, Philippines</td></tr>
+        <tr><td>Employment start date</td><td>March 2022 (current, permanent, full-time)</td></tr>
+      </table>
+    </div>
+  </div>
+
+
+  <div class="section">
+    <div class="section-heading">2. UK Contact and Host</div>
+    <div class="section-body">
+      <table class="ft">
+        <tr><td>Full Name</td><td>Simon <span class="ph">[SURNAME]</span></td></tr>
+        <tr><td>Nationality</td><td>Irish (Republic of Ireland, EU citizen)</td></tr>
+        <tr><td>Relationship to applicant</td><td>Partner</td></tr>
+        <tr><td>Home Address</td><td><span class="ph">[FULL ADDRESS]</span>, County Cork, Ireland</td></tr>
+        <tr><td>Phone Number</td><td><span class="ph">[PHONE NUMBER]</span></td></tr>
+        <tr><td>Email Address</td><td><span class="ph">[EMAIL ADDRESS]</span></td></tr>
+        <tr><td>Occupation</td><td>Senior Software Engineer and Team Lead, Oomnitza (employed remotely from Ireland)</td></tr>
+        <tr><td>Role in trip</td><td>Simon is the applicant's travel companion for the full duration of the visit. He meets the applicant on arrival at London Heathrow and accompanies her throughout the trip. He departs Belfast for Cork (by car, via ferry) on 20 September 2025.</td></tr>
+      </table>
+    </div>
+  </div>
+
+
+  <div class="section">
+    <div class="section-heading">3. Visit Overview</div>
+    <div class="section-body">
+      <table class="ft">
+        <tr><td>Purpose of visit</td><td>Tourism and leisure</td></tr>
+        <tr><td>Countries visited</td><td>United Kingdom only (England, Scotland, Northern Ireland)</td></tr>
+        <tr><td>Intended entry date</td><td>Saturday, 6 September 2025</td></tr>
+        <tr><td>Intended departure date</td><td>Saturday, 20 September 2025</td></tr>
+        <tr><td>Total duration</td><td>15 days (14 nights)</td></tr>
+        <tr><td>Port of entry</td><td>London Heathrow Airport (LHR), England</td></tr>
+        <tr><td>Port of exit</td><td>Belfast International Airport (BFS), Northern Ireland, departing to Manila (MNL)</td></tr>
+        <tr><td>Inbound flight</td><td><span class="ph">[AIRLINE and FLIGHT NUMBER]</span>, Manila (MNL) to London Heathrow (LHR), 6 September 2025. Booking reference: <span class="ph">[REF]</span></td></tr>
+        <tr><td>Return flight</td><td><span class="ph">[AIRLINE and FLIGHT NUMBER]</span>, Belfast International (BFS) to Manila (MNL), 20 September 2025. Booking reference: <span class="ph">[REF]</span></td></tr>
+        <tr><td>Financial arrangements</td><td>The applicant is funding her own travel and accommodation costs from personal savings. The applicant holds permanent full-time employment at IBM Philippines and receives a regular monthly salary. Three months of bank statements and an employer letter confirming salary and approved leave are attached separately.</td></tr>
+      </table>
+    </div>
+  </div>
+
+
+  <div class="section">
+    <div class="section-heading">4. Accommodation</div>
+    <div class="section-body">
+      <table class="dt">
+        <thead>
+          <tr>
+            <th>Check-in</th>
+            <th>Check-out</th>
+            <th style="text-align:center;">Nights</th>
+            <th>Hotel</th>
+            <th>Address</th>
+            <th>City / Region</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Sat 6 Sep 2025</td>
+            <td>Thu 11 Sep 2025</td>
+            <td style="text-align:center;">5</td>
+            <td>Premier Inn London Southwark (Tate Modern)</td>
+            <td>Bankside, London SE1</td>
+            <td>London, England</td>
+          </tr>
+          <tr>
+            <td>Thu 11 Sep 2025</td>
+            <td>Sat 13 Sep 2025</td>
+            <td style="text-align:center;">2</td>
+            <td>ibis York Centre</td>
+            <td>Rougier Street, York YO1 6JB</td>
+            <td>York, England</td>
+          </tr>
+          <tr>
+            <td>Sat 13 Sep 2025</td>
+            <td>Wed 17 Sep 2025</td>
+            <td style="text-align:center;">4</td>
+            <td>ibis Edinburgh Centre Royal Mile</td>
+            <td>Hunter Square, Edinburgh EH1 1QW</td>
+            <td>Edinburgh, Scotland</td>
+          </tr>
+          <tr>
+            <td>Wed 17 Sep 2025</td>
+            <td>Sat 20 Sep 2025</td>
+            <td style="text-align:center;">3</td>
+            <td>Premier Inn Belfast City Centre</td>
+            <td>Waring Street, Belfast BT1 2DX</td>
+            <td>Belfast, Northern Ireland</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+
+  <div class="section">
+    <div class="section-heading">5. Transport Between Cities</div>
+    <div class="section-body">
+      <table class="dt">
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>Type</th>
+            <th>Route</th>
+            <th>Operator</th>
+            <th>Duration</th>
+            <th>Booking Ref.</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>6 Sep 2025</td>
+            <td>Air (inbound)</td>
+            <td>Manila (MNL) to London Heathrow (LHR)</td>
+            <td><span class="ph">[AIRLINE]</span></td>
+            <td><span class="ph">[HRS]</span></td>
+            <td><span class="ph">[REF]</span></td>
+          </tr>
+          <tr>
+            <td>11 Sep 2025</td>
+            <td>Rail</td>
+            <td>London Kings Cross to York</td>
+            <td>LNER</td>
+            <td>Approx. 2 hours</td>
+            <td><span class="ph">[REF]</span></td>
+          </tr>
+          <tr>
+            <td>12 Sep 2025</td>
+            <td>Rail</td>
+            <td>York to Edinburgh Waverley</td>
+            <td>LNER</td>
+            <td>Approx. 2 hrs 30 min</td>
+            <td><span class="ph">[REF]</span></td>
+          </tr>
+          <tr>
+            <td>17 Sep 2025</td>
+            <td>Air (domestic)</td>
+            <td>Edinburgh (EDI) to Belfast International (BFS)</td>
+            <td><span class="ph">[AIRLINE]</span></td>
+            <td>Approx. 1 hour</td>
+            <td><span class="ph">[REF]</span></td>
+          </tr>
+          <tr>
+            <td>20 Sep 2025</td>
+            <td>Air (outbound)</td>
+            <td>Belfast International (BFS) to Manila (MNL)</td>
+            <td><span class="ph">[AIRLINE]</span></td>
+            <td><span class="ph">[HRS]</span></td>
+            <td><span class="ph">[REF]</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+
+  <div class="section">
+    <div class="section-heading">6. Day-by-Day Itinerary</div>
+    <div class="section-body">
+      <table class="dt">
+        <thead>
+          <tr>
+            <th class="itin-date">Date</th>
+            <th class="itin-dow">Day</th>
+            <th class="itin-city">City</th>
+            <th class="itin-hotel">Accommodation</th>
+            <th>Planned Activities</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="itin-date">6 Sep 2025</td>
+            <td class="itin-dow">Saturday</td>
+            <td class="itin-city">London</td>
+            <td class="itin-hotel">Premier Inn Southwark</td>
+            <td>Arrival at London Heathrow (LHR). Transfer by Elizabeth Line rail to hotel. South Bank walk (Tate Modern exterior, Millennium Bridge).</td>
+          </tr>
+          <tr>
+            <td class="itin-date">7 Sep 2025</td>
+            <td class="itin-dow">Sunday</td>
+            <td class="itin-city">London</td>
+            <td class="itin-hotel">Premier Inn Southwark</td>
+            <td>Westminster (Parliament, St James's Park, Buckingham Palace). National Gallery, Trafalgar Square (free entry). Covent Garden.</td>
+          </tr>
+          <tr>
+            <td class="itin-date">8 Sep 2025</td>
+            <td class="itin-dow">Monday</td>
+            <td class="itin-city">London</td>
+            <td class="itin-hotel">Premier Inn Southwark</td>
+            <td>Tower Bridge. Brick Lane market area. Shoreditch street art and Spitalfields Market.</td>
+          </tr>
+          <tr>
+            <td class="itin-date">9 Sep 2025</td>
+            <td class="itin-dow">Tuesday</td>
+            <td class="itin-city">London</td>
+            <td class="itin-hotel">Premier Inn Southwark</td>
+            <td>British Museum, Bloomsbury (free entry). Borough Market. Tate Modern galleries (free entry). Shakespeare's Globe exterior.</td>
+          </tr>
+          <tr>
+            <td class="itin-date">10 Sep 2025</td>
+            <td class="itin-dow">Wednesday</td>
+            <td class="itin-city">London / Windsor</td>
+            <td class="itin-hotel">Premier Inn Southwark</td>
+            <td>Day trip by rail to Windsor (29 miles west of London). Windsor Castle (pre-booked entry). Windsor Great Park and the Long Walk. Return to London by rail.</td>
+          </tr>
+          <tr>
+            <td class="itin-date">11 Sep 2025</td>
+            <td class="itin-dow">Thursday</td>
+            <td class="itin-city">York</td>
+            <td class="itin-hotel">ibis York Centre</td>
+            <td>Rail from London Kings Cross to York (approx. 2 hours). The Shambles medieval street. York City Walls walk (free).</td>
+          </tr>
+          <tr>
+            <td class="itin-date">12 Sep 2025</td>
+            <td class="itin-dow">Friday</td>
+            <td class="itin-city">York / Edinburgh</td>
+            <td class="itin-hotel">ibis Edinburgh Royal Mile</td>
+            <td>Morning in York: York Minster, National Railway Museum (free), Betty's Tea Room. Afternoon: rail York to Edinburgh Waverley (approx. 2 hrs 30 min).</td>
+          </tr>
+          <tr>
+            <td class="itin-date">13 Sep 2025</td>
+            <td class="itin-dow">Saturday</td>
+            <td class="itin-city">Edinburgh</td>
+            <td class="itin-hotel">ibis Edinburgh Royal Mile</td>
+            <td>Royal Mile orientation walk. Old Town closes and courtyards. Grassmarket area.</td>
+          </tr>
+          <tr>
+            <td class="itin-date">14 Sep 2025</td>
+            <td class="itin-dow">Sunday</td>
+            <td class="itin-city">Edinburgh</td>
+            <td class="itin-hotel">ibis Edinburgh Royal Mile</td>
+            <td>Edinburgh Castle (pre-booked entry). St Giles' Cathedral (free). Victoria Street. Greyfriars Kirkyard (free). Calton Hill viewpoint (free).</td>
+          </tr>
+          <tr>
+            <td class="itin-date">15 Sep 2025</td>
+            <td class="itin-dow">Monday</td>
+            <td class="itin-city">Edinburgh</td>
+            <td class="itin-hotel">ibis Edinburgh Royal Mile</td>
+            <td>Arthur's Seat hike, Holyrood Park (free). Holyrood Palace exterior. Scottish National Gallery (free). New Town and Princes Street Gardens.</td>
+          </tr>
+          <tr>
+            <td class="itin-date">16 Sep 2025</td>
+            <td class="itin-dow">Tuesday</td>
+            <td class="itin-city">Edinburgh</td>
+            <td class="itin-hotel">ibis Edinburgh Royal Mile</td>
+            <td>Royal Yacht Britannia, Leith (pre-booked). The Shore waterfront, Leith. National Museum of Scotland (free). Final evening in Edinburgh.</td>
+          </tr>
+          <tr>
+            <td class="itin-date">17 Sep 2025</td>
+            <td class="itin-dow">Wednesday</td>
+            <td class="itin-city">Edinburgh / Belfast</td>
+            <td class="itin-hotel">Premier Inn Belfast</td>
+            <td>Check out Edinburgh. Fly Edinburgh (EDI) to Belfast International (BFS), approx. 1 hour. Check in Belfast. Cathedral Quarter walk. St Anne's Cathedral (free).</td>
+          </tr>
+          <tr>
+            <td class="itin-date">18 Sep 2025</td>
+            <td class="itin-dow">Thursday</td>
+            <td class="itin-city">Belfast / Antrim</td>
+            <td class="itin-hotel">Premier Inn Belfast</td>
+            <td>Day trip by car to Giant's Causeway, County Antrim (UNESCO World Heritage Site, approx. 60 miles north of Belfast). Return via Causeway Coastal Route.</td>
+          </tr>
+          <tr>
+            <td class="itin-date">19 Sep 2025</td>
+            <td class="itin-dow">Friday</td>
+            <td class="itin-city">Belfast</td>
+            <td class="itin-hotel">Premier Inn Belfast</td>
+            <td>St George's Market (Victorian market, free entry). Titanic Belfast museum (pre-booked). Black Taxi Murals Tour (Falls Road and Shankill Road).</td>
+          </tr>
+          <tr>
+            <td class="itin-date">20 Sep 2025</td>
+            <td class="itin-dow">Saturday</td>
+            <td class="itin-city">Belfast (depart)</td>
+            <td class="itin-hotel">Checked out</td>
+            <td>Check out of hotel. Travel to Belfast International Airport (BFS). Depart to Manila, Philippines (MNL). The applicant returns to full-time employment at IBM Philippines on the next working day.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+
+  <div class="section">
+    <div class="section-heading">7. Supporting Employment Details</div>
+    <div class="section-body">
+      <table class="ft">
+        <tr><td>Employer</td><td>IBM Philippines (International Business Machines Philippines Corporation)</td></tr>
+        <tr><td>Job title</td><td>Record to Report Analyst</td></tr>
+        <tr><td>Employment type</td><td>Full-time, permanent</td></tr>
+        <tr><td>Employment start date</td><td>March 2022</td></tr>
+        <tr><td>Work location</td><td>Naga, Bicol Region, Philippines (hybrid arrangement)</td></tr>
+        <tr><td>Annual leave period</td><td>6 September 2025 to 20 September 2025. Annual leave approved by employer. Letter of approval from employer is attached separately.</td></tr>
+        <tr><td>Return to work</td><td>The applicant returns to employment at IBM Philippines on the first working day after 20 September 2025.</td></tr>
+      </table>
+    </div>
+  </div>
+
+
+  <div class="section">
+    <div class="section-heading">8. Declaration</div>
+    <div class="declaration">
+      <p>I confirm that the information in this itinerary is accurate and complete to the best of my knowledge. I understand that I must comply with the conditions of the Standard Visitor Visa at all times during my stay in the United Kingdom. I confirm that I intend to leave the United Kingdom no later than 20 September 2025 and to return to my employment in the Philippines.</p>
+      <div class="sig-block">
+        <div class="sig-line">
+          <p class="sig-label">Applicant signature</p>
+          <hr class="sig-rule">
+          <p class="sig-name"><span class="ph">[FULL NAME]</span></p>
+        </div>
+        <div class="sig-line">
+          <p class="sig-label">Date signed</p>
+          <hr class="sig-rule">
+          <p class="sig-name">&nbsp;</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="doc-footer">
+    <span>UK Standard Visitor Visa Application - Supporting Itinerary</span>
+    <span>Print and include with application documents.</span>
+  </div>
+
+</div>
+</body>
+</html>
