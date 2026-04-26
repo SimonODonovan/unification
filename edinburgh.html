@@ -94,6 +94,20 @@
     .day-nav-inner{padding-left:1.25rem;}
     .page-footer{padding-left:1.25rem;padding-right:1.25rem;}
   }
+
+  /* CITY NAVIGATION GRID */
+  .city-nav{margin:1.5rem 0 2.5rem;}
+  .city-nav-label{font-size:10px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--ink3);margin-bottom:.75rem;}
+  .city-nav-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(110px,1fr));gap:1px;background:var(--border);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;}
+  .cn-card{background:var(--surface);padding:.85rem 1rem;text-decoration:none;display:flex;align-items:center;gap:.55rem;transition:background .15s;min-width:0;}
+  .cn-card:hover:not(.cn-active){background:var(--surface2);}
+  .cn-card.cn-active{background:var(--surface);cursor:default;box-shadow:inset 0 -2px 0 var(--city-color);}
+  .cn-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0;}
+  .cn-info{flex:1;min-width:0;}
+  .cn-name{font-size:12px;font-weight:500;color:var(--ink);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+  .cn-meta{font-size:10px;color:var(--ink3);margin-top:1px;}
+  .cn-card.cn-active .cn-name{color:var(--city-color);font-weight:700;}
+  .cn-home-icon{font-size:.9rem;color:var(--ink3);flex-shrink:0;}
 </style>
 </head>
 <body>
@@ -134,6 +148,17 @@
 </div>
 
 <main class="main">
+
+  <div class="city-nav">
+    <p class="city-nav-label">City guides</p>
+    <div class="city-nav-grid">
+      <a href="index.html" class="cn-card"><span class="cn-home-icon">&#8592;</span><div class="cn-info"><div class="cn-name">All Cities</div><div class="cn-meta">6&ndash;20 Sep</div></div></a>
+      <a href="london.html" class="cn-card"><div class="cn-dot" style="background:#2a4e8a"></div><div class="cn-info"><div class="cn-name">London</div><div class="cn-meta">Days 1&ndash;5 &middot; 5 nights</div></div></a>
+      <a href="york.html" class="cn-card"><div class="cn-dot" style="background:#7a5a2a"></div><div class="cn-info"><div class="cn-name">York</div><div class="cn-meta">Days 6&ndash;7 &middot; 2 nights</div></div></a>
+      <a href="edinburgh.html" class="cn-card cn-active"><div class="cn-dot" style="background:#2a6e4a"></div><div class="cn-info"><div class="cn-name">Edinburgh</div><div class="cn-meta">Days 8&ndash;11 &middot; 4 nights</div></div></a>
+      <a href="belfast.html" class="cn-card"><div class="cn-dot" style="background:#b5762a"></div><div class="cn-info"><div class="cn-name">Belfast</div><div class="cn-meta">Days 12&ndash;14 &middot; 3 nights</div></div></a>
+    </div>
+  </div>
 
 <!-- ═══ DAY 8 ═══ -->
 <section class="day-section" id="day8">
