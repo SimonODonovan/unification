@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Phase 1 Checklist &mdash; Simon &amp; Jenifer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#f7f5f1;--surface:#fff;--surface2:#f0ede8;--border:#e2ddd6;
+    --ink:#1a1814;--ink2:#4a4640;--ink3:#8a857d;
+    --amber:#b5762a;--amber-bg:#fdf6ec;--amber-bd:#e8d0a0;
+    --green:#2a6e4a;--green-bg:#eef6f1;--green-bd:#b8dfc8;
+    --blue:#2a4e8a;--blue-bg:#eef1fd;--blue-bd:#b0c4e8;
+    --purple:#5a3a8a;--purple-bg:#f0eefa;--purple-bd:#c8b8e8;
+    --red:#7a2a2a;--red-bg:#fdf0f0;--red-bd:#e8c0c0;
+    --radius:10px;
+  }
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{background:var(--bg);color:var(--ink);font-family:'Inter',sans-serif;font-weight:400;line-height:1.65;}
+
+  /* HERO */
+  .hero{background:#1a1814;padding:4rem 5vw 3rem;position:relative;overflow:hidden;}
+  .hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 80% at 85% 40%,rgba(181,118,42,.18) 0%,transparent 60%);pointer-events:none;}
+  .hero-inner{max-width:820px;margin:0 auto;position:relative;}
+  .hero-label{font-size:11px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:#b5762a;margin-bottom:1rem;}
+  .hero-title{font-family:'Playfair Display',serif;font-size:clamp(2rem,6vw,3.5rem);font-weight:400;line-height:1.08;color:#f0ebe0;margin-bottom:.75rem;}
+  .hero-title em{font-style:italic;color:#e8b554;}
+  .hero-sub{font-size:.9rem;color:#9a9288;max-width:480px;line-height:1.8;}
+  .progress-wrap{margin-top:2rem;padding-top:1.75rem;border-top:1px solid rgba(255,255,255,.09);}
+  .progress-bar-track{height:4px;background:rgba(255,255,255,.1);border-radius:2px;overflow:hidden;margin-bottom:.75rem;}
+  .progress-bar-fill{height:100%;border-radius:2px;background:linear-gradient(90deg,#b5762a,#e8b554);transition:width .4s;}
+  .progress-stats{display:flex;gap:2rem;flex-wrap:wrap;}
+  .ps-item span:first-child{font-size:10px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:#5a5248;display:block;margin-bottom:2px;}
+  .ps-item span:last-child{font-family:'Playfair Display',serif;font-size:1.2rem;color:#f0ebe0;}
+
+  /* NAV */
+  .topnav{background:var(--surface);border-bottom:1px solid var(--border);padding:0 5vw;position:sticky;top:0;z-index:50;}
+  .topnav-inner{max-width:820px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;}
+  .nav-brand{font-family:'Playfair Display',serif;font-size:.9rem;color:var(--amber);padding:13px 0;}
+  .nav-back{font-size:12px;color:var(--ink3);font-weight:500;text-decoration:none;}
+  .nav-back:hover{color:var(--amber);}
+
+  /* MAIN */
+  .main{max-width:820px;margin:0 auto;padding:2rem 5vw 6rem;}
+
+  /* FILTER BAR */
+  .filters{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:2rem;padding:1rem 1.25rem;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);}
+  .filter-label{font-size:10px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--ink3);display:flex;align-items:center;margin-right:4px;}
+  .filter-btn{font-family:'Inter',sans-serif;font-size:11px;font-weight:500;padding:3px 10px;border-radius:20px;border:1px solid var(--border);background:var(--surface2);color:var(--ink3);cursor:pointer;transition:all .15s;}
+  .filter-btn:hover{border-color:var(--amber);color:var(--amber);}
+  .filter-btn.on{background:var(--amber);color:#fff;border-color:var(--amber);}
+
+  /* SECTION */
+  .section{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;margin-bottom:1.25rem;}
+  .section.hidden{display:none;}
+  .section-head{display:flex;align-items:center;gap:.85rem;padding:1rem 1.25rem;border-bottom:1px solid var(--border);background:#fafaf8;}
+  .section-bar{width:4px;height:36px;border-radius:2px;flex-shrink:0;}
+  .section-info{flex:1;}
+  .section-title{font-family:'Playfair Display',serif;font-size:1rem;color:var(--ink);line-height:1.2;}
+  .section-meta{font-size:10px;color:var(--ink3);letter-spacing:.08em;text-transform:uppercase;margin-top:2px;}
+  .owner-badge{font-size:10px;font-weight:600;padding:2px 8px;border-radius:20px;margin-left:6px;}
+  .section-note{padding:.6rem 1.25rem;font-size:12px;color:#8a5015;background:var(--amber-bg);border-bottom:1px solid var(--amber-bd);line-height:1.6;}
+
+  /* ITEM */
+  .item{display:flex;align-items:flex-start;gap:10px;padding:.8rem 1.25rem;border-bottom:1px solid #f0ede8;transition:background .12s;}
+  .item:last-child{border-bottom:none;}
+  .item:hover{background:#fafaf8;}
+  .item.done{background:#f7fbf8;}
+  .item.done .item-text{color:var(--ink3);text-decoration:line-through;}
+  .item-check{width:18px;height:18px;border-radius:4px;border:2px solid #c8c0b8;background:#fff;flex-shrink:0;margin-top:2px;display:flex;align-items:center;justify-content:center;}
+  .item.done .item-check{background:var(--green);border-color:var(--green);}
+  .item-check svg{display:none;}
+  .item.done .item-check svg{display:block;}
+  .item-text{font-size:13px;color:var(--ink2);line-height:1.6;flex:1;}
+  .item-note{font-size:11.5px;color:#5a5248;background:var(--amber-bg);border:1px solid var(--amber-bd);border-radius:5px;padding:4px 9px;margin-top:5px;line-height:1.6;}
+  .tag{font-size:10px;font-weight:600;padding:2px 7px;border-radius:20px;white-space:nowrap;flex-shrink:0;margin-top:3px;}
+  .tag-generate{background:var(--amber-bg);color:#8a5015;border:1px solid var(--amber-bd);}
+  .tag-physical{background:var(--green-bg);color:var(--green);border:1px solid var(--green-bd);}
+  .tag-online{background:var(--blue-bg);color:var(--blue);border:1px solid var(--blue-bd);}
+  .tag-compile{background:var(--purple-bg);color:var(--purple);border:1px solid var(--purple-bd);}
+  .tag-book{background:var(--red-bg);color:var(--red);border:1px solid var(--red-bd);}
+  .tag-monitor{background:var(--surface2);color:var(--ink3);border:1px solid var(--border);}
+  .tag-verify{background:#fdf9ec;color:#6a5a10;border:1px solid #e0d498;}
+  .tag-optional{background:var(--surface2);color:var(--ink3);border:1px solid var(--border);}
+  .tag-confirm{background:var(--blue-bg);color:var(--blue);border:1px solid var(--blue-bd);}
+  .tag-upload{background:#eef7f9;color:#2a6e7a;border:1px solid #b0d8e0;}
+
+  /* LAST UPDATED */
+  .updated-note{text-align:center;font-size:11px;color:var(--ink3);margin-bottom:1.5rem;}
+
+  /* LEGEND */
+  .legend{border:1px solid var(--border);border-radius:var(--radius);background:var(--surface);padding:1rem 1.25rem;}
+  .legend-title{font-size:10px;font-weight:600;letter-spacing:.15em;text-transform:uppercase;color:var(--ink3);margin-bottom:.75rem;}
+  .legend-tags{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:.75rem;}
+  .legend-note{font-size:11px;color:var(--ink3);line-height:1.7;}
+
+  /* FOOTER */
+  footer{border-top:1px solid var(--border);padding:1.5rem 5vw;max-width:820px;margin:0 auto;display:flex;justify-content:space-between;flex-wrap:wrap;gap:.4rem;}
+  .f-name{font-family:'Playfair Display',serif;font-size:.9rem;color:var(--ink2);}
+  .f-note{font-size:11px;color:var(--ink3);font-weight:500;}
+
+  @media(max-width:560px){
+    .hero,.main{padding-left:1.25rem;padding-right:1.25rem;}
+    .topnav{padding:0 1.25rem;}
+    footer{padding:1.25rem;}
+    .filters{gap:4px;}
+  }
+</style>
+</head>
+<body>
+
+<section class="hero">
+  <div class="hero-inner">
+    <p class="hero-label">Family Reunification Project &nbsp;&middot;&nbsp; Phase 1</p>
+    <h1 class="hero-title">UK Visa &amp; Trip<br><em>Checklist</em></h1>
+    <p class="hero-sub">UK Standard Visitor Visa &mdash; Simon &amp; Jenifer &mdash; September 2026. Pre-application through travel day.</p>
+    <div class="progress-wrap">
+      <div class="progress-bar-track"><div class="progress-bar-fill" id="progress-fill" style="width:0%"></div></div>
+      <div class="progress-stats">
+        <div class="ps-item"><span>Completed</span><span id="stat-done">0</span></div>
+        <div class="ps-item"><span>Remaining</span><span id="stat-remaining">0</span></div>
+        <div class="ps-item"><span>Total</span><span id="stat-total">0</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="topnav">
+  <div class="topnav-inner">
+    <span class="nav-brand">Simon &amp; Jenifer</span>
+    <a href="index.html" class="nav-back">&#8592; Itinerary</a>
+  </div>
+</div>
+
+<main class="main">
+
+  <p class="updated-note">Last updated: 9 May 2026 &nbsp;&middot;&nbsp; To update items, ask Claude to mark tasks complete</p>
+
+  <div class="filters">
+    <span class="filter-label">Phase:</span>
+    <button class="filter-btn on" onclick="filterPhase(this,'all')">All</button>
+    <button class="filter-btn" onclick="filterPhase(this,'Pre-Application')">Pre-Application</button>
+    <button class="filter-btn" onclick="filterPhase(this,'Application')">Application</button>
+    <button class="filter-btn" onclick="filterPhase(this,'Post-Application')">Post-Application</button>
+    <button class="filter-btn" onclick="filterPhase(this,'Travel Day')">Travel Day</button>
+    <button class="filter-btn" onclick="filterPhase(this,'SSVWP')">SSVWP / Ireland</button>
+  </div>
+
+  <!-- ═══ PRE-APP: SIMON ═══ -->
+  <div class="section" data-phase="Pre-Application">
+    <div class="section-head">
+      <div class="section-bar" style="background:#2a4e8a"></div>
+      <div class="section-info">
+        <div class="section-title">Simon &mdash; Documents to Gather
+          <span class="owner-badge" style="background:#eef1fd;color:#2a4e8a;border:1px solid #b0c4e8">Simon</span>
+        </div>
+        <div class="section-meta">Pre-Application</div>
+      </div>
+    </div>
+    <div class="item" id="s1"><div class="item-check"><svg width="10" height="8" viewBox="0 0 10 8"><polyline points="1,4 3.5,6.5 9,1" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="item-text">Valid Irish passport (must cover full trip dates + 6 months)</div><span class="tag tag-physical">Physical</span></div>
+    <div class="item" id="s2"><div class="item-check"><svg width="10" height="8" viewBox="0 0 10 8"><polyline points="1,4 3.5,6.5 9,1" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="item-text">Finalize and date the invitation letter (currently undated in Google Doc &mdash; insert exact date before submission)</div><span class="tag tag-generate">Generate</span></div>
+    <div class="item" id="s3"><div class="item-check"><svg width="10" height="8" viewBox="0 0 10 8"><polyline points="1,4 3.5,6.5 9,1" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="item-text">Proof of employment: letter from Oomnitza confirming role, salary, and length of service</div><span class="tag tag-generate">Generate</span></div>
+    <div class="item" id="s4"><div class="item-check"><svg width="10" height="8" viewBox="0 0 10 8"><polyline points="1,4 3.5,6.5 9,1" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="item-text">3 months of personal bank statements (showing ability to cover Jenifer's trip costs)</div><span class="tag tag-physical">Physical</span></div>
+    <div class="item" id="s5"><div class="item-check"><svg width="10" height="8" viewBox="0 0 10 8"><polyline points="1,4 3.5,6.5 9,1" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="item-text">3 months of payslips</div><span class="tag tag-physical">Physical</span></div>
+    <div class="item" id="s6"><div class="item-check"><svg width="10" height="8" viewBox="0 0 10 8"><polyline points="1,4 3.5,6.5 9,1" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="item-text">Proof of address in Ireland (utility bill or official letter at Blarney address)</div><span class="tag tag-physical">Physical</span></div>
+    <div class="item" id="s7"><div class="item-check"><svg width="10" height="8" viewBox="0 0 10 8"><polyline points="1,4 3.5,6.5 9,1" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="item-text">Compile relationship evidence: geotagged photos together from previous trips, labelled and dated</div><span class="tag tag-compile">Compile</span></div>
+    <div class="item" id="s8"><div class="item-check"><svg width="10" height="8" viewBox="0 0 10 8"><polyline points="1,4 3.5,6.5 9,1" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="item-text">Compile sample communication records (screenshots of messages/calls &mdash; a representative selection)</div><span class="tag tag-compile">Compile</span></div>
+  </div>
+
+  <!-- ═══ PRE-APP: JENIFER ═══ -->
+  <div class="section" data-phase="Pre-Application">
+    <div class="section-head">
+      <div class="section-bar" style="background:#7a2a5a"></div>
+      <div class="section-info">
+        <div class="section-title">Jenifer &mdash; Documents to Gather
+          <span class="owner-badge" style="background:#fdf0f7;color:#7a2a5a;border:1px solid #e8b0d0">Jenifer</span>
+        </div>
+        <div class="section-meta">Pre-Application</div>
+      </div>
+    </div>
+    <div class="item" id="j1"><div class="item-check"><svg width="10" height="8" viewBox="0 0 10 8"><polyline points="1,4 3.5,6.5 9,1" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="item-text">Valid Philippine passport (check expiry &mdash; must cover the full trip + ideally 6 months beyond)</div><span class="tag tag-physical">Physical</span></div>
+    <div class="item" id="j2"><div class="item-check"><svg width="10" height="8" viewBox="0 0 10 8"><polyline points="1,4 3.5,6.5 9,1" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="item-text">IBM employment letter confirming: current role, length of service, monthly salary, and that leave has been approved for the trip dates</div><span class="tag tag-generate">Generate</span></div>
+    <div class="item" id="j3"><div class="item-check"><svg width="10" height="8" viewBox="0 0 10 8"><polyline points="1,4 3.5,6.5 9,1" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="item-text">3 months of personal bank statements (Philippine peso account &mdash; showing regular salary credits and healthy balance)</div><span class="tag tag-physical">Physical</span></div>
+    <div class="item" id="j4"><div class="item-check"><svg width="10" height="8" viewBox="0 0 10 8"><polyline points="1,4 3.5,6.5 9,1" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="item-text">IBM payslips &mdash; 3 months</div><span class="tag tag-physical">Physical</span></div>
+    <div class="item" id="j5"><div class="item-check"><svg width="10" height="8" viewBox="0 0 10 8"><polyline points="1,4 3.5,6.5 9,1" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="item-text">Proof of financial ties in the Philippines (land title, savings account, or family property documents) &mdash; strengthens ties-to-home argument</div><span class="tag tag-physical">Physical</span></div>
+    <div class="item" id="j6"><div class="item-check"><svg width="10" height="8" viewBox="0 0 10 8"><polyline points="1,4 3.5,6.5 9,1" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="item-text">NBI Clearance (optional &mdash; can strengthen the application, valid 6 months from issue)</div><span class="tag tag-optional">Optional</span></div>
+    <div class="item" id="j7"><div class="item-check"><svg width="10" height="8" viewBox="0 0 10 8"><polyline points="1,4 3.5,6.5 9,1" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="item-text">Biometric passport photo &mdash; UKVI-spec (45mm &times; 35mm, white background, taken within the last 6 months)</div><span class="tag tag-physical">Physical</span></div>
+  </div>
+
+  <!-- ═══ PRE-APP: SHARED ═══ -->
+  <div class="section" data-phase="Pre-Application">
+    <div class="section-head">
+      <div class="section-bar" style="background:#2a6e4a"></div>
+      <div class="section-info">
+        <div class="section-title">Shared &mdash; Documents &amp; Assets to Generate
+          <span class="owner-badge" style="background:#eef6f1;color:#2a6e4a;border:1px solid #b8dfc8">Both</span>
+        </div>
+        <div class="section-meta">Pre-Application</div>
+      </div>
+    </div>
+    <div class="item" id="b1"><div class="item-check"><svg width="10" height="8" viewBox="0 0 10 8"><polyline points="1,4 3.5,6.5 9,1" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="item-text">Finalize and print the travel itinerary (full London&rarr;York&rarr;Edinburgh&rarr;Belfast route, 6&ndash;20 Sep 2026, with named hotels)</div><span class="tag tag-generate">Generate</span></div>
+  </div>
+
+  <!-- ═══ APPLICATION: FORMAL STEPS ═══ -->
+  <div class="section" data-phase="Application">
+    <div class="section-head">
+      <div class="section-bar" style="background:#b5762a"></div>
+      <div class="section-info">
+        <div class="section-title">Jenifer &mdash; Formal Application Steps
+          <span class="owner-badge" style="background:#fdf0f7;color:#7a2a5a;border:1px solid #e8b0d0">Jenifer</span>
+        </div>
+        <div class="section-meta">Application</div>
+      </div>
+    </div>
+    <div class="item" id="a1"><div class="item-check"><svg width="10" height="8" viewBox="0 0 10 8"><polyline points="1,4 3.5,6.5 9,1" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="item-text">Complete UK Standard Visitor Visa online application at gov.uk &mdash; declare intended stay as <strong>15 days</strong> (not 6 months &mdash; must match the itinerary)</div><span class="tag tag-online">Online</span></div>
+    <div class="item" id="a2"><div class="item-check"><svg width="10" height="8" viewBox="0 0 10 8"><polyline points="1,4 3.5,6.5 9,1" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="item-text">Pay visa application fee online (currently &pound;115 for Standard Visitor)</div><span class="tag tag-online">Online</span></div>
+    <div class="item" id="a3"><div class="item-check"><svg width="10" height="8" viewBox="0 0 10 8"><polyline points="1,4 3.5,6.5 9,1" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="item-text">Book biometric enrolment appointment at VFS Global Manila &mdash; book as early as possible after submitting the online form</div><span class="tag tag-online">Online</span></div>
+    <div class="item" id="a4"><div class="item-check"><svg width="10" height="8" viewBox="0 0 10 8"><polyline points="1,4 3.5,6.5 9,1" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="item-text">Attend VFS Global appointment: bring passport + all physical supporting documents</div><span class="tag tag-physical">Physical</span></div>
+    <div class="item" id="a5"><div class="item-check"><svg width="10" height="8" viewBox="0 0 10 8"><polyline points="1,4 3.5,6.5 9,1" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="item-text">Upload/submit supporting documents via the UKVI online portal or bring physical copies to VFS (confirm current VFS Manila procedure)</div><span class="tag tag-upload">Upload</span></div>
+  </div>
+
+  <!-- ═══ APPLICATION: SUBMISSION PACK ═══ -->
+  <div class="section" data-phase="Application">
+    <div class="section-head">
+      <div class="section-bar" style="background:#b5762a"></div>
+      <div class="section-info">
+        <div class="section-title">Document Submission Pack &mdash; Full List
+          <span class="owner-badge" style="background:#eef6f1;color:#2a6e4a;border:1px solid #b8dfc8">Both</span>
+        </div>
+        <div class="section-meta">Application</div>
+      </div>
+    </div>
+    <div class="section-note">Confirm with VFS Manila whether documents are uploaded electronically or submitted physically at appointment. Prepare both.</div>
+    <div class="item" id="ds1"><div class="item-check"><svg width="10" height="8" viewBox="0 0 10 8"><polyline points="1,4 3.5,6.5 9,1" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="item-text">Jenifer: Original passport (handed in at VFS for visa stamp)</div><span class="tag tag-physical">Physical</span></div>
+    <div class="item" id="ds2"><div class="item-check"><svg width="10" height="8" viewBox="0 0 10 8"><polyline points="1,4 3.5,6.5 9,1" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="item-text">Jenifer: Biometric photo (UKVI-spec)</div><span class="tag tag-physical">Physical</span></div>
+    <div class="item" id="ds3"><div class="item-check"><svg width="10" height="8" viewBox="0 0 10 8"><polyline points="1,4 3.5,6.5 9,1" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="item-text">Jenifer: IBM employment letter</div><span class="tag tag-physical">Physical</span></div>
+    <div class="item" id="ds4"><div class="item-check"><svg width="10" height="8" viewBox="0 0 10 8"><polyline points="1,4 3.5,6.5 9,1" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="item-text">Jenifer: 3 months bank statements</div><span class="tag tag-physical">Physical</span></div>
+    <div class="item" id="ds5"><div class="item-check"><svg width="10" height="8" viewBox="0 0 10 8"><polyline points="1,4 3.5,6.5 9,1" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="item-text">Jenifer: 3 months payslips</div><span class="tag tag-physical">Physical</span></div>
+    <div class="item" id="ds6"><div class="item-check"><svg width="10" height="8" viewBox="0 0 10 8"><polyline points="1,4 3.5,6.5 9,1" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="item-text">Jenifer: Proof of ties to Philippines (property / family documents)</div><span class="tag tag-physical">Physical</span></div>
+    <div class="item" id="ds7"><div class="item-check"><svg width="10" height="8" viewBox="0 0 10 8"><polyline points="1,4 3.5,6.5 9,1" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="item-text">Simon: Signed and dated invitation letter (printed, signed in ink)</div><span class="tag tag-physical">Physical</span></div>
+    <div class="item" id="ds8"><div class="item-check"><svg width="10" height="8" viewBox="0 0 10 8"><polyline points="1,4 3.5,6.5 9,1" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="item-text">Simon: Passport copy (bio page)</div><span class="tag tag-physical">Physical</span></div>
+    <div class="item" id="ds9"><div class="item-check"><svg width="10" height="8" viewBox="0 0 10 8"><polyline points="1,4 3.5,6.5 9,1" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="item-text">Simon: Proof of employment (Oomnitza letter)</div><span class="tag tag-physical">Physical</span></div>
+    <div class="item" id="ds10"><div class="item-check"><svg width="10" height="8" viewBox="0 0 10 8"><polyline points="1,4 3.5,6.5 9,1" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="item-text">Simon: 3 months bank statements</div><span class="tag tag-physical">Physical</span></div>
+    <div class="item" id="ds11"><div class="item-check"><svg width="10" height="8" viewBox="0 0 10 8"><polyline points="1,4 3.5,6.5 9,1" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="item-text">Simon: 3 months payslips</div><span class="tag tag-physical">Physical</span></div>
+    <div class="item" id="ds12"><div class="item-check"><svg width="10" height="8" viewBox="0 0 10 8"><polyline points="1,4 3.5,6.5 9,1" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="item-text">Simon: Proof of address (Ireland)</div><span class="tag tag-physical">Physical</span></div>
+    <div class="item" id="ds13"><div class="item-check"><svg width="10" height="8" viewBox="0 0 10 8"><polyline points="1,4 3.5,6.5 9,1" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="item-text">Travel itinerary (printed copy &mdash; named hotels, exact dates, transport connections, return flight)</div><span class="tag tag-physical">Physical</span></div>
+    <div class="item" id="ds17"><div class="item-check"><svg width="10" height="8" viewBox="0 0 10 8"><polyline points="1,4 3.5,6.5 9,1" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="item-text">Relationship evidence pack: selection of dated, labelled photographs from trips together</div><span class="tag tag-physical">Physical</span></div>
+    <div class="item" id="ds18"><div class="item-check"><svg width="10" height="8" viewBox="0 0 10 8"><polyline points="1,4 3.5,6.5 9,1" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="item-text">Communication evidence: sample screenshots of ongoing correspondence (printed or uploaded)</div><span class="tag tag-physical">Physical</span></div>
+  </div>
+
+  <!-- ═══ POST-APP: TRACKING ═══ -->
+  <div class="section" data-phase="Post-Application">
+    <div class="section-head">
+      <div class="section-bar" style="background:#4a4040"></div>
+      <div class="section-info">
+        <div class="section-title">Post-Submission &mdash; Application Tracking
+          <span class="owner-badge" style="background:#eef6f1;color:#2a6e4a;border:1px solid #b8dfc8">Both</span>
+        </div>
+        <div class="section-meta">Post-Application</div>
+      </div>
+    </div>
+    <div class="item" id="p1"><div class="item-check"><svg width="10" height="8" viewBox="0 0 10 8"><polyline points="1,4 3.5,6.5 9,1" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="item-text">Track application status via UKVI tracking link / VFS Manila portal</div><span class="tag tag-monitor">Monitor</span></div>
+    <div class="item" id="p2"><div class="item-check"><svg width="10" height="8" viewBox="0 0 10 8"><polyline points="1,4 3.5,6.5 9,1" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="item-text">Collect passport from VFS Manila once visa is stamped &mdash; check visa vignette: dates, number of entries, any endorsements</div><span class="tag tag-physical">Physical</span></div>
+    <div class="item" id="p3"><div class="item-check"><svg width="10" height="8" viewBox="0 0 10 8"><polyline points="1,4 3.5,6.5 9,1" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="item-text">Verify the visa: confirm entry validity covers 6 Sep 2026 and that it is a Standard Visitor (not a different category)</div><span class="tag tag-verify">Verify</span></div>
+    <div class="item" id="p5"><div class="item-check"><svg width="10" height="8" viewBox="0 0 10 8"><polyline points="1,4 3.5,6.5 9,1" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="item-text">Simon: Confirm he will be at London Heathrow on 6 Sep to meet Jenifer off the Manila flight</div><span class="tag tag-confirm">Confirm</span></div>
+  </div>
+
+  <!-- ═══ POST-APP: BOOKINGS ═══ -->
+  <div class="section" data-phase="Post-Application">
+    <div class="section-head">
+      <div class="section-bar" style="background:#b5762a"></div>
+      <div class="section-info">
+        <div class="section-title">Post-Application &mdash; Flights, Hotels &amp; Reservations
+          <span class="owner-badge" style="background:#eef6f1;color:#2a6e4a;border:1px solid #b8dfc8">Both</span>
+        </div>
+        <div class="section-meta">Post-Application</div>
+      </div>
+    </div>
+    <div class="section-note">UKVI does not require confirmed bookings for the visa application. Make all bookings after the visa is granted.</div>
+    <div class="item" id="f1"><div class="item-check"><svg width="10" height="8" viewBox="0 0 10 8"><polyline points="1,4 3.5,6.5 9,1" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="item-text">Jenifer: Book Manila (MNL) &rarr; London Heathrow (LHR) flight &mdash; depart in time to arrive 6 Sep 2026</div><span class="tag tag-book">Book</span></div>
+    <div class="item" id="f2"><div class="item-check"><svg width="10" height="8" viewBox="0 0 10 8"><polyline points="1,4 3.5,6.5 9,1" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="item-text">Jenifer: Book return flight London (LHR) &rarr; Manila (MNL) departing 20 Sep 2026</div><span class="tag tag-book">Book</span></div>
+    <div class="item" id="f3"><div class="item-check"><svg width="10" height="8" viewBox="0 0 10 8"><polyline points="1,4 3.5,6.5 9,1" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="item-text">Simon: Book Belfast International (BFS) &rarr; London Heathrow (LHR) flight &mdash; arrive 6 Sep to meet Jenifer on arrival</div><span class="tag tag-book">Book</span></div>
+    <div class="item" id="f4"><div class="item-check"><svg width="10" height="8" viewBox="0 0 10 8"><polyline points="1,4 3.5,6.5 9,1" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="item-text">Book Edinburgh (EDI) &rarr; Belfast International (BFS) flight &mdash; 17 Sep (Loganair or easyJet)</div><span class="tag tag-book">Book</span></div>
+    <div class="item" id="bk2"><div class="item-check"><svg width="10" height="8" viewBox="0 0 10 8"><polyline points="1,4 3.5,6.5 9,1" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="item-text">Book all 4 hotels: Premier Inn Southwark London (5 nts, 6&ndash;10 Sep), ibis York Centre (2 nts, 11&ndash;12 Sep), ibis Edinburgh Royal Mile (4 nts, 13&ndash;16 Sep), Premier Inn Belfast City Centre (3 nts, 17&ndash;19 Sep)</div><span class="tag tag-book">Book</span></div>
+    <div class="item" id="bk4"><div class="item-check"><svg width="10" height="8" viewBox="0 0 10 8"><polyline points="1,4 3.5,6.5 9,1" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="item-text">Book UK internal trains: London Kings Cross &rarr; York (LNER, 11 Sep) and York &rarr; Edinburgh Waverley (LNER, 13 Sep) &mdash; advance fare</div><span class="tag tag-book">Book</span></div>
+    <div class="item" id="bk6"><div class="item-check"><svg width="10" height="8" viewBox="0 0 10 8"><polyline points="1,4 3.5,6.5 9,1" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="item-text">Pre-book Windsor Castle timed entry &mdash; 10 Sep (sells out weeks ahead)</div><span class="tag tag-book">Book</span></div>
+    <div class="item" id="bk7"><div class="item-check"><svg width="10" height="8" viewBox="0 0 10 8"><polyline points="1,4 3.5,6.5 9,1" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="item-text">Pre-book Edinburgh Castle timed entry &mdash; 14 Sep (sells out in September)</div><span class="tag tag-book">Book</span></div>
+    <div class="item" id="bk8"><div class="item-check"><svg width="10" height="8" viewBox="0 0 10 8"><polyline points="1,4 3.5,6.5 9,1" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="item-text">Pre-book Royal Yacht Britannia, Leith &mdash; 16 Sep</div><span class="tag tag-book">Book</span></div>
+    <div class="item" id="bk9"><div class="item-check"><svg width="10" height="8" viewBox="0 0 10 8"><polyline points="1,4 3.5,6.5 9,1" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="item-text">Pre-book Titanic Belfast 10am slot &mdash; 19 Sep</div><span class="tag tag-book">Book</span></div>
+    <div class="item" id="bk10"><div class="item-check"><svg width="10" height="8" viewBox="0 0 10 8"><polyline points="1,4 3.5,6.5 9,1" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="item-text">Simon: Book Belfast International long-stay parking (car stays 6&ndash;17 Sep while Simon flies BFS&rarr;LHR on Day 1)</div><span class="tag tag-book">Book</span></div>
+  </div>
+
+  <!-- ═══ TRAVEL DAY ═══ -->
+  <div class="section" data-phase="Travel Day">
+    <div class="section-head">
+      <div class="section-bar" style="background:#2a6e4a"></div>
+      <div class="section-info">
+        <div class="section-title">Day of Travel &mdash; 6 Sep 2026 &mdash; Things to Have
+          <span class="owner-badge" style="background:#eef6f1;color:#2a6e4a;border:1px solid #b8dfc8">Both</span>
+        </div>
+        <div class="section-meta">Travel Day</div>
+      </div>
+    </div>
+    <div class="item" id="t1"><div class="item-check"><svg width="10" height="8" viewBox="0 0 10 8"><polyline points="1,4 3.5,6.5 9,1" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="item-text">Jenifer: Original passport with UK visa stamped</div><span class="tag tag-physical">Physical</span></div>
+    <div class="item" id="t2"><div class="item-check"><svg width="10" height="8" viewBox="0 0 10 8"><polyline points="1,4 3.5,6.5 9,1" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="item-text">Jenifer: Printed copy of itinerary to show at UK Border Force if asked</div><span class="tag tag-physical">Physical</span></div>
+    <div class="item" id="t3"><div class="item-check"><svg width="10" height="8" viewBox="0 0 10 8"><polyline points="1,4 3.5,6.5 9,1" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="item-text">Jenifer: Printed hotel confirmation for first night (London hotel)</div><span class="tag tag-physical">Physical</span></div>
+    <div class="item" id="t4"><div class="item-check"><svg width="10" height="8" viewBox="0 0 10 8"><polyline points="1,4 3.5,6.5 9,1" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="item-text">Jenifer: Return flight booking confirmation (evidence of intent to leave on 20 Sep)</div><span class="tag tag-physical">Physical</span></div>
+    <div class="item" id="t5"><div class="item-check"><svg width="10" height="8" viewBox="0 0 10 8"><polyline points="1,4 3.5,6.5 9,1" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="item-text">Jenifer: Simon&rsquo;s contact details written down (not just on phone)</div><span class="tag tag-physical">Physical</span></div>
+    <div class="item" id="t6"><div class="item-check"><svg width="10" height="8" viewBox="0 0 10 8"><polyline points="1,4 3.5,6.5 9,1" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="item-text">Jenifer: IBM employment letter &mdash; carry in hand luggage (UK Border can ask for proof of employment)</div><span class="tag tag-physical">Physical</span></div>
+    <div class="item" id="t7"><div class="item-check"><svg width="10" height="8" viewBox="0 0 10 8"><polyline points="1,4 3.5,6.5 9,1" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="item-text"><strong>At UK Border Force:</strong> Jenifer will receive an entry stamp granting a permitted stay &mdash; check the stamp date before leaving the desk. This date (not the visa validity date) is the legal departure deadline.</div><span class="tag tag-monitor">Monitor</span></div>
+  </div>
+
+  <!-- ═══ SSVWP / IRELAND ═══ -->
+  <div class="section" data-phase="SSVWP">
+    <div class="section-head">
+      <div class="section-bar" style="background:#2a4e8a"></div>
+      <div class="section-info">
+        <div class="section-title">Onward Travel to Ireland (SSVWP)
+          <span class="owner-badge" style="background:#eef6f1;color:#2a6e4a;border:1px solid #b8dfc8">Both</span>
+        </div>
+        <div class="section-meta">SSVWP / Ireland</div>
+      </div>
+    </div>
+    <div class="section-note">The Short Stay Visa Waiver Programme allows Jenifer to travel onward to Ireland without a separate Irish visa &mdash; provided the UK was the first port of entry (she lands at LHR, not Dublin).</div>
+    <div class="item" id="ir1"><div class="item-check"><svg width="10" height="8" viewBox="0 0 10 8"><polyline points="1,4 3.5,6.5 9,1" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="item-text">Confirm UK is Jenifer&rsquo;s first port of entry (required for SSVWP &mdash; she lands at LHR, not Dublin)</div><span class="tag tag-verify">Verify</span></div>
+    <div class="item" id="ir2"><div class="item-check"><svg width="10" height="8" viewBox="0 0 10 8"><polyline points="1,4 3.5,6.5 9,1" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="item-text">No separate Irish visa needed &mdash; SSVWP covers Philippine nationals with a valid UK Visitor Visa</div><span class="tag tag-verify">Verify</span></div>
+    <div class="item" id="ir3"><div class="item-check"><svg width="10" height="8" viewBox="0 0 10 8"><polyline points="1,4 3.5,6.5 9,1" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="item-text">When travelling into the Republic of Ireland, Jenifer carries: passport, UK entry stamp, and UK visa &mdash; Irish border officers may ask to see these</div><span class="tag tag-physical">Physical</span></div>
+    <div class="item" id="ir4"><div class="item-check"><svg width="10" height="8" viewBox="0 0 10 8"><polyline points="1,4 3.5,6.5 9,1" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="item-text">Monitor the Border Force entry stamp expiry throughout the extended stay &mdash; departure from the UK/Ireland Common Travel Area must be before this date</div><span class="tag tag-monitor">Monitor</span></div>
+  </div>
+
+  <!-- LEGEND -->
+  <div class="legend">
+    <p class="legend-title">Tag Legend</p>
+    <div class="legend-tags">
+      <span class="tag tag-generate">Generate</span>
+      <span class="tag tag-physical">Physical</span>
+      <span class="tag tag-online">Online</span>
+      <span class="tag tag-compile">Compile</span>
+      <span class="tag tag-book">Book</span>
+      <span class="tag tag-upload">Upload</span>
+      <span class="tag tag-monitor">Monitor</span>
+      <span class="tag tag-verify">Verify</span>
+      <span class="tag tag-confirm">Confirm</span>
+      <span class="tag tag-optional">Optional</span>
+    </div>
+    <p class="legend-note"><strong>Generate</strong> &mdash; needs to be written or requested &nbsp;&middot;&nbsp; <strong>Physical</strong> &mdash; printed or original document &nbsp;&middot;&nbsp; <strong>Book</strong> &mdash; external reservation required &nbsp;&middot;&nbsp; <strong>Monitor</strong> &mdash; ongoing watch item &nbsp;&middot;&nbsp; <strong>Compile</strong> &mdash; gathering existing materials</p>
+  </div>
+
+</main>
+
+<footer>
+  <div class="f-name">Simon &amp; Jenifer &nbsp;&middot;&nbsp; Phase 1 Checklist</div>
+  <div class="f-note">UK Standard Visitor Visa &nbsp;&middot;&nbsp; September 2026</div>
+</footer>
+
+<script>
+  // ─── Progress counter ───────────────────────────────────────────
+  function updateProgress() {
+    const all = document.querySelectorAll('.item');
+    const done = document.querySelectorAll('.item.done');
+    const total = all.length;
+    const doneCount = done.length;
+    const pct = total ? Math.round((doneCount / total) * 100) : 0;
+    document.getElementById('progress-fill').style.width = pct + '%';
+    document.getElementById('stat-done').textContent = doneCount;
+    document.getElementById('stat-remaining').textContent = total - doneCount;
+    document.getElementById('stat-total').textContent = total;
+  }
+
+  // ─── Phase filter ───────────────────────────────────────────────
+  function filterPhase(btn, phase) {
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('on'));
+    btn.classList.add('on');
+    document.querySelectorAll('.section').forEach(s => {
+      if (phase === 'all') { s.classList.remove('hidden'); return; }
+      const sPhase = s.getAttribute('data-phase');
+      s.classList.toggle('hidden', sPhase !== phase);
+    });
+  }
+
+  updateProgress();
+</script>
+</body>
+</html>
