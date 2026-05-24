@@ -61,19 +61,8 @@ This plan's IE entry is **5 October 2026** — 26 days before the programme end.
 - **Hard end-date for new SSVWP entries.** Any Irish entry under SSVWP must occur on or before 31 October 2026. ✓ for this plan.
 - **What happens to a stay that spans the end date?** The PDF doesn't say explicitly; standard immigration precedent is that the stamp issued at entry sets the authorised stay length (here, 90 days), and is not retroactively voided by programme termination. *Probable* outcome, not guaranteed. The "may be amended at any time" clause is the residual risk.
 - **Historical pattern: renewal.** SSVWP has been extended in 2014, 2017, 2020, 2023 (→ 2026). Another extension is the *probable* outcome but as of 2026-05-23 no announcement has been made.
-### 2.5 The hedge: Irish 'C' short-stay visit visa applied in parallel
  
-Apply for an Irish 'C' short-stay visit visa (~€60, ~8 wk processing at Manila embassy) in parallel with the UK Standard Visitor Visa. J's 2025 'C' visa file is the template (`Prior_2025_Visa_Docs_Inventory.md`).
- 
-**Decision tree (trigger date ~15 August 2026):**
- 
-- **Branch A** — SSVWP renewed past 31 Oct AND UK visa granted → use SSVWP for the Irish entry (free, automatic at DUB airport). C-visa unused.
-- **Branch B** — SSVWP NOT renewed AND UK visa granted AND C-visa granted → use the C-visa as the Irish entry mechanism. Trip dates unchanged. The C-visa is independent of SSVWP and UK visa; it just is the Irish permission. **In this branch J can fly DUB direct from MNL or via any intermediate — she does NOT need to land in UK first.** The plan still works because she's still in the UK first for the holiday, but legally the C-visa is what's allowing the Irish entry.
-- **Branch C** — Neither SSVWP renewed nor C-visa granted → trip becomes UK-only; Xmas/NY in NI rather than Blarney; Blarney evidence skipped this trip.
-- **Branch D** — UK visa refused → re-apply for 15-day visitor or pivot to C-visa-only (90-day Blarney trip; skip UK leg).
-The most likely branch is A. The hedge cost is the C-visa application fee. Worth it.
- 
-### 2.6 Passport-stamp reality
+### 2.5 Passport-stamp reality
 | Transition in this plan | Stamp produced? |
 | - | - |
 | MNL → LHR (UK entry by air) on 22 Sep | YES — UK entry stamp at LHR |
@@ -82,7 +71,7 @@ The most likely branch is A. The hedge cost is the C-visa application fee. Worth
 | DUB → Newry by car on 3 Jan (border crossing) | No stamp; UK side has no reporting obligation for in-validity visa holders |
 | BFS → MNL on 7 Mar (final departure) | No exit stamp; airline-API record only |
  
-### 2.7 S's "work from Ireland only" rule
+### 2.6 S's "work from Ireland only" rule
 - Oomnitza policy: S works only from Ireland.
 - Workable pattern: sleep NI (Newry, BT34), commute daily to Dundalk (ROI) ~30 min.
 - Single NI block of 63 nights is borderline-acceptable for "short-stay" interpretation. Shorter than the 6-month colleague's case that triggered the relocate-or-quit ultimatum, but worth keeping low-key with the manager.
@@ -121,21 +110,7 @@ This becomes the supporting document for the UK visa application — submitted b
  
 ---
  
-## 4. SSVWP-end-date risk and the C-visa hedge — full decision tree
- 
-(Same as §2.5, expanded.) **Apply for both UK Standard Visitor Visa and Irish 'C' short-stay visit visa in parallel by 15 July 2026.** Then watch the SSVWP renewal news.
- 
-| Branch | UK visa | SSVWP renewed by ~mid-August? | C-visa granted? | What happens |
-| - | - | - | - | - |
-| A (most likely) | Granted | Yes | Granted (or pending) | Use SSVWP at DUB airport. C-visa unused. Plan as written. |
-| B | Granted | No | Yes | Use C-visa as IE entry mechanism. Plan as written; just present C-visa instead of UK visa at DUB immigration. |
-| C | Granted | No | No | UK-only trip. Xmas/NY in NI not Blarney. Stage 3 evidence lighter. |
-| D | Refused | (irrelevant) | Granted | C-visa-only Blarney trip; skip UK leg. 90 days Blarney covers Xmas/NY. |
-| D' | Refused | (irrelevant) | Refused | Restart. Re-apply for one or both. |
- 
----
- 
-## 5. Risks and shortfalls
+## 4. Risks and shortfalls
  
 | # | Risk | Likelihood | Severity | Mitigation |
 | - | - | - | - | - |
@@ -157,63 +132,63 @@ This becomes the supporting document for the UK visa application — submitted b
  
 ---
  
-## 6. Prep tasks
+## 5. Prep tasks
  
-### 6.1 UK Standard Visitor Visa application (submit by 15 July 2026)
- 
-| # | Task | Owner | Deadline | Notes |
-| - | - | - | - | - |
-| 6.1.1 | Create UKVI account | J | 2026-06-05 | https://www.gov.uk/standard-visitor-visa |
-| 6.1.2 | Pay visa fee (£127) | J | 2026-06-15 | |
-| 6.1.3 | Book VFS Global Manila biometrics | J | 2026-06-20 | Late June / early July slot |
-| 6.1.4 | Draft Simon's sponsorship letter | S | 2026-06-25 | Covers all costs; J returns to PH 7 Mar 2027. **No mention of marriage.** |
-| 6.1.5 | Compile Simon's 3 months bank statements + 2-3 payslips | S | 2026-06-25 | Show OOMNITZA salary credit |
-| 6.1.6 | Obtain IBM PH leave letter for J | J | 2026-07-01 | True at time of application |
-| 6.1.7 | Compile Jenifer's 3 months bank statements | J | 2026-06-25 | Ties-to-PH |
-| 6.1.8 | **Re-cut the live itinerary** to 22 Sep – 5 Oct, drop Belfast, end with EDI → DUB | S | 2026-06-15 | Visa-supporting document; must match actual planned travel |
-| 6.1.9 | Print the re-cut itinerary | S | 2026-07-05 | |
-| 6.1.10 | Submit application + attend biometrics | J | 2026-07-15 | 3-6 week processing → decision by mid-Aug |
-| 6.1.11 | Visa granted → book all flights | S+J | 2026-08-15 | |
-| 6.1.12 | Post-grant: J resigns from IBM PH | J | between visa grant and 22 Sep | Per S's plan |
- 
-### 6.2 Irish 'C' short-stay visit visa (parallel hedge — submit by 15 July 2026)
+### 5.1 UK Standard Visitor Visa application (submit by 15 July 2026)
  
 | # | Task | Owner | Deadline | Notes |
 | - | - | - | - | - |
-| 6.2.1 | Reuse 2025 'C' visa file as template | S+J | 2026-06-05 | See `Prior_2025_Visa_Docs_Inventory.md` |
-| 6.2.2 | Update sponsor letter for new dates (5 Oct – 2 Jan) | S | 2026-06-25 | Same financial pack as UK visa |
-| 6.2.3 | Apply online via AVATS | J | 2026-07-15 | https://www.irishimmigration.ie/visas/avats/ — €60; ~8 wk processing |
-| 6.2.4 | If granted, hold as backup | — | — | Use only if Branch B in §4 |
+| 5.1.1 | Create UKVI account | J | 2026-06-05 | https://www.gov.uk/standard-visitor-visa |
+| 5.1.2 | Pay visa fee (£127) | J | 2026-06-15 | |
+| 5.1.3 | Book VFS Global Manila biometrics | J | 2026-06-20 | Late June / early July slot |
+| 5.1.4 | Draft Simon's sponsorship letter | S | 2026-06-25 | Covers all costs; J returns to PH 7 Mar 2027. **No mention of marriage.** |
+| 5.1.5 | Compile Simon's 3 months bank statements + 2-3 payslips | S | 2026-06-25 | Show OOMNITZA salary credit |
+| 5.1.6 | Obtain IBM PH leave letter for J | J | 2026-07-01 | True at time of application |
+| 5.1.7 | Compile Jenifer's 3 months bank statements | J | 2026-06-25 | Ties-to-PH |
+| 5.1.8 | **Re-cut the live itinerary** to 22 Sep – 5 Oct, drop Belfast, end with EDI → DUB | S | 2026-06-15 | Visa-supporting document; must match actual planned travel |
+| 5.1.9 | Print the re-cut itinerary | S | 2026-07-05 | |
+| 5.1.10 | Submit application + attend biometrics | J | 2026-07-15 | 3-6 week processing → decision by mid-Aug |
+| 5.1.11 | Visa granted → book all flights | S+J | 2026-08-15 | |
+| 5.1.12 | Post-grant: J resigns from IBM PH | J | between visa grant and 22 Sep | Per S's plan |
  
-### 6.3 Stage 2 / Stage 3 prep (start now)
- 
-| # | Task | Owner | Deadline | Notes |
-| - | - | - | - | - |
-| 6.3.1 | Order PSA CENOMAR (J) + DFA apostille | J | 2026-06-10 | |
-| 6.3.2 | Order PSA Birth Certificate (J) + apostille | J | 2026-06-10 | |
-| 6.3.3 | Order NBI Clearance (J) | J | 2026-06-10 | |
-| 6.3.4 | Pull S's most recent payslip + 12 months bank statements (Stage 3 Track B) | S | 2026-06-15 | Re-pull closer to filing |
-| 6.3.5 | Draft §3.11 relationship-history narrative | S+J | 2026-07-01 | Iterate during trip |
-| 6.3.6 | Contact precedent couple — 4 Route 2 questions + 5th SSVWP-end-date question | S | 2026-06-15 | High-information-density input |
-| 6.3.7 | Identify Irish immigration solicitors as standby | S | 2026-07-01 | Berkeley, Sinnott, Cleary & Co, etc. |
-| 6.3.8 | Begin PH wedding logistics planning | S+J | 2026-07-01 | Format B recommended — see §10 |
-| 6.3.9 | **Newry-Dundalk commute dry-run** (full week) | S | week of 2026-07-13 | Test commute before committing |
-| 6.3.10 | Source NI accommodation (single 63-night rental, 3 Jan – 6 Mar) | S | 2026-08-01 | Long-let preferred; ~£700/mo; confirm heating |
-| 6.3.11 | Confirm Dundalk coworking arrangement | S | 2026-08-15 | Block T / Regional Development Centre |
-| 6.3.12 | Monitor for SSVWP renewal announcement | S | ongoing from 2026-06-01 | Weekly check of ISD news page |
- 
-### 6.4 Flight bookings (after UK visa grant)
+### 5.2 Irish 'C' short-stay visit visa (parallel hedge — submit by 15 July 2026)
  
 | # | Task | Owner | Deadline | Notes |
 | - | - | - | - | - |
-| 6.4.1 | Book MNL → DOH → LHR for 22 Sep 2026 | S+J | 2026-08-15 | Qatar Airways |
-| 6.4.2 | Internal UK per re-cut itinerary (LHR → EDI etc.) | S+J | 2026-08-15 | |
-| 6.4.3 | Book EDI → DUB for 5 Oct evening | S+J | 2026-08-15 | Aer Lingus / Ryanair; ~£60. ★ This flight gives J the Dublin airport SSVWP entry stamp. ★ |
-| 6.4.4 | Book BFS → MNL for 7 Mar 2027 | S+J | 2026-08-15 | Likely BFS → LHR → DOH → MNL; ~£700-900 |
+| 5.2.1 | Reuse 2025 'C' visa file as template | S+J | 2026-06-05 | See `Prior_2025_Visa_Docs_Inventory.md` |
+| 5.2.2 | Update sponsor letter for new dates (5 Oct – 2 Jan) | S | 2026-06-25 | Same financial pack as UK visa |
+| 5.2.3 | Apply online via AVATS | J | 2026-07-15 | https://www.irishimmigration.ie/visas/avats/ — €60; ~8 wk processing |
+| 5.2.4 | If granted, hold as backup | — | — | Use only if Branch B in §4 |
+ 
+### 5.3 Stage 2 / Stage 3 prep (start now)
+ 
+| # | Task | Owner | Deadline | Notes |
+| - | - | - | - | - |
+| 5.3.1 | Order PSA CENOMAR (J) + DFA apostille | J | 2026-06-10 | |
+| 5.3.2 | Order PSA Birth Certificate (J) + apostille | J | 2026-06-10 | |
+| 5.3.3 | Order NBI Clearance (J) | J | 2026-06-10 | |
+| 5.3.4 | Pull S's most recent payslip + 12 months bank statements (Stage 3 Track B) | S | 2026-06-15 | Re-pull closer to filing |
+| 5.3.5 | Draft §3.11 relationship-history narrative | S+J | 2026-07-01 | Iterate during trip |
+| 5.3.6 | Contact precedent couple — 4 Route 2 questions + 5th SSVWP-end-date question | S | 2026-06-15 | High-information-density input |
+| 5.3.7 | Identify Irish immigration solicitors as standby | S | 2026-07-01 | Berkeley, Sinnott, Cleary & Co, etc. |
+| 5.3.8 | Begin PH wedding logistics planning | S+J | 2026-07-01 | Format B recommended — see §10 |
+| 5.3.9 | **Newry-Dundalk commute dry-run** (full week) | S | week of 2026-07-13 | Test commute before committing |
+| 5.3.10 | Source NI accommodation (single 63-night rental, 3 Jan – 6 Mar) | S | 2026-08-01 | Long-let preferred; ~£700/mo; confirm heating |
+| 5.3.11 | Confirm Dundalk coworking arrangement | S | 2026-08-15 | Block T / Regional Development Centre |
+| 5.3.12 | Monitor for SSVWP renewal announcement | S | ongoing from 2026-06-01 | Weekly check of ISD news page |
+ 
+### 5.4 Flight bookings (after UK visa grant)
+ 
+| # | Task | Owner | Deadline | Notes |
+| - | - | - | - | - |
+| 5.4.1 | Book MNL → DOH → LHR for 22 Sep 2026 | S+J | 2026-08-15 | Qatar Airways |
+| 5.4.2 | Internal UK per re-cut itinerary (LHR → EDI etc.) | S+J | 2026-08-15 | |
+| 5.4.3 | Book EDI → DUB for 5 Oct evening | S+J | 2026-08-15 | Aer Lingus / Ryanair; ~£60. ★ This flight gives J the Dublin airport SSVWP entry stamp. ★ |
+| 5.4.4 | Book BFS → MNL for 7 Mar 2027 | S+J | 2026-08-15 | Likely BFS → LHR → DOH → MNL; ~£700-900 |
  
 ---
  
-## 7. Execution plan, by leg
+## 6. Execution plan, by leg
  
 ### Leg 1 — Britain holiday (22 Sep – 5 Oct 2026, 14 days)
 - Re-cut itinerary: London 22-26 Sep (5n), York 27-28 Sep (2n), Edinburgh 29 Sep – 5 Oct (7n — extended by 3 nights to absorb the Belfast slot). Use the extra Edinburgh days for: Fife day trip (Anstruther / St Andrews), Stirling Castle, Loch Lomond.
@@ -245,7 +220,7 @@ This becomes the supporting document for the UK visa application — submitted b
 (See Leg 3 day 90 — drive Blarney → Newry on 2 Jan.)
  
 ### Leg 5 — NI base in Newry (3 Jan – 6 Mar 2027, 63 days)
-- **Day 1 (3 Jan):** check into NI rental (booked per §6.3.10).
+- **Day 1 (3 Jan):** check into NI rental (booked per §5.3.10).
   - If landlord permits, add J to rental agreement; otherwise S is named tenant with J as named co-occupant in cover email.
   - Open NatWest / Danske / Bank of Ireland UK current account in joint names.
   - Set up broadband or use rental WiFi; retain bill statements.
@@ -272,13 +247,13 @@ Stage 2 begins: S obtains updated Letter of Freedom from Irish Embassy Manila �
  
 ---
  
-## 8. Dublin Airport entry framing — what J says at the IBOS desk on 5 Oct
+## 7. Dublin Airport entry framing — what J says at the IBOS desk on 5 Oct
  
-### 8.1 Why "I'm here for 2 weeks of tourism" is the wrong answer
+### 7.1 Why "I'm here for 2 weeks of tourism" is the wrong answer
  
 A 2-week declaration followed by a 90-day stay reads as misrepresentation at Stage 3 C-visa review. SSVWP exists to allow up to 90 days of visit. Using most of it is normal.
  
-### 8.2 The recommended framing
+### 7.2 The recommended framing
  
 **"How long are you staying?"** — *"Up to 90 days. I'm visiting my partner Simon, an Irish citizen, who lives in Blarney near Cork. My return flight to Manila via Belfast is on 7 March 2027 — after my partner's work commitments wrap."*
  
@@ -290,7 +265,7 @@ A 2-week declaration followed by a 90-day stay reads as misrepresentation at Sta
  
 **Marriage plans (if asked specifically):** *"We've talked about getting married, possibly in the Philippines later this year. The wedding isn't in Ireland."*
  
-### 8.3 Documents J should carry through Dublin immigration
+### 7.3 Documents J should carry through Dublin immigration
  
 - Current passport (with UK entry stamp from 22 Sep visible)
 - UK Standard Visitor Visa (or Irish C-visa if Branch B in §4)
@@ -299,7 +274,7 @@ A 2-week declaration followed by a 90-day stay reads as misrepresentation at Sta
 - Printed accommodation evidence (Blarney address; current Irish utility bill in S's name)
 - S in arrivals at DUB to meet her (helpful, not required)
 - Sufficient funds evidence
-### 8.4 Specifically requesting 90 days
+### 7.4 Specifically requesting 90 days
  
 The stamp duration is at the officer's discretion. J should:
 - Have a return flight 4+ months out (the 7 Mar flight comfortably exceeds 90 days)
@@ -309,7 +284,7 @@ If the officer grants less, plan-compression fallback applies — see §11.
  
 ---
  
-## 9. Decisions to make before 2026-06-15
+## 8. Decisions to make before 2026-06-15
  
 1. **Confirm this plan as written.**
 2. **Confirm Newry as the NI base.**
@@ -321,11 +296,11 @@ If the officer grants less, plan-compression fallback applies — see §11.
 8. **Get answers to the precedent couple's questions** including SSVWP-end-date.
 ---
  
-## 10. Stage 2 — PH wedding format
+## 9. Stage 2 — PH wedding format
  
 S's requirements: easiest documentation; J's family attends; J wears dress + walks aisle; with mom, dad, brothers on the day.
  
-### 10.1 Format options
+### 9.1 Format options
 | Format | Documentation burden | Family attends? | Dress + aisle? | Prep time from S landing PH |
 | - | - | - | - | - |
 | A. Civil only at registrar's office | Lowest | Witnesses only typical | No | ~3 weeks |
@@ -333,7 +308,7 @@ S's requirements: easiest documentation; J's family attends; J wears dress + wal
 | C. Civil + Catholic Church wedding | High (Catholic paperwork) | Yes | Yes | ~3–6 months extra |
 | D. Full traditional | Highest | Yes | Yes | 3–6+ months |
  
-### 10.2 Documentation per format
+### 9.2 Documentation per format
  
 **All formats require (civil, mandatory):**
 - J's PSA Birth Certificate (apostilled)
@@ -351,26 +326,14 @@ S's requirements: easiest documentation; J's family attends; J wears dress + wal
 - Canonical Interview at parish
 - Pre-Cana / Marriage Preparation Seminar
 - Banns of Marriage at both parties' parishes for 3 consecutive Sundays
-### 10.3 Recommended: Format B
+### 9.3 Recommended: Format B
 Civil paperwork only; J's family attends at reception venue; J wears dress + walks aisle at venue; ~3-4 weeks prep from S landing PH. Civil registrar / judge / mayor officiates off-site (confirm with J's local civil registry early — some require registry-office solemnisation).
  
 If Catholic preference emerges, Format C adds 3-6 months to Stage 2; start Catholic paperwork during Stage 1 if so.
  
 ---
  
-## 11. Plan-compression fallbacks
- 
-| Trigger | Compression |
-| - | - |
-| DUB immigration grants <90-day stamp on 5 Oct | Skip NI leg; fly DUB → MNL on the stamp expiry day. Xmas / NY still covered (assuming stamp ≥ 88 days). Forgoes the 63-day NI evidence layer. |
-| S's commute proves unsustainable | Skip or compress NI leg; J flies DUB → MNL on 2 Jan. |
-| SSVWP terminated AND C-visa not granted | Branch C of §4 — trip becomes UK-only; Xmas/NY in NI. |
-| EDI → DUB flight cancelled on 5 Oct | Same-day rebooking on any UK→DUB flight (LHR-DUB, MAN-DUB hourly). If no flight available: ferry / car via NI → Burgh Quay report — adds 1 day, eats into SSVWP. Adjust IE exit forward by same amount. |
-| UK visa refused | Re-apply 15-day visitor or pivot to C-visa-only Blarney trip. |
- 
----
- 
-## 12. Cross-references
+## 10. Cross-references
  
 - Parent route comparison: `Route_Analysis_2026-05-22.md`
 - Track B scheme: `Spouse_of_Irish_National_Scheme.md`
