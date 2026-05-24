@@ -72,7 +72,7 @@ This plan's IE entry is **5 October 2026** — 26 days before the programme end.
 | BFS → MNL on 7 Mar (final departure) | No exit stamp; airline-API record only |
  
 ### 2.6 S's "work from Ireland only" rule
-- Oomnitza policy: S works only from Ireland.
+- Work policy: S works only from Ireland.
 - Workable pattern: sleep NI (Newry, BT34), commute daily to Dundalk (ROI) ~30 min.
 - Single NI block of 63 nights is borderline-acceptable for "short-stay" interpretation. Shorter than the 6-month colleague's case that triggered the relocate-or-quit ultimatum, but worth keeping low-key with the manager.
 ### 2.8 HSE 3-month marriage notice does NOT apply
@@ -122,7 +122,7 @@ This becomes the supporting document for the UK visa application — submitted b
 | 6 | SSVWP 90-day overstay (plan is at cap) | Plan is at cap = elevated discipline needed | Very High (5-year IE ban) | Calendar alerts SSVWP day 80 (23 Dec), 85 (28 Dec), 88 (31 Dec), 89 (1 Jan). **Drive Blarney → Newry early morning of 2 Jan (day 90), not late evening.** No flight involved = no airline-delay risk. |
 | 7 | UK visa overstay | Very Low with 14-day buffer | Very High (10-year UK ban) | 14-day buffer between trip end (7 Mar) and visa expiry (21 Mar) |
 | 8 | S's Newry-Dundalk commute proves unworkable | Medium | Medium | Dry-run a full week in **July 2026** before committing to NI rental. If commute fails, plan-compression fallback: J flies DUB → MNL on 2 Jan (skip NI leg); see §11. |
-| 9 | Oomnitza policy change blocks NI cross-border pattern mid-NI-leg | Low–Medium | High | Get informal written confirmation from S's manager that working from Dundalk hub during a short personal stay in NI is fine. Single 63-day NI block is at the upper edge of "short-stay" — but materially shorter than the 6-month colleague case. Keep arrangement low-key in IP-logging visibility. |
+| 9 | Work policy change blocks NI cross-border pattern mid-NI-leg | Low–Medium | High | Get informal written confirmation from S's manager that working from Dundalk hub during a short personal stay in NI is fine. Single 63-day NI block is at the upper edge of "short-stay" — but materially shorter than the 6-month colleague case. Keep arrangement low-key in IP-logging visibility. |
 | 10 | J's IBM PH role disruption | Mitigated | Low | Per S: J obtains approved-leave letter from IBM PH *for the visa application* (true at time of application); after UK visa grant, J resigns from IBM PH before travel. At LHR entry J truthfully says "I recently resigned, visiting my partner." |
 | 11 | Joint cohabitation evidence not actively collected | High if passive | High (weakens Track B) | §7 spells out daily/weekly evidence-collection cadence per leg |
 | 12 | Health issue / medical extension need | Low | High | Comprehensive travel insurance covering UK + IE for full 167 days |
@@ -142,7 +142,7 @@ This becomes the supporting document for the UK visa application — submitted b
 | 5.1.2 | Pay visa fee (£127) | J | 2026-06-15 | |
 | 5.1.3 | Book VFS Global Manila biometrics | J | 2026-06-20 | Late June / early July slot |
 | 5.1.4 | Draft Simon's sponsorship letter | S | 2026-06-25 | Covers all costs; J returns to PH 7 Mar 2027. **No mention of marriage.** |
-| 5.1.5 | Compile Simon's 3 months bank statements + 2-3 payslips | S | 2026-06-25 | Show OOMNITZA salary credit |
+| 5.1.5 | Compile Simon's 3 months bank statements + 2-3 payslips | S | 2026-06-25 | Show work salary credit |
 | 5.1.6 | Obtain IBM PH leave letter for J | J | 2026-07-01 | True at time of application |
 | 5.1.7 | Compile Jenifer's 3 months bank statements | J | 2026-06-25 | Ties-to-PH |
 | 5.1.8 | **Re-cut the live itinerary** to 22 Sep – 5 Oct, drop Belfast, end with EDI → DUB | S | 2026-06-15 | Visa-supporting document; must match actual planned travel |
@@ -288,7 +288,7 @@ If the officer grants less, plan-compression fallback applies — see §11.
  
 1. **Confirm this plan as written.**
 2. **Confirm Newry as the NI base.**
-3. **Confirm S's annual-leave allocation** with Oomnitza for 22 Sep – 5 Oct.
+3. **Confirm S's annual-leave allocation** with work for 22 Sep – 5 Oct.
 4. **Confirm IBM PH leave letter is obtainable.**
 5. **Confirm Blarney accommodation** for the 90-day ROI leg.
 6. **Confirm the Irish 'C' visa hedge application** is filed in parallel with UK visa.
