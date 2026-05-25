@@ -94,6 +94,24 @@
   .hotel-desc{font-size:12px;color:var(--ink3);line-height:1.6;}
   .hotel-price{display:inline-block;margin-top:7px;font-size:11px;font-weight:600;background:#eef6f1;color:var(--green);border:1px solid #b8dfc8;border-radius:20px;padding:2px 9px;}
 
+  /* CITY GUIDE NAV */
+  .cg-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(175px,1fr));gap:1px;background:var(--border);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;margin-bottom:2.5rem;}
+  .cg-card{background:var(--surface);padding:1rem 1.1rem;text-decoration:none;display:flex;align-items:center;gap:.75rem;transition:background .15s;}
+  .cg-card:hover{background:var(--surface2);}
+  .cg-dot{width:10px;height:10px;border-radius:50%;flex-shrink:0;}
+  .cg-info{flex:1;min-width:0;}
+  .cg-name{font-family:'Playfair Display',serif;font-size:1.05rem;color:var(--ink);line-height:1.2;}
+  .cg-meta{font-size:10px;color:var(--ink3);margin-top:2px;font-weight:500;}
+  .cg-arrow{font-size:13px;color:var(--ink3);font-weight:300;}
+
+  /* ITINERARY LINK */
+  .itin-link-box{margin-top:1rem;display:flex;align-items:center;gap:.75rem;padding:.85rem 1.25rem;background:#f0f4ff;border:1px solid #c0cdf0;border-radius:var(--radius);}
+  .itin-link-icon{font-size:1.1rem;flex-shrink:0;}
+  .itin-link-text{flex:1;font-size:12.5px;color:var(--ink2);line-height:1.5;}
+  .itin-link-text strong{display:block;color:#1a3a6b;font-size:13px;margin-bottom:1px;}
+  .itin-link-btn{font-size:11.5px;font-weight:600;color:#fff;background:#1a3a6b;padding:7px 14px;border-radius:20px;text-decoration:none;white-space:nowrap;flex-shrink:0;}
+  .itin-link-btn:hover{background:#2a4e8a;}
+
   /* NOTICE */
   .notice{background:var(--amber-bg);border:1px solid var(--amber-bd);border-radius:var(--radius);padding:1.4rem 1.5rem;margin-top:1.75rem;}
   .notice-title{font-family:'Playfair Display',serif;font-size:1rem;color:var(--amber);margin-bottom:.5rem;}
@@ -158,6 +176,25 @@
     <div class="sb"><div class="sb-n">3</div><div class="sb-l">Cities</div></div>
     <div class="sb"><div class="sb-n">2</div><div class="sb-l">Nations</div></div>
     <div class="sb"><div class="sb-n">2</div><div class="sb-l">Train legs</div></div>
+  </div>
+
+  <p class="section-title">Day-by-day city guides</p>
+  <div class="cg-grid">
+    <a href="london.html" class="cg-card">
+      <div class="cg-dot" style="background:#2a4e8a"></div>
+      <div class="cg-info"><div class="cg-name">London</div><div class="cg-meta">Days 1&ndash;6 &nbsp;&middot;&nbsp; 4&ndash;9 Oct &nbsp;&middot;&nbsp; 6 nights</div></div>
+      <span class="cg-arrow">&#8594;</span>
+    </a>
+    <a href="york.html" class="cg-card">
+      <div class="cg-dot" style="background:#7a5a2a"></div>
+      <div class="cg-info"><div class="cg-name">York</div><div class="cg-meta">Days 7&ndash;9 &nbsp;&middot;&nbsp; 10&ndash;12 Oct &nbsp;&middot;&nbsp; 3 nights</div></div>
+      <span class="cg-arrow">&#8594;</span>
+    </a>
+    <a href="edinburgh.html" class="cg-card">
+      <div class="cg-dot" style="background:#2a6e4a"></div>
+      <div class="cg-info"><div class="cg-name">Edinburgh</div><div class="cg-meta">Days 10&ndash;14 &nbsp;&middot;&nbsp; 13&ndash;17 Oct &nbsp;&middot;&nbsp; 5 nights</div></div>
+      <span class="cg-arrow">&#8594;</span>
+    </a>
   </div>
 
 
@@ -512,10 +549,64 @@
   </div>
 
   <div class="notice">
-    <div class="notice-title">Visa note &mdash; UK Standard Visitor Visa</div>
+    <div class="notice-title">Visa note &mdash; UK Standard Visitor Visa &amp; Short Stay Visa Waiver Programme (SSVWP)</div>
     <div class="notice-text">
-      Jenifer will need a <strong>UK Standard Visitor Visa</strong> before travelling. This itinerary works as a key supporting document: it shows a clear route with exact dates (<strong>4–18 October 2025</strong>), named hotels, realistic travel connections, and a confirmed return flight on 18 October. The most important supporting documents alongside it are Jenifer&rsquo;s <strong>IBM employment letter</strong> (confirming role, salary, and approved leave) and 3 months of bank statements. Simon&rsquo;s invitation letter as the UK-based contact also strengthens the application.
+      Jenifer will need a <strong>UK Standard Visitor Visa</strong> before travelling. This itinerary is a key supporting document: it shows a clear route with exact dates (<strong>4&ndash;18 October 2025</strong>), named hotels, and realistic travel connections.<br><br>
+      <strong>Sponsorship:</strong> All costs of the trip are covered by Simon (Jenifer&rsquo;s partner, Irish citizen). The visa application should include a signed sponsorship letter from Simon, his 3-month bank statements, and payslips. Jenifer should also include her IBM employment letter and her own bank statements (to demonstrate stable employment and ties to the Philippines, not to show self-funding).<br><br>
+      <strong>Flight tickets:</strong> UKVI does <em>not</em> require confirmed/paid flight tickets with the application. A proposed itinerary showing intended dates and routes is sufficient. Do not purchase non-refundable tickets before the visa decision is received. Book flights after the visa is granted.<br><br>
+      As a <strong>Philippine national</strong>, Jenifer also qualifies for Ireland&rsquo;s <strong>Short Stay Visa Waiver Programme (SSVWP)</strong> &mdash; a valid UK visa permits entry to Ireland for up to 90 days with no separate Irish visa needed. This is distinct from BIVS (China/India only).
     </div>
+  </div>
+
+
+  <p class="section-title" style="margin-top:2.5rem;">Visa application &mdash; preparation guide</p>
+
+  <div style="background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;margin-bottom:1rem;">
+    <div style="background:#1a3a6b;padding:10px 1.25rem;">
+      <span style="font-size:10px;font-weight:600;letter-spacing:.15em;text-transform:uppercase;color:#fff;">&#128196;&nbsp; This guide is for Simon and Jenifer only &mdash; not part of the visa submission</span>
+    </div>
+    <div style="padding:1.25rem 1.5rem;display:flex;flex-direction:column;gap:1.25rem;">
+
+      <div>
+        <div style="font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:#1a3a6b;margin-bottom:.5rem;">Flight tickets &mdash; do not book before the visa is granted</div>
+        <p style="font-size:13px;color:var(--ink2);line-height:1.7;">UK Visas and Immigration (UKVI) does not require confirmed or paid flight tickets as part of the application. A proposed itinerary showing intended dates, airline, and route is sufficient. The Home Office specifically advises against purchasing non-refundable tickets before a decision, as processing delays or a refusal would result in financial loss. Book flights only after the visa stamp is in the passport.</p>
+      </div>
+
+      <div>
+        <div style="font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:#1a3a6b;margin-bottom:.5rem;">Sponsorship letter &mdash; Simon (most important document)</div>
+        <p style="font-size:13px;color:var(--ink2);line-height:1.7;">Simon should write a signed letter on plain paper (with full name, address, phone, and email at the top) addressed to the Entry Clearance Officer. It should clearly state: his full name and nationality; his relationship to Jenifer; that he is covering all costs of the trip (flights, accommodation, transport, activities, and day-to-day expenses); an approximate total cost figure; that he has sufficient funds to cover this without hardship; and that Jenifer is expected to return to her employment in the Philippines on 18 October 2025. Keep the tone factual and direct &mdash; one or two pages is right.</p>
+      </div>
+
+      <div>
+        <div style="font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:#1a3a6b;margin-bottom:.5rem;">Simon&rsquo;s bank statements</div>
+        <p style="font-size:13px;color:var(--ink2);line-height:1.7;">3 months of statements. The caseworker is looking for: a regular salary credit each month (ideally labelled &ldquo;OOMNITZA&rdquo; or similar so the employer is identifiable); a healthy average balance comfortably above the total trip cost; and no large unexplained outflows. Include 2&ndash;3 recent payslips alongside the statements.</p>
+      </div>
+
+      <div>
+        <div style="font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:#1a3a6b;margin-bottom:.5rem;">Jenifer&rsquo;s bank statements</div>
+        <p style="font-size:13px;color:var(--ink2);line-height:1.7;">Jenifer should still submit her own 3-month bank statements even though Simon is the sponsor. These are not submitted to show she is self-funding &mdash; they are evidence of stable employment and financial ties to the Philippines. The key thing the caseworker wants to see is a regular IBM salary credit arriving each month. The account balance is secondary when sponsorship is clearly documented.</p>
+      </div>
+
+      <div>
+        <div style="font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:#1a3a6b;margin-bottom:.5rem;">If a minimum balance transfer is made</div>
+        <p style="font-size:13px;color:var(--ink2);line-height:1.7;">If you decide to transfer funds into Jenifer&rsquo;s account to show a minimum balance, the transfer should happen <strong>at least 4 weeks before the application is submitted</strong> and the funds should remain in the account. A large deposit made immediately before submission can raise suspicion. The transfer must be accompanied by a signed letter from Simon confirming: the amount transferred, that it originates from his personal account, and the reason for the transfer. Include both Simon&rsquo;s bank statement showing the debit and Jenifer&rsquo;s statement showing the credit.</p>
+      </div>
+
+      <div>
+        <div style="font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:#1a3a6b;margin-bottom:.5rem;">Consistency check</div>
+        <p style="font-size:13px;color:var(--ink2);line-height:1.7;">The total accommodation, activity, and transport costs in the sponsorship letter should be consistent with what is listed in the Visitor Travel Itinerary below. If a caseworker totals the hotel costs from the itinerary, it should match what the letter claims. The itinerary itself is part of the financial evidence package.</p>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="itin-link-box">
+    <span class="itin-link-icon">&#128196;</span>
+    <div class="itin-link-text">
+      <strong>Visa Application Itinerary</strong>
+      A print-ready itinerary formatted for inclusion with the UK Standard Visitor Visa application documents.
+    </div>
+    <a href="itinerary.html" class="itin-link-btn">View &amp; Print &#8599;</a>
   </div>
 
 </main>
