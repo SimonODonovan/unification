@@ -247,40 +247,205 @@ Stage 2 begins: S obtains updated Letter of Freedom from Irish Embassy Manila �
  
 ---
  
-## 7. Dublin Airport entry framing — what J says at the IBOS desk on 5 Oct
+## 7.  Dublin Airport entry framing — what J says at the IBOS desk on 5 Oct
  
-### 7.1 Why "I'm here for 2 weeks of tourism" is the wrong answer
+This is the single highest-stakes moment of Stage 1. The IBOS officer's decision sets J's authorised stay length (which determines whether Xmas + NY both fall inside the stamp), and the entry itself goes into J's permanent immigration record which Embassy Manila will see at Stage 3. **Spend real time preparing this interaction.** S+J should run the rehearsal protocol in §8.12 at least 3 times in the 2 weeks before travel.
  
-A 2-week declaration followed by a 90-day stay reads as misrepresentation at Stage 3 C-visa review. SSVWP exists to allow up to 90 days of visit. Using most of it is normal.
+### 7.1 The two cardinal principles
  
-### 7.2 The recommended framing
+**Principle 1 — Truthful, brief, consistent.** Every answer must be (a) true, (b) one or two sentences max, (c) consistent with every other answer and every document J presents. Officers are trained to detect inconsistency, embellishment, and rehearsed-sounding answers.
  
-**"How long are you staying?"** — *"Up to 90 days. I'm visiting my partner Simon, an Irish citizen, who lives in Blarney near Cork. My return flight to Manila via Belfast is on 7 March 2027 — after my partner's work commitments wrap."*
+**Principle 2 — Answer the question asked. Do not volunteer.** If asked how long, say how long. Don't add why. If asked why, say why. Don't pre-emptively explain employment. Volunteering invites follow-up questions and creates surface area for inconsistency. Brevity is a strength, not rudeness.
  
-**"What is your purpose?"** — *"Family visit. Simon is my partner; I'm staying at his home and meeting his family. We're spending Christmas and New Year together with his family in Blarney."*
+### 7.2 Why "I'm here for 2 weeks of tourism" is the wrong answer
  
-**"What do you do?"** — *"I recently resigned from IBM Philippines to take this extended trip with my partner before reconsidering my career."*
+A short-stay declaration followed by a 90-day stay reads as misrepresentation at Stage 3 C-visa review — Embassy Manila has access to entry records. SSVWP exists precisely to allow up to 90 days of visit; using most of it is normal and well within the rules. **Declaring 90 days truthfully is materially safer than under-declaring "to play it safe".** Under-declaration is the actual risk.
  
-**"Have you been to Ireland before?"** — *"Yes, on a 'C' visit visa in September 2025."*
+### 7.3 Core Q&A — the first-pass interview
  
-**Marriage plans (if asked specifically):** *"We've talked about getting married, possibly in the Philippines later this year. The wedding isn't in Ireland."*
+The IBOS officer will typically ask 4–6 questions in 1–3 minutes. The core scripts:
  
-### 7.3 Documents J should carry through Dublin immigration
+**"How long are you staying in Ireland?"**
+> *"Up to 90 days. My return flight from Belfast to Manila is on 7 March 2027 — I'll be in Northern Ireland for the last couple of months of my trip with my partner."*
  
-- Current passport (with UK entry stamp from 22 Sep visible)
-- UK Standard Visitor Visa (or Irish C-visa if Branch B in §4)
-- Printed return MNL flight confirmation (for 7 Mar 2027)
-- Printed sponsorship letter from S
-- Printed accommodation evidence (Blarney address; current Irish utility bill in S's name)
-- S in arrivals at DUB to meet her (helpful, not required)
-- Sufficient funds evidence
-### 7.4 Specifically requesting 90 days
+**"What is your purpose here?"**
+> *"Family visit. My partner Simon is an Irish citizen and lives in Blarney near Cork. I'm staying at his home and meeting his family — including Christmas and New Year with them."*
  
-The stamp duration is at the officer's discretion. J should:
-- Have a return flight 4+ months out (the 7 Mar flight comfortably exceeds 90 days)
-- Have a stay plan requiring up to 90 days (Christmas + NY)
-- Politely state "I would like to request the maximum 90 days, please"
-If the officer grants less, plan-compression fallback applies — see §11.
+**"Where will you be staying?"**
+> *"At my partner Simon's home in Blarney, near Cork. I have his address and a recent utility bill in my documents."*
+ 
+**"What do you do for work?"**
+> *"I recently resigned from IBM Philippines after [X] years to take this extended trip with my partner before deciding on my next career step."*
+ 
+**"Have you been to Ireland before?"**
+> *"Yes, on a Type C visit visa in September 2025. I complied with the conditions and returned to the Philippines on time."*
+ 
+### 7.4 Extended Q&A — likely probing follow-ups
+ 
+If the officer probes — likely, because 90 days is on the longer side of SSVWP usage — they will dig into ties-to-PH, sponsorship, return-intent, and marriage. Have crisp answers ready for:
+ 
+**"Why such a long visit?"**
+> *"Christmas and New Year are important family occasions and this is the first time I'll be spending them with Simon's family in Ireland. After the holidays we move to Northern Ireland to be near Simon's work, and I fly home from Belfast in early March."*
+ 
+**"How are you funding the trip?"**
+> *"My partner Simon is covering all costs. I have his signed sponsorship letter and his bank statements here."* — Then hand over only if asked, in the order listed in §8.8.
+ 
+**"Will you be working in Ireland?"**
+> *"No. I'm visiting only. I have no intention of working in Ireland."*
+ 
+**"Do you have family in the Philippines?"**
+> *"Yes. My parents and brothers all live in Manila. I have family commitments there in March."*
+ 
+**"What is your home address in the Philippines?"**
+> *"[Provide the truthful, specific Manila address J actually uses.]"*
+ 
+**"Why did you resign from IBM?"**
+> *"After [X] years at IBM I decided to take this extended visit with my partner before deciding what to do next. It's a deliberate career break, not a redundancy."* — Truthful; rules out "economic migrant" reading.
+ 
+**"Do you intend to live in Ireland?"**
+> *"No. My home is in the Philippines and my family is there. My return flight is booked for 7 March."*
+ 
+**"How did you and Simon meet?"**
+> *"[Briefly state the truthful mechanism — when and how. One sentence.]"*
+ 
+**"How long have you been together?"**
+> *"Since [year]. We've visited each other a few times each year since."*
+ 
+**"Why fly out of Belfast and not Dublin?"**
+> *"My partner's work is in Ireland and we spend the last couple of months of the trip in Northern Ireland near his work commute. Belfast is the most convenient airport from there."*
+ 
+**"Do you have travel insurance?"**
+> *"Yes, I have insurance covering the full trip duration."* — Have the printed policy ready.
+ 
+**"Do you have sufficient funds for the trip?"**
+> *"My partner is covering my costs — here is his sponsorship letter and his bank statements. I also have my own funds in my account."*
+ 
+### 7.5 The marriage line of questioning — handle carefully
+ 
+If the officer suspects J is in Ireland to marry, two specific SSVWP rules trigger:
+1. **SSVWP cannot be used by "visitors for the purpose of marriage or entering into a civil partnership"** (PDF §3.b). Even though J is not marrying *in Ireland*, an officer who reads the situation as marriage-purpose may apply this rule defensively.
+2. **Extension of Visitor Permission is refused for those "seeking permission to marry in Ireland"** — doesn't directly bind today, but sets a tone.
+**The defensible truth:** J and S plan to marry **in the Philippines, in 2027, after this trip**. J is not in Ireland to marry, not in Ireland to plan an Irish wedding (no Irish venue, no HSE notice, no Irish wedding paperwork in her luggage), and not engaged in any activity that implicates Irish marriage rules.
+ 
+**Phrasing to use:**
+- *"We're not getting married in Ireland."*
+- *"Our wedding will be in the Philippines so my family can attend."*
+- *"This trip is to spend time with my partner's family — the wedding itself is at home in the Philippines."*
+**Phrasing to AVOID:**
+- *"We're getting married soon"* — open-ended; sounds like Ireland.
+- *"We're planning the wedding"* in Ireland.
+- Any specific date mentioned without explicitly naming the Philippines.
+- *"We might get married while I'm here"* — fatal.
+If the officer asks if J has wedding dress / rings / venue paperwork — truthful **"no"** answers. None of those will be in her luggage for this trip.
+ 
+### 7.6 Red flags — answers J must NOT give
+ 
+These phrases materially increase scrutiny or refusal risk. **Avoid:**
+ 
+- *"I'm moving here."* / *"I'm coming to live with my partner."* — even loosely meant, reads as "non-genuine visitor".
+- *"We're going to get married in Ireland."* — explicit SSVWP exclusion + future-extension refusal ground.
+- *"I don't know how long I'm staying."* — reads as fishing.
+- *"I'm unemployed."* — replace with *"recently resigned, taking a break to travel with my partner."*
+- *"I'm looking for work in Ireland."* — kills the visit framing.
+- *"I'm not sure when I'll return."* — replace with the specific 7 March flight date.
+- *"My partner is paying for everything"* without offering sponsorship documentation — sounds dependency-driven without backup.
+- *"I have nothing to go back to."* — destroys ties-to-PH narrative entirely.
+- *"I'd like to stay longer than 90 days."* — reads as intent to overstay.
+- *"Maybe I'll stay if I find work."* — fatal.
+- Hesitation or filler words ("um, well…") before basic factual answers. Practice until the basics are crisp.
+- Inconsistency — if the sponsorship letter says "Christmas + NY with family" and J says "tourism", that conflict is fatal.
+### 7.7 Demeanor, body language, and presentation
+ 
+- **Calm, polite, confident.** Hands visible (on the counter or relaxed at sides). No fidgeting with passport, phone, or hair.
+- **Eye contact** during questions and answers — natural, not staring. Looking down or away reads as evasive.
+- **Listen to the full question before answering.** Don't anticipate; the officer may ask something different from what you expect.
+- **Speak clearly at moderate pace.** A Filipino-accented English is fine — Irish officers hear many accents daily — but speak slowly enough to be understood the first time. Avoid filler words.
+- **No fake smile, no false cheer.** Brief, friendly smile on greeting is fine; otherwise neutral-positive. Over-cheerfulness reads as masking something.
+- **Don't argue.** If the officer says something J disagrees with, acknowledge politely and offer the relevant document.
+- **If you don't understand a question, ask the officer to repeat.** *"Sorry, could you say that again please?"* — much better than answering the wrong question.
+- **Stress is normal; visible panic is not.** Take a breath if needed before answering. Officers expect some nervousness from non-EU first-time visa-supported entrants.
+- **Don't carry the conversation.** Answer, then stop. Wait for the next question.
+- **Do not produce documents proactively.** Only hand over what is specifically asked for. See §8.8.
+### 7.8 Document presentation order
+ 
+Keep documents in a clear plastic folder in this specific order. **Produce only when asked.** Order:
+ 
+1. **Passport** — already in hand for the officer; opened to the UK visa page
+2. **Return MNL flight confirmation** — 7 March 2027 BFS → MNL, printed
+3. **Simon's sponsorship letter** — addressed to "Immigration Officer / Border Management Unit"; one page; signed; covers all costs; states return date 7 March
+4. **Simon's most recent 3 months of bank statements** — printed
+5. **Simon's most recent 2–3 payslips** — printed
+6. **Blarney accommodation evidence** — current utility bill / mortgage statement / lease in S's name showing Blarney address
+7. **Travel insurance certificate** — printed, covering the full 167-day trip
+8. **J's own bank statements** (last 3 months) — printed
+9. **J's prior 2025 Irish 'C' visa stamp** — in the passport; useful evidence of prior compliance, point to it if the officer asks
+10. **Optional: small folder of relationship highlights** — 4–6 dated photos of S+J together; produce *only* if specifically asked about the relationship
+**Do not hand over the entire folder at once.** The officer asks; J provides. Producing a 30-page binder unprompted reads as defensive — as if J is preparing for refusal.
+ 
+### 7.9 Specifically requesting the 90-day stamp
+ 
+The stamp duration is at the officer's discretion (PDF §8). Standard practice is to grant the duration requested up to 90 days for visa-supported visitors with valid sponsorship and onward travel within the validity. To support the 90-day grant:
+ 
+- **Return flight 4+ months out** — the 7 March flight comfortably exceeds 90 days; this supports a max-stamp request.
+- **Stay plan requiring up to 90 days** — Christmas + NY with S's family + transition to NI is the stated plan.
+- **State the request politely once.** *"I would like to request the maximum 90 days please."* — works as a sentence appended to the "how long are you staying" answer. Doesn't need to be a separate moment.
+The officer will stamp J's passport with: an entry date (today, 5 Oct), and a date until which she can stay. Target: **2 January 2027** (90 days inclusive).
+ 
+**★ Check the stamp date is correct BEFORE leaving the desk. ★** If the officer wrote a different exit date than intended, politely ask *"Could I confirm the stay-until date please?"* and verify with day-counting. Stamps are hard to correct after walking away.
+ 
+### 7.10 If the officer grants less than 90 days
+ 
+Stay calm. **Do not argue.** Accept the stamp graciously and clarify the dates: *"Thank you. So I should leave Ireland by [date]?"* — get verbal confirmation of the exit date. Note it.
+ 
+Common shorter grants:
+- **60 days** = 5 Oct → 3 Dec. Covers no Christmas, no NY.
+- **30 days** = 5 Oct → 3 Nov. Significantly shorter.
+If the stamp is materially shorter than 90 days:
+- Spend the shorter IE stamp at Blarney with S
+- Leave Ireland by the stamp expiry date (not the planned 2 Jan)
+- Either (a) move to NI early for the balance of the UK visa, or (b) return to PH early
+- **In either case, do not overstay.** Hard rule.
+This contingency is undesirable but recoverable. The Stage 3 file is weaker (less Blarney evidence; Xmas/NY potentially not at Blarney), but Track B is not dead. Update Stage 2/3 planning accordingly. See §11.
+ 
+### 7.11 If the officer asks for secondary inspection
+ 
+A small fraction of extended-stay visa-supported entries are referred to a secondary inspection room — **this is not a refusal, just more detailed review.** If this happens:
+ 
+- **Don't panic.** It's procedural and routine for travellers whose entries warrant a closer look.
+- **S cannot accompany** into the secondary area — it's airside / restricted.
+- **Cooperate fully.** Answer every question truthfully and briefly, as in the primary interview. Same rules apply: short answers, no volunteering.
+- **Provide additional documents on request.** The folder J carries should already cover the likely asks.
+- **Time expectation:** secondary inspection typically takes 30–90 minutes.
+- **Outcome paths:**
+  - **Most common:** officer satisfied → stamp granted, J released to arrivals.
+  - **Less common:** officer grants a shorter stamp than requested → §8.10 applies.
+  - **Rare:** entry refused → J is returned to UK on the next flight. Her UK visa lets her wait in UK while she reconsiders (re-apply for Irish C-visa from UK or PH; Stage 1 compresses or pauses).
+If refused entry, S should be ready in arrivals to: (a) collect any luggage if it makes it through, (b) help J book the return UK flight, (c) help her find accommodation in UK while the next step is decided. **Have a UK credit card ready and Belfast / Edinburgh hotel options pre-saved on a phone**.
+ 
+### 7.12 Rehearsal protocol — S+J prep in the weeks before travel
+ 
+S should role-play the IBOS officer with J **at least 3 times** before travel. This is the single highest-ROI prep activity.
+ 
+**Round 1 — Core Q&A only (§8.3):** ~5 minutes. Just the basics. Goal: crisp 1–2 sentence answers, no hesitation. Repeat until fluent.
+ 
+**Round 2 — Extended Q&A + probing (§8.4):** ~15 minutes. Cover the longer questions. S should ask unexpectedly: *"What does Simon's mother do for a living?"* — J doesn't have to know perfectly but answers normally without panicking. *"How long have you and Simon known each other?"* / *"What's your home address in Manila?"* / *"How many trips has Simon made to the Philippines?"* — these are normal probing questions an officer might ask to test the relationship-truth. Goal: fluency under unexpected questions.
+ 
+**Round 3 — Hostile rehearsal (§8.5–§8.6):** ~20 minutes. S deliberately probes the marriage angle, employment, "would you live here", with mild skepticism. *"You've recently resigned and you're visiting your partner for 90 days at Christmas — sounds like you're testing out living here, isn't it?"* — J practices truthful-and-brief without becoming defensive or over-explaining. End with document-handover practice (§8.8) — S calls out "How are you funding this?" and J produces the sponsorship letter from the folder cleanly.
+ 
+**Things to lock down through rehearsal:**
+- Stay-until date: **7 March 2027**, not "around March" or "90 days" alone.
+- Partner term: **"my partner Simon"** — consistent (not "boyfriend", not "fiancé", not "future husband").
+- Marriage location: **"in the Philippines later in 2027"** — explicit; never just "we plan to get married".
+- Employment status: **"recently resigned, taking a break to travel"** — never "unemployed".
+- Funds: **"my partner is covering costs; here are his documents"** — never "I have no money".
+**The night before travel** — at the layover hotel during the Doha stopover or wherever J is the night before flying EDI → DUB — do a 10-minute speed run of all the Q&A. Resets the muscle memory.
+ 
+### 7.13 What J does immediately after the stamp
+ 
+- **Verify the stamp dates on the spot.** Entry date today; stay-until date 2 January 2027 (or whatever was granted). Don't walk away if either is wrong.
+- **Once clear of immigration**, photograph the stamp at the first sensible moment (after baggage claim is fine; **photography in the immigration hall itself is prohibited**).
+- **Keep all printed documents.** They may be needed at the land border crossing back to NI on 2 Jan, and at BFS departure on 7 Mar.
+- **Proceed to arrivals.** Meet S. Trip Leg 3 (Blarney) begins.
  
 ---
  
@@ -296,44 +461,7 @@ If the officer grants less, plan-compression fallback applies — see §11.
 8. **Get answers to the precedent couple's questions** including SSVWP-end-date.
 ---
  
-## 9. Stage 2 — PH wedding format
- 
-S's requirements: easiest documentation; J's family attends; J wears dress + walks aisle; with mom, dad, brothers on the day.
- 
-### 9.1 Format options
-| Format | Documentation burden | Family attends? | Dress + aisle? | Prep time from S landing PH |
-| - | - | - | - | - |
-| A. Civil only at registrar's office | Lowest | Witnesses only typical | No | ~3 weeks |
-| **B. Civil at venue + family reception** ★ recommended | Same as A | Yes | Yes (venue aisle, dress) | ~3–4 weeks |
-| C. Civil + Catholic Church wedding | High (Catholic paperwork) | Yes | Yes | ~3–6 months extra |
-| D. Full traditional | Highest | Yes | Yes | 3–6+ months |
- 
-### 9.2 Documentation per format
- 
-**All formats require (civil, mandatory):**
-- J's PSA Birth Certificate (apostilled)
-- J's PSA CENOMAR (<6 months old, apostilled)
-- J's passport / government photo ID
-- S's **Certificate of Legal Capacity to Contract Marriage (CLCCM)** — "Letter of Freedom" — from Irish Embassy Manila. 2-4 weeks lead time.
-- S's passport + birth certificate (apostilled)
-- Marriage License from Local Civil Registrar of J's town. **Mandatory 10-day posting period.** Valid 120 days.
-- 2 witnesses; both parties present (no proxy marriages)
-**Formats B / C / D additionally:** venue, catering, attire.
- 
-**Formats C / D additionally — Catholic-specific:**
-- Baptismal Certificates "Annotated for Marriage Purposes" (both parties), recent
-- Confirmation Certificates (both parties)
-- Canonical Interview at parish
-- Pre-Cana / Marriage Preparation Seminar
-- Banns of Marriage at both parties' parishes for 3 consecutive Sundays
-### 9.3 Recommended: Format B
-Civil paperwork only; J's family attends at reception venue; J wears dress + walks aisle at venue; ~3-4 weeks prep from S landing PH. Civil registrar / judge / mayor officiates off-site (confirm with J's local civil registry early — some require registry-office solemnisation).
- 
-If Catholic preference emerges, Format C adds 3-6 months to Stage 2; start Catholic paperwork during Stage 1 if so.
- 
----
- 
-## 10. Cross-references
+## 9. Cross-references
  
 - Parent route comparison: `Route_Analysis_2026-05-22.md`
 - Track B scheme: `Spouse_of_Irish_National_Scheme.md`
