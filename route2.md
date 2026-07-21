@@ -1,6 +1,6 @@
-# Route 2 — Detailed Plan (rev. 2026-05-23, sixth pass)
+# Route 2 — Detailed Plan (rev. 2026-07-21, seventh pass)
 
-**Status:** Route 2 confirmed; single trip shape locked. Holiday → IE → NI → home with a single NI block; dates set per S's 6th-pass decision below.
+**Status:** Route 2 confirmed; single trip shape locked. Holiday → IE → NI → home with a single NI block; dates set per S's 7th-pass decision below.
 
 **Companion docs:**
 - `Route_Analysis_2026-05-22.md` — parent comparison of all four routes
@@ -10,13 +10,13 @@
 - Live trip itinerary: https://simonodonovan.github.io/unification/
 
 **Trip anchors (final):**
-- **UK visa valid-from date / J arrival LHR:** Sat **3 October 2026** (MNL → DOH → LHR via Qatar Airways)
-- **UK visa expires:** **3 April 2027** (6 calendar months from 3 Oct)
+- **UK visa valid-from date / J arrival LHR:** **4 October 2026** (MNL → DOH → LHR via Qatar Airways; J flies out of Manila on the 4th and lands at LHR that evening or in the early hours of the 5th, depending on routing)
+- **UK visa expires:** **4 April 2027** (6 calendar months from 4 Oct)
 - **14-day buffer to visa expiry → trip ends 20 March 2027**
 - **SSVWP programme end date: 31 October 2026** (§2.4) — J's IE entry on 17 Oct is 14 days before the programme end
 - **Xmas (25 Dec 2026) + New Year (1 Jan 2027) in Blarney with S's family** — IE leg covers both (Xmas = SSVWP day 70, NY = SSVWP day 77)
-- **Visa-application "intended holiday":** 3 – 17 October 2026 (15 days; 14 nights; **London → York → Edinburgh — Belfast removed**)
-- **IBM PH leave letter dates (for visa pack):** 5 – 16 October 2026 (12 days — the formal IBM HR leave window; differs deliberately from the 15-day itinerary because the IBM letter only needs to cover working days)
+- **Visa-application "intended holiday":** 4 – 17 October 2026 (14 days; 13 nights; **London → York → Edinburgh → London**; Belfast removed). UK exit is a **LHR → DUB** flight on 17 Oct, not EDI → DUB.
+- **IBM PH leave letter dates (for visa pack):** 5 – 16 October 2026 (12 days — the formal IBM HR leave window; differs deliberately from the 14-day itinerary because the IBM letter only needs to cover working days)
 
 **Revision history:**
 - 1st pass — five-option enumeration
@@ -24,7 +24,8 @@
 - 3rd pass — Burgh Quay land-border reporting mechanic
 - 4th pass — (superseded) tried to fit Xmas/NY into 6-Sep anchor by splitting NI; rejected.
 - 5th pass — restored single NI block by uniformly shifting trip start to 22 Sep; IE 5 Oct – 2 Jan.
-- **6th pass (this version)** — Per S 2026-05-23: visa-application "valid-from" date set to **3 Oct 2026**; visa-application holiday end **17 Oct 2026** (15-day London → York → Edinburgh itinerary; **Belfast removed entirely**); IBM PH leave-letter dates set to **5 – 16 Oct 2026**. Trip shifts later by 11 days vs. v5. IE leg now 17 Oct – 14 Jan (90 SSVWP days at cap), NI block 14 Jan – 19 Mar in Newry, depart 20 Mar 2027. Visa-supporting itinerary on simonodonovan.github.io needs re-dating to 3 – 17 October 2026 (no Belfast).
+- **6th pass** — Per S 2026-05-23: visa-application "valid-from" date set to **3 Oct 2026**; visa-application holiday end **17 Oct 2026** (15-day London → York → Edinburgh itinerary; **Belfast removed entirely**); IBM PH leave-letter dates set to **5 – 16 Oct 2026**. Trip shifts later by 11 days vs. v5. IE leg now 17 Oct – 14 Jan (90 SSVWP days at cap), NI block 14 Jan – 19 Mar in Newry, depart 20 Mar 2027. Visa-supporting itinerary on simonodonovan.github.io needs re-dating to 3 – 17 October 2026 (no Belfast).
+- **7th pass (this version)** — Per S 2026-07-21: departure from Manila moved to **4 Oct** (arrival LHR 4 Oct evening or early 5 Oct, routing-dependent), so the visa window is **4 Oct 2026 – 4 Apr 2027**. Holiday shortened to **14 days / 13 nights**. Edinburgh cut from 5n to 3n and the party returns to **London for the final night (16 Oct)**, so the UK exit is **LHR → DUB on 17 Oct** rather than EDI → DUB. Art galleries removed from the itinerary throughout in favour of natural history (Natural History Museum, Grant Museum of Zoology, National Museum of Scotland). Visa-facing `itinerary.html` stripped back to visit overview / accommodation / transport / day-by-day only, with everything covered by the rest of the application pack removed from it.
 ---
  
 ## 1. Route 2 is three sequential stages
@@ -41,7 +42,7 @@ build                      ~2–3 months in PH           ~9–15 months total
 ## 2. Hard constraints
  
 ### 2.1 UK Standard Visitor Visa
-- Validity: 6 months from issue, single window. With "valid from" date **3 October 2026**, the visa **expires 3 April 2027.**
+- Validity: 6 months from issue, single window. With "valid from" date **4 October 2026**, the visa **expires 4 April 2027.**
 - Per-visit cap: 6 months max; multi-entry by default.
 - **🚨 Cannot be a Marriage Visitor Visa** — that class is an explicit SSVWP exclusion. Apply for and frame as general visitor; no mention of marriage anywhere in the UK application. The PH wedding happens *after* this trip.
 - UK ETAs do not qualify for SSVWP. Filipinos still need a visa stamp.
@@ -55,8 +56,8 @@ Per the [ISD page (last updated 2025-05-09)](https://www.irishimmigration.ie/com
 - Maximum stay per Irish entry: **90 days OR remaining UK permission, whichever is lesser.**
 - Must have landed in the UK on the current UK visa *before* travelling to Ireland.
 - Cannot enter Ireland directly on the UK visa for the first journey from home.
-- **Combined CTA cap (UK + IE): up to 180 days** (from PDF Q&A f). Our plan totals 169 days, under cap.
-- **Mandatory land-border report (PDF §8 footnote):** if arriving Ireland from NI by land, must report to Burgh Quay or local Garda immigration office. *Not relevant to this plan* — our IE entry is by air (EDI → DUB) for the Dublin airport entry stamp. The exit back to NI is by car (no equivalent reporting obligation in that direction).
+- **Combined CTA cap (UK + IE): up to 180 days** (from PDF Q&A f). Our plan totals 168 days, under cap.
+- **Mandatory land-border report (PDF §8 footnote):** if arriving Ireland from NI by land, must report to Burgh Quay or local Garda immigration office. *Not relevant to this plan* — our IE entry is by air (LHR → DUB) for the Dublin airport entry stamp. The exit back to NI is by car (no equivalent reporting obligation in that direction).
 ### 2.4 SSVWP end date: 31 October 2026
  
 ISD PDF (page 1): *"The Short-stay Visa Waiver Programme (the Programme) is to continue until 31 October 2026 and may be amended at any time."*
@@ -70,9 +71,9 @@ This plan's IE entry is **17 October 2026** — 14 days before the programme end
 ### 2.5 Passport-stamp reality
 | Transition in this plan | Stamp produced? |
 | - | - |
-| MNL → LHR (UK entry by air) on 3 Oct | YES — UK entry stamp at LHR |
-| Internal UK (LHR → EDI per itinerary) | No further stamping |
-| **EDI → DUB on 17 Oct evening** | **YES — Irish SSVWP entry stamp at DUB Airport immigration** ★ |
+| MNL → LHR (UK entry by air) on 4 Oct | YES — UK entry stamp at LHR |
+| Internal UK (rail London ↔ York ↔ Edinburgh) | No further stamping |
+| **LHR → DUB on 17 Oct** | **YES — Irish SSVWP entry stamp at DUB Airport immigration** ★ |
 | DUB → Newry by car on 14 Jan (border crossing, SSVWP day 90) | No stamp; UK side has no reporting obligation for in-validity visa holders |
 | BFS → MNL on 20 Mar (final departure) | No exit stamp; airline-API record only |
  
@@ -88,8 +89,8 @@ Marriage is in PH (Stage 2).
 ## 3. The plan — single shape, single NI block
  
 ```
-LEG 1   3 Oct – 17 Oct 2026   15 days   UK   Britain holiday (London → York → Edinburgh; no Belfast). 14 nights in UK.
-LEG 2   17 Oct 2026 (eve)     —         —    Fly EDI → DUB. SSVWP entry stamp at DUB airport. Day 1 SSVWP.
+LEG 1   4 Oct – 17 Oct 2026   14 days   UK   Britain holiday (London → York → Edinburgh → London; no Belfast). 13 nights in UK.
+LEG 2   17 Oct 2026            —         —    Fly LHR → DUB. SSVWP entry stamp at DUB airport. Day 1 SSVWP.
 LEG 3   17 Oct – 14 Jan 2027  90 days   IE   ROI at Blarney. SSVWP at cap. ★ Xmas (SSVWP day 70) + NY (day 77) with S's family ★
 LEG 4   14 Jan 2027           —         —    Drive DUB → Newry. Border crossing by car. SSVWP day 90 — depart Blarney early morning.
 LEG 5   14 Jan – 19 Mar 2027  65 days   UK   NI base in Newry — single continuous stay. S commutes Newry → Dundalk daily.
@@ -97,22 +98,22 @@ LEG 6   20 Mar 2027           —         —    Fly BFS → MNL. 14-day buffer 
 ```
  
 **Totals:**
-- UK total: 14 (holiday nights) + 65 (NI nights) = 79 days
+- UK total: 13 (holiday nights) + 65 (NI nights) = 78 days
 - IE total: 90 days (SSVWP at cap)
-- Trip total: 169 days
-- CTA total: 169 ≤ 180-day cap ✓
+- Trip total: 168 days
+- CTA total: 168 ≤ 180-day cap ✓
 - UK visa buffer: 14 days
 - SSVWP buffer: 0 days (at cap) ⚠
 
 **Passport stamps:**
-1. LHR entry stamp (UK entry, 3 Oct) — automatic at airport immigration
-2. DUB entry stamp (SSVWP entry, 17 Oct) — automatic at airport immigration on EDI → DUB arrival
+1. LHR entry stamp (UK entry, 4 Oct) — automatic at airport immigration
+2. DUB entry stamp (SSVWP entry, 17 Oct) — automatic at airport immigration on LHR → DUB arrival
 3. No exit stamps (UK and IE don't routinely stamp exits)
 
 **Itinerary site action:** the live itinerary at simonodonovan.github.io/unification needs to be re-cut to:
 - New dates: **3 – 17 October 2026** (was 6 – 20 Sep)
 - **Drop Belfast leg entirely**, extend Edinburgh
-- End with EDI → DUB evening flight on **17 October** (not BFS departure)
+- Return to London for the final night; end with a **LHR → DUB** flight on **17 October** (not BFS, not EDI)
 
 This becomes the supporting document for the UK visa application — submitted by 15 July 2026.
  
@@ -133,9 +134,9 @@ This becomes the supporting document for the UK visa application — submitted b
 | 9 | Work policy change blocks NI cross-border pattern mid-NI-leg | Low–Medium | High | Get informal written confirmation from S's manager that working from Dundalk hub during a short personal stay in NI is fine. Single 65-day NI block is at the upper edge of "short-stay" — but materially shorter than the 6-month colleague case. Keep arrangement low-key in IP-logging visibility. |
 | 10 | J's IBM PH role disruption | Mitigated | Low | Per S: J obtains approved-leave letter from IBM PH for visa application (true at time of application; IBM letter dates 5 – 16 Oct 2026); after UK visa grant, J resigns from IBM PH before travel. At LHR entry J truthfully says "I recently resigned, visiting my partner." |
 | 11 | Joint cohabitation evidence not actively collected | High if passive | High (weakens Track B) | §6 spells out daily/weekly evidence-collection cadence per leg |
-| 12 | Health issue / medical extension need | Low | High | Comprehensive travel insurance covering UK + IE for full 169 days |
+| 12 | Health issue / medical extension need | Low | High | Comprehensive travel insurance covering UK + IE for full 168 days |
 | 13 | Documents misfiled / lost | Low | Medium | Scan every receipt / boarding pass to Drive nightly; one folder per leg |
-| 14 | EDI → DUB flight disruption on 17 Oct (cancellation, weather) | Low | Medium–High (could push IE entry past 31 Oct if renewal not in force — 14-day buffer is the only protection) | Book flight on 17 Oct morning rather than evening if possible; have backup of car-and-Burgh-Quay-report as fallback (drive Edinburgh ferry → Belfast → cross border → report at Burgh Quay). **This risk is materially higher than in v5 because of the tight 14-day SSVWP-end buffer.** |
+| 14 | LHR → DUB flight disruption on 17 Oct (cancellation, weather) | Low | Medium–High (could push IE entry past 31 Oct if renewal not in force — 14-day buffer is the only protection) | Book the flight for 17 Oct morning rather than evening. LHR has far more DUB rotations per day than EDI, so a cancellation is easier to rebook same-day — this is the main reason the exit moved to London. Fallback remains car-and-Burgh-Quay-report. **This risk is materially higher than in v5 because of the tight 14-day SSVWP-end buffer.** |
 | 15 | "May be amended at any time" SSVWP clause triggers mid-stay | Low (no historical precedent) | High | C-visa hedge covers this |
  
 ---
@@ -153,11 +154,11 @@ This becomes the supporting document for the UK visa application — submitted b
 | 5.1.5 | Compile Simon's 3 months bank statements + 2-3 payslips | S | 2026-06-25 | Show work salary credit |
 | 5.1.6 | Obtain IBM PH leave letter for J | J | 2026-07-01 | Leave dates on the letter: **5 – 16 October 2026** (12 working days). True at time of application. Note: actual UK holiday in visa-supporting itinerary is wider (3 – 17 Oct) — IBM letter only covers the working-day window. |
 | 5.1.7 | Compile Jenifer's 3 months bank statements | J | 2026-06-25 | Ties-to-PH |
-| 5.1.8 | **Re-cut the live itinerary** to 3 – 17 Oct, drop Belfast entirely, end with EDI → DUB | S | 2026-06-15 | Visa-supporting document; must match actual planned travel. London → York → Edinburgh only. |
+| 5.1.8 | **Re-cut the live itinerary** to 4 – 17 Oct, drop Belfast entirely, end with LHR → DUB | S | 2026-06-15 | Visa-supporting document; must match actual planned travel. London → York → Edinburgh → London only. |
 | 5.1.9 | Print the re-cut itinerary | S | 2026-07-05 | |
 | 5.1.10 | Submit application + attend biometrics | J | 2026-07-15 | 3-6 week processing → decision by mid-Aug |
 | 5.1.11 | Visa granted → book all flights | S+J | 2026-08-15 | |
-| 5.1.12 | Post-grant: J resigns from IBM PH | J | between visa grant and 3 Oct | Per S's plan |
+| 5.1.12 | Post-grant: J resigns from IBM PH | J | between visa grant and 4 Oct | Per S's plan |
  
 ### 5.2 Irish 'C' short-stay visit visa (parallel hedge — submit by 15 July 2026)
  
@@ -189,23 +190,24 @@ This becomes the supporting document for the UK visa application — submitted b
  
 | # | Task | Owner | Deadline | Notes |
 | - | - | - | - | - |
-| 5.4.1 | Book MNL → DOH → LHR for 3 Oct 2026 | S+J | 2026-08-15 | Qatar Airways |
+| 5.4.1 | Book MNL → DOH → LHR departing 4 Oct 2026 | S+J | 2026-08-15 | Qatar Airways |
 | 5.4.2 | Internal UK per re-cut itinerary (LHR → EDI etc.) | S+J | 2026-08-15 | |
-| 5.4.3 | Book EDI → DUB for 17 Oct evening | S+J | 2026-08-15 | Aer Lingus / Ryanair; ~£60. ★ This flight gives J the Dublin airport SSVWP entry stamp. ★ |
+| 5.4.3 | Book LHR → DUB for 17 Oct | S+J | 2026-08-15 | Aer Lingus / BA / Ryanair; ~£60. Book a morning or midday slot. ★ This flight gives J the Dublin airport SSVWP entry stamp. ★ |
 | 5.4.4 | Book BFS → MNL for 20 Mar 2027 | S+J | 2026-08-15 | Likely BFS → LHR → DOH → MNL; ~£700-900 |
  
 ---
  
 ## 6. Execution plan, by leg
  
-### Leg 1 — Britain holiday (3 Oct – 17 Oct 2026, 15 days / 14 nights)
-- **Belfast removed entirely.** Re-cut itinerary: London 3-7 Oct (5n), York 8-9 Oct (2n), Edinburgh 10-16 Oct (7n — extended to absorb the dropped Belfast). Use the extra Edinburgh days for: Fife day trip (Anstruther / St Andrews), Stirling Castle, Loch Lomond.
-- S takes annual leave for the holiday. J's IBM PH leave-letter dates for the visa application: **5 – 16 Oct 2026** (12 working days; the wider 3 Oct and 17 Oct ends are travel days outside formal IBM leave).
+### Leg 1 — Britain holiday (4 Oct – 17 Oct 2026, 14 days / 13 nights)
+- **Belfast removed entirely.** Re-cut itinerary as built on the live site: **London 4–9 Oct (6n), York 10–12 Oct (3n), Edinburgh 13–15 Oct (3n), London again 16 Oct (1n)**. The return to London on the 16th is by LNER from Edinburgh Waverley (~4h30) and exists so the UK exit is from Heathrow rather than Edinburgh.
+- J's arrival is not a fixed calendar day: she departs Manila **4 Oct** and lands at LHR either that evening or in the **early hours of 5 Oct**, depending on which Qatar routing is booked. The London hotel is held from the night of the 4th either way.
+- S takes annual leave for the holiday. J's IBM PH leave-letter dates for the visa application: **5 – 16 Oct 2026** (12 working days; the 4 Oct and 17 Oct ends are travel days outside formal IBM leave).
 - **Daily evidence cadence:** ≥3 dated photos of S+J per day; retain boarding passes, train tickets; geo-tag where camera permits.
-- 17 Oct: tram from Edinburgh to EDI airport (~30 min); evening flight EDI → DUB (~1h).
+- 17 Oct: Piccadilly line from King's Cross to LHR (~50 min); flight LHR → DUB (~1h20).
 
-### Leg 2 — Fly EDI → DUB (17 October 2026 evening, SSVWP day 1)
-- Arrive Dublin ~21:00.
+### Leg 2 — Fly LHR → DUB (17 October 2026, SSVWP day 1)
+- Book a morning or midday departure. LHR runs many DUB rotations daily, so a same-day rebook is realistic if the first flight goes wrong — this is the reason the exit moved from EDI to LHR.
 - **Dublin Airport immigration desk (IBOS):** see §7 for the entry framing brief. Get DUB entry stamp = SSVWP entry stamp. Officer marks the date until which J is allowed to stay (request 90 days = until 14 Jan 2027).
 - Overnight at Dublin Airport hotel.
 
@@ -244,7 +246,7 @@ This becomes the supporting document for the UK visa application — submitted b
 ### Leg 6 — Departure (20 March 2027)
 - Morning: drive Newry → BFS Airport (~1h).
 - Fly BFS → onward → MNL.
-- 14-day buffer before UK visa expiry (3 April 2027).
+- 14-day buffer before UK visa expiry (4 April 2027).
 
 ### Handoff to Stage 2
 
@@ -252,7 +254,7 @@ By the time J lands MNL on ~21 March 2027:
 - 14 nights of holiday evidence (London, York, Edinburgh; no Belfast)
 - 90 days of Blarney joint-occupation evidence (joint utility, joint Irish account, dated photos, post in both names, Xmas + NY with S's family — the centrepiece)
 - 65 days of NI joint-occupation evidence (utility, joint UK account, dated post, photos, S's commute log)
-- Two passport stamps: LHR entry (3 Oct) + DUB SSVWP entry (17 Oct)
+- Two passport stamps: LHR entry (4 Oct) + DUB SSVWP entry (17 Oct)
 - Fully drafted §3.11 relationship narrative
 - Expanded cover letter
 - 12 months of S's bank statements + recent payslip
@@ -390,7 +392,7 @@ Keep documents in a clear plastic folder in this specific order. **Produce only 
 4. **Simon's most recent 3 months of bank statements** — printed
 5. **Simon's most recent 2–3 payslips** — printed
 6. **Blarney accommodation evidence** — current utility bill / mortgage statement / lease in S's name showing Blarney address
-7. **Travel insurance certificate** — printed, covering the full 169-day trip
+7. **Travel insurance certificate** — printed, covering the full 168-day trip
 8. **J's own bank statements** (last 3 months) — printed
 9. **J's prior 2025 Irish 'C' visa stamp** — in the passport; useful evidence of prior compliance, point to it if the officer asks
 10. **Optional: small folder of relationship highlights** — 4–6 dated photos of S+J together; produce *only* if specifically asked about the relationship
@@ -456,7 +458,7 @@ S should role-play the IBOS officer with J **at least 3 times** before travel. T
 - Marriage location: **"in the Philippines later in 2027"** — explicit; never just "we plan to get married".
 - Employment status: **"recently resigned, taking a break to travel"** — never "unemployed".
 - Funds: **"my partner is covering costs; here are his documents"** — never "I have no money".
-**The night before travel** — at the layover hotel during the Doha stopover or wherever J is the night before flying EDI → DUB — do a 10-minute speed run of all the Q&A. Resets the muscle memory.
+**The night before travel** — at the layover hotel during the Doha stopover or wherever J is the night before flying LHR → DUB — do a 10-minute speed run of all the Q&A. Resets the muscle memory.
  
 ### 7.13 What J does immediately after the stamp
  
@@ -485,7 +487,7 @@ S should role-play the IBOS officer with J **at least 3 times** before travel. T
 - Track B scheme: `Spouse_of_Irish_National_Scheme.md`
 - C-visa marriage route mechanics: `C_Visa_Marriage_Route_Plan.md`
 - 2025 visa Drive folder inventory: `Prior_2025_Visa_Docs_Inventory.md`
-- Live itinerary site (needs re-cut to **3 – 17 October 2026**, drop Belfast entirely, end at EDI → DUB): https://simonodonovan.github.io/unification/
+- Live itinerary site (needs re-cut to **4 – 17 October 2026**, drop Belfast entirely, end at LHR → DUB): https://simonodonovan.github.io/unification/
 - ISD Spouse of Irish National scheme: https://www.irishimmigration.ie/my-situation-has-changed-since-i-arrived-in-ireland/spouse-civil-partner-of-irish-national-scheme/
 - ISD SSVWP page: https://www.irishimmigration.ie/coming-to-visit-ireland/short-stay-visa-waiver-programme/
 - ISD SSVWP PDF (Feb 2023, 31 Oct 2026 end date): https://www.irishimmigration.ie/wp-content/uploads/2023/02/Irish-Short-Stay-Visa-Waiver-Programme-February-2023.pdf

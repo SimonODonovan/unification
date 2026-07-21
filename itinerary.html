@@ -29,8 +29,11 @@
   .doc-meta-item{font-size:12px;color:var(--ink3);}
   .doc-meta-item strong{color:var(--ink2);display:block;font-size:10.5px;text-transform:uppercase;letter-spacing:.05em;margin-bottom:1px;}
 
-  /* PLACEHOLDER */
+  /* PLACEHOLDER - fill in by hand before printing */
   .ph{color:var(--red);font-style:italic;background:#fff5f5;border:1px dashed #f88;border-radius:2px;padding:0 4px;font-weight:400;}
+
+  /* TBD - deliberately not booked yet */
+  .tbd{color:var(--ink3);font-weight:500;letter-spacing:.03em;}
 
   /* SECTION */
   .section{margin-bottom:2rem;}
@@ -54,20 +57,11 @@
   .itin-date{font-weight:600;white-space:nowrap;color:var(--accent);width:88px;}
   .itin-dow{white-space:nowrap;width:68px;color:var(--ink3);}
   .itin-city{font-weight:600;width:110px;}
-  .itin-hotel{color:var(--ink3);font-size:12px;width:165px;}
+  .itin-hotel{color:var(--ink3);font-size:12px;width:150px;}
 
   /* NOTICE BOX */
   .notice{border:1px solid var(--border);border-left:4px solid var(--accent);border-radius:var(--radius);padding:.75rem 1rem;font-size:12.5px;color:var(--ink2);line-height:1.7;margin-bottom:1.75rem;background:#f6f8ff;}
   .notice strong{color:var(--accent);}
-
-  /* DECLARATION */
-  .declaration{border:1px solid var(--border);border-radius:var(--radius);padding:1.25rem 1.5rem;margin-bottom:2rem;background:var(--stripe);}
-  .declaration p{font-size:12.5px;color:var(--ink2);line-height:1.8;}
-  .sig-block{display:flex;gap:3rem;margin-top:1.5rem;flex-wrap:wrap;}
-  .sig-line{flex:1;min-width:180px;}
-  .sig-label{font-size:10.5px;text-transform:uppercase;letter-spacing:.08em;color:var(--ink3);margin-bottom:.5rem;}
-  .sig-rule{border:none;border-bottom:1px solid var(--ink);margin:2rem 0 .25rem;}
-  .sig-name{font-size:11.5px;color:var(--ink2);}
 
   /* FOOTER */
   .doc-footer{border-top:1px solid var(--border-light);padding-top:1rem;margin-top:2rem;font-size:11px;color:var(--ink3);display:flex;justify-content:space-between;flex-wrap:wrap;gap:.5rem;}
@@ -88,106 +82,42 @@
   <div class="doc-header">
     <p class="doc-type">Supporting Document - UK Standard Visitor Visa Application</p>
     <h1 class="doc-title">Visitor Travel Itinerary</h1>
-    <p class="doc-subtitle">United Kingdom only &nbsp;|&nbsp; Purpose: Tourism &nbsp;|&nbsp; 4 October 2026 to 18 October 2026</p>
+    <p class="doc-subtitle">United Kingdom &nbsp;|&nbsp; Purpose: Tourism &nbsp;|&nbsp; 4 October 2026 to 17 October 2026</p>
     <div class="doc-meta">
       <div class="doc-meta-item"><strong>Applicant</strong><span class="ph">[FULL NAME - as on passport]</span></div>
-      <div class="doc-meta-item"><strong>Nationality</strong>Filipino</div>
       <div class="doc-meta-item"><strong>Passport No.</strong><span class="ph">[PASSPORT NUMBER]</span></div>
       <div class="doc-meta-item"><strong>Date prepared</strong><span class="ph">[DATE]</span></div>
     </div>
   </div>
 
   <div class="notice">
-    <strong>Note to visa officer:</strong> This document supports a Standard Visitor Visa application for a tourism visit to the United Kingdom. All accommodation listed is pre-booked. The applicant is in full-time employment in the Philippines and returns to that employment on 18 October 2026. The costs of this trip are met in full by the applicant's partner and financial sponsor, Simon [SURNAME], an Irish (EU) citizen. A signed sponsorship letter from Simon and his supporting financial documents are attached separately. Hotel confirmation numbers and employment documentation are also attached separately.
+    <strong>Purpose of this document.</strong> This sets out the planned travel, accommodation, and daily activities for a tourism visit to the United Kingdom. Applicant details, sponsorship, funds, employment, and evidence of the relationship with the sponsor are covered in the other documents submitted with this application and are not repeated here.<br><br>
+    <strong>Bookings.</strong> Flights and accommodation are not yet booked. Following Home Office guidance, no non-refundable travel or accommodation will be purchased before a decision is made on this application. Items shown as TBD will be booked once the visa is granted. The hotels named below are the intended bookings and the basis of the costs set out in the sponsorship letter.
   </div>
 
 
   <div class="section">
-    <div class="section-heading">1. Applicant Details</div>
-    <div class="section-body">
-      <table class="ft">
-        <tr><td>Full Name</td><td><span class="ph">[FULL NAME - as on passport]</span></td></tr>
-        <tr><td>Date of Birth</td><td><span class="ph">[DD/MM/YYYY]</span></td></tr>
-        <tr><td>Nationality</td><td>Filipino (Republic of the Philippines)</td></tr>
-        <tr><td>Passport Number</td><td><span class="ph">[PASSPORT NUMBER]</span></td></tr>
-        <tr><td>Passport Expiry Date</td><td><span class="ph">[DD/MM/YYYY]</span></td></tr>
-        <tr><td>Home Address</td><td><span class="ph">[FULL HOME ADDRESS]</span>, Camarines Norte, Philippines</td></tr>
-        <tr><td>Phone Number</td><td><span class="ph">[PHONE NUMBER]</span></td></tr>
-        <tr><td>Email Address</td><td><span class="ph">[EMAIL ADDRESS]</span></td></tr>
-        <tr><td>Occupation</td><td>Record to Report Analyst</td></tr>
-        <tr><td>Employer Name</td><td>IBM Philippines</td></tr>
-        <tr><td>Employer Address</td><td>Naga, Bicol Region, Philippines</td></tr>
-        <tr><td>Employment start date</td><td>March 2022 (current, permanent, full-time)</td></tr>
-      </table>
-    </div>
-  </div>
-
-
-  <div class="section">
-    <div class="section-heading">2. UK Contact and Host</div>
-    <div class="section-body">
-      <table class="ft">
-        <tr><td>Full Name</td><td>Simon <span class="ph">[SURNAME]</span></td></tr>
-        <tr><td>Nationality</td><td>Irish (Republic of Ireland, EU citizen)</td></tr>
-        <tr><td>Relationship to applicant</td><td>Partner</td></tr>
-        <tr><td>Home Address</td><td><span class="ph">[FULL ADDRESS]</span>, County Cork, Ireland</td></tr>
-        <tr><td>Phone Number</td><td><span class="ph">[PHONE NUMBER]</span></td></tr>
-        <tr><td>Email Address</td><td><span class="ph">[EMAIL ADDRESS]</span></td></tr>
-        <tr><td>Occupation</td><td>Senior Software Engineer and Team Lead, Oomnitza (employed remotely from Ireland)</td></tr>
-        <tr><td>Role in trip</td><td>Simon is the applicant's travel companion for the full duration of the visit and the <strong>financial sponsor</strong> covering all costs of the trip. He meets the applicant on arrival at London Heathrow and accompanies her throughout. He departs Edinburgh for Cork on 18 October 2026.</td></tr>
-      </table>
-    </div>
-  </div>
-
-
-  <div class="section">
-    <div class="section-heading">3. Visit Overview</div>
+    <div class="section-heading">1. Visit Overview</div>
     <div class="section-body">
       <table class="ft">
         <tr><td>Purpose of visit</td><td>Tourism and leisure</td></tr>
-        <tr><td>Countries visited</td><td>United Kingdom only (England, Scotland, Northern Ireland)</td></tr>
+        <tr><td>Places visited</td><td>London and Windsor (England), York (England), Edinburgh (Scotland)</td></tr>
         <tr><td>Intended entry date</td><td>Sunday, 4 October 2026</td></tr>
-        <tr><td>Intended departure date</td><td>Sunday, 18 October 2026</td></tr>
-        <tr><td>Total duration</td><td>15 days (14 nights)</td></tr>
+        <tr><td>Intended departure date</td><td>Saturday, 17 October 2026</td></tr>
+        <tr><td>Total duration</td><td>14 days, 13 nights</td></tr>
         <tr><td>Port of entry</td><td>London Heathrow Airport (LHR), England</td></tr>
-        <tr><td>Port of exit</td><td>Edinburgh Airport (EDI), Scotland, departing to Manila (MNL)</td></tr>
-        <tr><td>Inbound flight</td><td><span class="ph">[AIRLINE and FLIGHT NUMBER]</span>, Manila (MNL) to London Heathrow (LHR), 3 October 2026 (arriving 4 October 2026).</td></tr>
-        <tr><td>Return flight</td><td><span class="ph">[AIRLINE and FLIGHT NUMBER]</span>, Edinburgh (EDI) to Manila (MNL), 18 October 2026.</td></tr>
-        <tr><td>Financial arrangements</td><td>All costs of this trip are met in full by the applicant's partner and financial sponsor, Simon [SURNAME] (Irish citizen). This includes international flights, all accommodation, ground transport, and day-to-day expenses throughout the visit. The applicant is in full-time employment at IBM Philippines and has strong ties to the Philippines. A signed sponsorship letter from Simon, together with his bank statements (3 months), payslips, and a copy of his Irish passport, are attached separately.</td></tr>
+        <tr><td>Port of exit</td><td>London Heathrow Airport (LHR), England</td></tr>
+        <tr><td>Inbound flight</td><td>Manila (MNL) to London Heathrow (LHR), departing 4 October 2026. Depending on the routing selected, arrival at Heathrow falls on the evening of 4 October or the early morning of 5 October. Airline and flight number: <span class="tbd">TBD</span>.</td></tr>
+        <tr><td>Onward flight</td><td>London Heathrow (LHR) to Dublin (DUB), Ireland, departing 17 October 2026. Airline and flight number: <span class="tbd">TBD</span>.</td></tr>
+        <tr><td>Travelling with</td><td>Simon <span class="ph">[SURNAME]</span>, the applicant's partner and an Irish citizen. He meets the applicant at London Heathrow on arrival and accompanies her for the whole visit. He is also the financial sponsor for the trip. See the sponsorship letter submitted with this application.</td></tr>
+        <tr><td>Documents submitted separately</td><td>Visa application form, sponsorship letter and sponsor financial documents, payslips, and evidence of the relationship between the applicant and the sponsor.</td></tr>
       </table>
-    </div>
-  </div>
-
-  <div class="section">
-    <div class="section-heading">3b. Sponsor Declaration &amp; Guidance</div>
-    <div class="section-body">
-      <table class="ft">
-        <tr><td>Sponsor full name</td><td>Simon <span class="ph">[SURNAME]</span></td></tr>
-        <tr><td>Sponsor nationality</td><td>Irish (Republic of Ireland, EU citizen)</td></tr>
-        <tr><td>Sponsor occupation</td><td>Senior Software Engineer and Team Lead, Oomnitza (employed remotely)</td></tr>
-        <tr><td>Relationship to applicant</td><td>Partner (long-term relationship)</td></tr>
-        <tr><td>Costs covered by sponsor</td><td>
-          International flights (MNL&ndash;LHR and BFS&ndash;MNL) &nbsp;&middot;&nbsp;
-          All accommodation (4 hotels, 14 nights) &nbsp;&middot;&nbsp;
-          Domestic transport (rail, internal flights, car) &nbsp;&middot;&nbsp;
-          All admission fees, tours, and activities &nbsp;&middot;&nbsp;
-          Day-to-day meals and incidental expenses throughout the visit
-        </td></tr>
-        <tr><td>Sponsor documents attached</td><td>
-          Signed sponsorship letter (stating all costs covered) &nbsp;&middot;&nbsp;
-          3 months bank statements (showing sufficient funds and regular income) &nbsp;&middot;&nbsp;
-          2&ndash;3 recent payslips &nbsp;&middot;&nbsp;
-          Copy of Irish passport (bio data page)
-        </td></tr>
-
-      </table>
-
     </div>
   </div>
 
 
   <div class="section">
-    <div class="section-heading">4. Accommodation</div>
+    <div class="section-heading">2. Accommodation</div>
     <div class="section-body">
       <table class="dt">
         <thead>
@@ -195,9 +125,9 @@
             <th>Check-in</th>
             <th>Check-out</th>
             <th style="text-align:center;">Nights</th>
-            <th>Hotel</th>
+            <th>Intended hotel</th>
             <th>Address</th>
-            <th>City / Region</th>
+            <th>Booking</th>
           </tr>
         </thead>
         <tbody>
@@ -205,9 +135,9 @@
             <td>Sun 4 Oct 2026</td>
             <td>Sat 10 Oct 2026</td>
             <td style="text-align:center;">6</td>
-            <td>Premier Inn London Southwark (Tate Modern)</td>
+            <td>Premier Inn London Southwark</td>
             <td>Bankside, London SE1</td>
-            <td>London, England</td>
+            <td><span class="tbd">TBD</span></td>
           </tr>
           <tr>
             <td>Sat 10 Oct 2026</td>
@@ -215,15 +145,23 @@
             <td style="text-align:center;">3</td>
             <td>Roomzzz York Aparthotel</td>
             <td>58 Micklegate, York YO1 6LF</td>
-            <td>York, England</td>
+            <td><span class="tbd">TBD</span></td>
           </tr>
           <tr>
             <td>Tue 13 Oct 2026</td>
-            <td>Sat 18 Oct 2026</td>
-            <td style="text-align:center;">5</td>
+            <td>Fri 16 Oct 2026</td>
+            <td style="text-align:center;">3</td>
             <td>Radisson Blu Hotel Edinburgh</td>
             <td>80 High Street, Edinburgh EH1 1TH</td>
-            <td>Edinburgh, Scotland</td>
+            <td><span class="tbd">TBD</span></td>
+          </tr>
+          <tr>
+            <td>Fri 16 Oct 2026</td>
+            <td>Sat 17 Oct 2026</td>
+            <td style="text-align:center;">1</td>
+            <td>Premier Inn London King's Cross</td>
+            <td>Belgrove Street, London WC1H 8AN</td>
+            <td><span class="tbd">TBD</span></td>
           </tr>
         </tbody>
       </table>
@@ -232,8 +170,7 @@
 
 
   <div class="section">
-    <div class="section-heading">5. Transport Between Cities</div>
-
+    <div class="section-heading">3. Transport</div>
     <div class="section-body">
       <table class="dt">
         <thead>
@@ -243,25 +180,25 @@
             <th>Route</th>
             <th>Operator</th>
             <th>Duration</th>
-            <th>Status</th>
+            <th>Booking</th>
           </tr>
         </thead>
         <tbody>
           <tr>
             <td>4 Oct 2026</td>
-            <td>Air (inbound)</td>
+            <td>Air, inbound</td>
             <td>Manila (MNL) to London Heathrow (LHR)</td>
-            <td><span class="ph">[AIRLINE]</span></td>
-            <td><span class="ph">[HRS]</span></td>
-            <td>Planned — to be booked on visa approval</td>
+            <td><span class="tbd">TBD</span></td>
+            <td><span class="tbd">TBD</span></td>
+            <td><span class="tbd">TBD</span>, book on visa approval</td>
           </tr>
           <tr>
             <td>10 Oct 2026</td>
             <td>Rail</td>
-            <td>London Kings Cross to York</td>
+            <td>London King's Cross to York</td>
             <td>LNER</td>
             <td>Approx. 2 hours</td>
-            <td>Planned — advance booking</td>
+            <td><span class="tbd">TBD</span>, advance fare</td>
           </tr>
           <tr>
             <td>13 Oct 2026</td>
@@ -269,15 +206,23 @@
             <td>York to Edinburgh Waverley</td>
             <td>LNER</td>
             <td>Approx. 2 hrs 30 min</td>
-            <td>Planned — advance booking</td>
+            <td><span class="tbd">TBD</span>, advance fare</td>
           </tr>
           <tr>
-            <td>18 Oct 2026</td>
-            <td>Air (outbound)</td>
-            <td>Edinburgh (EDI) to Manila (MNL)</td>
-            <td><span class="ph">[AIRLINE]</span></td>
-            <td><span class="ph">[HRS]</span></td>
-            <td>Planned — to be booked on visa approval</td>
+            <td>16 Oct 2026</td>
+            <td>Rail</td>
+            <td>Edinburgh Waverley to London King's Cross</td>
+            <td>LNER</td>
+            <td>Approx. 4 hrs 30 min</td>
+            <td><span class="tbd">TBD</span>, advance fare</td>
+          </tr>
+          <tr>
+            <td>17 Oct 2026</td>
+            <td>Air, onward</td>
+            <td>London Heathrow (LHR) to Dublin (DUB)</td>
+            <td><span class="tbd">TBD</span></td>
+            <td>Approx. 1 hr 20 min</td>
+            <td><span class="tbd">TBD</span>, book on visa approval</td>
           </tr>
         </tbody>
       </table>
@@ -286,7 +231,7 @@
 
 
   <div class="section">
-    <div class="section-heading">6. Day-by-Day Itinerary</div>
+    <div class="section-heading">4. Day by Day Itinerary</div>
     <div class="section-body">
       <table class="dt">
         <thead>
@@ -304,158 +249,101 @@
             <td class="itin-dow">Sunday</td>
             <td class="itin-city">London</td>
             <td class="itin-hotel">Premier Inn Southwark</td>
-            <td>Arrival at London Heathrow (LHR). Transfer by Elizabeth Line rail to hotel. South Bank walk (Tate Modern exterior, Millennium Bridge).</td>
+            <td>Arrival at London Heathrow (LHR). Transfer to the hotel by Elizabeth Line rail. Rest after the flight. Short walk along the South Bank and Millennium Bridge if the arrival time allows.</td>
           </tr>
           <tr>
             <td class="itin-date">5 Oct 2026</td>
             <td class="itin-dow">Monday</td>
             <td class="itin-city">London</td>
             <td class="itin-hotel">Premier Inn Southwark</td>
-            <td>Westminster (Parliament, St James's Park, Buckingham Palace). National Gallery, Trafalgar Square (free entry). Covent Garden.</td>
+            <td>Westminster: Houses of Parliament, St James's Park, Buckingham Palace exterior. Natural History Museum, South Kensington (free entry). Covent Garden in the evening.</td>
           </tr>
           <tr>
             <td class="itin-date">6 Oct 2026</td>
             <td class="itin-dow">Tuesday</td>
             <td class="itin-city">London</td>
             <td class="itin-hotel">Premier Inn Southwark</td>
-            <td>Tower Bridge. Brick Lane market area. Shoreditch street art and Spitalfields Market.</td>
+            <td>Tower Bridge and St Katharine Docks. Brick Lane. Shoreditch and Spitalfields Market.</td>
           </tr>
           <tr>
             <td class="itin-date">7 Oct 2026</td>
             <td class="itin-dow">Wednesday</td>
             <td class="itin-city">London</td>
             <td class="itin-hotel">Premier Inn Southwark</td>
-            <td>British Museum, Bloomsbury (free entry). Borough Market. Tate Modern galleries (free entry). Shakespeare's Globe exterior.</td>
+            <td>British Museum, Bloomsbury (free entry). Grant Museum of Zoology, UCL (free entry). Borough Market. South Bank walk to Shakespeare's Globe exterior.</td>
           </tr>
           <tr>
             <td class="itin-date">8 Oct 2026</td>
             <td class="itin-dow">Thursday</td>
             <td class="itin-city">London / Windsor</td>
             <td class="itin-hotel">Premier Inn Southwark</td>
-            <td>Day trip by rail to Windsor (29 miles west of London). Windsor Castle (pre-booked entry). Windsor Great Park and the Long Walk. Return to London by rail.</td>
+            <td>Day trip by rail to Windsor, 29 miles west of London. Windsor Castle (timed entry). Windsor Great Park and the Long Walk. Return to London by rail the same day.</td>
           </tr>
           <tr>
             <td class="itin-date">9 Oct 2026</td>
             <td class="itin-dow">Friday</td>
             <td class="itin-city">London</td>
-            <td class="itin-hotel">Premier Inn London Southwark</td>
-            <td>Thames Clipper to Greenwich. Royal Observatory and Prime Meridian (pre-booked). Lunch at Greenwich Market. Cutty Sark (pre-booked). Final London dinner.</td>
-          </tr>
-          <tr>
-            <td class="itin-date">10 Oct 2026</td>
-            <td class="itin-dow">Saturday</td>
-            <td class="itin-city">York</td>
-            <td class="itin-hotel">Roomzzz York Aparthotel</td>
-            <td>Check out London. Rail from London Kings Cross to York (approx. 2 hours). The Shambles medieval street. York City Walls walk (free).</td>
+            <td class="itin-hotel">Premier Inn Southwark</td>
+            <td>Thames Clipper river boat to Greenwich. Royal Observatory and the Prime Meridian. Lunch at Greenwich Market. Cutty Sark.</td>
           </tr>
           <tr>
             <td class="itin-date">10 Oct 2026</td>
             <td class="itin-dow">Saturday</td>
             <td class="itin-city">York</td>
             <td class="itin-hotel">Roomzzz York</td>
-            <td>Full day in York. York Minster (pre-booked). National Railway Museum (free). Betty's Tea Room. Spa afternoon at The Grand Hotel and Spa York (hydrotherapy pool, steam, sauna, treatments). Goodramgate vintage shops. Evening dinner in York. Train to Edinburgh departs the following morning.</td>
+            <td>Check out of the London hotel. LNER rail from London King's Cross to York, approx. 2 hours. Check in. The Shambles medieval street. York City Walls walk (free).</td>
           </tr>
           <tr>
             <td class="itin-date">11 Oct 2026</td>
             <td class="itin-dow">Sunday</td>
             <td class="itin-city">York</td>
-            <td class="itin-hotel">Roomzzz York Aparthotel</td>
-            <td>York Minster and tower climb (pre-booked). National Railway Museum (free). Betty's Tea Rooms (St Helen's Square). Clifford's Tower viewpoint.</td>
+            <td class="itin-hotel">Roomzzz York</td>
+            <td>York Minster and tower climb. National Railway Museum (free entry). Betty's Tea Rooms, St Helen's Square. Spa afternoon at The Grand Hotel and Spa York.</td>
           </tr>
           <tr>
             <td class="itin-date">12 Oct 2026</td>
             <td class="itin-dow">Monday</td>
             <td class="itin-city">York</td>
-            <td class="itin-hotel">Roomzzz York Aparthotel</td>
-            <td>Jorvik Viking Centre (pre-booked). Relaxed lunch in the city. Yorkshire Museum and Museum Gardens &mdash; St Mary's Abbey ruins (free). Final York dinner.</td>
+            <td class="itin-hotel">Roomzzz York</td>
+            <td>Jorvik Viking Centre. Yorkshire Museum and Museum Gardens, including the St Mary's Abbey ruins. Clifford's Tower viewpoint.</td>
           </tr>
           <tr>
             <td class="itin-date">13 Oct 2026</td>
             <td class="itin-dow">Tuesday</td>
             <td class="itin-city">York / Edinburgh</td>
-            <td class="itin-hotel">Radisson Blu Hotel Edinburgh</td>
-            <td>Check out York. LNER York to Edinburgh Waverley (approx. 2 hrs 30 min, depart ~9am). Arrive Edinburgh, check in. Royal Mile orientation walk. Old Town closes. Grassmarket area.</td>
-          </tr>
-          <tr>
-            <td class="itin-date">13 Oct 2026</td>
-            <td class="itin-dow">Tuesday</td>
-            <td class="itin-city">Edinburgh</td>
-            <td class="itin-hotel">Radisson Blu Hotel Edinburgh</td>
-            <td>Edinburgh Castle (pre-booked entry). Camera Obscura and World of Illusions. St Giles' Cathedral (free). Victoria Street and Greyfriars Kirkyard (free). Calton Hill viewpoint (free).</td>
+            <td class="itin-hotel">Radisson Blu Edinburgh</td>
+            <td>Check out of the York hotel. LNER rail from York to Edinburgh Waverley, approx. 2 hrs 30 min. Check in. Royal Mile orientation walk, the Old Town closes, and the Grassmarket.</td>
           </tr>
           <tr>
             <td class="itin-date">14 Oct 2026</td>
             <td class="itin-dow">Wednesday</td>
             <td class="itin-city">Edinburgh</td>
-            <td class="itin-hotel">Radisson Blu Hotel Edinburgh</td>
-            <td>Arthur's Seat hike, Holyrood Park (free). Holyrood Palace and Abbey ruins (exterior, free). Spa afternoon at One Spa, Sheraton Grand Edinburgh (rooftop hydropool, thermal suite, treatments). Dinner near the hotel.</td>
+            <td class="itin-hotel">Radisson Blu Edinburgh</td>
+            <td>Edinburgh Castle (timed entry). St Giles' Cathedral (free). Victoria Street and Greyfriars Kirkyard (free). National Museum of Scotland, Chambers Street (free entry), including the natural history and animal world galleries. Calton Hill viewpoint at sunset (free).</td>
           </tr>
           <tr>
             <td class="itin-date">15 Oct 2026</td>
             <td class="itin-dow">Thursday</td>
             <td class="itin-city">Edinburgh</td>
-            <td class="itin-hotel">Radisson Blu Hotel Edinburgh</td>
-            <td>Arthur's Seat summit hike, Holyrood Park (free). Scottish National Gallery (free). Princes Street Gardens. New Town afternoon walk on George Street.</td>
+            <td class="itin-hotel">Radisson Blu Edinburgh</td>
+            <td>Arthur's Seat hike, Holyrood Park (free). Holyrood Palace and Abbey ruins from the exterior. Spa afternoon at One Spa, Sheraton Grand Edinburgh. Princes Street Gardens and the New Town.</td>
           </tr>
           <tr>
             <td class="itin-date">16 Oct 2026</td>
             <td class="itin-dow">Friday</td>
-            <td class="itin-city">Edinburgh</td>
-            <td class="itin-hotel">Radisson Blu Edinburgh</td>
-            <td>Leith by bus &mdash; Royal Yacht Britannia (pre-booked). Lunch on The Shore waterfront. National Museum of Scotland (free). Dinner on the Royal Mile.</td>
+            <td class="itin-city">Edinburgh / London</td>
+            <td class="itin-hotel">Premier Inn King's Cross</td>
+            <td>Check out of the Edinburgh hotel. Royal Yacht Britannia at Leith, morning slot. LNER rail from Edinburgh Waverley to London King's Cross in the early afternoon, approx. 4 hrs 30 min. Check in near King's Cross.</td>
           </tr>
           <tr>
             <td class="itin-date">17 Oct 2026</td>
             <td class="itin-dow">Saturday</td>
-            <td class="itin-city">Edinburgh</td>
-            <td class="itin-hotel">Radisson Blu Hotel Edinburgh</td>
-            <td>Water of Leith Walkway &mdash; Canonmills to Dean Village (free). Stockbridge lunch and neighbourhood browse. Scottish National Portrait Gallery (free). Farewell Edinburgh dinner.</td>
-          </tr>
-          <tr>
-            <td class="itin-date">18 Oct 2026</td>
-            <td class="itin-dow">Sunday</td>
-            <td class="itin-city">Edinburgh (depart)</td>
+            <td class="itin-city">London (depart)</td>
             <td class="itin-hotel">Checked out</td>
-            <td>Check out of hotel. Edinburgh Tram from St Andrew Square to Edinburgh Airport (EDI), approx. 30 minutes. Depart to Manila, Philippines (MNL). The applicant returns to full-time employment at IBM Philippines on the next working day.</td>
+            <td>Check out of the hotel. Piccadilly line from King's Cross St Pancras to London Heathrow (LHR), approx. 50 minutes. Depart the United Kingdom on a flight to Dublin (DUB), Ireland.</td>
           </tr>
         </tbody>
       </table>
-    </div>
-  </div>
-
-
-  <div class="section">
-    <div class="section-heading">7. Supporting Employment Details</div>
-    <div class="section-body">
-      <table class="ft">
-        <tr><td>Employer</td><td>IBM Philippines (International Business Machines Philippines Corporation)</td></tr>
-        <tr><td>Job title</td><td>Record to Report Analyst</td></tr>
-        <tr><td>Employment type</td><td>Full-time, permanent</td></tr>
-        <tr><td>Employment start date</td><td>March 2022</td></tr>
-        <tr><td>Work location</td><td>Naga, Bicol Region, Philippines (hybrid arrangement)</td></tr>
-        <tr><td>Annual leave period</td><td>4 October 2026 to 18 October 2026. Annual leave approved by employer. Letter of approval from employer is attached separately.</td></tr>
-        <tr><td>Return to work</td><td>The applicant returns to employment at IBM Philippines on the first working day after 18 October 2026.</td></tr>
-      </table>
-    </div>
-  </div>
-
-
-  <div class="section">
-    <div class="section-heading">8. Declaration</div>
-    <div class="declaration">
-      <p>I confirm that the information in this itinerary is accurate and complete to the best of my knowledge. I understand that I must comply with the conditions of the Standard Visitor Visa at all times during my stay in the United Kingdom. I confirm that I intend to leave the United Kingdom no later than 18 October 2026 and to return to my employment in the Philippines.</p>
-      <div class="sig-block">
-        <div class="sig-line">
-          <p class="sig-label">Applicant signature</p>
-          <hr class="sig-rule">
-          <p class="sig-name"><span class="ph">[FULL NAME]</span></p>
-        </div>
-        <div class="sig-line">
-          <p class="sig-label">Date signed</p>
-          <hr class="sig-rule">
-          <p class="sig-name">&nbsp;</p>
-        </div>
-      </div>
     </div>
   </div>
 
