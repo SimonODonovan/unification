@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Estimated Trip Costs - Visa Application</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink:#111; --ink2:#333; --ink3:#666;
+    --border:#bbb; --border-light:#ddd;
+    --header-bg:#f0f0f0; --stripe:#fafafa;
+    --accent:#1a3a6b; --red:#b00;
+    --radius:3px;
+  }
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+  html{font-size:14px;}
+  body{background:#d8d8d8;color:var(--ink);font-family:"Inter",sans-serif;font-weight:400;line-height:1.6;padding:2rem 1rem;}
+  .page{background:#fff;max-width:794px;margin:0 auto;padding:3rem 3.5rem;box-shadow:0 2px 16px rgba(0,0,0,.14);}
+
+  /* HEADER */
+  .doc-header{border-bottom:3px solid var(--accent);padding-bottom:1.5rem;margin-bottom:1.75rem;}
+  .doc-type{font-size:10px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--ink3);margin-bottom:.5rem;}
+  .doc-title{font-family:"Playfair Display",serif;font-size:1.75rem;font-weight:400;color:var(--accent);line-height:1.15;margin-bottom:.35rem;}
+  .doc-subtitle{font-size:13px;color:var(--ink3);margin-bottom:1rem;}
+  .doc-meta{display:flex;gap:2rem;flex-wrap:wrap;border-top:1px solid var(--border-light);padding-top:.75rem;margin-top:.75rem;}
+  .doc-meta-item{font-size:12px;color:var(--ink3);}
+  .doc-meta-item strong{color:var(--ink2);display:block;font-size:10.5px;text-transform:uppercase;letter-spacing:.05em;margin-bottom:1px;}
+  .doc-meta-item span{color:var(--ink);font-weight:500;}
+
+  /* TBD - deliberately not booked yet */
+  .tbd{color:var(--ink3);font-weight:500;letter-spacing:.03em;}
+
+  /* SECTION */
+  .section{margin-bottom:2rem;}
+  .section-heading{font-size:10px;font-weight:600;letter-spacing:.15em;text-transform:uppercase;color:#fff;background:var(--accent);padding:5px 10px;border-radius:var(--radius) var(--radius) 0 0;}
+  .section-body{border:1px solid var(--border);border-top:none;border-radius:0 0 var(--radius) var(--radius);overflow:hidden;}
+
+  /* FIELD TABLE */
+  .ft{width:100%;border-collapse:collapse;}
+  .ft tr:nth-child(even){background:var(--stripe);}
+  .ft td{padding:7px 12px;font-size:13px;border-bottom:1px solid var(--border-light);vertical-align:top;}
+  .ft tr:last-child td{border-bottom:none;}
+  .ft td:first-child{font-weight:600;color:var(--ink2);width:360px;}
+  .ft td.amount{text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums;font-weight:600;color:var(--accent);}
+
+  /* DATA TABLE */
+  .dt{width:100%;border-collapse:collapse;font-size:12.5px;}
+  .dt thead tr{background:var(--header-bg);}
+  .dt th{padding:7px 9px;text-align:left;font-weight:600;font-size:11px;text-transform:uppercase;letter-spacing:.04em;color:var(--ink2);border-bottom:2px solid var(--border);}
+  .dt th.num{text-align:right;}
+  .dt td{padding:7px 9px;border-bottom:1px solid var(--border-light);vertical-align:top;line-height:1.5;}
+  .dt td.num{text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums;}
+  .dt tbody tr:nth-child(even){background:var(--stripe);}
+  .dt tbody tr:last-child td{border-bottom:none;}
+  .dt .item-name{font-weight:600;color:var(--ink2);}
+  .dt .when{color:var(--ink3);white-space:nowrap;width:90px;}
+  .dt tr.subtotal td{border-top:2px solid var(--border);border-bottom:none;font-weight:600;background:#eef1f7;}
+  .dt tr.total td{border-top:2px solid var(--accent);border-bottom:none;font-weight:700;background:#eef1f7;color:var(--accent);font-size:13.5px;}
+
+  /* NOTICE BOX */
+  .notice{border:1px solid var(--border);border-left:4px solid var(--accent);border-radius:var(--radius);padding:.75rem 1rem;font-size:12.5px;color:var(--ink2);line-height:1.7;margin-bottom:1.75rem;background:#f6f8ff;}
+  .notice strong{color:var(--accent);}
+
+  /* FOOTNOTE LIST */
+  .notes{list-style:none;padding:.85rem 1.1rem;margin:0;}
+  .notes li{font-size:12px;color:var(--ink2);line-height:1.65;padding-left:14px;position:relative;margin-bottom:.4rem;}
+  .notes li:last-child{margin-bottom:0;}
+  .notes li::before{content:"\2013";position:absolute;left:0;color:var(--accent);}
+
+  /* FOOTER */
+  .doc-footer{border-top:1px solid var(--border-light);padding-top:1rem;margin-top:2rem;font-size:11px;color:var(--ink3);display:flex;justify-content:space-between;flex-wrap:wrap;gap:.5rem;}
+
+  @media print{
+    body{background:#fff;padding:0;}
+    .page{box-shadow:none;padding:0;margin:0;max-width:100%;}
+    .section{page-break-inside:avoid;}
+    .dt tr{page-break-inside:avoid;}
+    .doc-footer{display:none;}
+    @page{size:A4 portrait;margin:2cm 2.5cm;}
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <div class="doc-header">
+    <p class="doc-type">Supporting Document - UK Standard Visitor Visa Application</p>
+    <h1 class="doc-title">Estimated Trip Costs and Sponsorship Summary</h1>
+    <p class="doc-subtitle">United Kingdom &nbsp;|&nbsp; 4 October 2026 to 17 October 2026 &nbsp;|&nbsp; All amounts in pounds sterling (GBP), estimated</p>
+    <div class="doc-meta">
+      <div class="doc-meta-item"><strong>Applicant</strong><span>Jenifer Guangco Aban</span></div>
+      <div class="doc-meta-item"><strong>Passport No.</strong><span>REDACTED</span></div>
+      <div class="doc-meta-item"><strong>Sponsor</strong><span>Simon O'Donovan</span></div>
+      <div class="doc-meta-item"><strong>Date prepared</strong><span>23/07/2026</span></div>
+    </div>
+  </div>
+
+  <div class="notice">
+    <strong>Purpose of this document.</strong> This sets out the estimated cost of the planned tourism visit to the United Kingdom. The sponsor, Simon O'Donovan, is covering the full cost of the applicant's trip, including her flights, UK visa fee, and travel insurance. Section 2 shows the costs the sponsor is covering for the applicant. Section 3 shows the estimated cost of the whole trip for both travellers.<br><br>
+    <strong>Estimates and bookings.</strong> The figures below are estimates. Flights and accommodation are not yet booked. Following Home Office guidance, no non-refundable travel or accommodation will be purchased before a decision is made on this application, so final amounts are confirmed once the visa is granted. The estimates are the basis of the costs set out in the sponsorship letter.
+  </div>
+
+
+  <div class="section">
+    <div class="section-heading">1. Summary</div>
+    <div class="section-body">
+      <table class="ft">
+        <tr>
+          <td>Estimated total sponsored by Simon O'Donovan for the applicant (Jenifer Guangco Aban)</td>
+          <td class="amount">&pound;3,615</td>
+        </tr>
+        <tr>
+          <td>Estimated total cost of the trip for both travellers</td>
+          <td class="amount">&pound;6,415</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+
+  <div class="section">
+    <div class="section-heading">2. Costs Sponsored for the Applicant (Jenifer Guangco Aban)</div>
+    <div class="section-body">
+      <table class="dt">
+        <thead>
+          <tr>
+            <th>Category</th>
+            <th>Basis of estimate</th>
+            <th class="num">Estimated cost</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="item-name">Return flight</td>
+            <td>Manila (MNL) to London Heathrow (LHR), economy return</td>
+            <td class="num">&pound;850</td>
+          </tr>
+          <tr>
+            <td class="item-name">UK Standard Visitor visa fee</td>
+            <td>Standard Visitor visa application fee</td>
+            <td class="num">&pound;115</td>
+          </tr>
+          <tr>
+            <td class="item-name">Travel insurance</td>
+            <td>Single-trip travel insurance, two weeks</td>
+            <td class="num">&pound;50</td>
+          </tr>
+          <tr>
+            <td class="item-name">Accommodation</td>
+            <td>Applicant's share of the shared rooms, 13 nights (one half of the room cost)</td>
+            <td class="num">&pound;1,060</td>
+          </tr>
+          <tr>
+            <td class="item-name">Rail travel</td>
+            <td>London to Edinburgh and return, two LNER advance fares</td>
+            <td class="num">&pound;160</td>
+          </tr>
+          <tr>
+            <td class="item-name">Local transport</td>
+            <td>London Underground, buses and trams, and airport transfers (about &pound;10 per day)</td>
+            <td class="num">&pound;140</td>
+          </tr>
+          <tr>
+            <td class="item-name">Attractions and experiences</td>
+            <td>Paid entries and booked experiences, per person (itemised in Section 4)</td>
+            <td class="num">&pound;540</td>
+          </tr>
+          <tr>
+            <td class="item-name">Food and drink</td>
+            <td>Daily allowance of &pound;50 per day for 14 days</td>
+            <td class="num">&pound;700</td>
+          </tr>
+          <tr class="total">
+            <td colspan="2">Estimated total sponsored for the applicant</td>
+            <td class="num">&pound;3,615</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+
+  <div class="section">
+    <div class="section-heading">3. Estimated Total Cost of the Trip (Both Travellers)</div>
+    <div class="section-body">
+      <table class="dt">
+        <thead>
+          <tr>
+            <th>Category</th>
+            <th>Basis of estimate</th>
+            <th class="num">Estimated cost</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="item-name">Flights</td>
+            <td>Applicant, Manila to London (&pound;850), and sponsor, Cork to London return (&pound;150)</td>
+            <td class="num">&pound;1,000</td>
+          </tr>
+          <tr>
+            <td class="item-name">UK Standard Visitor visa fee</td>
+            <td>Applicant only (the sponsor is an Irish citizen and needs no visa)</td>
+            <td class="num">&pound;115</td>
+          </tr>
+          <tr>
+            <td class="item-name">Travel insurance</td>
+            <td>Two travellers, single-trip cover</td>
+            <td class="num">&pound;100</td>
+          </tr>
+          <tr>
+            <td class="item-name">Accommodation</td>
+            <td>Full room cost, 13 nights across three hotels</td>
+            <td class="num">&pound;2,120</td>
+          </tr>
+          <tr>
+            <td class="item-name">Rail travel</td>
+            <td>London to Edinburgh and return, two LNER fares for two travellers</td>
+            <td class="num">&pound;320</td>
+          </tr>
+          <tr>
+            <td class="item-name">Local transport</td>
+            <td>Underground, buses, trams and airport transfers for two</td>
+            <td class="num">&pound;280</td>
+          </tr>
+          <tr>
+            <td class="item-name">Attractions and experiences</td>
+            <td>Paid entries and booked experiences for two (itemised in Section 4)</td>
+            <td class="num">&pound;1,080</td>
+          </tr>
+          <tr>
+            <td class="item-name">Food and drink</td>
+            <td>&pound;50 per person per day for 14 days, two travellers</td>
+            <td class="num">&pound;1,400</td>
+          </tr>
+          <tr class="total">
+            <td colspan="2">Estimated total cost of the trip</td>
+            <td class="num">&pound;6,415</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+
+  <div class="section">
+    <div class="section-heading">4. Attractions and Experiences, Itemised (Per Person)</div>
+    <div class="section-body">
+      <table class="dt">
+        <thead>
+          <tr>
+            <th>Attraction or experience</th>
+            <th class="when">Date</th>
+            <th class="num">Est. per person</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="item-name">Afternoon tea, The Swan at Shakespeare's Globe</td>
+            <td class="when">5 Oct</td>
+            <td class="num">&pound;42</td>
+          </tr>
+          <tr>
+            <td class="item-name">Westminster Abbey</td>
+            <td class="when">6 Oct</td>
+            <td class="num">&pound;31</td>
+          </tr>
+          <tr>
+            <td class="item-name">St Paul's Cathedral</td>
+            <td class="when">7 Oct</td>
+            <td class="num">&pound;27</td>
+          </tr>
+          <tr>
+            <td class="item-name">Tower of London</td>
+            <td class="when">7 Oct</td>
+            <td class="num">&pound;35</td>
+          </tr>
+          <tr>
+            <td class="item-name">Cutty Sark and Royal Observatory (combined ticket)</td>
+            <td class="when">8 Oct</td>
+            <td class="num">&pound;25</td>
+          </tr>
+          <tr>
+            <td class="item-name">My Neighbour Totoro, Gillian Lynne Theatre</td>
+            <td class="when">8 Oct</td>
+            <td class="num">&pound;60</td>
+          </tr>
+          <tr>
+            <td class="item-name">Harry Potter Studio Tour, including rail to Watford</td>
+            <td class="when">9 Oct</td>
+            <td class="num">&pound;70</td>
+          </tr>
+          <tr>
+            <td class="item-name">Kew Gardens</td>
+            <td class="when">10 Oct</td>
+            <td class="num">&pound;15</td>
+          </tr>
+          <tr>
+            <td class="item-name">Petersham Nurseries lunch</td>
+            <td class="when">10 Oct</td>
+            <td class="num">&pound;50</td>
+          </tr>
+          <tr>
+            <td class="item-name">Edinburgh Castle</td>
+            <td class="when">13 Oct</td>
+            <td class="num">&pound;22</td>
+          </tr>
+          <tr>
+            <td class="item-name">One Spa, Sheraton Grand, day access and treatment</td>
+            <td class="when">14 Oct</td>
+            <td class="num">&pound;120</td>
+          </tr>
+          <tr>
+            <td class="item-name">Royal Yacht Britannia</td>
+            <td class="when">15 Oct</td>
+            <td class="num">&pound;20</td>
+          </tr>
+          <tr>
+            <td class="item-name">The Real Mary King's Close (optional)</td>
+            <td class="when">15 Oct</td>
+            <td class="num">&pound;22</td>
+          </tr>
+          <tr class="subtotal">
+            <td colspan="2">Subtotal per person (rounded to &pound;540 in the summaries above)</td>
+            <td class="num">&pound;539</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+
+  <div class="section">
+    <div class="section-heading">5. Basis of the Estimates</div>
+    <div class="section-body">
+      <ul class="notes">
+        <li>All figures are estimates in pounds sterling (GBP) and are indicative only. Flights and accommodation are not yet booked, so final costs are confirmed after the visa decision.</li>
+        <li>Accommodation is based on twin or double rooms shared by both travellers across the three hotels named in the travel itinerary. The applicant's share is shown as one half of the room cost.</li>
+        <li>Food and drink is budgeted at &pound;50 per person per day. Some meals and experiences, such as the afternoon tea and the Petersham Nurseries lunch, are listed separately under attractions and experiences.</li>
+        <li>Local transport is budgeted at about &pound;10 per person per day in London, paid by contactless card with daily caps, plus airport and city transfers.</li>
+        <li>Several attractions are free and are not costed here, including the Natural History Museum, the British Museum, the National Museum of Scotland, Southwark Cathedral, St Giles' Cathedral, Richmond Park, Hampstead Heath, Greenwich Park, Arthur's Seat, Calton Hill, Dean Village, Borough Market, Columbia Road Flower Market, and all parks and walks.</li>
+        <li>The sponsor, Simon O'Donovan, is covering the full cost of the applicant's trip, including her flights, UK visa fee, and travel insurance. Full details are in the sponsorship letter and sponsor financial documents submitted with this application.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="doc-footer">
+    <span>UK Standard Visitor Visa Application - Estimated Trip Costs</span>
+    <span>Simon &amp; Jenifer &nbsp;|&nbsp; 4 to 17 October 2026</span>
+  </div>
+
+</div>
+</body>
+</html>

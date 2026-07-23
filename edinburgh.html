@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Edinburgh &mdash; Simon &amp; Jenifer, October 2026</title>
+<title>Edinburgh - Simon & Jenifer, October 2026</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -94,8 +94,6 @@
     .day-nav-inner{padding-left:1.25rem;}
     .page-footer{padding-left:1.25rem;padding-right:1.25rem;}
   }
-
-
   .arrival-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;margin-bottom:.75rem;}
   .arrival-card-header{padding:.85rem 1.25rem;border-bottom:1px solid var(--border);background:rgba(42,110,74,.04);}
   .arrival-card-header h3{font-size:13px;font-weight:600;color:var(--ink);}
@@ -108,7 +106,7 @@
   /* CITY NAVIGATION GRID */
   .city-nav{margin:1.5rem 0 2.5rem;}
   .city-nav-label{font-size:10px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--ink3);margin-bottom:.75rem;}
-  .city-nav-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(110px,1fr));gap:1px;background:var(--border);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;}
+  .city-nav-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:1px;background:var(--border);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;}
   .cn-card{background:var(--surface);padding:.85rem 1rem;text-decoration:none;display:flex;align-items:center;gap:.55rem;transition:background .15s;min-width:0;}
   .cn-card:hover:not(.cn-active){background:var(--surface2);}
   .cn-card.cn-active{background:var(--surface);cursor:default;box-shadow:inset 0 -2px 0 var(--city-color);}
@@ -127,7 +125,6 @@
     <a href="index.html" class="back-link">&#8592; Full itinerary</a>
     <span class="trip-crumb">
       <a href="london.html">London</a> &nbsp;&middot;&nbsp;
-      <a href="york.html">York</a> &nbsp;&middot;&nbsp;
       <strong>Edinburgh</strong>
     </span>
   </div>
@@ -135,12 +132,12 @@
 
 <section class="hero">
   <div class="hero-inner">
-    <p class="hero-label">City 3 of 3 &nbsp;&middot;&nbsp; Days 8&ndash;11</p>
+    <p class="hero-label">City 2 of 2 &nbsp;&middot;&nbsp; Days 9 to 12</p>
     <h1 class="hero-title">Edinburgh</h1>
-    <p class="hero-meta">11&ndash;14 October 2026 &nbsp;&middot;&nbsp; 4 nights &nbsp;&middot;&nbsp; Radisson Blu Hotel Edinburgh</p>
+    <p class="hero-meta">12 to 16 October 2026 &nbsp;&middot;&nbsp; 4 nights &nbsp;&middot;&nbsp; Radisson Blu Edinburgh, on the Royal Mile</p>
     <div class="hero-stats">
-      <div><span class="hs-l">Arrives from</span><span class="hs-v">York (train)</span></div>
-      <div><span class="hs-l">Moves on to</span><span class="hs-v">London (train)</span></div>
+      <div><span class="hs-l">Arrives from</span><span class="hs-v">London (train)</span></div>
+      <div><span class="hs-l">Returns to</span><span class="hs-v">London (train)</span></div>
       <div><span class="hs-l">Getting around</span><span class="hs-v">Walking / bus</span></div>
       <div><span class="hs-l">Bus card</span><span class="hs-v">Contactless works</span></div>
     </div>
@@ -149,10 +146,10 @@
 
 <div class="day-nav">
   <div class="day-nav-inner">
-    <a href="#day8">Day 8 &nbsp;&middot;&nbsp; 11 Oct (Sun)</a>
     <a href="#day9">Day 9 &nbsp;&middot;&nbsp; 12 Oct (Mon)</a>
     <a href="#day10">Day 10 &nbsp;&middot;&nbsp; 13 Oct (Tue)</a>
     <a href="#day11">Day 11 &nbsp;&middot;&nbsp; 14 Oct (Wed)</a>
+    <a href="#day12">Day 12 &nbsp;&middot;&nbsp; 15 Oct (Thu)</a>
   </div>
 </div>
 
@@ -161,50 +158,47 @@
   <div class="city-nav">
     <p class="city-nav-label">City guides</p>
     <div class="city-nav-grid">
-      <a href="index.html" class="cn-card"><span class="cn-home-icon">&#8592;</span><div class="cn-info"><div class="cn-name">All Cities</div><div class="cn-meta">4&ndash;17 Oct</div></div></a>
-      <a href="london.html" class="cn-card"><div class="cn-dot" style="background:#2a4e8a"></div><div class="cn-info"><div class="cn-name">London</div><div class="cn-meta">Days 1&ndash;4, 12&ndash;14 &middot; 6 nights</div></div></a>
-      <a href="york.html" class="cn-card"><div class="cn-dot" style="background:#7a5a2a"></div><div class="cn-info"><div class="cn-name">York</div><div class="cn-meta">Days 5&ndash;7 &middot; 3 nights</div></div></a>
-      <a href="edinburgh.html" class="cn-card cn-active"><div class="cn-dot" style="background:#2a6e4a"></div><div class="cn-info"><div class="cn-name">Edinburgh</div><div class="cn-meta">Days 8&ndash;11 &middot; 4 nights</div></div></a>
+      <a href="index.html" class="cn-card"><span class="cn-home-icon">&#8592;</span><div class="cn-info"><div class="cn-name">All Cities</div><div class="cn-meta">4 to 17 Oct</div></div></a>
+      <a href="london.html" class="cn-card"><div class="cn-dot" style="background:#2a4e8a"></div><div class="cn-info"><div class="cn-name">London</div><div class="cn-meta">Days 1 to 8, 13 to 14 &middot; 9 nights</div></div></a>
+      <a href="edinburgh.html" class="cn-card cn-active"><div class="cn-dot" style="background:#2a6e4a"></div><div class="cn-info"><div class="cn-name">Edinburgh</div><div class="cn-meta">Days 9 to 12 &middot; 4 nights</div></div></a>
     </div>
   </div>
 
-<!-- ═══ DAY 10 ═══ -->
-<section class="day-section" id="day8">
+<!-- ═══ DAY 9 ═══ -->
+<section class="day-section" id="day9">
   <div class="day-section-header">
-    <span class="day-number">Day 8</span>
+    <span class="day-number">Day 9</span>
     <div>
-      <div class="day-title">Arrive Edinburgh &mdash; Royal Mile Evening</div>
-      <div class="day-date">Sunday, 11 October 2026 &nbsp;&middot;&nbsp; Morning travel day from York</div>
+      <div class="day-title">North</div>
+      <div class="day-date">Monday, 12 October 2026 &nbsp;&middot;&nbsp; Travel day from London</div>
     </div>
   </div>
 
-  <div class="slot-label">Morning &mdash; check out York, travel to Edinburgh</div>
+  <div class="slot-label">Morning, check out and travel</div>
 
   <div class="arrival-card">
-    <div class="arrival-card-header"><h3>&#128646;&nbsp; York to Edinburgh &mdash; LNER direct</h3></div>
+    <div class="arrival-card-header"><h3>&#128646;&nbsp; London to Edinburgh, LNER direct</h3></div>
     <div class="arrival-rows">
       <div class="arrival-row">
         <div class="arrival-row-icon">&#127968;</div>
         <div class="arrival-row-content">
-          <strong>Check out of Roomzzz York</strong>
-          <span class="step">Check-out is by <strong>11am</strong>. Pack the night before (Saturday evening). Walk north from Roomzzz up Micklegate and through the city to York station &mdash; about 15 min on foot from the hotel.</span>
+          <strong>Check out of the Premier Inn, Bankside</strong>
+          <span class="step">Check-out is by <strong>noon</strong>. Pack the night before. Tube to <strong>King&rsquo;s Cross</strong>: Jubilee line from Southwark, change at Waterloo for the Northern line to King&rsquo;s Cross, about 25 minutes. Allow time to find the platform.</span>
         </div>
       </div>
       <div class="arrival-row">
         <div class="arrival-row-icon">&#128646;</div>
         <div class="arrival-row-content">
-          <strong>LNER &mdash; York &#8594; Edinburgh Waverley</strong>
-          <span class="step">Direct train, no changes. Journey time: <strong>~2hrs 30min</strong>. A <strong>9am or 9:30am departure</strong> from York is ideal &mdash; arriving Edinburgh Waverley around 11:30am&ndash;noon, leaving a full afternoon for the city.</span>
-          <span class="step"><strong>Cost:</strong> ~&pound;25&ndash;50pp advance (lner.co.uk) &nbsp;&middot;&nbsp; Book in advance &nbsp;&middot;&nbsp; No changes needed</span>
-          <span class="step"><strong>Seat tip:</strong> Sit on the <strong>right-hand (east) side</strong> of the train for the dramatic Northumberland coast views between Berwick-upon-Tweed and Edinburgh &mdash; the sea comes right up to the railway line. One of the finest rail journeys in Britain.</span>
+          <strong>LNER, King&rsquo;s Cross to Edinburgh Waverley</strong>
+          <span class="step">Direct train, no changes. Journey time about <strong>4hr 20min</strong>. Take a mid-morning departure to arrive early-to-mid afternoon. Advance fares open about 12 weeks ahead, so set a reminder for mid-July 2026.</span>
+          <span class="step"><strong>Seat tip:</strong> book a table seat on the <strong>east side</strong> and eat on board. The stretch along the Northumberland coast past Alnmouth and Berwick runs right along the cliff edge and is one of the great British rail journeys.</span>
         </div>
       </div>
       <div class="arrival-row">
         <div class="arrival-row-icon">&#128652;</div>
         <div class="arrival-row-content">
-          <strong>Edinburgh Waverley &#8594; Radisson Blu Hotel Edinburgh</strong>
-          <span class="step">Exit Waverley station at the <strong>Waverley Bridge exit</strong> and walk directly up to the Royal Mile &mdash; 8 min uphill. Or use the <strong>Market Street exit</strong> (street level) and walk up through the Old Town. Walk up Waverley Bridge onto the Royal Mile &mdash; the Radisson Blu is at 80 High Street, a 10-min walk from the station, directly on the Royal Mile. Or: exit Waverley at the Market Street exit and walk up through the Old Town &mdash; the hotel is on your left as you reach the Mile.</span>
-          <span class="step">Check-in from <strong>3pm</strong>. If you arrive before 3pm, leave bags at reception and head out &mdash; the Royal Mile is directly outside the hotel entrance.</span>
+          <strong>Edinburgh Waverley to the Radisson Blu</strong>
+          <span class="step">The hotel is an 8-minute walk uphill from Waverley, on the Royal Mile itself. Exit at the Market Street exit and walk up through the Old Town closes, or up Waverley Bridge onto the Mile.</span>
         </div>
       </div>
     </div>
@@ -214,17 +208,15 @@
   <div class="hotel-card">
     <div class="hotel-card-body">
       <div class="hotel-info">
-        <div class="hotel-badge">&#127968;&nbsp; Base for nights 10&ndash;14 &nbsp;&middot;&nbsp; 4-star</div>
+        <div class="hotel-badge">&#127968;&nbsp; Base for nights 9 to 12 &nbsp;&middot;&nbsp; 4-star</div>
         <div class="hotel-name">Radisson Blu Hotel Edinburgh</div>
-        <div class="hotel-address">&#128205;&nbsp; 80 High Street, Edinburgh EH1 1TH &nbsp;&middot;&nbsp; On the Royal Mile, 10-min walk from Waverley</div>
+        <div class="hotel-address">&#128205;&nbsp; 80 High Street, Edinburgh EH1 1TH &nbsp;&middot;&nbsp; On the Royal Mile, 8-minute walk from Waverley</div>
         <ul class="hotel-detail">
-          <li>Check-in from <strong>3pm</strong> &nbsp;|&nbsp; Check-out by <strong>noon</strong> on 15 Oct &nbsp;|&nbsp; Luggage storage available all day</li>
-          <li>On the Royal Mile itself &mdash; the castle is uphill to the right, Holyrood Palace is downhill to the left. Every Old Town activity on the Edinburgh itinerary is within a 15-min walk</li>
-          <li>From Waverley: exit at Waverley Bridge, walk up the Mound and right along the Royal Mile &mdash; 10 min. Or take the Market Street exit and walk uphill through the Old Town closes &mdash; slightly shorter</li>
-          <li>Good breakfast included; Epicurean restaurant on site. Rooms are spacious by Edinburgh city-centre standards. Reliable 4-star quality, well-reviewed</li>
-          <li>Typical rate: ~&pound;150&ndash;220 per night in October</li>
+          <li>Check-in from <strong>3pm</strong>, check-out by <strong>noon</strong> on 16 Oct, luggage storage available all day</li>
+          <li>On the Royal Mile itself: the castle is uphill to the right, Holyrood Palace downhill to the left. Every Old Town activity here is within a 15-minute walk</li>
+          <li>Reliable 4-star quality, spacious by Edinburgh city-centre standards, good breakfast</li>
         </ul>
-        <div class="tip-box" style="margin-top:.75rem"><strong>Alternative options at similar standard:</strong> <strong>Kimpton Charlotte Square</strong> (4-star, 38 Charlotte Square, EH2 4HQ &mdash; a beautifully restored Georgian townhouse in the New Town, elegant and quiet, ~12 min walk from Waverley) &nbsp;|&nbsp; <strong>The Scotsman Hotel</strong> (4-star, 20 North Bridge, EH1 1YT &mdash; a converted Victorian newspaper building on North Bridge, 3-min walk from Waverley, good rooftop bar).</div>
+        <div class="tip-box" style="margin-top:.75rem"><strong>Alternatives at a similar standard:</strong> Kimpton Charlotte Square (a restored Georgian townhouse in the New Town, elegant and quiet, about 12 minutes from Waverley), or The Scotsman Hotel (a converted Victorian newspaper building on North Bridge, 3 minutes from Waverley).</div>
       </div>
       <div class="map-area">
         <iframe src="https://maps.google.com/maps?q=Radisson+Blu+Hotel+Edinburgh+80+High+Street+EH1+1TH&output=embed" loading="lazy" title="Radisson Blu Edinburgh"></iframe>
@@ -233,77 +225,93 @@
     </div>
   </div>
 
-  <div class="slot-label">Evening</div>
+  <div class="slot-label">Afternoon, first walk</div>
+
   <div class="activity-card">
     <div class="activity-card-body">
       <div class="activity-info">
-        <div class="activity-type">&#127981;&nbsp; First evening &mdash; Old Town orientation</div>
-        <div class="activity-name">Royal Mile closes &amp; Grassmarket</div>
+        <div class="activity-type">&#127981;&nbsp; Old Town orientation, free</div>
+        <div class="activity-name">The Royal Mile &amp; its closes</div>
         <div class="activity-address">&#128205;&nbsp; Royal Mile, Edinburgh EH1 &nbsp;&middot;&nbsp; Hotel front door</div>
         <div class="practical-row">
           <span class="prac-item"><span class="pric-free">Free</span></span>
-          <span class="prac-item">&#9201;&nbsp; 45 min walk, then dinner</span>
+          <span class="prac-item">&#9201;&nbsp; A slow afternoon</span>
         </div>
-        <p class="activity-desc">Walk south-west from the hotel along the Royal Mile toward Grassmarket. The route takes you down the Lawnmarket and off down Victoria Street &mdash; a curved, colourful medieval street that drops into the Grassmarket square at the foot of Castle Rock. Explore two or three closes (alleyways) as you go.</p>
+        <p class="activity-desc">The best possible use of a first afternoon: the Royal Mile and its closes, the narrow alleys branching off both sides, each one going somewhere unexpected. No plan needed.</p>
         <ul class="highlights">
-          <li><b>Advocates Close:</b> Steps down from the Royal Mile with views of the city below and Princes Street Gardens. Atmospheric in the early evening light.</li>
-          <li><b>Dunbar&rsquo;s Close Garden:</b> A hidden 17th-century walled garden tucked behind a close door on the Mile. Free to enter, usually quiet in the early evening &mdash; one of Edinburgh&rsquo;s small secrets.</li>
-          <li><b>Victoria Street:</b> Turn left off the Mile down George IV Bridge, then left again onto the curve of Victoria Street. Independent shops line both levels of the street &mdash; most are open until 5:30&ndash;6pm on a Saturday, so arriving at 4:30pm gives a good hour of browsing before dinner. The view back up the curve from the Grassmarket end is the best angle on the street.</li>
-          <li><b>Grassmarket:</b> A wide cobbled square at the foot of the castle rock. Busy on a Saturday evening with a good range of restaurants on all sides. Armstrong&rsquo;s Vintage is on the Grassmarket itself &mdash; see thrift note below.</li>
+          <li><b>Advocates Close:</b> steps down from the Mile with views over the city and Princes Street Gardens.</li>
+          <li><b>Dunbar&rsquo;s Close Garden:</b> a hidden 17th-century walled garden behind a close door, usually quiet.</li>
         </ul>
-        <div class="tip-box"><strong>Shop hours note:</strong> If you check in and leave the hotel at 4&ndash;5pm, you have about 1&ndash;1.5 hours of shopping time before most independent shops close at 5:30&ndash;6pm. Victoria Street boutiques and the Grassmarket shops are your best bet for early-evening browsing. Restaurants in the Grassmarket begin service from 5:30pm, so the timing flows naturally: browse then eat.</div>
-        <div class="tip-box" style="margin-top:6px"><strong>Thrift note:</strong> <strong>Armstrong&rsquo;s Vintage</strong> (83 Grassmarket, EH1 2HJ) is one of the best vintage and second-hand clothing shops in Scotland &mdash; a large, well-organised space with a huge range of clothing, accessories, and costumes at good prices. Open until 5:30pm on Saturdays. Right on the Grassmarket square, hard to miss. A priority stop on the way to dinner.</div>
-        <div class="tip-box" style="margin-top:6px"><strong>Romantic note:</strong> Victoria Street at dusk is one of the most photographed streets in Scotland for good reason. The curve of different-coloured buildings, the cobbles, and the castle visible above the rooftops at the Grassmarket end &mdash; this is a genuinely lovely first evening in Edinburgh. No plan needed beyond walking slowly and seeing where each close leads.</div>
       </div>
       <div class="map-area">
-        <iframe src="https://maps.google.com/maps?q=Grassmarket+Edinburgh+EH1+2JR&output=embed" loading="lazy" title="Grassmarket Edinburgh"></iframe>
-        <a class="map-open-link" href="https://www.google.com/maps/search/?api=1&query=Grassmarket+Edinburgh+EH1" target="_blank">Open in Google Maps &#8599;</a>
+        <iframe src="https://maps.google.com/maps?q=Royal+Mile+Edinburgh+EH1&output=embed" loading="lazy" title="Royal Mile map"></iframe>
+        <a class="map-open-link" href="https://www.google.com/maps/search/?api=1&query=Royal+Mile+Edinburgh+EH1" target="_blank">Open in Google Maps &#8599;</a>
       </div>
     </div>
   </div>
-  <div class="dinner-card">
-    <div class="dinner-title">&#127374;&nbsp; Dinner &mdash; Grassmarket area</div>
-    <div class="dinner-options">
-      <div class="dinner-opt"><b>Maxie&rsquo;s Bistro</b> &mdash; 5B Johnston Terrace, EH1 2PW. Overlooking the Grassmarket. Reliable Edinburgh institution &mdash; good fish, good salads, outdoor terrace with a castle view. Booking recommended on a Saturday.</div>
-      <div class="dinner-opt"><b>Vittoria on the Bridge</b> &mdash; 19 George IV Bridge, EH1 1EN. An Edinburgh Italian institution &mdash; wood-fired pizza and pasta, very good value, a 3-min walk from the Grassmarket up George IV Bridge. Lively and consistent. A good first Edinburgh dinner without travelling far.</div>
-      <div class="dinner-opt"><b>Timberyard</b> &mdash; 10 Lady Lawson Street, EH3 9DS. A 10-min walk west from the Grassmarket through the Cowgate. Seasonal Scottish tasting menu in a converted warehouse. One of Edinburgh&rsquo;s most interesting restaurants &mdash; book in advance for Saturday evenings.</div>
-    </div>
-  </div>
-</section>
 
-<!-- ═══ DAY 11 ═══ -->
-<section class="day-section" id="day9">
-  <div class="day-section-header">
-    <span class="day-number">Day 9</span>
-    <div>
-      <div class="day-title">Edinburgh Castle &amp; Old Town</div>
-      <div class="day-date">Monday, 12 October 2026</div>
-    </div>
-  </div>
-
-  <div class="slot-label">Morning &mdash; the castle</div>
+  <div class="slot-label">Evening, sunset about 6:25pm</div>
 
   <div class="activity-card">
     <div class="activity-card-body">
       <div class="activity-info">
-        <div class="activity-type">&#127963;&nbsp; Castle &mdash; pre-book timed entry</div>
-        <div class="activity-name">Edinburgh Castle</div>
-        <div class="activity-address">&#128205;&nbsp; Castlehill, Edinburgh EH1 2NG &nbsp;&middot;&nbsp; 10-min walk uphill from hotel</div>
+        <div class="activity-type">&#9968;&nbsp; Viewpoint, free, 5-minute climb</div>
+        <div class="activity-name">Calton Hill (if light remains)</div>
+        <div class="activity-address">&#128205;&nbsp; Calton Hill, Edinburgh EH7 5AA &nbsp;&middot;&nbsp; East end of Princes Street</div>
         <div class="practical-row">
-          <span class="prac-item">&#128178;&nbsp; ~&pound;22pp &nbsp;|&nbsp; Book: edinburghcastle.scot</span>
-          <span class="prac-item">&#128336;&nbsp; Open 9:30am daily</span>
-          <span class="prac-item">&#9201;&nbsp; Allow 2.5&ndash;3hrs</span>
+          <span class="prac-item"><span class="pric-free">Free</span></span>
+          <span class="prac-item">&#128336;&nbsp; Sunset about 6:25pm</span>
         </div>
-        <p class="activity-desc">Built on a volcanic plug of rock that rises 130m above the city, the castle dominates Edinburgh from every angle. There is considerably more inside than most visitors expect. Pre-book a timed entry &mdash; October dates sell out.</p>
+        <p class="activity-desc">If light remains after checking in, Calton Hill is a five-minute climb from the east end of Princes Street for 360-degree views over the whole city. If you would rather leave it, day 10 catches it at sunset instead.</p>
+      </div>
+      <div class="map-area">
+        <iframe src="https://maps.google.com/maps?q=Calton+Hill+Edinburgh+EH7+5AA&output=embed" loading="lazy" title="Calton Hill map"></iframe>
+        <a class="map-open-link" href="https://www.google.com/maps/search/?api=1&query=Calton+Hill+Edinburgh+EH7" target="_blank">Open in Google Maps &#8599;</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="dinner-card">
+    <div class="dinner-title">&#127374;&nbsp; Dinner, the Grassmarket</div>
+    <div class="dinner-options">
+      <div class="dinner-opt"><b>Grassmarket</b>, the square under the castle rock, is surrounded by restaurants and is a good introduction to the Old Town on a first night.</div>
+      <div class="dinner-opt"><b>Maxie&rsquo;s Bistro</b>, 5B Johnston Terrace, EH1 2PW. Overlooking the Grassmarket, with a terrace and castle view. Booking recommended.</div>
+      <div class="dinner-opt"><b>Vittoria on the Bridge</b>, 19 George IV Bridge, EH1 1EN. An Edinburgh Italian institution, wood-fired pizza and pasta, good value, a short walk up from the Grassmarket.</div>
+    </div>
+  </div>
+</section><!-- end day 9 -->
+
+<!-- ═══ DAY 10 ═══ -->
+<section class="day-section" id="day10">
+  <div class="day-section-header">
+    <span class="day-number">Day 10</span>
+    <div>
+      <div class="day-title">The Castle &amp; the Old Town</div>
+      <div class="day-date">Tuesday, 13 October 2026</div>
+    </div>
+  </div>
+
+  <div class="slot-label">9:30am, pre-book, it sells out in October</div>
+
+  <div class="activity-card">
+    <div class="activity-card-body">
+      <div class="activity-info">
+        <div class="activity-type">&#127963;&nbsp; Castle, pre-book timed entry</div>
+        <div class="activity-name">Edinburgh Castle</div>
+        <div class="activity-address">&#128205;&nbsp; Castlehill, Edinburgh EH1 2NG &nbsp;&middot;&nbsp; 10-minute walk uphill from the hotel</div>
+        <div class="practical-row">
+          <span class="prac-item">&#128178;&nbsp; About &pound;22pp &nbsp;&middot;&nbsp; Book: edinburghcastle.scot</span>
+          <span class="prac-item">&#128336;&nbsp; Open 9:30am, arrive at opening</span>
+          <span class="prac-item">&#9201;&nbsp; 2.5 to 3 hours</span>
+        </div>
+        <p class="activity-desc">Built on a volcanic rock above the city, the castle dominates Edinburgh from every angle. Arrive at opening. The Crown Jewels, the Stone of Destiny, St Margaret&rsquo;s Chapel, and views from the ramparts across the Firth of Forth. The One O&rsquo;Clock Gun fires at 1pm daily except Sunday.</p>
         <ul class="highlights">
-          <li><b>The Scottish Crown Jewels (Honours of Scotland):</b> The oldest crown jewels in the British Isles &mdash; the crown, sword, and sceptre of Scotland, used at coronations since the 15th century.</li>
-          <li><b>The Stone of Destiny:</b> The ancient coronation stone on which Scottish (and later British) monarchs were crowned. It was held in Westminster Abbey for 700 years and returned to Scotland in 1996.</li>
-          <li><b>The One O&rsquo;Clock Gun:</b> Fired daily at 1pm (Monday&ndash;Saturday) from the Half Moon Battery. A tradition since 1861, originally to help ships in the Firth of Forth set their chronometers. Stand on the esplanade at 12:58pm to be in position.</li>
-          <li><b>The Great Hall:</b> A 16th-century banqueting hall with one of the finest original timber hammer-beam roofs in Scotland. The armour displays are remarkable.</li>
-          <li><b>Mons Meg:</b> A medieval siege cannon from 1449, one of the largest medieval guns in existence. It is outside the Great Hall &mdash; the barrel is 15 feet long.</li>
-          <li><b>The views:</b> From the Half Moon Battery, 360&deg; views of the city &mdash; Arthur&rsquo;s Seat, the Firth of Forth, the New Town, and south to the Pentland Hills.</li>
+          <li><b>The Honours of Scotland:</b> the oldest crown jewels in the British Isles, the crown, sword and sceptre.</li>
+          <li><b>The Stone of Destiny:</b> the ancient coronation stone, returned to Scotland in 1996.</li>
+          <li><b>St Margaret&rsquo;s Chapel:</b> the oldest building in Edinburgh, from about 1130.</li>
+          <li><b>The One O&rsquo;Clock Gun:</b> fired at 1pm from the Half Moon Battery. Stand on the esplanade at 12:58pm.</li>
         </ul>
-        <div class="tip-box"><strong>Strategy:</strong> Arrive at opening (9:30am) to avoid queues at the Crown Jewels (they build up fast). Do the Crown Jewels first, then the Great Hall, then walk the ramparts. Use the included audio guide for the Crown Jewels room &mdash; it adds significant context.</div>
+        <div class="tip-box"><strong>Strategy:</strong> arrive at opening to beat the queue for the Crown Jewels, which builds fast. Do the jewels first, then the Great Hall, then the ramparts.</div>
       </div>
       <div class="map-area">
         <iframe src="https://maps.google.com/maps?q=Edinburgh+Castle+Castlehill+Edinburgh+EH1+2NG&output=embed" loading="lazy" title="Edinburgh Castle"></iframe>
@@ -312,70 +320,28 @@
     </div>
   </div>
 
-  <div class="transport-between">
-    <div class="transport-between-icon">&#128694;</div>
-    <div class="transport-between-text">
-      <strong>Edinburgh Castle &#8594; Camera Obscura</strong>
-      <span>Exit the castle and turn right &mdash; Camera Obscura is a 1-min walk down Castlehill. You will see the Victorian tower building immediately on the left as you leave the esplanade.</span>
-    </div>
-    <span class="transport-badge">1 min walk</span>
-  </div>
-
-  <div class="activity-card">
-    <div class="activity-card-body">
-      <div class="activity-info">
-        <div class="activity-type">&#128301;&nbsp; Victorian optical experience &mdash; pre-book</div>
-        <div class="activity-name">Camera Obscura &amp; World of Illusions</div>
-        <div class="activity-address">&#128205;&nbsp; Castlehill, Edinburgh EH1 2ND &nbsp;&middot;&nbsp; 1-min walk from Edinburgh Castle exit</div>
-        <div class="practical-row">
-          <span class="prac-item">&#128178;&nbsp; ~&pound;20pp &nbsp;&middot;&nbsp; camera-obscura.co.uk</span>
-          <span class="prac-item">&#128336;&nbsp; 9:30am&ndash;9pm daily</span>
-          <span class="prac-item">&#9201;&nbsp; Allow 1&ndash;1.5hrs</span>
-        </div>
-        <p class="activity-desc">A Victorian optical tower that has operated since 1853, built directly above the Old Town on Castlehill. The rooftop Camera Obscura itself projects a live real-time image of Edinburgh onto a white dish &mdash; you can watch people walking on Princes Street below, in silence, in a darkened room. Below the roof are five floors of optical illusions, holograms, and interactive exhibits. Nothing like it anywhere else in Edinburgh.</p>
-        <ul class="highlights">
-          <li><b>The Camera Obscura (roof):</b> A rotating mirror and lens projects a live panorama of Edinburgh onto a concave white dish. The guide can pick up individual people from the street and &ldquo;hold&rdquo; them in the palm of their hand. It is genuinely startling and rather beautiful. Allow 20 minutes here.</li>
-          <li><b>The illusions floors:</b> Five floors of well-curated optical illusions &mdash; Ames rooms, vortex tunnels, giant mirror mazes, and Victorian scientific instruments. Better than the description suggests &mdash; a lot of it is genuinely fun to experience together.</li>
-          <li><b>The rooftop terrace:</b> Free to access during your visit &mdash; 360&deg; views over the Old Town, equal to Calton Hill from a different angle. A good photograph from up here.</li>
-        </ul>
-        <div class="tip-box"><strong>Romantic note:</strong> The Camera Obscura room itself is a surprisingly intimate experience &mdash; a dark, quiet room with a live moving image of the city projected below you. One of those things that is difficult to describe but very pleasant to experience together.</div>
-      </div>
-      <div class="map-area">
-        <iframe src="https://maps.google.com/maps?q=Camera+Obscura+Castlehill+Edinburgh+EH1+2ND&output=embed" loading="lazy" title="Camera Obscura Edinburgh"></iframe>
-        <a class="map-open-link" href="https://www.google.com/maps/search/?api=1&query=Camera+Obscura+Edinburgh+EH1+2ND" target="_blank">Open in Google Maps &#8599;</a>
-      </div>
-    </div>
-  </div>
-
-  <div class="slot-label">Lunch</div>
+  <div class="slot-label">Lunch, down a close near the castle</div>
   <div class="dinner-card">
-    <div class="dinner-title">&#127829;&nbsp; Lunch near the castle</div>
+    <div class="dinner-title">&#127829;&nbsp; Lunch options</div>
     <div class="dinner-options">
-      <div class="dinner-opt"><b>The Jolly Judge</b> &mdash; 7A James Court, off Lawnmarket, EH1 2PB. Down a close just below the castle esplanade. A small, old pub with low ceilings and a quiet atmosphere &mdash; away from the main tourist flow. Good for soup and a sandwich.</div>
-      <div class="dinner-opt"><b>Amber Restaurant</b> &mdash; 354 Castlehill, EH1 2NE. Right at the castle entrance. Scottish produce menu. More of a restaurant than a quick lunch stop but very convenient after the castle.</div>
-      <div class="dinner-opt"><b>Cannonball Restaurant</b> &mdash; 356 Castlehill, EH1 2NE. Next to Amber, with good views over the Esplanade. Reliable Scottish food, good scone and soup lunch option.</div>
+      <div class="dinner-opt"><b>The Jolly Judge</b>, 7A James Court, off Lawnmarket, EH1 2PB. Down a close just below the castle. Low-ceilinged, quiet, and off the tourist flow. Good for soup and a sandwich.</div>
+      <div class="dinner-opt"><b>Cannonball Restaurant</b>, 356 Castlehill, EH1 2NE. Right at the castle entrance, with views over the esplanade.</div>
     </div>
   </div>
 
-  <div class="slot-label">Afternoon &mdash; Old Town</div>
+  <div class="slot-label">Afternoon, the Old Town, slowly</div>
 
   <div class="activity-card">
     <div class="activity-card-body">
       <div class="activity-info">
-        <div class="activity-type">&#9962;&nbsp; Cathedral &mdash; free</div>
+        <div class="activity-type">&#9962;&nbsp; Cathedral, free</div>
         <div class="activity-name">St Giles&rsquo; Cathedral</div>
-        <div class="activity-address">&#128205;&nbsp; High Street, Edinburgh EH1 1RE &nbsp;&middot;&nbsp; On the Royal Mile, 5-min walk from castle</div>
+        <div class="activity-address">&#128205;&nbsp; High Street, Edinburgh EH1 1RE &nbsp;&middot;&nbsp; On the Royal Mile, 5 minutes from the castle</div>
         <div class="practical-row">
           <span class="prac-item"><span class="pric-free">Free</span>&nbsp; entry</span>
-          <span class="prac-item">&#128336;&nbsp; Mon&ndash;Fri 9am&ndash;7pm, Sat 9am&ndash;5pm, Sun 1pm&ndash;5pm</span>
-          <span class="prac-item">&#9201;&nbsp; 30&ndash;45 min</span>
+          <span class="prac-item">&#9201;&nbsp; 30 to 45 minutes</span>
         </div>
-        <p class="activity-desc">The High Kirk of Edinburgh &mdash; the church at the centre of Scottish religious history. The nave is impressive, but the Thistle Chapel at the far end is extraordinary: a tiny, ornately carved chapel crammed with heraldic detail.</p>
-        <ul class="highlights">
-          <li><b>The Thistle Chapel (1911):</b> Scotland&rsquo;s equivalent of the Order of the Garter chapel in Windsor. 16 stalls, each one carved with the personal heraldry of its knight. The craftsmanship is astonishing in a space this small.</li>
-          <li><b>The John Knox statue:</b> The reformer who shaped Scottish Protestantism stands in one of the side chapels. His pulpit is preserved here.</li>
-          <li><b>The Parliament Square side:</b> Exit through the south door to Parliament Square &mdash; the old Scottish Parliament building (now law courts) and the mercat cross where royal proclamations were made.</li>
-        </ul>
+        <p class="activity-desc">The High Kirk of Edinburgh. The nave is impressive, but the Thistle Chapel inside is worth the small extra: a tiny, ornately carved chapel crammed with heraldic detail, Scotland&rsquo;s equivalent of the Order of the Garter chapel at Windsor.</p>
       </div>
       <div class="map-area">
         <iframe src="https://maps.google.com/maps?q=St+Giles+Cathedral+High+Street+Edinburgh+EH1+1RE&output=embed" loading="lazy" title="St Giles Cathedral"></iframe>
@@ -387,234 +353,172 @@
   <div class="transport-between">
     <div class="transport-between-icon">&#128694;</div>
     <div class="transport-between-text">
-      <strong>St Giles&rsquo; &#8594; Victoria Street &#8594; Greyfriars</strong>
-      <span>Walk west along the Mile past the Cathedral, turn left down George IV Bridge, then left onto Victoria Street (the curved colourful street). Walk to the bottom &mdash; the Grassmarket &mdash; then back up and left on Candlemaker Row to Greyfriars. About 15 min total.</span>
+      <strong>St Giles&rsquo; &#8594; Victoria Street &#8594; The Vennel &#8594; Greyfriars</strong>
+      <span>Walk west along the Mile, turn down George IV Bridge, then onto the curve of Victoria Street to the Grassmarket. The Vennel is a stepped alley off the Grassmarket. Greyfriars is a few minutes back up Candlemaker Row. About 20 minutes of walking with stops.</span>
     </div>
-    <span class="transport-badge">15 min walk</span>
+    <span class="transport-badge">15 to 20 min</span>
   </div>
 
   <div class="activity-card">
     <div class="activity-card-body">
       <div class="activity-info">
-        <div class="activity-type">&#127981;&nbsp; Street &amp; graveyard &mdash; free</div>
-        <div class="activity-name">Victoria Street &amp; Greyfriars Kirkyard</div>
-        <div class="activity-address">&#128205;&nbsp; Greyfriars Pl, Edinburgh EH1 2QQ &nbsp;&middot;&nbsp; 5-min walk south of the Royal Mile</div>
+        <div class="activity-type">&#127981;&nbsp; Streets &amp; kirkyard, free</div>
+        <div class="activity-name">Victoria Street, The Vennel &amp; Greyfriars Kirkyard</div>
+        <div class="activity-address">&#128205;&nbsp; Victoria St to Greyfriars, Edinburgh EH1 2QQ</div>
         <div class="practical-row">
           <span class="prac-item"><span class="pric-free">Free</span></span>
-          <span class="prac-item">&#9201;&nbsp; 45&ndash;60 min for both</span>
+          <span class="prac-item">&#9201;&nbsp; 1 to 1.5 hours for all three</span>
         </div>
-        <p class="activity-desc">Victoria Street is the curved, colourful medieval street most often cited as an inspiration for Diagon Alley. Greyfriars Kirkyard below it is one of the most atmospheric graveyards in Europe.</p>
+        <p class="activity-desc">Three free stops close together, all worth the time.</p>
         <ul class="highlights">
-          <li><b>Victoria Street:</b> Walk slowly. The buildings are 3&ndash;4 storeys of different-coloured painted stone. Independent shops on both levels. The view back up the curve of the street is particularly good.</li>
-          <li><b>Greyfriars Bobby statue:</b> At the top of Candlemaker Row &mdash; the bronze terrier said to have guarded his owner&rsquo;s grave for 14 years. The nose is worn bright from being touched by tourists.</li>
-          <li><b>Greyfriars Kirkyard:</b> The graveyard itself is free and open. The covenanter&rsquo;s prison (an outdoor enclosure) is in the far corner. Many of the names on the gravestones appear in the Harry Potter books.</li>
-          <li><b>George Mackenzie mausoleum:</b> The baroque round tomb of the man who imprisoned the Covenanters. A focal point of the graveyard&rsquo;s dark history.</li>
+          <li><b>Victoria Street:</b> the curved, coloured street said to have inspired Diagon Alley. Walk slowly and look back up the curve from the Grassmarket end.</li>
+          <li><b>The Vennel:</b> a stepped alley off the Grassmarket with the best castle photograph in the city, free and nearly empty.</li>
+          <li><b>Greyfriars Kirkyard:</b> Greyfriars Bobby at the top of Candlemaker Row, and a lot of familiar surnames on the headstones.</li>
         </ul>
       </div>
       <div class="map-area">
-        <iframe src="https://maps.google.com/maps?q=Greyfriars+Kirkyard+Edinburgh+EH1+2QQ&output=embed" loading="lazy" title="Greyfriars Kirkyard"></iframe>
-        <a class="map-open-link" href="https://www.google.com/maps/search/?api=1&query=Greyfriars+Kirkyard+Edinburgh" target="_blank">Open in Google Maps &#8599;</a>
+        <iframe src="https://maps.google.com/maps?q=The+Vennel+Steps+Edinburgh+EH1&output=embed" loading="lazy" title="The Vennel map"></iframe>
+        <a class="map-open-link" href="https://www.google.com/maps/search/?api=1&query=The+Vennel+Edinburgh+EH1" target="_blank">Open in Google Maps &#8599;</a>
       </div>
     </div>
   </div>
 
-  <div class="slot-label">Evening &mdash; Calton Hill at sunset</div>
+  <div class="slot-label">Late afternoon, free, and the rain contingency for the trip</div>
 
   <div class="activity-card">
     <div class="activity-card-body">
       <div class="activity-info">
-        <div class="activity-type">&#9968;&nbsp; Viewpoint &mdash; free, 5-min climb</div>
-        <div class="activity-name">Calton Hill</div>
-        <div class="activity-address">&#128205;&nbsp; Calton Hill, Edinburgh EH7 5AA &nbsp;&middot;&nbsp; East end of Princes Street</div>
+        <div class="activity-type">&#127963;&nbsp; Museum, free</div>
+        <div class="activity-name">National Museum of Scotland</div>
+        <div class="activity-address">&#128205;&nbsp; Chambers St, Edinburgh EH1 1JF &nbsp;&middot;&nbsp; 8-minute walk from the hotel</div>
         <div class="practical-row">
           <span class="prac-item"><span class="pric-free">Free</span></span>
-          <span class="prac-item">&#9201;&nbsp; 5 min climb, 30&ndash;45 min on top</span>
-          <span class="prac-item">&#128336;&nbsp; Open at all times</span>
+          <span class="prac-item">&#128336;&nbsp; 10am to 5pm</span>
+          <span class="prac-item">&#9201;&nbsp; 1.5 to 2 hours</span>
         </div>
-        <p class="activity-desc">A small hill at the east end of Princes Street with a 5-minute path to the summit. The 360&deg; views from the top are arguably the best free view in Edinburgh &mdash; castle, Arthur&rsquo;s Seat, the Firth of Forth, the New Town grid, the Old Town skyline all visible at once. Especially good at dusk in October.</p>
-        <ul class="highlights">
-          <li><b>National Monument:</b> A partial replica of the Parthenon, begun in 1826 and never finished due to lack of funds. Known locally as &ldquo;Scotland&rsquo;s Disgrace.&rdquo; Striking against the sky.</li>
-          <li><b>Nelson Monument:</b> A tower with a time ball that drops at 1pm daily (same tradition as the Castle gun). You can climb it for a small fee.</li>
-          <li><b>The view west:</b> The castle, the spire of the Balmoral Hotel, Arthur&rsquo;s Seat behind it &mdash; the whole of Edinburgh&rsquo;s skyline from the east. The light at 6&ndash;7pm in October is warm and golden.</li>
-        </ul>
-        <div class="tip-box"><strong>Getting there:</strong> Walk east from the Royal Mile along Canongate, then north up Calton Road, then up the steps to the hill. About 15 min from the hotel. Or walk along Princes Street to the east end and take the path up from Waterloo Place.</div>
-        <div class="tip-box" style="margin-top:6px"><strong>Romantic note:</strong> Calton Hill at sunset in October is one of the most reliably beautiful things Edinburgh offers. The light turns the castle and the New Town golden from the east, and the hill is rarely as crowded as the daytime. Bring a layer &mdash; it is always cooler up top than in the city. Sit on the grass facing west and watch the light change. No agenda beyond this.</div>
-        <div class="tip-box" style="margin-top:6px"><strong>Thrift note:</strong> On the walk to Calton Hill from the Royal Mile, <strong>Herman Brown</strong> (151 West Port, EH3 9DP) is a short detour west &mdash; one of Edinburgh&rsquo;s best independent vintage clothing shops, well-curated men&rsquo;s and women&rsquo;s, reasonable prices. Or keep it for another day; West Port is on the way between Grassmarket and the Meadows.</div>
+        <p class="activity-desc">One of the best museums in Britain. The Grand Gallery atrium, the T. rex cast, and Dolly the Sheep are the reason to go, and the roof terrace has a castle view most visitors never find. This is also your rain contingency for the whole trip.</p>
       </div>
       <div class="map-area">
-        <iframe src="https://maps.google.com/maps?q=Calton+Hill+Edinburgh+EH7+5AA&output=embed" loading="lazy" title="Calton Hill Edinburgh"></iframe>
-        <a class="map-open-link" href="https://www.google.com/maps/search/?api=1&query=Calton+Hill+Edinburgh" target="_blank">Open in Google Maps &#8599;</a>
+        <iframe src="https://maps.google.com/maps?q=National+Museum+of+Scotland+Chambers+Street+Edinburgh+EH1+1JF&output=embed" loading="lazy" title="National Museum of Scotland map"></iframe>
+        <a class="map-open-link" href="https://www.google.com/maps/search/?api=1&query=National+Museum+of+Scotland+Edinburgh+EH1" target="_blank">Open in Google Maps &#8599;</a>
       </div>
     </div>
   </div>
 
+  <div class="slot-label">Evening, Calton Hill at sunset if you missed it</div>
   <div class="dinner-card">
-    <div class="dinner-title">&#127374;&nbsp; Dinner &mdash; Old Town or Princes Street area</div>
+    <div class="dinner-title">&#127374;&nbsp; Sunset, then dinner</div>
     <div class="dinner-options">
-      <div class="dinner-opt"><b>Dishoom Edinburgh</b> &mdash; 3A St Andrew Square, EH2 2BD. Brilliant Bombay caf&eacute; food. May have a wait; worth it. The black dal is the thing to order.</div>
-      <div class="dinner-opt"><b>The Witchery by the Castle</b> &mdash; Castlehill, EH1 2NF. An Edinburgh institution &mdash; dramatically decorated, beside the castle. More expensive but a memorable evening out. Book in advance.</div>
-      <div class="dinner-opt"><b>Ondine</b> &mdash; 2 George IV Bridge, EH1 1AD. A well-regarded Edinburgh seafood restaurant on George IV Bridge, 5 min from the Royal Mile. Sustainable Scottish seafood, beautiful room, consistently excellent. A good romantic dinner option &mdash; book in advance.</div>
+      <div class="dinner-opt"><b>Calton Hill</b> for sunset if you did not catch it on arrival, a five-minute climb from the east end of Princes Street.</div>
+      <div class="dinner-opt"><b>Timberyard</b>, 10 Lady Lawson St, EH3 9DS. A seasonal Scottish tasting menu in a converted warehouse, one of the city&rsquo;s most interesting restaurants. Book ahead.</div>
     </div>
   </div>
-</section>
+</section><!-- end day 10 -->
 
-<!-- ═══ DAY 12 ═══ -->
-<section class="day-section" id="day10">
-  <div class="day-section-header">
-    <span class="day-number">Day 10</span>
-    <div>
-      <div class="day-title">Arthur&rsquo;s Seat &amp; One Spa</div>
-      <div class="day-date">Tuesday, 13 October 2026</div>
-    </div>
-  </div>
-
-  <div class="slot-label">Early morning &mdash; start by 8am</div>
-
-  <div class="activity-card">
-    <div class="activity-card-body">
-      <div class="activity-info">
-        <div class="activity-type">&#9968;&nbsp; Hike &mdash; free, allow 1.5&ndash;2hrs</div>
-        <div class="activity-name">Arthur&rsquo;s Seat</div>
-        <div class="activity-address">&#128205;&nbsp; Holyrood Park, Edinburgh EH8 8HG &nbsp;&middot;&nbsp; 20-min walk from hotel</div>
-        <div class="practical-row">
-          <span class="prac-item"><span class="pric-free">Free</span></span>
-          <span class="prac-item">&#9201;&nbsp; 45 min to summit, 30 min down &nbsp;&middot;&nbsp; total 1.5&ndash;2hrs</span>
-          <span class="prac-item">&#128336;&nbsp; Open at all times &mdash; start early</span>
-        </div>
-        <p class="activity-desc">An ancient volcano in the middle of the city, rising 251m above sea level. The views from the summit are the finest in Edinburgh by a considerable margin. The climb is not technically difficult &mdash; good footwear is sufficient. Start early to have the path mostly to yourself.</p>
-        <ul class="highlights">
-          <li><b>Getting to the start:</b> Walk east down the Royal Mile, past Holyrood Palace, into Holyrood Park. The main path to the summit (Volunteer&rsquo;s Walk) starts from the car park near St Margaret&rsquo;s Loch. About 20 min walk from the hotel.</li>
-          <li><b>The path:</b> Follow the wide path south-west from St Margaret&rsquo;s Loch. It climbs steadily through open grassland &mdash; no scrambling required on the main route. The ridge becomes steeper near the top. Allow 45 min at a comfortable pace.</li>
-          <li><b>The summit:</b> 360&deg; views &mdash; the full Edinburgh skyline to the west, the Firth of Forth and Fife to the north, the Pentland Hills to the south, the North Sea to the east. On a clear October morning this is extraordinary.</li>
-          <li><b>Wind:</b> It is almost always windy at the top. Bring a layer even if it is warm in the city below.</li>
-          <li><b>Descent:</b> Return by the same path, or take the alternate route down past Salisbury Crags (the dramatic cliff face on the west side) &mdash; adds 20 min but spectacular.</li>
-        </ul>
-        <div class="tip-box"><strong>Practical:</strong> Wear trainers with a decent grip &mdash; the path is rocky near the top. There are no facilities on the hill. Bring water. The summit is exposed &mdash; October mornings are cold; dress in layers.</div>
-      </div>
-      <div class="map-area">
-        <iframe src="https://maps.google.com/maps?q=Arthur+Seat+Holyrood+Park+Edinburgh&output=embed" loading="lazy" title="Arthur's Seat Edinburgh"></iframe>
-        <a class="map-open-link" href="https://www.google.com/maps/search/?api=1&query=Arthur+Seat+Edinburgh+Holyrood+Park" target="_blank">Open in Google Maps &#8599;</a>
-      </div>
-    </div>
-  </div>
-
-  <div class="activity-card">
-    <div class="activity-card-body">
-      <div class="activity-info">
-        <div class="activity-type">&#127963;&nbsp; Royal Palace &mdash; exterior</div>
-        <div class="activity-name">Palace of Holyroodhouse</div>
-        <div class="activity-address">&#128205;&nbsp; Canongate, Edinburgh EH8 8DX &nbsp;&middot;&nbsp; Foot of the Royal Mile, at the park entrance</div>
-        <div class="practical-row">
-          <span class="prac-item"><span class="pric-free">Free</span>&nbsp; exterior &nbsp;|&nbsp; &#128178;&nbsp; ~&pound;18pp for the interior</span>
-          <span class="prac-item">&#128336;&nbsp; 9:30am&ndash;4:30pm (check seasonal hours)</span>
-          <span class="prac-item">&#9201;&nbsp; 20 min exterior / 1.5hrs interior</span>
-        </div>
-        <p class="activity-desc">The official Scottish residence of the monarch, at the foot of the Royal Mile directly opposite the Scottish Parliament. You will pass it on the return from Arthur&rsquo;s Seat. It is primarily a historic royal palace rather than a garden or nature space &mdash; but the Abbey ruins attached to it are genuinely dramatic and free to see from outside the gates. Allow 15&ndash;20 minutes here rather than a full visit, then continue up the Royal Mile.</p>
-        <ul class="highlights">
-          <li><b>Holyrood Abbey ruins (exterior, free):</b> The roofless shell of a 12th-century Augustinian abbey is attached to the right side of the palace and visible from the forecourt area. The arched window frames and the nave walls still standing against the sky are more visually dramatic than the palace itself &mdash; one of the best ruins in the city.</li>
-          <li><b>The palace forecourt:</b> The baroque facade is impressive from the gate. The fountain in the forecourt dates from the 16th century. You do not need a ticket to see this &mdash; you can approach the gates freely.</li>
-          <li><b>Interior (paid, ~&pound;18pp):</b> The Mary Queen of Scots apartments, where she lived in the 1560s, are the most interesting rooms inside &mdash; they are small, surprisingly intimate, and contain the actual chamber where her secretary was murdered in front of her. Worth it if this specific history appeals; not primarily a nature or garden experience.</li>
-          <li><b>Nature note:</b> The palace garden is not generally open to the public. For a genuine garden experience, the Royal Botanic Garden in Inverleith is the right choice &mdash; on the afternoon programme below.</li>
-        </ul>
-      </div>
-      <div class="map-area">
-        <iframe src="https://maps.google.com/maps?q=Palace+of+Holyroodhouse+Edinburgh+EH8+8DX&output=embed" loading="lazy" title="Holyrood Palace"></iframe>
-        <a class="map-open-link" href="https://www.google.com/maps/search/?api=1&query=Palace+Holyroodhouse+Edinburgh" target="_blank">Open in Google Maps &#8599;</a>
-      </div>
-    </div>
-  </div>
-
-  <div class="slot-label">Late morning &amp; afternoon &mdash; Spa day</div>
-
-  <div class="activity-card">
-    <div class="activity-card-body">
-      <div class="activity-info">
-        <div class="activity-type">&#128703;&nbsp; Spa &mdash; day access, no hotel stay required</div>
-        <div class="activity-name">One Spa at the Sheraton Grand Hotel Edinburgh</div>
-        <div class="activity-address">&#128205;&nbsp; 1 Festival Square, Edinburgh EH3 9SR &nbsp;&middot;&nbsp; West End, 20-min walk from hotel</div>
-        <div class="practical-row">
-          <span class="prac-item">&#128178;&nbsp; Facilities access: ~&pound;50&ndash;80pp &nbsp;&middot;&nbsp; Treatments extra &nbsp;&middot;&nbsp; Book: onespa.com</span>
-          <span class="prac-item">&#128336;&nbsp; Open daily &mdash; advance booking essential</span>
-          <span class="prac-item">&#9201;&nbsp; Allow 3hrs minimum for facilities + treatment</span>
-        </div>
-        <p class="activity-desc">One Spa is widely considered the best spa in Edinburgh city centre. The signature feature is the rooftop hydropool &mdash; a thermal pool on top of the building with direct views toward Edinburgh Castle. After the Arthur&rsquo;s Seat hike first thing this morning, a spa afternoon here is about as well-earned as it gets on any trip. Day visitor access is available without a hotel stay.</p>
-        <ul class="highlights">
-          <li><b>The rooftop hydropool:</b> A warm outdoor thermal pool on the roof of the Sheraton, looking directly toward the castle. One of the most memorable things you can do in Edinburgh &mdash; sitting in warm water watching the castle lit up above the city. Particularly good in the late afternoon when the October light is low.</li>
-          <li><b>The thermal suite:</b> A full thermal experience &mdash; steam room, sauna, experience showers, ice fountain, and a series of relaxation rooms at different temperatures. Allow at least 90 minutes in the thermal suite alone.</li>
-          <li><b>Treatments:</b> A full treatment menu including Swedish massage, hot stone massage, and couples treatments. Book a 60-minute treatment each alongside the facilities access. Couples treatment rooms are available &mdash; ask specifically when booking if you want to be treated at the same time in the same room.</li>
-          <li><b>The pool deck:</b> The indoor 20-metre pool beneath the rooftop level, warm and quiet on a weekday afternoon.</li>
-          <li><b>Post-spa dinner:</b> Festival Square outside the Sheraton has several restaurants &mdash; or the short walk back through the Grassmarket to the hotel gives options on the Royal Mile for a relaxed dinner afterward.</li>
-        </ul>
-        <div class="tip-box"><strong>Romantic note:</strong> The rooftop hydropool with the castle view is the single most romantic thing on the entire Edinburgh itinerary. Two people, warm water, the castle above the rooftops, late afternoon light in October. Book this early &mdash; it is the one slot on the trip where booking late is a genuine mistake.</div>
-        <div class="tip-box" style="margin-top:6px"><strong>Booking:</strong> Book at onespa.com or call directly. Specify day visitor access (facilities + treatments). For a weekday slot in October, book 2&ndash;3 weeks ahead. Request the rooftop hydropool access and confirm it is included in your package &mdash; on rare occasions it is closed for maintenance.</div>
-        <div class="tip-box" style="margin-top:6px"><strong>Getting there from hotel:</strong> Walk west from the Radisson Blu along the Royal Mile, down the Mound, through Princes Street Gardens, and along Lothian Road to Festival Square &mdash; about 20 min on foot, an easy walk. Or take a taxi (~&pound;6, 5 min).</div>
-        <div class="tip-box" style="margin-top:6px"><strong>Two more options if a slot opens up:</strong> The <strong>Chocolatarium</strong> (11 Holyrood Road) runs a tasting tour a short walk from the hotel and takes about an hour. The <strong>Royal Botanic Garden</strong> in Inverleith is free, open every day, and a 10-min walk from Stockbridge &mdash; it pairs naturally with the Dean Village walk on Day 11 if the weather is good.</div>
-      </div>
-      <div class="map-area">
-        <iframe src="https://maps.google.com/maps?q=One+Spa+Sheraton+Grand+Hotel+Edinburgh+Festival+Square+EH3+9SR&output=embed" loading="lazy" title="One Spa Sheraton Edinburgh"></iframe>
-        <a class="map-open-link" href="https://www.google.com/maps/search/?api=1&query=One+Spa+Sheraton+Grand+Edinburgh+EH3+9SR" target="_blank">Open in Google Maps &#8599;</a>
-      </div>
-    </div>
-  </div>
-
-  <div class="slot-label">Evening &mdash; New Town</div>
-
-  <div class="activity-card">
-    <div class="activity-card-body">
-      <div class="activity-info">
-        <div class="activity-type">&#127981;&nbsp; Georgian neighbourhood &mdash; free to explore</div>
-        <div class="activity-name">Princes Street Gardens &amp; New Town</div>
-        <div class="activity-address">&#128205;&nbsp; Princes Street Gardens, Edinburgh EH2 2AB &nbsp;&middot;&nbsp; North side of the Old Town</div>
-        <div class="practical-row">
-          <span class="prac-item"><span class="pric-free">Free</span></span>
-          <span class="prac-item">&#9201;&nbsp; 1.5&ndash;2hrs</span>
-        </div>
-        <p class="activity-desc">Princes Street Gardens runs along the base of the castle rock. The view looking up to Edinburgh Castle from the gardens is one of the most photographed in Scotland. The New Town beyond is a complete contrast to the Old Town &mdash; Georgian grid streets, grand terraces, a very different Edinburgh.</p>
-        <ul class="highlights">
-          <li><b>The gardens:</b> A long park at the foot of the castle rock. The Ross Fountain, the Scott Monument (a Gothic spire to Sir Walter Scott &mdash; you can climb it for &pound;12), and the flower clock.</li>
-          <li><b>The castle view:</b> From the central path in the gardens, the castle sits directly above you on the rock. The best stationary photograph of Edinburgh Castle is from here.</li>
-          <li><b>George Street:</b> A block north of Princes Street &mdash; the main shopping and restaurant street of the New Town. More relaxed and upmarket than Princes Street itself.</li>
-          <li><b>Rose Street:</b> A pedestrian lane between Princes Street and George Street &mdash; bars, boutiques, good for a coffee stop.</li>
-        </ul>
-      </div>
-      <div class="map-area">
-        <iframe src="https://maps.google.com/maps?q=Princes+Street+Gardens+Edinburgh+EH2+2AB&output=embed" loading="lazy" title="Princes Street Gardens"></iframe>
-        <a class="map-open-link" href="https://www.google.com/maps/search/?api=1&query=Princes+Street+Gardens+Edinburgh" target="_blank">Open in Google Maps &#8599;</a>
-      </div>
-    </div>
-  </div>
-
-  <div class="dinner-card">
-    <div class="dinner-title">&#127374;&nbsp; Dinner &mdash; New Town, George Street</div>
-    <div class="dinner-options">
-      <div class="dinner-opt"><b>The Gardener&rsquo;s Cottage</b> &mdash; 1 Royal Terrace Gardens, EH7 5DX. A small restaurant in a 19th-century cottage, one communal table, set menu of seasonal Scottish produce. Book months in advance &mdash; one of Edinburgh&rsquo;s best restaurants.</div>
-      <div class="dinner-opt"><b>Contini</b> &mdash; 103 George Street, EH2 3ES. Italian family cooking, good pasta, consistently excellent. A reliable and enjoyable mid-range dinner on George Street.</div>
-      <div class="dinner-opt"><b>The Ivy Edinburgh</b> &mdash; 4 St Andrew Square, EH2 2BD. The Edinburgh branch of the London restaurant. Good all-day menu, smart but not stuffy. Convenient for the New Town end of the day.</div>
-    </div>
-  </div>
-</section>
-
-<!-- ═══ DAY 13 ═══ -->
+<!-- ═══ DAY 11 ═══ -->
 <section class="day-section" id="day11">
   <div class="day-section-header">
     <span class="day-number">Day 11</span>
     <div>
-      <div class="day-title">Leith, the Royal Yacht &amp; Dean Village</div>
-      <div class="day-date">Wednesday, 14 October 2026 &nbsp;&middot;&nbsp; Last day in Edinburgh</div>
+      <div class="day-title">Arthur&rsquo;s Seat &amp; One Spa</div>
+      <div class="day-date">Wednesday, 14 October 2026</div>
     </div>
   </div>
 
-  <div class="tip-box" style="margin-bottom:1.25rem;padding:1rem 1.25rem;background:var(--amber-bg);border:1px solid var(--amber-bd);border-radius:var(--radius);font-size:13px;color:var(--ink2);line-height:1.75;">
-    <strong>Shape of the day.</strong> Britannia in the morning at Leith, then back into town for the Water of Leith walk and an afternoon in Stockbridge. No checkout today &mdash; the room is yours until tomorrow morning, so this is a proper last day rather than a travel day.
+  <div class="slot-label">8:00am, sunrise about 7:35am</div>
+
+  <div class="activity-card">
+    <div class="activity-card-body">
+      <div class="activity-info">
+        <div class="activity-type">&#9968;&nbsp; Hill walk, free</div>
+        <div class="activity-name">Arthur&rsquo;s Seat</div>
+        <div class="activity-address">&#128205;&nbsp; Holyrood Park, Edinburgh EH8 8HG &nbsp;&middot;&nbsp; Start from Holyrood, at the foot of the Mile</div>
+        <div class="practical-row">
+          <span class="prac-item"><span class="pric-free">Free</span></span>
+          <span class="prac-item">&#128336;&nbsp; About 45 minutes up the main path</span>
+          <span class="prac-item">&#9201;&nbsp; 2 to 2.5 hours round trip</span>
+        </div>
+        <p class="activity-desc">An extinct volcano in the middle of the city, 251 metres, about 45 minutes up the main path from Holyrood. Views over Edinburgh, the Forth and the Pentlands, the finest in the city. Sunrise is about 7:35am so an 8am start gets good light.</p>
+        <div class="tip-box"><strong>Bring a windproof layer:</strong> it is always windy at the top, and colder than the forecast. Waterproof footwear is worth it, the path can be damp.</div>
+      </div>
+      <div class="map-area">
+        <iframe src="https://maps.google.com/maps?q=Arthur's+Seat+Holyrood+Park+Edinburgh+EH8&output=embed" loading="lazy" title="Arthur's Seat map"></iframe>
+        <a class="map-open-link" href="https://www.google.com/maps/search/?api=1&query=Arthurs+Seat+Edinburgh+EH8" target="_blank">Open in Google Maps &#8599;</a>
+      </div>
+    </div>
   </div>
 
-  <div class="slot-label">Morning &mdash; the tram down to Leith</div>
+  <div class="slot-label">Late morning, coffee well earned</div>
+
+  <div class="activity-card">
+    <div class="activity-card-body">
+      <div class="activity-info">
+        <div class="activity-type">&#127963;&nbsp; Palace exterior &amp; abbey ruins, free to view</div>
+        <div class="activity-name">Holyrood Palace &amp; Abbey ruins</div>
+        <div class="activity-address">&#128205;&nbsp; Canongate, Edinburgh EH8 8DX &nbsp;&middot;&nbsp; Foot of the Royal Mile</div>
+        <div class="practical-row">
+          <span class="prac-item"><span class="pric-free">Free</span>&nbsp; (to view)</span>
+          <span class="prac-item">&#9201;&nbsp; 20 to 30 minutes</span>
+        </div>
+        <p class="activity-desc">Down past Holyrood Palace and the free-to-view Abbey ruins on the way back into town. Coffee at the foot of the Royal Mile, well earned after the climb.</p>
+      </div>
+      <div class="map-area">
+        <iframe src="https://maps.google.com/maps?q=Palace+of+Holyroodhouse+Edinburgh+EH8+8DX&output=embed" loading="lazy" title="Holyrood Palace map"></iframe>
+        <a class="map-open-link" href="https://www.google.com/maps/search/?api=1&query=Palace+of+Holyroodhouse+Edinburgh+EH8" target="_blank">Open in Google Maps &#8599;</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="slot-label">Afternoon, book 2 to 3 weeks ahead</div>
+
+  <div class="activity-card">
+    <div class="activity-card-body">
+      <div class="activity-info">
+        <div class="activity-type">&#128704;&nbsp; Spa, day access, book ahead</div>
+        <div class="activity-name">One Spa at the Sheraton Grand</div>
+        <div class="activity-address">&#128205;&nbsp; 8 Conference Sq, Festival Square, Edinburgh EH3 8AN</div>
+        <div class="practical-row">
+          <span class="prac-item">&#128178;&nbsp; About &pound;80 to &pound;150pp &nbsp;&middot;&nbsp; Book: onespa.com</span>
+          <span class="prac-item">&#128336;&nbsp; Day access, no hotel stay required</span>
+          <span class="prac-item">&#9201;&nbsp; An afternoon</span>
+        </div>
+        <p class="activity-desc">Day access with no hotel stay required. The rooftop hydropool faces the castle, outdoor and heated, in October. The best-earned afternoon of the Edinburgh stay after a morning up the hill.</p>
+        <div class="tip-box"><strong>Booking:</strong> book 2 to 3 weeks ahead and put both treatments in the same slot so you are in together. Confirm the rooftop hydropool is included in the day pass.</div>
+      </div>
+      <div class="map-area">
+        <iframe src="https://maps.google.com/maps?q=One+Spa+Sheraton+Grand+Edinburgh+EH3+8AN&output=embed" loading="lazy" title="One Spa map"></iframe>
+        <a class="map-open-link" href="https://www.google.com/maps/search/?api=1&query=One+Spa+Sheraton+Grand+Edinburgh+EH3" target="_blank">Open in Google Maps &#8599;</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="slot-label">Evening, sunset about 6:05pm</div>
+  <div class="dinner-card">
+    <div class="dinner-title">&#127374;&nbsp; Princes Street Gardens, then the New Town</div>
+    <div class="dinner-options">
+      <div class="dinner-opt"><b>Princes Street Gardens</b> on the walk back, where the castle view at dusk is the best in the city.</div>
+      <div class="dinner-opt"><b>Dinner on George Street or Thistle Street</b> in the New Town, a strong run of restaurants a short walk from the gardens.</div>
+    </div>
+  </div>
+</section><!-- end day 11 -->
+
+<!-- ═══ DAY 12 ═══ -->
+<section class="day-section" id="day12">
+  <div class="day-section-header">
+    <span class="day-number">Day 12</span>
+    <div>
+      <div class="day-title">Leith, Britannia &amp; Dean Village</div>
+      <div class="day-date">Thursday, 15 October 2026 &nbsp;&middot;&nbsp; Last full day in Scotland</div>
+    </div>
+  </div>
+
+  <div class="slot-label">10:00am, pre-book the 10am slot</div>
 
   <div class="transport-between">
-    <div class="transport-between-icon">&#128651;</div>
+    <div class="transport-between-icon">&#128652;</div>
     <div class="transport-between-text">
-      <strong>Princes Street &#8594; Leith (Ocean Terminal)</strong>
-      <span>Take bus 16 from Princes Street or the Edinburgh Tram to Newhaven. Journey time: approximately 20 minutes. Leith is Edinburgh&rsquo;s port district &mdash; a completely different character from the Old Town.</span>
+      <strong>Royal Mile &#8594; Leith</strong>
+      <span>Bus 16 or the tram down to Leith, about 20 minutes. Contactless works on both.</span>
     </div>
     <span class="transport-badge">~20 min</span>
   </div>
@@ -622,104 +526,111 @@
   <div class="activity-card">
     <div class="activity-card-body">
       <div class="activity-info">
-        <div class="activity-type">&#9973;&nbsp; Historic royal yacht &mdash; pre-book required</div>
+        <div class="activity-type">&#128674;&nbsp; Royal yacht, pre-book</div>
         <div class="activity-name">Royal Yacht Britannia</div>
         <div class="activity-address">&#128205;&nbsp; Ocean Terminal, Leith, Edinburgh EH6 6JJ</div>
         <div class="practical-row">
-          <span class="prac-item">&#128178;&nbsp; ~&pound;19pp &nbsp;|&nbsp; Book: royalyachtbritannia.co.uk</span>
-          <span class="prac-item">&#128336;&nbsp; Opens 10am daily</span>
-          <span class="prac-item">&#9201;&nbsp; Allow 2hrs</span>
+          <span class="prac-item">&#128178;&nbsp; About &pound;20pp &nbsp;&middot;&nbsp; Book: royalyachtbritannia.co.uk</span>
+          <span class="prac-item">&#128336;&nbsp; Book the 10am slot</span>
+          <span class="prac-item">&#9201;&nbsp; Allow 2 hours</span>
         </div>
-        <p class="activity-desc">The Royal Family&rsquo;s private floating home from 1954 to 1997, decommissioned and preserved exactly as it was on the final voyage. The combination of grand state rooms and intensely modest private quarters &mdash; the Queen&rsquo;s bedroom is no larger than a small hotel room &mdash; makes this one of the most quietly fascinating things to visit in Scotland.</p>
-        <ul class="highlights">
-          <li><b>The State Dining Room:</b> Used for official banquets with up to 56 guests. Everything on the table was placed by exact measurement before each dinner &mdash; rulers were used for every fork and glass.</li>
-          <li><b>The Royal Apartments:</b> The private rooms used by the Royal Family. Modest in scale; the personal photographs and family details make them unexpectedly affecting.</li>
-          <li><b>The Engine Room:</b> The original turbines that powered Britannia at up to 22 knots. A remarkable piece of mid-century engineering, maintained in perfect condition.</li>
-          <li><b>The Crew Quarters:</b> 220 officers and crew lived in conditions that contrast starkly with the upper decks. The contrast tells its own story.</li>
-        </ul>
-        <div class="tip-box"><strong>Practical:</strong> Audio guide is included in the ticket price and is very well done &mdash; use it throughout. The visit flows naturally in one direction from the gangplank to the gift shop. Allow the full 2hrs; the engine room and crew spaces near the end are the highlights for many visitors.</div>
-        <div class="tip-box" style="margin-top:6px"><strong>Book the 10am slot</strong> so the afternoon is free for Dean Village. Ocean Terminal has a food court if you want coffee before going in, but save lunch for Stockbridge.</div>
+        <p class="activity-desc">The royal family&rsquo;s floating home from 1954 to 1997, preserved exactly: the state rooms, the surprisingly small private cabins, the engine room. The audio guide is included and very well done. Book the 10am slot so the afternoon is free for Dean Village.</p>
       </div>
       <div class="map-area">
-        <iframe src="https://maps.google.com/maps?q=Royal+Yacht+Britannia+Ocean+Terminal+Leith+EH6+6JJ&output=embed" loading="lazy" title="Royal Yacht Britannia"></iframe>
-        <a class="map-open-link" href="https://www.google.com/maps/search/?api=1&query=Royal+Yacht+Britannia+Ocean+Terminal+Leith+EH6+6JJ" target="_blank">Open in Google Maps &#8599;</a>
+        <iframe src="https://maps.google.com/maps?q=Royal+Yacht+Britannia+Ocean+Terminal+Leith+EH6+6JJ&output=embed" loading="lazy" title="Royal Yacht Britannia map"></iframe>
+        <a class="map-open-link" href="https://www.google.com/maps/search/?api=1&query=Royal+Yacht+Britannia+Leith+EH6+6JJ" target="_blank">Open in Google Maps &#8599;</a>
       </div>
     </div>
   </div>
 
   <div class="transport-between">
-    <div class="transport-between-icon">&#128651;</div>
+    <div class="transport-between-icon">&#128652;</div>
     <div class="transport-between-text">
       <strong>Leith &#8594; Stockbridge</strong>
-      <span>Bus 16 back toward the centre and get off at Canonmills, or walk the Water of Leith path west from The Shore. The bus is about 15 min and drops you at the start of the walkway.</span>
+      <span>Bus 16 back toward the centre, get off at Canonmills, about 15 minutes. Stockbridge is the most pleasant neighbourhood in the city.</span>
     </div>
     <span class="transport-badge">~15 min</span>
   </div>
 
-  <div class="slot-label">Lunch &mdash; Stockbridge</div>
-
+  <div class="slot-label">Lunch, Stockbridge</div>
   <div class="dinner-card">
     <div class="dinner-title">&#127829;&nbsp; Lunch in Stockbridge</div>
     <div class="dinner-options">
-      <div class="dinner-opt"><b>The Scran &amp; Scallie</b> &mdash; 1 Comely Bank Rd, EH4 1DT. Tom Kitchin&rsquo;s relaxed pub restaurant. Excellent Scottish pub food, warm room, no dress code. Book ahead.</div>
-      <div class="dinner-opt"><b>Le Petit Cochon</b> &mdash; 8 Deanhaugh St, EH4 1LY. Small French bistro right by the bridge in Stockbridge. Good value set lunch.</div>
-      <div class="dinner-opt"><b>Any of the independent cafes on St Stephen Street</b> &mdash; the whole street is worth a slow walk, and there is no wrong choice on it.</div>
+      <div class="dinner-opt"><b>The Scran &amp; Scallie</b>, 1 Comely Bank Rd, EH4 1DT. Tom Kitchin&rsquo;s relaxed pub restaurant, excellent Scottish pub food. Book ahead.</div>
+      <div class="dinner-opt"><b>St Stephen Street</b>, the whole street is worth a slow walk with a strong run of independents, and there is no wrong choice on it.</div>
     </div>
   </div>
 
-  <div class="slot-label">Afternoon &mdash; Water of Leith &amp; Dean Village</div>
+  <div class="slot-label">Afternoon, free, the loveliest walk in the city</div>
 
   <div class="activity-card">
     <div class="activity-card-body">
       <div class="activity-info">
-        <div class="activity-type">&#127807;&nbsp; Riverside walk &mdash; free</div>
-        <div class="activity-name">Water of Leith Walkway &amp; Dean Village</div>
+        <div class="activity-type">&#127807;&nbsp; Riverside walk, free</div>
+        <div class="activity-name">Water of Leith Walkway to Dean Village</div>
         <div class="activity-address">&#128205;&nbsp; Start: Stockbridge, EH4 1LR &nbsp;&middot;&nbsp; End: Dean Village, EH4 3BQ</div>
         <div class="practical-row">
-          <span class="prac-item"><span class="pric-free">Free</span>&nbsp; to walk</span>
+          <span class="prac-item"><span class="pric-free">Free</span></span>
           <span class="prac-item">&#128336;&nbsp; Open at all times</span>
-          <span class="prac-item">&#9201;&nbsp; 45&ndash;60 min at a slow pace</span>
+          <span class="prac-item">&#9201;&nbsp; About 45 minutes at an easy pace</span>
         </div>
-        <p class="activity-desc">One of Edinburgh&rsquo;s best-kept secrets and the right way to finish four days here. The walkway follows the river through a hidden gorge below the New Town &mdash; mature woodland, stone bridges, the sound of the water, and the city gone completely. Dean Village at the end is a former mill village tucked into the gorge that most visitors never find.</p>
+        <p class="activity-desc">The path drops into a hidden gorge below the New Town and the city vanishes completely. St Bernard&rsquo;s Well is on the way, and Dean Village at the end is a former mill village almost no visitor finds. Quietly one of the loveliest walks in any British city.</p>
         <ul class="highlights">
-          <li><b>The gorge:</b> The path drops below street level almost immediately and the city disappears. Urban noise replaced by birdsong and water within two minutes of leaving Stockbridge.</li>
-          <li><b>St Bernard&rsquo;s Well:</b> A Roman-style mineral spring pavilion from 1789 on the riverbank, with a statue of Hygeia under a circular colonnade. A genuinely strange and beautiful thing to come across mid-walk.</li>
-          <li><b>Dean Village:</b> 17th-century mill buildings around a medieval bridge, now flats. Photogenic, quiet, and almost entirely overlooked. The view from Dean Bridge looking down is the one everybody photographs.</li>
-          <li><b>Carry on if you want:</b> The path continues west toward Roseburn. Or climb the steps at Dean Village up to Queensferry Street and you are a 15-min walk from the hotel.</li>
+          <li><b>St Bernard&rsquo;s Well:</b> a Roman-style mineral spring pavilion from 1789 on the riverbank.</li>
+          <li><b>Dean Village:</b> 17th-century mill buildings around a medieval bridge. The view from Dean Bridge looking down is the one everybody photographs.</li>
         </ul>
-        <div class="tip-box"><strong>Practical:</strong> Flat, well-surfaced, clearly signposted. Can be damp underfoot in October, so decent shoes rather than anything smart. Sunset is around 6pm in mid-October, so start by 3:30pm to have the light.</div>
-        <div class="tip-box" style="margin-top:6px"><strong>If it rains:</strong> Swap this for the <strong>National Museum of Scotland</strong> on Chambers Street (free, 10am&ndash;5pm, 8-min walk from the hotel). The Animal World atrium, the T. rex cast, and Dolly the Sheep are the reason to go, and the roof terrace has one of the better castle views in the city.</div>
+        <div class="tip-box"><strong>If it rains:</strong> swap this for the National Museum of Scotland if you have not already been, or simply do it in drizzle, the gorge is atmospheric either way.</div>
       </div>
       <div class="map-area">
-        <iframe src="https://maps.google.com/maps?q=Dean+Village+Edinburgh+EH4+3BQ&output=embed" loading="lazy" title="Dean Village Edinburgh"></iframe>
+        <iframe src="https://maps.google.com/maps?q=Dean+Village+Edinburgh+EH4+3BQ&output=embed" loading="lazy" title="Dean Village map"></iframe>
         <a class="map-open-link" href="https://www.google.com/maps/search/?api=1&query=Dean+Village+Edinburgh+EH4+3BQ" target="_blank">Open in Google Maps &#8599;</a>
       </div>
     </div>
   </div>
 
-  <div class="slot-label">Evening &mdash; farewell to Scotland</div>
+  <div class="slot-label">Optional, book ahead</div>
 
+  <div class="activity-card">
+    <div class="activity-card-body">
+      <div class="activity-info">
+        <div class="activity-type">&#127981;&nbsp; Guided tour, optional</div>
+        <div class="activity-name">The Real Mary King&rsquo;s Close</div>
+        <div class="activity-address">&#128205;&nbsp; 2 Warriston&rsquo;s Close, High St, Edinburgh EH1 1PG &nbsp;&middot;&nbsp; On the Royal Mile</div>
+        <div class="practical-row">
+          <span class="prac-item">&#128178;&nbsp; About &pound;22pp &nbsp;&middot;&nbsp; Book ahead</span>
+          <span class="prac-item">&#9201;&nbsp; About 1 hour</span>
+        </div>
+        <p class="activity-desc">A guided tour of 17th-century streets buried beneath the City Chambers on the Royal Mile. Atmospheric and genuinely good, and a fitting last afternoon activity if the weather turns. Book ahead.</p>
+      </div>
+      <div class="map-area">
+        <iframe src="https://maps.google.com/maps?q=The+Real+Mary+King's+Close+Edinburgh+EH1+1PG&output=embed" loading="lazy" title="Mary King's Close map"></iframe>
+        <a class="map-open-link" href="https://www.google.com/maps/search/?api=1&query=Real+Mary+Kings+Close+Edinburgh+EH1" target="_blank">Open in Google Maps &#8599;</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="slot-label">Evening, last dinner in Scotland</div>
   <div class="dinner-card">
-    <div class="dinner-title">&#127374;&nbsp; Last dinner in Edinburgh &mdash; book somewhere worth the occasion</div>
+    <div class="dinner-title">&#127374;&nbsp; Book somewhere worth the occasion</div>
     <div class="dinner-options">
-      <div class="dinner-opt"><b>Timberyard</b> &mdash; 10 Lady Lawson St, EH3 9DS. One of Edinburgh&rsquo;s most acclaimed restaurants. Scottish produce, open kitchen, a converted Victorian warehouse. The right room for a last night. Book well in advance.</div>
-      <div class="dinner-opt"><b>The Kitchin</b> &mdash; 78 Commercial Quay, Leith, EH6 6LX. Michelin-starred, and you will have passed it this morning on the way to Britannia. Book at kitchin.com.</div>
-      <div class="dinner-opt"><b>Wedgwood the Restaurant</b> &mdash; 267 Canongate, EH8 8BQ. Closer to the hotel on the lower Royal Mile. Seasonal Scottish menu, romantic setting, easier to get into at short notice.</div>
+      <div class="dinner-opt"><b>Timberyard</b>, 10 Lady Lawson St, EH3 9DS. One of Edinburgh&rsquo;s most acclaimed restaurants, the right room for a last night. Book well in advance.</div>
+      <div class="dinner-opt"><b>The Kitchin</b>, 78 Commercial Quay, Leith, EH6 6LX. Michelin-starred, and you will have passed it this morning on the way to Britannia.</div>
+      <div class="dinner-opt"><b>Wedgwood the Restaurant</b>, 267 Canongate, EH8 8BQ. Closer to the hotel on the lower Royal Mile, seasonal Scottish, easier to get into at short notice.</div>
     </div>
   </div>
 
   <div class="tip-box" style="margin:1.5rem 0;padding:1rem 1.25rem;background:var(--amber-bg);border:1px solid var(--amber-bd);border-radius:var(--radius);font-size:13px;color:var(--ink2);line-height:1.75;">
-    <strong>Tonight:</strong> Pack. Tomorrow morning (Thu 15 Oct) you check out by noon and take the LNER south from Waverley to London King&rsquo;s Cross, about 4hrs 30min. Book a table seat on the <strong>east side</strong> for the Northumberland coast and Durham cathedral from the viaduct. The rest of the trip is on the <a href="london.html#day12">London page</a>.
+    <strong>Tonight:</strong> pack. Tomorrow morning (Fri 16 Oct) you check out by noon and take the LNER south from Waverley to London King&rsquo;s Cross, about 4hr 20min. Book a table seat on the east side again. The final London night is on the <a href="london.html#day13">London page</a>.
   </div>
 
-</section>
+</section><!-- end day 12 -->
 </main>
 
 <div class="page-footer">
-  <span class="footer-brand">Edinburgh &nbsp;&middot;&nbsp; Days 8&ndash;11 &nbsp;&middot;&nbsp; 11&ndash;14 Oct</span>
+  <span class="footer-brand">Edinburgh &nbsp;&middot;&nbsp; Days 9 to 12 &nbsp;&middot;&nbsp; 12 to 16 Oct</span>
   <div style="display:flex;gap:1.5rem;">
-    <a href="york.html" class="prev-city-link">&#8592; York</a>
-    <a href="london.html#day12" class="next-city-link">Next: London &#8594;</a>
+    <a href="london.html" class="prev-city-link">&#8592; London</a>
+    <a href="london.html#day13" class="next-city-link">Back to London &#8594;</a>
   </div>
 </div>
 
