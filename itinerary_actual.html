@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Travel Itinerary - Simon &amp; Jenifer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink:#111; --ink2:#333; --ink3:#666;
+    --border:#bbb; --border-light:#ddd;
+    --header-bg:#f0f0f0; --stripe:#fafafa;
+    --accent:#1a3a6b; --red:#b00;
+    --green:#2a6e4a; --green-bg:#eef6f1; --green-bd:#b8dfc8;
+    --amber:#8a5015; --amber-bg:#fdf6ec; --amber-bd:#e8d5b0;
+    --radius:3px;
+  }
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+  html{font-size:14px;}
+  body{background:#d8d8d8;color:var(--ink);font-family:"Inter",sans-serif;font-weight:400;line-height:1.6;padding:2rem 1rem;}
+  .page{background:#fff;max-width:794px;margin:0 auto;padding:3rem 3.5rem;box-shadow:0 2px 16px rgba(0,0,0,.14);}
+
+  /* HEADER */
+  .doc-header{border-bottom:3px solid var(--green);padding-bottom:1.5rem;margin-bottom:1.75rem;}
+  .doc-type{font-size:10px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--green);margin-bottom:.5rem;}
+  .doc-title{font-family:"Playfair Display",serif;font-size:1.75rem;font-weight:400;color:var(--accent);line-height:1.15;margin-bottom:.35rem;}
+  .doc-subtitle{font-size:13px;color:var(--ink3);margin-bottom:1rem;}
+  .doc-meta{display:flex;gap:2rem;flex-wrap:wrap;border-top:1px solid var(--border-light);padding-top:.75rem;margin-top:.75rem;}
+  .doc-meta-item{font-size:12px;color:var(--ink3);}
+  .doc-meta-item strong{color:var(--ink2);display:block;font-size:10.5px;text-transform:uppercase;letter-spacing:.05em;margin-bottom:1px;}
+  .doc-meta-item span{color:var(--ink);font-weight:500;}
+
+  /* STATUS PILLS */
+  .pill{display:inline-block;font-size:10px;font-weight:600;letter-spacing:.04em;padding:1px 7px;border-radius:20px;white-space:nowrap;}
+  .pill-ok{background:var(--green-bg);color:var(--green);border:1px solid var(--green-bd);}
+  .pill-tbc{background:var(--amber-bg);color:var(--amber);border:1px solid var(--amber-bd);}
+
+  /* SECTION */
+  .section{margin-bottom:2rem;}
+  .section-heading{font-size:10px;font-weight:600;letter-spacing:.15em;text-transform:uppercase;color:#fff;background:var(--accent);padding:5px 10px;border-radius:var(--radius) var(--radius) 0 0;}
+  .section-body{border:1px solid var(--border);border-top:none;border-radius:0 0 var(--radius) var(--radius);overflow:hidden;}
+
+  /* FIELD TABLE */
+  .ft{width:100%;border-collapse:collapse;}
+  .ft tr:nth-child(even){background:var(--stripe);}
+  .ft td{padding:7px 12px;font-size:13px;border-bottom:1px solid var(--border-light);vertical-align:top;}
+  .ft tr:last-child td{border-bottom:none;}
+  .ft td:first-child{font-weight:600;color:var(--ink2);width:210px;white-space:nowrap;}
+
+  /* DATA TABLE */
+  .dt{width:100%;border-collapse:collapse;font-size:12.5px;}
+  .dt thead tr{background:var(--header-bg);}
+  .dt th{padding:7px 9px;text-align:left;font-weight:600;font-size:11px;text-transform:uppercase;letter-spacing:.04em;color:var(--ink2);border-bottom:2px solid var(--border);}
+  .dt td{padding:7px 9px;border-bottom:1px solid var(--border-light);vertical-align:top;line-height:1.5;}
+  .dt tbody tr:nth-child(even){background:var(--stripe);}
+  .dt tbody tr:last-child td{border-bottom:none;}
+  .itin-date{font-weight:600;white-space:nowrap;color:var(--accent);width:88px;}
+  .itin-dow{white-space:nowrap;width:68px;color:var(--ink3);}
+  .itin-city{font-weight:600;width:110px;}
+  .itin-hotel{color:var(--ink3);font-size:12px;width:150px;}
+
+  /* NOTICE BOX */
+  .notice{border:1px solid var(--border);border-left:4px solid var(--green);border-radius:var(--radius);padding:.75rem 1rem;font-size:12.5px;color:var(--ink2);line-height:1.7;margin-bottom:1.75rem;background:var(--green-bg);}
+  .notice strong{color:var(--green);}
+
+  /* NOTES LIST */
+  .notes{list-style:none;padding:.85rem 1.1rem;margin:0;}
+  .notes li{font-size:12px;color:var(--ink2);line-height:1.65;padding-left:14px;position:relative;margin-bottom:.5rem;}
+  .notes li:last-child{margin-bottom:0;}
+  .notes li::before{content:"\2013";position:absolute;left:0;color:var(--accent);}
+  .notes li strong{color:var(--ink);}
+
+  /* FOOTER */
+  .doc-footer{border-top:1px solid var(--border-light);padding-top:1rem;margin-top:2rem;font-size:11px;color:var(--ink3);display:flex;justify-content:space-between;flex-wrap:wrap;gap:.5rem;}
+
+  @media print{
+    body{background:#fff;padding:0;}
+    .page{box-shadow:none;padding:0;margin:0;max-width:100%;}
+    .section{page-break-inside:avoid;}
+    .dt tr{page-break-inside:avoid;}
+    .doc-footer{display:none;}
+    @page{size:A4 portrait;margin:2cm 2.5cm;}
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <div class="doc-header">
+    <p class="doc-type">Current Itinerary</p>
+    <h1 class="doc-title">Travel Itinerary</h1>
+    <p class="doc-subtitle">United Kingdom &nbsp;|&nbsp; Jenifer in the UK 5 to 17 October 2026 &nbsp;|&nbsp; Simon in the UK 4 to 17 October 2026</p>
+    <div class="doc-meta">
+      <div class="doc-meta-item"><strong>Travellers</strong><span>Jenifer Guangco Aban, Simon O'Donovan</span></div>
+      <div class="doc-meta-item"><strong>Visa status</strong><span>eVisa granted, 16/08/2026</span></div>
+      <div class="doc-meta-item"><strong>Last updated</strong><span>24/08/2026</span></div>
+    </div>
+  </div>
+
+  <div class="notice">
+    <strong>Flights and the London hotel are booked.</strong> Jenifer flies Qatar Airways, landing at Heathrow Terminal 4 at <strong>06:25 on Monday 5 October</strong> and departing at <strong>19:25 on Saturday 17 October</strong>. Simon travels in from Cork on 4 October. The eight London nights are confirmed and prepaid at the Premier Inn on Borough High Street. Edinburgh, the last London night, rail, and timed entries are still to book.
+  </div>
+
+
+  <div class="section">
+    <div class="section-heading">1. Visit Overview</div>
+    <div class="section-body">
+      <table class="ft">
+        <tr><td>Purpose of visit</td><td>Tourism and leisure</td></tr>
+        <tr><td>Places visited</td><td>London (England) and Edinburgh (Scotland)</td></tr>
+        <tr><td>Entry date</td><td>Monday, 5 October 2026, 06:25</td></tr>
+        <tr><td>Departure date</td><td>Saturday, 17 October 2026, 19:25</td></tr>
+        <tr><td>Duration in the UK</td><td>Jenifer: 13 days, 12 nights. Simon: 14 days, 13 nights</td></tr>
+        <tr><td>Port of entry</td><td>London Heathrow Airport, <strong>Terminal 4</strong></td></tr>
+        <tr><td>Port of exit</td><td>London Heathrow Airport, <strong>Terminal 4</strong></td></tr>
+        <tr><td>Inbound flight</td><td><strong>QR 933</strong>, Manila (MNL) Terminal 3, 18:35 Sun 4 Oct, to Doha (DOH) 22:50, Boeing 777-300ER. Connection 2 hrs 20 min. <strong>QR 011</strong>, Doha 01:10 to London Heathrow (LHR) Terminal 4 <strong>06:25 Mon 5 Oct</strong>, Airbus A380-800. Seats 22G and 52G. <span class="pill pill-ok">Confirmed</span></td></tr>
+        <tr><td>Return flight</td><td><strong>QR 012</strong>, London Heathrow (LHR) Terminal 4, 19:25 Sat 17 Oct, to Doha (DOH) 04:10, Boeing 777-300ER. Connection 4 hrs. <strong>QR 928</strong>, Doha 08:10 to Manila (MNL) <strong>22:20 Sun 18 Oct</strong>, Boeing 777-300ER. Seats to be selected. <span class="pill pill-ok">Confirmed</span></td></tr>
+        <tr><td>Booking reference</td><td>Qatar Airways PNR <strong>REDACTED</strong>, e-ticket REDACTED, economy, 25 kg checked baggage on every leg</td></tr>
+        <tr><td>Immigration status</td><td>UK Standard Visitor <strong>eVisa</strong>, valid 27 September 2026 to 27 March 2027, multiple entries, held digitally against the passport. No vignette in the passport.</td></tr>
+        <tr><td>After the visit</td><td>Jenifer lands in Manila at 22:20 on Sunday, 18 October 2026 and is back at work on Monday, 19 October 2026.</td></tr>
+        <tr><td>Travelling with</td><td>Simon O'Donovan, Irish citizen. He travels in from Cork on 4 October and meets Jenifer at Heathrow Terminal 4 on the morning of 5 October.</td></tr>
+      </table>
+    </div>
+  </div>
+
+
+  <div class="section">
+    <div class="section-heading">2. Accommodation</div>
+    <div class="section-body">
+      <table class="dt">
+        <thead>
+          <tr>
+            <th>Check-in</th>
+            <th>Check-out</th>
+            <th style="text-align:center;">Nights</th>
+            <th>Hotel</th>
+            <th>Address</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Sun 4 Oct 2026</td>
+            <td>Mon 12 Oct 2026</td>
+            <td style="text-align:center;">8</td>
+            <td>Premier Inn London Southwark (Borough High St)</td>
+            <td>135 Borough High Street, London SE1 1NP. Tel. 0333 234 6478</td>
+            <td><span class="pill pill-ok">Booked</span></td>
+          </tr>
+          <tr>
+            <td>Mon 12 Oct 2026</td>
+            <td>Fri 16 Oct 2026</td>
+            <td style="text-align:center;">4</td>
+            <td>Radisson Blu Hotel Edinburgh</td>
+            <td>80 High Street, Edinburgh EH1 1TH</td>
+            <td><span class="pill pill-tbc">To book</span></td>
+          </tr>
+          <tr>
+            <td>Fri 16 Oct 2026</td>
+            <td>Sat 17 Oct 2026</td>
+            <td style="text-align:center;">1</td>
+            <td>Premier Inn London King's Cross</td>
+            <td>Belgrove Street, London WC1H 8AN</td>
+            <td><span class="pill pill-tbc">To book</span></td>
+          </tr>
+        </tbody>
+      </table>
+      <ul class="notes" style="border-top:1px solid var(--border-light);">
+        <li>The Southwark booking runs from <strong>4 October</strong>, the night before Jenifer lands. Simon uses it, and it means the room is theirs when she arrives at 06:25 on the 5th rather than waiting until the 15:00 check-in.</li>
+        <li><strong>Southwark is confirmed.</strong> Premier Inn booking reference <strong>REDACTED</strong>, booked by Mr Simon O'Donovan, one double room for 2 adults, standard rate, 8 nights. Check in after 15:00 on 4 October, check out before 12:00 on 12 October. <strong>&pound;1,340.00 prepaid in full.</strong></li>
+      </ul>
+    </div>
+  </div>
+
+
+  <div class="section">
+    <div class="section-heading">3. Transport</div>
+    <div class="section-body">
+      <table class="dt">
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>Type</th>
+            <th>Route</th>
+            <th>Operator</th>
+            <th>Detail</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>4-5 Oct 2026</td>
+            <td>Air, inbound</td>
+            <td>Manila to Doha to London Heathrow T4</td>
+            <td>Qatar Airways</td>
+            <td>QR 933 / QR 011, arrive 06:25</td>
+            <td><span class="pill pill-ok">Booked</span></td>
+          </tr>
+          <tr>
+            <td>5 Oct 2026</td>
+            <td>Rail, transfer</td>
+            <td>Heathrow T4 to Borough High Street</td>
+            <td>Elizabeth line, then Thameslink</td>
+            <td>T4 to Farringdon, then Thameslink to London Bridge and a four-minute walk. Roughly an hour door to door.</td>
+            <td><span class="pill pill-tbc">Pay as you go</span></td>
+          </tr>
+          <tr>
+            <td>12 Oct 2026</td>
+            <td>Rail</td>
+            <td>London King's Cross to Edinburgh Waverley</td>
+            <td>LNER</td>
+            <td>Approx. 4 hrs 20 min, advance fare, east-side table seat</td>
+            <td><span class="pill pill-tbc">To book</span></td>
+          </tr>
+          <tr>
+            <td>16 Oct 2026</td>
+            <td>Rail</td>
+            <td>Edinburgh Waverley to London King's Cross</td>
+            <td>LNER</td>
+            <td>Approx. 4 hrs 20 min, advance fare, east-side table seat</td>
+            <td><span class="pill pill-tbc">To book</span></td>
+          </tr>
+          <tr>
+            <td>17 Oct 2026</td>
+            <td>Rail, transfer</td>
+            <td>King's Cross to Heathrow T4</td>
+            <td>Piccadilly line</td>
+            <td>Direct, about 60 min. <strong>Only alternate trains serve T4</strong>, so check the front of the train. Leave by 16:00.</td>
+            <td><span class="pill pill-tbc">Pay as you go</span></td>
+          </tr>
+          <tr>
+            <td>17-18 Oct 2026</td>
+            <td>Air, return</td>
+            <td>London Heathrow T4 to Doha to Manila</td>
+            <td>Qatar Airways</td>
+            <td>QR 012 / QR 928, depart 19:25, arrive 22:20 on 18 Oct</td>
+            <td><span class="pill pill-ok">Booked</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+
+  <div class="section">
+    <div class="section-heading">4. Day by Day Itinerary</div>
+    <div class="section-body">
+      <table class="dt">
+        <thead>
+          <tr>
+            <th class="itin-date">Date</th>
+            <th class="itin-dow">Day</th>
+            <th class="itin-city">City</th>
+            <th class="itin-hotel">Accommodation</th>
+            <th>Plan</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="itin-date">4 Oct 2026</td>
+            <td class="itin-dow">Sunday</td>
+            <td class="itin-city">London</td>
+            <td class="itin-hotel">Premier Inn Borough High St</td>
+            <td><strong>Simon only.</strong> In from Cork, checks into the Southwark hotel and settles the room for the week. Jenifer departs Manila at 18:35 local and is in the air overnight.</td>
+          </tr>
+          <tr>
+            <td class="itin-date">5 Oct 2026</td>
+            <td class="itin-dow">Monday</td>
+            <td class="itin-city">London</td>
+            <td class="itin-hotel">Premier Inn Borough High St</td>
+            <td><strong>Arrival, 06:25 at Terminal 4.</strong> Simon meets her at arrivals. Elizabeth line and Thameslink to London Bridge, in the room by about 08:00, shower and breakfast. <strong>Nothing planned before noon.</strong> Light lunch at Borough Market, then Southwark Cathedral, the Winchester Palace ruin, the Golden Hinde and Crossbones Graveyard, all within five minutes of the door. A walk west along the South Bank past the Millennium Bridge to the <strong>London Eye</strong> for the last rotation of the day, then back along the river. <strong>Cosy dinner at The George Inn, Borough High Street.</strong> Bed by 21:00 to reset the clock.</td>
+          </tr>
+          <tr>
+            <td class="itin-date">6 Oct 2026</td>
+            <td class="itin-dow">Tuesday</td>
+            <td class="itin-city">London</td>
+            <td class="itin-hotel">Premier Inn Borough High St</td>
+            <td>Westminster Abbey (timed entry). Horse Guards. St James's Park, Buckingham Palace exterior, Green Park. Natural History Museum, South Kensington, 14:00 (free, timed slot). Back to the hotel to change, then Clerkenwell: drinks at The Parlour, The Zetter, 18:35, and <strong>dinner at The Quality Chop House, Farringdon Road, 19:45 &#8212; a booth.</strong> Walk home over the Millennium Bridge.</td>
+          </tr>
+          <tr>
+            <td class="itin-date">7 Oct 2026</td>
+            <td class="itin-dow">Wednesday</td>
+            <td class="itin-city">London</td>
+            <td class="itin-hotel">Premier Inn Borough High St</td>
+            <td>St Paul's Cathedral at the 10:00 opening (timed entry), including the dome climb. Postman's Park. A long lunch on Lamb's Conduit Street, Bloomsbury, 12:45 to 14:40 &mdash; the main meal of the day. Rail from Euston by 15:00 via Watford Junction and the shuttle, out to Leavesden: Warner Bros. Studio Tour, The Making of Harry Potter, <strong>Dark Arts, 16:30 &mdash; booked, reference REDACTED</strong>, the late slot so the outdoor Backlot is dark. Out about 20:30, back at the hotel about 21:45.</td>
+          </tr>
+          <tr>
+            <td class="itin-date">8 Oct 2026</td>
+            <td class="itin-dow">Thursday</td>
+            <td class="itin-city">London</td>
+            <td class="itin-hotel">Premier Inn Borough High St</td>
+            <td>Covent Garden, Seven Dials and Soho on foot: Neal's Yard, Seven Dials Market, Endell Street vintage, Cecil Court, the chocolate and cake crawl, Somerset House. <strong>Hunterian Museum</strong> (free, timed) and Novelty Automation at Holborn. Back to the hotel at 17:15 to change. <strong>My Neighbour Totoro, Gillian Lynne Theatre, 19:00.</strong></td>
+          </tr>
+          <tr>
+            <td class="itin-date">9 Oct 2026</td>
+            <td class="itin-dow">Friday</td>
+            <td class="itin-city">London</td>
+            <td class="itin-hotel">Premier Inn Borough High St</td>
+            <td><strong>Borough Market</strong> at full Friday trading strength, then over London Bridge on foot. Leadenhall Market and St Dunstan in the East. <strong>Tower of London, 14:00</strong> (timed entry). Tower Bridge and the Garden at 120. <strong>Sky Garden, 20 Fenchurch Street</strong> (free, timed slot) at sunset, then the Thames Path home. No trains all day.</td>
+          </tr>
+          <tr>
+            <td class="itin-date">10 Oct 2026</td>
+            <td class="itin-dow">Saturday</td>
+            <td class="itin-city">London</td>
+            <td class="itin-hotel">Premier Inn Borough High St</td>
+            <td>Kew Gardens from the 10:00 opening: Palm House, Temperate House, the Sackler Crossing, the Hive, Treetop Walkway. Thames towpath from Richmond Bridge. <strong>Lunch at Petersham Nurseries, 14:00.</strong> Richmond Park for the deer rut and King Henry's Mound. <strong>Richmond Hill at sunset.</strong> Dinner in Richmond.</td>
+          </tr>
+          <tr>
+            <td class="itin-date">11 Oct 2026</td>
+            <td class="itin-dow">Sunday</td>
+            <td class="itin-city">London</td>
+            <td class="itin-hotel">Premier Inn Borough High St</td>
+            <td>Columbia Road Flower Market from 08:45 (Sundays only). Brick Lane and the Old Truman Brewery vintage markets. <strong>Fournier Street and the Hanbury Street murals, 14:00.</strong> Old Spitalfields and Petticoat Lane from 15:00, eating through the market rather than a sit-down lunch. Walk to Redchurch Street. <strong>Boundary Rooftop from 17:30</strong> for sunset cocktails. Dinner on Redchurch Street only if still hungry, then pack.</td>
+          </tr>
+          <tr>
+            <td class="itin-date">12 Oct 2026</td>
+            <td class="itin-dow">Monday</td>
+            <td class="itin-city">London / Edinburgh</td>
+            <td class="itin-hotel">Radisson Blu Edinburgh</td>
+            <td>Check out. LNER from King's Cross to Edinburgh Waverley, about 4 hrs 20 min. Check in on the Royal Mile. Orientation walk, the Old Town closes, and the Grassmarket.</td>
+          </tr>
+          <tr>
+            <td class="itin-date">13 Oct 2026</td>
+            <td class="itin-dow">Tuesday</td>
+            <td class="itin-city">Edinburgh</td>
+            <td class="itin-hotel">Radisson Blu Edinburgh</td>
+            <td>Edinburgh Castle at opening (timed entry). St Giles' Cathedral. Victoria Street, The Vennel, and Greyfriars Kirkyard. National Museum of Scotland. Calton Hill at sunset.</td>
+          </tr>
+          <tr>
+            <td class="itin-date">14 Oct 2026</td>
+            <td class="itin-dow">Wednesday</td>
+            <td class="itin-city">Edinburgh</td>
+            <td class="itin-hotel">Radisson Blu Edinburgh</td>
+            <td>Arthur's Seat, Holyrood Park. Holyrood Palace and Abbey ruins from the exterior. Spa afternoon at One Spa, Sheraton Grand. Princes Street Gardens and the New Town.</td>
+          </tr>
+          <tr>
+            <td class="itin-date">15 Oct 2026</td>
+            <td class="itin-dow">Thursday</td>
+            <td class="itin-city">Edinburgh</td>
+            <td class="itin-hotel">Radisson Blu Edinburgh</td>
+            <td>Royal Yacht Britannia at Leith, 10:00 slot. Lunch in Stockbridge. Water of Leith Walkway and Dean Village. Optional: The Real Mary King's Close. Last evening in Edinburgh.</td>
+          </tr>
+          <tr>
+            <td class="itin-date">16 Oct 2026</td>
+            <td class="itin-dow">Friday</td>
+            <td class="itin-city">Edinburgh / London</td>
+            <td class="itin-hotel">Premier Inn King's Cross</td>
+            <td>Check out. LNER from Edinburgh Waverley to King's Cross, about 4 hrs 20 min. Check in opposite the station. Dinner at Coal Drops Yard.</td>
+          </tr>
+          <tr>
+            <td class="itin-date">17 Oct 2026</td>
+            <td class="itin-dow">Saturday</td>
+            <td class="itin-city">London (depart)</td>
+            <td class="itin-hotel">Checked out</td>
+            <td><strong>A full free day.</strong> Check out by 11:00 and leave the bags at the hotel. The British Library Treasures gallery is five minutes away, the <strong>British Museum</strong> twenty minutes on foot, and the Regent's Canal towpath is on the doorstep if it is dry. Back for the bags by 15:30, Piccadilly line to <strong>Heathrow Terminal 4 for QR 012 at 19:25</strong>, aiming to be at the terminal by 16:25.</td>
+          </tr>
+          <tr>
+            <td class="itin-date">18 Oct 2026</td>
+            <td class="itin-dow">Sunday</td>
+            <td class="itin-city">In transit</td>
+            <td class="itin-hotel">-</td>
+            <td>Doha 04:10 to 08:10, a four-hour layover in the small hours. QR 928 lands in Manila at 22:20. Back at work Monday 19 October.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+
+  <div class="section">
+    <div class="section-heading">5. Practical Notes</div>
+    <div class="section-body">
+      <ul class="notes">
+        <li><strong>Arrival day.</strong> Manila is seven hours ahead of London in October, so 06:25 local is early afternoon body time. Nothing is planned before noon: she sleeps first. From the afternoon on, staying upright and outdoors until an early night beats going back to bed. Everything planned for the 5th is within walking distance of the hotel, and the only two bookings are a late-afternoon London Eye slot and dinner.</li>
+        <li><strong>Both flights use Heathrow Terminal 4.</strong> The Elizabeth line and the Piccadilly line both serve it, but the Piccadilly line splits and only alternate trains run to Terminal 4.</li>
+        <li><strong>Departure day.</strong> A 19:25 departure leaves the whole day free. Bags can stay at the Premier Inn after the 11:00 checkout, which is four minutes from King's Cross.</li>
+        <li><strong>Doha connections.</strong> 2 hrs 20 min outbound, 4 hrs on the return between 04:10 and 08:10. Bags are checked through to the final destination on both.</li>
+        <li><strong>The Studio Tour is ticketed and timed.</strong> Warner Bros. Studio Tour London, Studio Tour Drive, Leavesden, Watford WD25 7LR. Booking reference <strong>REDACTED</strong>, two Adult Advance tickets for <strong>16:30 on Wednesday 7 October 2026</strong>, &pound;117.00 paid in full. The e-tickets came by email and are shown on a phone or printed at the entrance. <strong>Admission is no earlier than 20 minutes before the slot</strong>, so there is nothing to gain by arriving early, and changes carry a &pound;10 administration fee. Rail from Euston to Watford Junction and the Mullany's shuttle are <strong>not</strong> part of the ticket and are paid separately on the day.</li>
+        <li><strong>At the border.</strong> The eVisa is read digitally from the passport, so Jenifer must travel on the passport it is linked to. A UKVI share code generated in the last few days before travel is worth having in case check-in staff ask.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="doc-footer">
+    <span>Travel Itinerary - updated as booked</span>
+    <span>Simon &amp; Jenifer &nbsp;|&nbsp; 4 to 18 October 2026</span>
+  </div>
+
+</div>
+</body>
+</html>

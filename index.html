@@ -76,7 +76,7 @@
   .tags{display:flex;flex-wrap:wrap;gap:5px;margin-top:8px;}
   .tag{font-size:10.5px;font-weight:500;padding:2px 7px;border-radius:20px;background:var(--surface2);border:1px solid var(--border);color:var(--ink3);}
   .tag.hi{background:#fdf6ec;border-color:#e8d0a0;color:#8a5015;}
-  .tag.free{background:#eef6f1;border-color:#b8dfc8;color:#1d6040;}
+  .tag.free,.tag.ok{background:#eef6f1;border-color:#b8dfc8;color:#1d6040;}
   .tag.note{background:#f0eefa;border-color:#c8b8e8;color:#5a3a8a;}
 
   /* TRANSPORT */
@@ -114,6 +114,8 @@
 
   /* NOTICE */
   .notice{background:var(--amber-bg);border:1px solid var(--amber-bd);border-radius:var(--radius);padding:1.4rem 1.5rem;margin-top:1.75rem;}
+  .notice.ok{background:#f2f8f4;border-color:#b8dfc8;}
+  .notice.ok .notice-title{color:var(--green);}
   .notice-title{font-family:'Playfair Display',serif;font-size:1rem;color:var(--amber);margin-bottom:.5rem;}
   .notice-text{font-size:13px;color:var(--ink2);line-height:1.78;}
   .notice-text strong{color:var(--ink);font-weight:600;}
@@ -145,7 +147,7 @@
   <div class="hero-inner">
     <p class="hero-label">4 to 17 October 2026 &nbsp;&middot;&nbsp; London &amp; Edinburgh</p>
     <h1 class="hero-title">UK Holiday<br><em>Simon &amp; Jenifer</em></h1>
-    <p class="hero-sub">London and Edinburgh across two weeks, by train, on foot, and by river. Eight days on Bankside, four in Edinburgh, and a last night by King&rsquo;s Cross before the flight home.</p>
+    <p class="hero-sub">London and Edinburgh across two weeks, by train, on foot, and by river. Eight days in Southwark, four in Edinburgh, and a last night by King&rsquo;s Cross before the flight home.</p>
     <div class="route">
       <span class="rc">MNL</span><span class="ra">&rarr;</span>
       <span class="rc">LHR</span><span class="ra">&rarr;</span>
@@ -156,7 +158,7 @@
     </div>
     <div class="hero-stats">
       <div><span class="hs-l">Flies</span><span class="hs-v">4 Oct</span></div>
-      <div><span class="hs-l">Arrives</span><span class="hs-v">4/5 Oct</span></div>
+      <div><span class="hs-l">Arrives</span><span class="hs-v">5 Oct</span></div>
       <div><span class="hs-l">Departs</span><span class="hs-v">17 Oct</span></div>
       <div><span class="hs-l">Cities</span><span class="hs-v">2</span></div>
     </div>
@@ -202,7 +204,7 @@
       <span class="c-num">01</span>
       <div class="c-info">
         <div class="c-name">London</div>
-        <div class="c-sub">Stay: <b>Premier Inn London Southwark (Bankside)</b> &nbsp;&middot;&nbsp; Getting around: <b>Tube, river boat &amp; walking</b></div>
+        <div class="c-sub">Stay: <b>Premier Inn London Southwark (Borough High St)</b> &nbsp;&middot;&nbsp; Getting around: <b>Tube, river boat &amp; walking</b></div>
       </div>
       <div class="c-nights">8<small>Nights</small></div>
     </div>
@@ -214,12 +216,12 @@
         <span class="d-dow">Sunday</span>
       </div>
       <div class="day-body">
-        <div class="d-title">Arrival</div>
+        <div class="d-title">Simon arrives, Jenifer flies</div>
         <div class="slots">
-          <div class="slot"><span class="st">Daytime</span><span>Jenifer flies out of Manila on 4 Oct and arrives at Heathrow either late the same evening or in the early hours of 5 Oct. Simon in from Cork. Both take the <b>Elizabeth Line</b> into central London, then across to Blackfriars. Check in, drop bags, sleep.</span></div>
-          <div class="slot"><span class="st">Evening</span><span>If upright, five minutes to the river and over the <b>Millennium Bridge</b> for St Paul&rsquo;s lit up, then straight back to bed. Twenty minutes is plenty on a long travel day.</span></div>
+          <div class="slot"><span class="st">Daytime</span><span><b>Simon in from Cork</b>, checks into the Southwark hotel and settles the room for the week. Jenifer leaves Manila at 18:35 local (<b>QR 933</b>) and is in the air overnight via Doha.</span></div>
+          <div class="slot"><span class="st">Evening</span><span>Simon&rsquo;s night: five minutes to the river and over the <b>Millennium Bridge</b> for St Paul&rsquo;s lit up. An early night, because the alarm is going off at 5am for the airport.</span></div>
         </div>
-        <div class="tags"><span class="tag hi">Arrival may fall in the early hours of 5 Oct</span><span class="tag">Elizabeth Line from LHR: about &pound;14pp</span></div>
+        <div class="tags"><span class="tag hi">Room held from tonight, so it is ready when she lands at 06:25</span><span class="tag">Elizabeth line from LHR: about &pound;14pp</span></div>
       </div>
     </div>
 
@@ -230,13 +232,15 @@
         <span class="d-dow">Monday</span>
       </div>
       <div class="day-body">
-        <div class="d-title">Recovery on Bankside</div>
+        <div class="d-title">Arrival, then a slow first day</div>
         <div class="slots">
-          <div class="slot"><span class="st">Late AM</span><span><b>Borough Market</b>, four minutes from the door. Monday runs limited traders, exactly what you want on a recovery day. Coffee, a pastry, a slow wander.</span></div>
-          <div class="slot"><span class="st">Early PM</span><span>All within five minutes: <b>Southwark Cathedral</b>, <b>Winchester Palace</b> ruin, the <b>Golden Hinde</b>, and optionally the <b>Old Operating Theatre</b> (check it is open).</span></div>
-          <div class="slot"><span class="st">4:00pm</span><span><b>Afternoon tea at The Swan at Shakespeare&rsquo;s Globe</b>, the one fixed point of the day, with Thames and St Paul&rsquo;s views.</span></div>
+          <div class="slot"><span class="st">06:25</span><span><b>QR 011 lands at Heathrow Terminal 4.</b> Simon meets her at arrivals. <b>Elizabeth line</b> to Farringdon, then Thameslink to London Bridge and four minutes on foot, in the room by about 8am because it was held from the night before. Shower, breakfast, no agenda.</span></div>
+          <div class="slot"><span class="st">Morning</span><span><b>Nothing at all.</b> Sleep. Everything below still works starting at one o&rsquo;clock, and the only thing with a time on it is a London Eye slot that is cheap to walk away from.</span></div>
+          <div class="slot"><span class="st">Afternoon</span><span>A light lunch at <b>Borough Market</b> (limited Monday trading, which is what you want), then <b>Southwark Cathedral</b>, the <b>Winchester Palace</b> ruin, the <b>Golden Hinde</b> and <b>Crossbones Graveyard</b>, all within five minutes of the door.</span></div>
+          <div class="slot"><span class="st">Dusk</span><span>Walk the South Bank west past the <b>Millennium Bridge</b> to the <b>London Eye</b>, and take the last rotation of the day &mdash; half an hour sitting down with the whole fortnight laid out underneath her before she has visited any of it. About &pound;30pp, booked online.</span></div>
+          <div class="slot"><span class="st">Evening</span><span>Back along the river for a cosy dinner at <b>The George Inn</b> on Borough High Street, London&rsquo;s last galleried coaching inn and two minutes from the hotel. Bed by 9pm.</span></div>
         </div>
-        <div class="tags"><span class="tag hi">Book afternoon tea at The Swan, about &pound;42pp</span><span class="tag free">Southwark Cathedral &amp; Winchester Palace free</span></div>
+        <div class="tags"><span class="tag hi">Book the London Eye, last slot</span><span class="tag hi">Book a table at The George Inn</span><span class="tag free">Southwark Cathedral &amp; Winchester Palace free</span></div>
       </div>
     </div>
 
@@ -251,9 +255,9 @@
         <div class="slots">
           <div class="slot"><span class="st">Morning</span><span><b>Westminster Abbey</b> at the first slot, then <b>Horse Guards</b> for the King&rsquo;s Life Guard at 11am, and the royal parks: <b>St James&rsquo;s Park</b>, Buckingham Palace exterior, Green Park.</span></div>
           <div class="slot"><span class="st">Afternoon</span><span><b>Natural History Museum</b> at 2pm (free, book a slot). Hintze Hall and the blue whale, the dinosaurs, and Earth Hall through the iron globe.</span></div>
-          <div class="slot"><span class="st">Evening</span><span>Piccadilly line to <b>Covent Garden</b>. Dinner around Seven Dials or Neal&rsquo;s Yard.</span></div>
+          <div class="slot"><span class="st">Evening</span><span>Back to the hotel at 5:15pm to shower and change. Out at 6:15 and Thameslink to <b>Clerkenwell</b>, six minutes away. A cocktail at <b>The Parlour</b> on St John&rsquo;s Square, which has live music on Tuesdays, then dinner at <b>The Quality Chop House</b> at 7:45 &mdash; ask for one of the Victorian booths. Walk home past Smithfield and over the <b>Millennium Bridge</b> with St Paul&rsquo;s lit behind you.</span></div>
         </div>
-        <div class="tags"><span class="tag hi">Pre-book Westminster Abbey</span><span class="tag free">Natural History Museum free (timed slot)</span></div>
+        <div class="tags"><span class="tag hi">Pre-book Westminster Abbey</span><span class="tag hi">Book the Quality Chop House, request a booth</span><span class="tag hi">Book The Parlour for drinks</span><span class="tag free">Natural History Museum free (timed slot)</span><span class="tag note"><a href="london.html#appendix-british-museum" style="color:inherit;text-decoration:none;">Could swap for the British Museum &rarr;</a></span></div>
       </div>
     </div>
 
@@ -264,13 +268,13 @@
         <span class="d-dow">Wednesday</span>
       </div>
       <div class="day-body">
-        <div class="d-title">The City &amp; the Tower</div>
+        <div class="d-title">St Paul&rsquo;s, then the Studio Tour</div>
         <div class="slots">
-          <div class="slot"><span class="st">Morning</span><span><b>St Paul&rsquo;s Cathedral</b> at 10am with the full dome climb, then east through the City on foot: <b>Postman&rsquo;s Park</b>, <b>Leadenhall Market</b>, and <b>St Dunstan in the East</b>.</span></div>
-          <div class="slot"><span class="st">Afternoon</span><span><b>Tower of London</b> at 2pm. Join a Yeoman Warder tour on arrival, then the Crown Jewels and the White Tower.</span></div>
-          <div class="slot"><span class="st">Late PM</span><span><b>Tower Bridge</b> on foot, then the free rooftop <b>Garden at 120</b>. Walk home along the Thames Path at dusk.</span></div>
+          <div class="slot"><span class="st">Morning</span><span><b>St Paul&rsquo;s Cathedral</b> at the 10am opening with the full dome climb &mdash; 528 steps to the Golden Gallery. Then <b>Postman&rsquo;s Park</b>, two minutes north.</span></div>
+          <div class="slot"><span class="st">12:45</span><span>The <b>long lunch</b> on <b>Lamb&rsquo;s Conduit Street</b> in Bloomsbury &mdash; nearly two hours at the table, and the main meal of the day. Then a train out of Euston by <b>3pm</b> via Watford Junction and the Mullany&rsquo;s shuttle.</span></div>
+          <div class="slot"><span class="st">16:30</span><span><b>Warner Bros. Studio Tour</b> at Leavesden with the <b>Dark Arts</b> dressing. Self-paced, allow 4 hours. The late slot is deliberate: you reach the outdoor Backlot about 7pm, after the 6:25 sunset. Out about 8:30pm, home about 9:45pm.</span></div>
         </div>
-        <div class="tags"><span class="tag hi">Pre-book St Paul&rsquo;s &amp; Tower of London</span><span class="tag free">St Dunstan &amp; Garden at 120 free</span></div>
+        <div class="tags"><span class="tag ok">Studio Tour booked &middot; 16:30 &middot; ref REDACTED</span><span class="tag hi">Still to book: St Paul&rsquo;s, and the Lamb&rsquo;s Conduit lunch</span><span class="tag">Arrive no more than 20 min before the slot</span><span class="tag note">Heavy on the legs &mdash; dome climb then 4 hrs walking</span></div>
       </div>
     </div>
 
@@ -281,13 +285,13 @@
         <span class="d-dow">Thursday</span>
       </div>
       <div class="day-body">
-        <div class="d-title">Greenwich by River, then Totoro</div>
+        <div class="d-title">Covent Garden, Seven Dials &amp; Soho, then Totoro</div>
         <div class="slots">
-          <div class="slot"><span class="st">Morning</span><span><b>Thames Clipper</b> from Bankside to Greenwich. <b>Cutty Sark</b>, the <b>Greenwich Foot Tunnel</b> to Island Gardens, and the <b>Royal Observatory</b> and Prime Meridian.</span></div>
-          <div class="slot"><span class="st">Afternoon</span><span><b>Greenwich Park</b> and the Flower Garden, then the Clipper back to Bankside to shower and change.</span></div>
-          <div class="slot"><span class="st">Evening</span><span>Dinner in Covent Garden, then <b>My Neighbour Totoro</b> at the Gillian Lynne Theatre, 7pm.</span></div>
+          <div class="slot"><span class="st">Morning</span><span><b>Neal&rsquo;s Yard</b> before it fills up, <b>Seven Dials</b>, and cheese off a conveyor belt at <b>Seven Dials Market</b>. Vintage on Endell Street, then <b>Cecil Court</b>, a Victorian alley of antiquarian booksellers and occult shops.</span></div>
+          <div class="slot"><span class="st">Afternoon</span><span>A chocolate and cake crawl &mdash; Venchi, Ladur&eacute;e, Bageriet, Maison Bertaux. Then the <b>piazza</b> buskers, <b>Somerset House</b>, the <b>Hunterian Museum</b> (free) and <b>Novelty Automation</b> at Holborn. Back to the hotel at 5:15pm to shower and change.</span></div>
+          <div class="slot"><span class="st">7:00pm</span><span><b>My Neighbour Totoro</b> at the Gillian Lynne Theatre. The romantic evening is on Tuesday instead &mdash; a 7pm curtain leaves no room for both.</span></div>
         </div>
-        <div class="tags"><span class="tag hi">Book Totoro by late August for 20% off</span><span class="tag hi">Cutty Sark + Observatory combined ticket</span></div>
+        <div class="tags"><span class="tag note"><a href="london.html#appendix-british-museum" style="color:inherit;text-decoration:none;">Swap-in available this morning: British Museum &rarr;</a></span><span class="tag note"><a href="london.html#appendix-windsor" style="color:inherit;text-decoration:none;">Spare day available: Windsor &rarr;</a></span><span class="tag hi">Book Totoro by late August for 20% off</span><span class="tag free">Hunterian Museum, Somerset House &amp; Neal&rsquo;s Yard free</span></div>
       </div>
     </div>
 
@@ -298,13 +302,14 @@
         <span class="d-dow">Friday</span>
       </div>
       <div class="day-body">
-        <div class="d-title">Harry Potter Studio Tour, Dark Arts</div>
+        <div class="d-title">The City &amp; the Tower</div>
         <div class="slots">
-          <div class="slot"><span class="st">Morning</span><span>Free. Lie in, then <b>Borough Market at full trading strength</b>, the market as it actually is on a Friday.</span></div>
-          <div class="slot"><span class="st">13:30</span><span><b>Warner Bros. Studio Tour</b> at Leavesden. Travel independently: Euston to Watford Junction, then the Mullany&rsquo;s shuttle. Self-paced, 3 to 4 hours, with the <b>Dark Arts</b> Halloween dressing.</span></div>
-          <div class="slot"><span class="st">Evening</span><span>Back in central London about 7pm. Late, easy dinner near the hotel.</span></div>
+          <div class="slot"><span class="st">Morning</span><span><b>Borough Market at full trading strength</b>, the market as it actually is on a Friday, then straight over <b>London Bridge</b> into the City. No tube all day.</span></div>
+          <div class="slot"><span class="st">Late AM</span><span><b>Leadenhall Market</b>, the Victorian arcade used as Diagon Alley, and <b>St Dunstan in the East</b>, a Blitz ruin taken over by a garden. Lunch under the Leadenhall roof.</span></div>
+          <div class="slot"><span class="st">Afternoon</span><span><b>Tower of London</b> at 2pm &mdash; Yeoman Warder tour on arrival, then the Crown Jewels and the White Tower. <b>Tower Bridge</b> on foot and the free rooftop <b>Garden at 120</b>.</span></div>
+          <div class="slot"><span class="st">Sunset</span><span><b>Sky Garden</b> on floor 35 of the Walkie Talkie &mdash; three storeys of planting under a glass roof, free but on a timed slot released about three weeks ahead. Then the Thames Path home in the dark.</span></div>
         </div>
-        <div class="tags"><span class="tag hi">Book the Studio Tour now, October slots sell out</span><span class="tag">No tickets at the door</span></div>
+        <div class="tags"><span class="tag note"><a href="london.html#appendix-windsor" style="color:inherit;text-decoration:none;">Spare day available: Windsor &rarr;</a></span><span class="tag hi">Pre-book Tower of London</span><span class="tag hi">Book the free Sky Garden slot, 3 weeks out</span><span class="tag free">St Dunstan &amp; Garden at 120 free</span><span class="tag note">One walk, no trains</span></div>
       </div>
     </div>
 
@@ -315,13 +320,13 @@
         <span class="d-dow">Saturday</span>
       </div>
       <div class="day-body">
-        <div class="d-title">Kew, Petersham &amp; Richmond Park</div>
+        <div class="d-title">Kew, Petersham &amp; Richmond Hill</div>
         <div class="slots">
-          <div class="slot"><span class="st">Morning</span><span>One District line west. <b>Kew Gardens</b> at 10am for the glasshouses and autumn colour.</span></div>
-          <div class="slot"><span class="st">Lunch</span><span><b>Petersham Nurseries</b>, a Green Michelin Star in a pergola. Book well ahead.</span></div>
-          <div class="slot"><span class="st">Afternoon</span><span><b>Richmond Park</b> for the deer rut, then <b>Richmond Hill</b> for sunset, the only view in England protected by its own Act of Parliament.</span></div>
+          <div class="slot"><span class="st">Morning</span><span>One District line west. <b>Kew Gardens</b> at the 10am opening: the <b>Palm House</b> canopy walkway, the <b>Temperate House</b>, the <b>Sackler Crossing</b> over the lake, and the <b>Hive</b> &mdash; lie on the glass floor and look up.</span></div>
+          <div class="slot"><span class="st">Lunch</span><span>The Thames towpath from <b>Richmond Bridge</b>, then <b>Petersham Nurseries</b> at 2pm &mdash; book the Caf&eacute;, a glasshouse with plants growing over the tables. Then the shop.</span></div>
+          <div class="slot"><span class="st">Afternoon</span><span><b>Richmond Park</b> for the deer rut and <b>King Henry&rsquo;s Mound</b>, where a gap in a hedge frames St Paul&rsquo;s ten miles away. Then <b>Richmond Hill</b> for sunset, the only view in England protected by its own Act of Parliament.</span></div>
         </div>
-        <div class="tags"><span class="tag hi">Book Petersham Nurseries</span><span class="tag free">Richmond Park &amp; Richmond Hill free</span><span class="tag note">Keep 50m from the deer during the rut</span></div>
+        <div class="tags"><span class="tag note"><a href="london.html#appendix-windsor" style="color:inherit;text-decoration:none;">Spare day available: Windsor &rarr;</a></span><span class="tag hi">Book Kew and Petersham Nurseries</span><span class="tag free">Richmond Park &amp; Richmond Hill free</span><span class="tag note">Keep 50m from the deer during the rut</span></div>
       </div>
     </div>
 
@@ -332,13 +337,14 @@
         <span class="d-dow">Sunday</span>
       </div>
       <div class="day-body">
-        <div class="d-title">East End &amp; Hampstead</div>
+        <div class="d-title">The East End: thrifting, flowers &amp; a rooftop sunset</div>
         <div class="slots">
-          <div class="slot"><span class="st">Morning</span><span><b>Columbia Road Flower Market</b> at 8am (Sundays only), then <b>Brick Lane</b>, a Beigel Bake salt beef bagel, and Old Spitalfields Market.</span></div>
-          <div class="slot"><span class="st">Afternoon</span><span><b>British Museum</b> for two hours of highlights, or Sir John Soane&rsquo;s if you want something small and strange.</span></div>
-          <div class="slot"><span class="st">Evening</span><span><b>Hampstead Heath</b> and <b>Parliament Hill</b> for sunset, the local&rsquo;s view of the city. Pack tonight, the Edinburgh train is tomorrow.</span></div>
+          <div class="slot"><span class="st">Morning</span><span><b>Columbia Road Flower Market</b> from 8:45am (Sundays only) &mdash; buy her flowers and carry them all day. Vintage Heaven and the Cake Hole behind the stalls, then coffee on Ezra Street.</span></div>
+          <div class="slot"><span class="st">Midday</span><span><b>Brick Lane</b> and the <b>Old Truman Brewery</b>: the vintage market basement, Blitz, Absolute Vintage, Rokit, Beyond Retro. A Beigel Bake salt beef bagel and a <b>Dark Sugars</b> hot chocolate under a landslide of shaved chocolate.</span></div>
+          <div class="slot"><span class="st">Afternoon</span><span>2pm: the Hanbury Street murals and <b>Fournier Street</b>, a 1720s Huguenot silk-weavers&rsquo; terrace. 3pm: <b>Old Spitalfields</b> and <b>Petticoat Lane</b>, and eat your way through both rather than ordering one thing.</span></div>
+          <div class="slot"><span class="st">Sunset</span><span>Twelve minutes up Brick Lane to the <b>Boundary Rooftop</b> on Redchurch Street &mdash; cocktails as the City skyline comes on, with a glass Orangery for when October bites. Dinner afterwards only if you are still hungry; Redchurch Street is full of it. Pack tonight, the Edinburgh train is tomorrow.</span></div>
         </div>
-        <div class="tags"><span class="tag free">Columbia Road &amp; British Museum free</span><span class="tag hi">Book a free British Museum slot</span></div>
+        <div class="tags"><span class="tag free">Columbia Road, Brick Lane &amp; the markets free</span><span class="tag hi">Boundary Rooftop, about &pound;35pp for cocktails</span><span class="tag note">A slow meander, not a route</span></div>
       </div>
     </div>
 
@@ -481,10 +487,10 @@
       <div class="day-body">
         <div class="d-title">Departure</div>
         <div class="slots">
-          <div class="slot"><span class="st">Morning</span><span>Check out. If the flight is later, breakfast and a walk on the <b>Regent&rsquo;s Canal towpath</b> behind the station, or the British Library if it rains.</span></div>
-          <div class="slot"><span class="st">Departure</span><span><b>Piccadilly line direct</b> from King&rsquo;s Cross St Pancras to Heathrow, about 50 minutes. Jenifer flies home to Manila and is back at work on Monday 19 Oct. Simon makes his way home to Cork.</span></div>
+          <div class="slot"><span class="st">Daytime</span><span>Check out and leave bags at the hotel. The flight is not until the evening, so there is a full day: breakfast and a walk on the <b>Regent&rsquo;s Canal towpath</b> behind the station, the British Library if it rains, or the <b>British Museum</b> &mdash; free, opens at 10am, and twenty minutes on foot.</span></div>
+          <div class="slot"><span class="st">Departure</span><span>Back for the bags by about 15:00, then the <b>Piccadilly line direct</b> from King&rsquo;s Cross St Pancras to Heathrow, about 50 minutes, for <b>QR 012 at 19:25 from Terminal 4</b>. Jenifer lands in Manila at 22:20 on Sun 18 Oct and is back at work on Monday 19 Oct. Simon makes his way home to Cork.</span></div>
         </div>
-        <div class="tags"><span class="tag">Piccadilly line: King&rsquo;s Cross &rarr; LHR, about 50min direct</span><span class="tag hi">Allow 3hrs at Heathrow for a long-haul departure</span></div>
+        <div class="tags"><span class="tag">Piccadilly line: King&rsquo;s Cross &rarr; LHR, about 50min direct</span><span class="tag hi">QR 012 departs 19:25, be at Terminal 4 by 16:25</span></div>
       </div>
     </div>
 
@@ -496,9 +502,9 @@
   <div class="hotels">
     <div class="hotel">
       <div class="hotel-city">London, 8 nights (4 to 12 Oct)</div>
-      <div class="hotel-name">Premier Inn London Southwark (Bankside)</div>
-      <div class="hotel-desc">Bankside, SE1. On the South Bank, four minutes from Borough Market and a few from the Thames Clipper pier. The single best base for the whole London week. Consistent quality and good value for a central stay.</div>
-      <span class="hotel-price">Rate confirmed on booking</span>
+      <div class="hotel-name">Premier Inn London Southwark (Borough High St)</div>
+      <div class="hotel-desc">135 Borough High Street, SE1 1NP. Four minutes from London Bridge station and the same again to Borough Market, with Southwark Cathedral and the river just beyond. The single best base for the whole London week. Booking reference REDACTED, one double room, check in after 3pm on 4 Oct.</div>
+      <span class="hotel-price">Booked &middot; &pound;1,340 prepaid</span>
     </div>
     <div class="hotel">
       <div class="hotel-city">Edinburgh, 4 nights (12 to 16 Oct)</div>
@@ -514,22 +520,64 @@
     </div>
   </div>
 
-  <div class="notice">
-    <div class="notice-title">Visa note, UK Standard Visitor Visa</div>
+  <!-- FLIGHTS -->
+  <p class="section-title">Flights, booked</p>
+  <div class="hotels">
+    <div class="hotel">
+      <div class="hotel-city">Outbound, Sun 4 Oct &rarr; Mon 5 Oct</div>
+      <div class="hotel-name">Manila &rarr; London Heathrow, via Doha</div>
+      <div class="hotel-desc">
+        <b>QR 933</b> &nbsp;MNL 18:35 (Terminal 3) &rarr; DOH 22:50, 9hr 15min, Boeing 777-300ER. Seat 22G.<br>
+        2hr 20min in Doha.<br>
+        <b>QR 011</b> &nbsp;DOH 01:10 &rarr; LHR 06:25 (Terminal 4), 7hr 15min, Airbus A380. Seat 52G.
+      </div>
+      <span class="hotel-price">Confirmed &middot; 25kg checked</span>
+    </div>
+    <div class="hotel">
+      <div class="hotel-city">Inbound, Sat 17 Oct &rarr; Sun 18 Oct</div>
+      <div class="hotel-name">London Heathrow &rarr; Manila, via Doha</div>
+      <div class="hotel-desc">
+        <b>QR 012</b> &nbsp;LHR 19:25 (Terminal 4) &rarr; DOH 04:10, 6hr 45min, Boeing 777-300ER.<br>
+        4hr in Doha.<br>
+        <b>QR 928</b> &nbsp;DOH 08:10 &rarr; MNL 22:20, 9hr 10min, Boeing 777-300ER. Back at work Mon 19 Oct.
+      </div>
+      <span class="hotel-price">Confirmed &middot; 25kg checked</span>
+    </div>
+    <div class="hotel">
+      <div class="hotel-city">Booking</div>
+      <div class="hotel-name">Qatar Airways, booking reference REDACTED</div>
+      <div class="hotel-desc">Ms Jenifer Guangco Aban, e-ticket REDACTED. Economy both ways, seats selected on the outbound legs only. Booked 16 August 2026, total EUR 1,108.07 including seat selection.</div>
+      <span class="hotel-price">Paid in full</span>
+    </div>
+  </div>
+
+  <!-- ATTRACTIONS -->
+  <p class="section-title">Attractions, booked</p>
+  <div class="hotels">
+    <div class="hotel">
+      <div class="hotel-city">Wednesday 7 Oct, 16:30 entry</div>
+      <div class="hotel-name">Warner Bros. Studio Tour London &mdash; The Making of Harry Potter</div>
+      <div class="hotel-desc">Studio Tour Drive, Leavesden, Watford WD25 7LR. Booking reference <b>REDACTED</b>, two Adult Advance tickets, booked 24 August 2026. The 16:30 slot is the one the day was built around: the outdoor Backlot is reached about 7pm, after the 6:25 sunset, with the Dark Arts dressing running from 16 September to 8 November. E-tickets by email, shown on a phone or printed. <b>Admission is no earlier than 20 minutes before the slot</b>, and rail out to Watford Junction is not included in the ticket.</div>
+      <span class="hotel-price">Booked &middot; &pound;117 for two, paid</span>
+    </div>
+  </div>
+
+  <div class="notice ok">
+    <div class="notice-title">Visa granted, UK Standard Visitor</div>
     <div class="notice-text">
-      Jenifer will need a <strong>UK Standard Visitor Visa</strong> before travelling. This itinerary is a key supporting document: it shows a clear route with exact dates (<strong>4 to 17 October 2026</strong>), named hotels, and realistic travel connections.<br><br>
-      <strong>Sponsorship:</strong> all costs of the trip are covered by Simon (Jenifer&rsquo;s partner, Irish citizen). The visa application should include a signed sponsorship letter from Simon, his 3-month bank statements, and payslips. Jenifer should also include her IBM employment letter and her own bank statements, to demonstrate stable employment and ties to the Philippines, not to show self-funding.<br><br>
-      <strong>Flight tickets:</strong> UKVI does <em>not</em> require confirmed or paid flight tickets with the application. A proposed itinerary showing intended dates and routes is sufficient. Do not purchase non-refundable tickets before the visa decision is received. Book flights after the visa is granted.<br><br>
-      <strong>Return:</strong> Jenifer flies home from Heathrow on <strong>17 October</strong> and is back at work on <strong>Monday 19 October</strong>. The approved-leave letter from IBM and the return booking are the two documents that carry the most weight on return intent.
+      Jenifer&rsquo;s <strong>UK Standard Visitor eVisa</strong> has been issued. It is an eVisa held digitally against her passport, not a vignette in the passport. Status confirmed on <strong>16 August 2026</strong>: valid from <strong>27 September 2026</strong> to <strong>27 March 2027</strong>, <strong>multiple entries</strong> permitted, up to 6 months per stay. The validity window comfortably covers the trip dates of 4 to 17 October 2026.<br><br>
+      <strong>Flights:</strong> booked and paid. Qatar Airways, booking reference <strong>REDACTED</strong>, Manila to Heathrow on 4 October arriving 5 October at 06:25, and Heathrow to Manila departing 17 October at 19:25.<br><br>
+      <strong>Sponsorship:</strong> all costs of the trip are covered by Simon (Jenifer&rsquo;s partner, Irish citizen), as set out in the sponsorship letter submitted with the application.<br><br>
+      <strong>At the border:</strong> the eVisa is checked digitally against the passport, so Jenifer must travel on the <em>same passport</em> the eVisa is linked to. Generate a fresh UKVI share code shortly before travelling, as share codes expire, and carry printed copies of the itinerary, hotel confirmation, return flight, and the IBM leave letter. The entry stamp or permitted-stay date given on arrival, not the eVisa expiry, is the legal departure deadline.
     </div>
   </div>
 
 
-  <p class="section-title" style="margin-top:2.5rem;">Visa application, preparation guide</p>
+  <p class="section-title" style="margin-top:2.5rem;">Visa application, preparation guide (completed)</p>
 
   <div style="background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;margin-bottom:1rem;">
     <div style="background:#1a3a6b;padding:10px 1.25rem;">
-      <span style="font-size:10px;font-weight:600;letter-spacing:.15em;text-transform:uppercase;color:#fff;">&#128196;&nbsp; This guide is for Simon and Jenifer only, not part of the visa submission</span>
+      <span style="font-size:10px;font-weight:600;letter-spacing:.15em;text-transform:uppercase;color:#fff;">&#128196;&nbsp; Application complete, visa granted 16 Aug 2026. Kept as a record of what was submitted</span>
     </div>
     <div style="padding:1.25rem 1.5rem;display:flex;flex-direction:column;gap:1.25rem;">
 
@@ -566,23 +614,7 @@
     </div>
   </div>
 
-  <div class="itin-link-box">
-    <span class="itin-link-icon">&#128196;</span>
-    <div class="itin-link-text">
-      <strong>Visa Application Itinerary</strong>
-      A print-ready itinerary formatted for inclusion with the UK Standard Visitor Visa application documents.
-    </div>
-    <a href="itinerary.html" class="itin-link-btn">View &amp; Print &#8599;</a>
-  </div>
-
-  <div class="itin-link-box">
-    <span class="itin-link-icon">&#128176;</span>
-    <div class="itin-link-text">
-      <strong>Estimated Trip Costs</strong>
-      A print-ready cost estimate and sponsorship summary showing what Simon is covering for Jenifer, and the full trip cost for both.
-    </div>
-    <a href="costs.html" class="itin-link-btn">View &amp; Print &#8599;</a>
-  </div>
+  <p class="section-title" style="margin-top:2.5rem;">Live documents</p>
 
   <div class="itin-link-box">
     <span class="itin-link-icon">&#9989;</span>
@@ -591,6 +623,44 @@
       Everything that needs generating, compiling, booking, or carrying, grouped by category with progress tracking.
     </div>
     <a href="checklist.html" class="itin-link-btn">Open checklist &#8599;</a>
+  </div>
+
+  <div class="itin-link-box">
+    <span class="itin-link-icon">&#128197;</span>
+    <div class="itin-link-text">
+      <strong>Travel Itinerary</strong>
+      The plan as it stands: confirmed flights, hotels, transport, and the day by day route. Print-ready.
+    </div>
+    <a href="itinerary_actual.html" class="itin-link-btn">View &amp; Print &#8599;</a>
+  </div>
+
+  <div class="itin-link-box">
+    <span class="itin-link-icon">&#128178;</span>
+    <div class="itin-link-text">
+      <strong>Trip Costs</strong>
+      What is paid and what is left, updated as each item is booked. Print-ready.
+    </div>
+    <a href="cost_actual.html" class="itin-link-btn">View &amp; Print &#8599;</a>
+  </div>
+
+  <p class="section-title" style="margin-top:2.5rem;">Visa submission, point-in-time record</p>
+
+  <div class="itin-link-box" style="background:var(--surface2);border-color:var(--border);">
+    <span class="itin-link-icon">&#128196;</span>
+    <div class="itin-link-text">
+      <strong style="color:var(--ink2);">Visa Application Itinerary</strong>
+      Submitted 23 July 2026. Kept unchanged as a record of what was declared. Do not edit.
+    </div>
+    <a href="itinerary.html" class="itin-link-btn" style="background:#6a6258;">View &#8599;</a>
+  </div>
+
+  <div class="itin-link-box" style="background:var(--surface2);border-color:var(--border);">
+    <span class="itin-link-icon">&#128176;</span>
+    <div class="itin-link-text">
+      <strong style="color:var(--ink2);">Estimated Trip Costs</strong>
+      Submitted 23 July 2026. The sponsorship figures the application was assessed on. Do not edit.
+    </div>
+    <a href="costs.html" class="itin-link-btn" style="background:#6a6258;">View &#8599;</a>
   </div>
 
 </main>

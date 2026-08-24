@@ -80,6 +80,8 @@
   .highlights li b{color:var(--ink);font-weight:500;}
   .tip-box{background:var(--amber-bg);border:1px solid var(--amber-bd);border-radius:6px;padding:.6rem .85rem;margin-top:.75rem;font-size:12px;color:var(--ink2);line-height:1.6;}
   .tip-box strong{color:var(--amber);font-weight:600;}
+  .booked-box{background:#eef6f1;border:1px solid #b8dfc8;border-radius:6px;padding:.6rem .85rem;margin-top:.75rem;font-size:12px;color:var(--ink2);line-height:1.6;}
+  .booked-box strong{color:var(--green);font-weight:600;}
   .map-area{position:relative;height:100%;min-height:240px;background:#eee;border-left:1px solid var(--border);}
   .map-area iframe{display:block;width:100%;height:100%;min-height:240px;border:0;}
   .map-open-link{display:block;padding:8px 12px;background:var(--surface2);border-top:1px solid var(--border);font-size:11px;font-weight:500;color:var(--blue);text-decoration:none;text-align:center;}
@@ -121,6 +123,21 @@
   .dinner-options{display:flex;flex-direction:column;gap:5px;}
   .dinner-opt{font-size:12.5px;color:var(--ink2);line-height:1.6;}
   .dinner-opt b{color:var(--ink);font-weight:500;}
+
+  /* APPENDIX / OPTIONAL SWAP-IN DAY */
+  .appendix-divider{margin:5rem 0 0;padding-top:2.5rem;border-top:3px double var(--border);text-align:center;}
+  .appendix-kicker{font-size:10px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--amber);margin-bottom:.6rem;}
+  .appendix-heading{font-family:'Playfair Display',serif;font-size:1.9rem;font-weight:400;color:var(--ink);line-height:1.15;margin-bottom:.6rem;}
+  .appendix-blurb{font-size:13px;color:var(--ink2);line-height:1.75;max-width:620px;margin:0 auto;}
+  .appendix-section{position:relative;padding:2rem 1.5rem 2.25rem;margin-top:2rem;background:rgba(181,118,42,.035);border:1px dashed var(--amber-bd);border-radius:var(--radius);}
+  .appendix-section .day-section-header{border-bottom-color:var(--amber);}
+  .appendix-section .day-number{color:var(--amber);background:rgba(181,118,42,.1);}
+  .swap-banner{display:flex;align-items:flex-start;gap:12px;padding:1rem 1.25rem;background:var(--surface);border:1px solid var(--amber-bd);border-left:4px solid var(--amber);border-radius:var(--radius);margin-bottom:1.75rem;}
+  .swap-banner-icon{font-size:1.1rem;line-height:1.4;flex-shrink:0;}
+  .swap-banner-text{font-size:13px;color:var(--ink2);line-height:1.7;}
+  .swap-banner-text strong{color:var(--ink);font-weight:600;}
+  .optional-flag{display:inline-block;font-size:9.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--amber);background:rgba(181,118,42,.1);border:1px solid var(--amber-bd);padding:2px 7px;border-radius:3px;vertical-align:middle;margin-left:8px;}
+  .optional-card{border-style:dashed;border-color:var(--amber-bd);background:rgba(181,118,42,.03);}
 
   /* FOOTER */
   .page-footer{border-top:1px solid var(--border);padding:1.75rem 5vw;max-width:860px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;}
@@ -197,6 +214,8 @@
     <a href="#day8">Day 8 &nbsp;&middot;&nbsp; 11 Oct</a>
     <a href="#day13">Day 13 &nbsp;&middot;&nbsp; 16 Oct</a>
     <a href="#day14">Day 14 &nbsp;&middot;&nbsp; 17 Oct</a>
+    <a href="#appendix-windsor" style="color:var(--amber);">Appendix &nbsp;&middot;&nbsp; Windsor</a>
+    <a href="#appendix-british-museum" style="color:var(--amber);">Appendix &nbsp;&middot;&nbsp; British Museum</a>
   </div>
 </div>
 
@@ -233,17 +252,17 @@
         <div class="arrival-row-icon">&#9992;&#65039;</div>
         <div class="arrival-row-content">
           <strong>Jenifer, arriving at Heathrow (LHR)</strong>
-          <span class="step"><strong>Note on timing:</strong> Jenifer flies out of Manila on <strong>4 October</strong>. Depending on the routing booked, she lands at Heathrow either late that same evening or in the <strong>early hours of 5 October</strong>. Either way the room is booked from the night of the 4th, so it is there whenever she gets in.</span>
+          <span class="step"><strong>Note on timing:</strong> Jenifer flies out of Manila at 18:35 on <strong>4 October</strong> and lands at <strong>Heathrow Terminal 4 at 06:25 on Monday 5 October</strong> on QR 011. The room is booked from the night of the 4th, so it is theirs the moment she arrives rather than waiting for the 3pm check-in.</span>
           <span class="step">At the airport, follow signs for the <strong>Elizabeth Line</strong> (also called Crossrail). It runs from Terminals 2 and 3 and from Terminal 5. No booking needed: tap a contactless card at the gate. Cost is about &pound;14.</span>
-          <span class="step">Take any eastbound Elizabeth Line train toward Abbey Wood or Shenfield and ride to <strong>Farringdon</strong> (about 45 minutes). At Farringdon change to the <strong>Thameslink or Circle line</strong> one stop south to <strong>Blackfriars</strong>. Use the <strong>south exit</strong> at Blackfriars, which brings you out on the south bank. Walk east along the riverside path for about 8 minutes and the hotel is on your left.</span>
+          <span class="step">Take any eastbound Elizabeth Line train toward Abbey Wood or Shenfield and ride to <strong>Farringdon</strong> (about 45 minutes). At Farringdon change to <strong>Thameslink</strong> southbound and ride three stops to <strong>London Bridge</strong>. Leave by the Borough High Street exit and the hotel is about 4 minutes south on the left, at number 135.</span>
         </div>
       </div>
       <div class="arrival-row">
         <div class="arrival-row-icon">&#9992;&#65039;</div>
         <div class="arrival-row-content">
           <strong>Simon, arriving from Cork</strong>
-          <span class="step">Short flight into Heathrow or Gatwick. From <strong>Heathrow</strong>, follow the same Elizabeth Line route to Farringdon and Blackfriars as above.</span>
-          <span class="step">From <strong>Gatwick</strong>, take the <strong>Thameslink</strong> train direct to <strong>Blackfriars</strong> (about 45 minutes). Use the south exit and walk east along the south bank for 8 minutes to the hotel.</span>
+          <span class="step">Short flight into Heathrow or Gatwick. From <strong>Heathrow</strong>, follow the same Elizabeth Line route to Farringdon and London Bridge as above.</span>
+          <span class="step">From <strong>Gatwick</strong>, take the <strong>Thameslink</strong> train direct to <strong>London Bridge</strong> (about 35 minutes), then walk 4 minutes down Borough High Street to the hotel.</span>
         </div>
       </div>
     </div>
@@ -254,18 +273,19 @@
     <div class="hotel-card-body">
       <div class="hotel-info">
         <div class="hotel-badge">&#127968;&nbsp; Base for nights 1 to 8</div>
-        <div class="hotel-name">Premier Inn London Southwark (Bankside)</div>
-        <div class="hotel-address">&#128205;&nbsp; Bankside, London SE1 &nbsp;&middot;&nbsp; On the South Bank</div>
+        <div class="hotel-name">Premier Inn London Southwark (Borough High St)</div>
+        <div class="hotel-address">&#128205;&nbsp; 135 Borough High Street, London SE1 1NP &nbsp;&middot;&nbsp; Tel. 0333 234 6478</div>
         <ul class="hotel-detail">
-          <li>Check-in from <strong>3pm</strong>, check-out by <strong>noon</strong> on 12 Oct (the Edinburgh train day)</li>
+          <li><strong>Booked and prepaid.</strong> Reference <strong>REDACTED</strong>, one double room, 2 adults, 8 nights</li>
+          <li>Check-in from <strong>3pm</strong> on 4 Oct, check-out by <strong>noon</strong> on 12 Oct (the Edinburgh train day)</li>
           <li>Luggage storage available if you arrive before 3pm, so drop the bags and go exploring</li>
-          <li>Nearest stations: <strong>Southwark</strong> (Jubilee line, 10-minute walk) and <strong>Blackfriars</strong> (Thameslink, Circle and District, use the south exit, 8-minute walk east along the riverbank)</li>
-          <li><strong>Borough Market</strong> is 4 minutes from the door and the Thames riverfront is 3 minutes. This is the single best base for the whole week</li>
+          <li>Nearest stations: <strong>Borough</strong> (Northern line, 2-minute walk) and <strong>London Bridge</strong> (Northern, Jubilee, Thameslink and national rail, 4-minute walk)</li>
+          <li><strong>Borough Market</strong> is 4 minutes from the door, Southwark Cathedral 5, and the Thames riverfront 6. This is the single best base for the whole week</li>
         </ul>
       </div>
       <div class="map-area">
-        <iframe src="https://maps.google.com/maps?q=Premier+Inn+London+Bankside+SE1&output=embed" loading="lazy" title="Premier Inn Bankside map"></iframe>
-        <a class="map-open-link" href="https://www.google.com/maps/search/?api=1&query=Premier+Inn+London+Bankside+SE1" target="_blank">Open in Google Maps &#8599;</a>
+        <iframe src="https://maps.google.com/maps?q=135+Borough+High+Street+London+SE1+1NP&output=embed" loading="lazy" title="Premier Inn Borough High Street map"></iframe>
+        <a class="map-open-link" href="https://www.google.com/maps/search/?api=1&query=135+Borough+High+Street+London+SE1+1NP" target="_blank">Open in Google Maps &#8599;</a>
       </div>
     </div>
   </div>
@@ -277,7 +297,7 @@
       <div class="activity-info">
         <div class="activity-type">&#127748;&nbsp; Riverside walk</div>
         <div class="activity-name">Millennium Bridge &amp; the South Bank</div>
-        <div class="activity-address">&#128205;&nbsp; Bankside, London SE1 9TG &nbsp;&middot;&nbsp; 5-minute walk from the hotel</div>
+        <div class="activity-address">&#128205;&nbsp; Bankside, London SE1 9TG &nbsp;&middot;&nbsp; 12-minute walk from the hotel</div>
         <div class="practical-row">
           <span class="prac-item">&#128336;&nbsp; Any time, the path is lit and open all hours</span>
           <span class="prac-item"><span class="pric-free">Free</span></span>
@@ -309,16 +329,31 @@
   <div class="day-section-header">
     <span class="day-number">Day 2</span>
     <div class="day-title-block">
-      <div class="day-title">Recovery on Bankside</div>
-      <div class="day-date">Monday, 5 October 2026 &nbsp;&middot;&nbsp; Sleep as late as you need</div>
+      <div class="day-title">Arrival &amp; a Slow First Day</div>
+      <div class="day-date">Monday, 5 October 2026 &nbsp;&middot;&nbsp; Lands 06:25, nothing before noon</div>
     </div>
   </div>
 
   <div class="tip-box" style="margin-bottom:1.25rem;padding:1rem 1.25rem;background:var(--amber-bg);border:1px solid var(--amber-bd);border-radius:var(--radius);font-size:13px;color:var(--ink2);line-height:1.75;">
-    <strong>One booking, and it is late in the day.</strong> London is seven hours behind Manila, so this day is built so that sleeping until 1pm costs you nothing. Everything below is within five minutes of the hotel, and the only fixed point is afternoon tea at 4pm.
+    <strong>Two bookings all day, and one of them is dinner.</strong> QR 011 lands at Heathrow Terminal 4 at <strong>06:25</strong>, so she is showered and in the room by about eight in the morning after twenty hours in the air. <strong>Nothing is planned before noon.</strong> The afternoon is four free things within five minutes of the hotel door, then a slow walk west to the <strong>London Eye</strong> as the light goes &mdash; half an hour sitting down, looking at the whole of the coming fortnight at once &mdash; and the evening is a cosy dinner two minutes from the hotel. Manila is seven hours ahead of London, so staying upright and outdoors until an early night is what resets the clock &#8212; but not until she has slept.
   </div>
 
-  <div class="slot-label">Late morning</div>
+  <div class="transport-between">
+    <div class="transport-between-icon">&#128647;</div>
+    <div class="transport-between-text">
+      <strong>Heathrow Terminal 4 &#8594; Borough High Street</strong>
+      <span>Simon meets her at arrivals. Elizabeth line from Terminal 4 to Farringdon, then Thameslink one stop to London Bridge and a four-minute walk. Roughly an hour door to door, contactless at the gate, about &pound;14. The room is booked from the night of the 4th, so it is theirs on arrival rather than at the 3pm check-in.</span>
+    </div>
+    <span class="transport-badge">~1 hour</span>
+  </div>
+
+  <div class="slot-label">Morning &#8212; nothing at all</div>
+
+  <div class="tip-box" style="margin-bottom:1.25rem;">
+    <strong>Sleep, and do not feel clever about skipping it.</strong> Shower, breakfast, and then back to bed until noon if she wants it. Everything below still works starting at one o&rsquo;clock, and the only thing with a time on it is a late-afternoon London Eye slot that is cheap to walk away from.
+  </div>
+
+  <div class="slot-label">Early afternoon, a light lunch on the doorstep</div>
 
   <div class="activity-card">
     <div class="activity-card-body">
@@ -331,7 +366,7 @@
           <span class="prac-item">&#128336;&nbsp; Monday runs limited traders</span>
           <span class="prac-item">&#9201;&nbsp; As long as you like</span>
         </div>
-        <p class="activity-desc">London&rsquo;s oldest food market. Monday is a limited trading day, which is exactly what you want on a recovery morning: half strength and half the crowd. Coffee, a pastry, and a slow wander. You come back on Friday to see it at full strength, so there is no need to do it all now.</p>
+        <p class="activity-desc">London&rsquo;s oldest food market, and a light lunch rather than a project. Monday is a limited trading day, which is exactly what you want on a first afternoon: half strength and half the crowd. Coffee, something warm, and a slow wander. You come back on Friday to see it at full strength, so there is no need to do it all now.</p>
         <ul class="highlights">
           <li><b>Coffee:</b> Monmouth Coffee at the corner of the market is among the best in London.</li>
           <li><b>Bread Ahead</b> for a doughnut, and the cheese and produce stalls that do trade on a Monday.</li>
@@ -344,7 +379,7 @@
     </div>
   </div>
 
-  <div class="slot-label">Early afternoon, all within five minutes</div>
+  <div class="slot-label">Then, all within five minutes of the door</div>
 
   <div class="activity-card">
     <div class="activity-card-body">
@@ -378,7 +413,7 @@
         <p class="activity-desc">Two easy stops a minute apart. The ruined rose window of a medieval bishop&rsquo;s palace stands in the street at Winchester Palace, free and easy to walk straight past. A minute on is the Golden Hinde, a full-size replica of Drake&rsquo;s galleon moored in a dock off the street.</p>
       </div>
       <div class="map-area">
-        <iframe src="https://maps.google.com/maps?q=Winchester+Palace+Clink+Street+London+SE1&output=embed" loading="lazy" title="Winchester Palace map"></iframe>
+        <iframe src="https://maps.google.com/maps?q=Winchester+Palace+Clink+Street+London+SE1+9DG&output=embed" loading="lazy" title="Winchester Palace map"></iframe>
         <a class="map-open-link" href="https://www.google.com/maps/search/?api=1&query=Winchester+Palace+London+SE1" target="_blank">Open in Google Maps &#8599;</a>
       </div>
     </div>
@@ -387,53 +422,105 @@
   <div class="activity-card">
     <div class="activity-card-body">
       <div class="activity-info">
-        <div class="activity-type">&#129658;&nbsp; Optional, check opening days first</div>
-        <div class="activity-name">The Old Operating Theatre</div>
-        <div class="activity-address">&#128205;&nbsp; 9a St Thomas St, London SE1 9RY &nbsp;&middot;&nbsp; 6-minute walk from the hotel</div>
+        <div class="activity-type">&#127807;&nbsp; A strange little corner, free</div>
+        <div class="activity-name">Crossbones Graveyard</div>
+        <div class="activity-address">&#128205;&nbsp; Redcross Way, London SE1 1TA &nbsp;&middot;&nbsp; 2-minute walk from the hotel</div>
         <div class="practical-row">
-          <span class="prac-item">&#128178;&nbsp; About &pound;7.50pp</span>
-          <span class="prac-item">&#128336;&nbsp; Not open every day, check first</span>
-          <span class="prac-item">&#9201;&nbsp; 30 to 45 minutes</span>
+          <span class="prac-item"><span class="pric-free">Free</span></span>
+          <span class="prac-item">&#128336;&nbsp; Gates always visible, garden hours vary</span>
+          <span class="prac-item">&#9201;&nbsp; 10 minutes</span>
         </div>
-        <p class="activity-desc">Britain&rsquo;s oldest surviving operating theatre, set in the roof space of a church and reached up a spiral staircase. Odd and excellent. It is not open daily, so check the opening days before you walk over.</p>
-        <div class="tip-box"><strong>Check first:</strong> Opening days vary. Look it up before making the short walk, and treat it as a bonus rather than a fixed plan.</div>
+        <p class="activity-desc">A medieval burial ground for the outcast dead &#8212; paupers, and the women who worked the Bankside stews under the Bishop of Winchester&rsquo;s licence. The iron gates are covered in ribbons, beads and handwritten tokens left by strangers, and there is a small memorial garden behind them. Two minutes from the hotel, ten minutes of your time, and completely unlike anything else on the street.</p>
       </div>
       <div class="map-area">
-        <iframe src="https://maps.google.com/maps?q=Old+Operating+Theatre+Museum+London+SE1+9RY&output=embed" loading="lazy" title="Old Operating Theatre map"></iframe>
-        <a class="map-open-link" href="https://www.google.com/maps/search/?api=1&query=Old+Operating+Theatre+Museum+London+SE1" target="_blank">Open in Google Maps &#8599;</a>
+        <iframe src="https://maps.google.com/maps?q=Crossbones+Graveyard+Redcross+Way+London+SE1+1TA&output=embed" loading="lazy" title="Crossbones Graveyard map"></iframe>
+        <a class="map-open-link" href="https://www.google.com/maps/search/?api=1&query=Crossbones+Graveyard+London+SE1" target="_blank">Open in Google Maps &#8599;</a>
       </div>
     </div>
   </div>
-
-  <div class="slot-label">4:00pm, the one fixed point</div>
 
   <div class="activity-card">
     <div class="activity-card-body">
       <div class="activity-info">
-        <div class="activity-type">&#127861;&nbsp; Afternoon tea, book ahead</div>
-        <div class="activity-name">Afternoon Tea at The Swan at Shakespeare&rsquo;s Globe</div>
-        <div class="activity-address">&#128205;&nbsp; 21 New Globe Walk, London SE1 9DT &nbsp;&middot;&nbsp; 5-minute walk from the hotel</div>
+        <div class="activity-type">&#129658;&nbsp; Optional, and probably shut today</div>
+        <div class="activity-name">The Old Operating Theatre</div>
+        <div class="activity-address">&#128205;&nbsp; 9a St Thomas St, London SE1 9RY &nbsp;&middot;&nbsp; 6-minute walk from the hotel</div>
         <div class="practical-row">
-          <span class="prac-item">&#128178;&nbsp; About &pound;42pp &nbsp;&middot;&nbsp; Book ahead</span>
-          <span class="prac-item">&#128336;&nbsp; 4:00pm sitting</span>
-          <span class="prac-item">&#9201;&nbsp; 1.5 hours</span>
+          <span class="prac-item">&#128178;&nbsp; About &pound;7.50pp</span>
+          <span class="prac-item">&#128336;&nbsp; Not open every day, likely closed Mondays</span>
+          <span class="prac-item">&#9201;&nbsp; 30 to 45 minutes</span>
         </div>
-        <p class="activity-desc">Deliberately the only booking of the day, and deliberately a sit-down one. The Swan sits beside Shakespeare&rsquo;s Globe with Thames and St Paul&rsquo;s views out of the window. A proper afternoon tea to reset the clock at the end of a gentle day.</p>
-        <div class="tip-box"><strong>Booking:</strong> Reserve the 4pm sitting when you book the rest of the trip, roughly two weeks ahead. Ask for a window table if they can offer one.</div>
+        <p class="activity-desc">Britain&rsquo;s oldest surviving operating theatre, set in the roof space of a church and reached up a narrow spiral staircase. Odd and excellent, and very much her sort of thing.</p>
+        <div class="tip-box"><strong>Do not count on it today.</strong> Opening days vary and Monday is usually one of the closed ones. Check before making the walk, and if it is shut, drop it into any other morning &#8212; it is six minutes from the hotel door, so it fits before you set off on almost any day of the week.</div>
       </div>
       <div class="map-area">
-        <iframe src="https://maps.google.com/maps?q=The+Swan+at+Shakespeare's+Globe+London+SE1+9DT&output=embed" loading="lazy" title="The Swan at the Globe map"></iframe>
-        <a class="map-open-link" href="https://www.google.com/maps/search/?api=1&query=The+Swan+Shakespeares+Globe+London+SE1" target="_blank">Open in Google Maps &#8599;</a>
+        <iframe src="https://maps.google.com/maps?q=Old+Operating+Theatre+Museum+London+SE1+9RY&output=embed" loading="lazy" title="Old Operating Theatre map"></iframe>
+        <a class="map-open-link" href="https://www.google.com/maps/search/?api=1&query=Old+Operating+Theatre+London+SE1" target="_blank">Open in Google Maps &#8599;</a>
       </div>
     </div>
   </div>
 
-  <div class="slot-label">Dusk, sunset about 6:35pm</div>
-  <div class="dinner-card">
-    <div class="dinner-title">&#127749;&nbsp; A short walk, then an early night</div>
-    <div class="dinner-options">
-      <div class="dinner-opt">Walk the Millennium Bridge and the South Bank west toward Blackfriars as the light goes. Early dinner near the hotel, then bed. Tomorrow is the first full day.</div>
-      <div class="dinner-opt"><b>Dinner nearby:</b> Borough Market restaurants, Bermondsey Street, or back to Padella if the queue was too long yesterday.</div>
+  <div class="slot-label">About 4:30pm, walk west &#8212; sunset is about 6:35pm</div>
+
+  <div class="activity-card">
+    <div class="activity-card-body">
+      <div class="activity-info">
+        <div class="activity-type">&#127905;&nbsp; The whole city at once, book a timed slot</div>
+        <div class="activity-name">The London Eye</div>
+        <div class="activity-address">&#128205;&nbsp; Riverside Building, County Hall, London SE1 7PB &nbsp;&middot;&nbsp; 25-minute walk west along the South Bank</div>
+        <div class="practical-row">
+          <span class="prac-item">&#128178;&nbsp; About &pound;30pp online &nbsp;&middot;&nbsp; Book: londoneye.com</span>
+          <span class="prac-item">&#128336;&nbsp; October hours are roughly 11am to 6pm &mdash; check the last rotation when you book</span>
+          <span class="prac-item">&#9201;&nbsp; 30 minutes for the rotation, 45 with the queue</span>
+        </div>
+        <p class="activity-desc">The right thing to do on the first afternoon, and the only day it makes sense: half an hour sitting down in a glass capsule, no walking, no stairs, and the entire fortnight laid out underneath her before she has visited any of it. Westminster and the Abbey directly across the water, St Paul&rsquo;s downriver, the Shard past it, and the parks and Whitehall spread out west. Everything you point at from up there, you are standing in later in the week.</p>
+        <ul class="highlights">
+          <li><b>Take the last slot of the day</b> for the low late-afternoon light and the lights coming on across the city. In October that is around 5pm, so it fits neatly between Southwark and dinner.</li>
+          <li><b>The walk there is half the point:</b> out past the Tate Modern, over or past the Millennium Bridge with St Paul&rsquo;s lit up behind you, on under Blackfriars and Waterloo Bridge. Flat, riverside, 25 minutes at a stroll.</li>
+          <li><b>Book online in advance</b> rather than at the ticket office &mdash; it is cheaper and the standard entry queue on a Monday in October is short. Skip the Fast Track upgrade.</li>
+        </ul>
+        <div class="tip-box"><strong>If she is flat, drop it without a second thought.</strong> It is a jet-lag day and this is the only ticket on it. Move it to <a href="#day13">the evening of the 16th</a> or simply walk the Millennium Bridge and the South Bank to Blackfriars instead, fifteen minutes, and be back for dinner. Book a slot you can afford to lose, and check the change policy at the time.</div>
+      </div>
+      <div class="map-area">
+        <iframe src="https://maps.google.com/maps?q=London+Eye+County+Hall+London+SE1+7PB&output=embed" loading="lazy" title="London Eye map"></iframe>
+        <a class="map-open-link" href="https://www.google.com/maps/search/?api=1&query=London+Eye+London+SE1+7PB" target="_blank">Open in Google Maps &#8599;</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="transport-between">
+    <div class="transport-between-icon">&#128694;</div>
+    <div class="transport-between-text">
+      <strong>The London Eye &#8594; the hotel, back along the river</strong>
+      <span>Walk back east along the South Bank in the dark, or the Jubilee line from Waterloo to London Bridge is two stops if legs have given out. Dinner is two minutes from the door either way.</span>
+    </div>
+    <span class="transport-badge">25 min walk</span>
+  </div>
+
+  <div class="slot-label">Evening, the other booking of the day</div>
+
+  <div class="activity-card">
+    <div class="activity-card-body">
+      <div class="activity-info">
+        <div class="activity-type">&#127862;&nbsp; Cosy dinner, book ahead</div>
+        <div class="activity-name">The George Inn</div>
+        <div class="activity-address">&#128205;&nbsp; 75 Borough High St, London SE1 1NH &nbsp;&middot;&nbsp; 2-minute walk from the hotel</div>
+        <div class="practical-row">
+          <span class="prac-item">&#128178;&nbsp; Pub prices &nbsp;&middot;&nbsp; Book a table</span>
+          <span class="prac-item">&#128336;&nbsp; Early, then bed by nine</span>
+          <span class="prac-item">&#9201;&nbsp; 1.5 hours</span>
+        </div>
+        <p class="activity-desc">London&rsquo;s last surviving galleried coaching inn, owned by the National Trust: wooden galleries, low beams, uneven floors, and a courtyard off Borough High Street. It is two minutes from the hotel door, which on this particular evening matters more than anything else about it. Book a table so there is no standing about.</p>
+        <ul class="highlights">
+          <li><b>If you would rather eat properly:</b> <b>Elliot&rsquo;s</b> on Stoney Street, small and wine-led, is the better food and also bookable.</li>
+          <li><b>No booking, no queue-free promise:</b> <b>Padella</b> for pasta or <b>Flat Iron Square</b> for street food, both five minutes away, if plans change.</li>
+        </ul>
+        <div class="tip-box"><strong>Then bed.</strong> Aim to be asleep by nine. Tomorrow is the first full day and the clock resets fastest with one properly early night.</div>
+      </div>
+      <div class="map-area">
+        <iframe src="https://maps.google.com/maps?q=The+George+Inn+75+Borough+High+Street+London+SE1+1NH&output=embed" loading="lazy" title="The George Inn map"></iframe>
+        <a class="map-open-link" href="https://www.google.com/maps/search/?api=1&query=The+George+Inn+Borough+High+Street+London+SE1" target="_blank">Open in Google Maps &#8599;</a>
+      </div>
     </div>
   </div>
 
@@ -445,7 +532,7 @@
     <span class="day-number">Day 3</span>
     <div class="day-title-block">
       <div class="day-title">Westminster, Whitehall &amp; the Natural History Museum</div>
-      <div class="day-date">Tuesday, 6 October 2026</div>
+      <div class="day-date">Tuesday, 6 October 2026 &nbsp;&middot;&nbsp; and the Clerkenwell evening</div>
     </div>
   </div>
 
@@ -580,6 +667,7 @@
           <li><b>Earth Hall:</b> Ride the escalator up through the middle of a giant iron globe into the geology galleries.</li>
         </ul>
         <div class="tip-box"><strong>Tip:</strong> Book the free timed ticket online to skip any queue. The V&amp;A and the Science Museum are both two minutes away on the same road and both free if the weather turns.</div>
+        <div class="tip-box"><strong>The swap nobody should make lightly.</strong> This afternoon is the one slot the <a href="#appendix-british-museum">British Museum</a> could take on a like-for-like basis &mdash; one free museum for another, with the rest of the day untouched. It would cost you the blue whale, the dinosaurs and Hintze Hall, which is precisely the trade the week was built to avoid. The <a href="#appendix-british-museum">appendix</a> sets out the case if you want it; the recommendation is Thursday morning instead.</div>
       </div>
       <div class="map-area">
         <iframe src="https://maps.google.com/maps?q=Natural+History+Museum+Cromwell+Road+London+SW7&output=embed" loading="lazy" title="Natural History Museum map"></iframe>
@@ -589,21 +677,104 @@
   </div>
 
   <div class="transport-between">
-    <div class="transport-between-icon">&#128666;</div>
+    <div class="transport-between-icon">&#128703;</div>
     <div class="transport-between-text">
-      <strong>Natural History Museum &#8594; Covent Garden</strong>
-      <span>Piccadilly line direct from South Kensington to Covent Garden, about 15 minutes, no changes.</span>
+      <strong>Natural History Museum &#8594; hotel, shower and change</strong>
+      <span>Leave the museum about 4:30pm. District or Circle line from South Kensington to Westminster, then the Jubilee to London Bridge, about 25 minutes. In the room by roughly 5:15pm. Tonight is the dress-up night of the trip, so there is time to do it properly.</span>
     </div>
-    <span class="transport-badge">15 min tube</span>
+    <span class="transport-badge">~30 min</span>
   </div>
 
-  <div class="slot-label">Evening, dinner in Covent Garden</div>
+  <div class="transport-between">
+    <div class="transport-between-icon">&#128650;</div>
+    <div class="transport-between-text">
+      <strong>Hotel &#8594; Clerkenwell</strong>
+      <span>Out at 6:15pm. Thameslink from London Bridge to Farringdon, two stops and about six minutes, then five minutes on foot up to St John&rsquo;s Square. This is the one evening that sits on the doorstep &mdash; no boat to catch, no curtain to run for, and the whole night held inside ten streets you are in nowhere else on the trip.</span>
+    </div>
+    <span class="transport-badge">~15 min</span>
+  </div>
+
+  <div class="slot-label">6:35pm, a drink first &mdash; there is live music on a Tuesday</div>
+
+  <div class="activity-card">
+    <div class="activity-card-body">
+      <div class="activity-info">
+        <div class="activity-type">&#127864;&nbsp; Aperitif in a Georgian townhouse</div>
+        <div class="activity-name">The Parlour at The Zetter</div>
+        <div class="activity-address">&#128205;&nbsp; 49&ndash;50 St John&rsquo;s Square, London EC1V 4JJ &nbsp;&middot;&nbsp; Farringdon station</div>
+        <div class="practical-row">
+          <span class="prac-item">&#128178;&nbsp; About &pound;15 a cocktail &nbsp;&middot;&nbsp; Book: 020 7324 4545</span>
+          <span class="prac-item">&#128336;&nbsp; Open until 10:30pm</span>
+          <span class="prac-item">&#9201;&nbsp; About an hour</span>
+        </div>
+        <p class="activity-desc">A small bar inside a Georgian townhouse on a cobbled square, doing classic cocktails and small plates. <strong>There is live music on Tuesday and Wednesday evenings</strong>, which is the reason this is the first stop rather than a drink at the restaurant &mdash; it is the only live music anywhere in the fortnight, and it happens to fall on your night.</p>
+        <ul class="highlights">
+          <li><b>Book it,</b> even for two at the bar. It is a small room and Tuesday is a music night.</li>
+          <li><b>One drink, not three.</b> Dinner is eight minutes&rsquo; walk away and St Paul&rsquo;s opens at ten tomorrow.</li>
+        </ul>
+      </div>
+      <div class="map-area">
+        <iframe src="https://maps.google.com/maps?q=The+Zetter+49-50+St+Johns+Square+London+EC1V+4JJ&output=embed" loading="lazy" title="The Zetter map"></iframe>
+        <a class="map-open-link" href="https://www.google.com/maps/search/?api=1&query=The+Zetter+St+Johns+Square+London+EC1V" target="_blank">Open in Google Maps &#8599;</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="transport-between">
+    <div class="transport-between-icon">&#128694;</div>
+    <div class="transport-between-text">
+      <strong>St John&rsquo;s Square &#8594; Farringdon Road</strong>
+      <span>Down Clerkenwell Road and left on to Farringdon Road, about eight minutes. If you have time in hand, go the long way round Clerkenwell Green and past the gatehouse at St John&rsquo;s Gate, which is Tudor and lit at night.</span>
+    </div>
+    <span class="transport-badge">8 min walk</span>
+  </div>
+
+  <div class="slot-label">7:45pm, the dinner of the week, book ahead</div>
+
+  <div class="activity-card">
+    <div class="activity-card-body">
+      <div class="activity-info">
+        <div class="activity-type">&#127860;&nbsp; The romantic one, book ahead</div>
+        <div class="activity-name">The Quality Chop House</div>
+        <div class="activity-address">&#128205;&nbsp; 88&ndash;94 Farringdon Road, London EC1R 3EA &nbsp;&middot;&nbsp; Farringdon station</div>
+        <div class="practical-row">
+          <span class="prac-item">&#128178;&nbsp; About &pound;45 to &pound;60pp &nbsp;&middot;&nbsp; Book: thequalitychophouse.com</span>
+          <span class="prac-item">&#128336;&nbsp; Tuesday dinner, 6:00 to 9:45pm</span>
+          <span class="prac-item">&#9201;&nbsp; Two hours, unhurried</span>
+        </div>
+        <p class="activity-desc">On Farringdon Road since 1869 and still in its original room: a Grade II listed interior with the wooden booths, etched glass and pressed tin ceiling all intact. <strong>Ask for a booth when you book</strong> &#8212; they are high-backed, narrow and face each other, and they are the whole reason to come. The cooking is British and unfussy: chops and steaks, Belted Galloway rib-eye, and confit potatoes that are genuinely famous.</p>
+        <ul class="highlights">
+          <li><b>The booths are the room.</b> They were built as cheap seating for a working man&rsquo;s chop house and are now the prized tables. Put the request in the booking notes.</li>
+          <li><b>Why tonight and not Thursday:</b> the Totoro curtain is at 7pm on the 8th, which would mean eating at quarter past five. Tonight there is nothing to run for.</li>
+          <li><b>Bookable online now,</b> unlike most of the romantic shortlist &mdash; so this is the one to lock in early and stop thinking about.</li>
+        </ul>
+      </div>
+      <div class="map-area">
+        <iframe src="https://maps.google.com/maps?q=The+Quality+Chop+House+88-94+Farringdon+Road+London+EC1R+3EA&output=embed" loading="lazy" title="The Quality Chop House map"></iframe>
+        <a class="map-open-link" href="https://www.google.com/maps/search/?api=1&query=Quality+Chop+House+Farringdon+Road+London+EC1R" target="_blank">Open in Google Maps &#8599;</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="slot-label">9:45pm, the walk home is part of the plan, not the way back from it</div>
+
+  <div class="transport-between">
+    <div class="transport-between-icon">&#127769;</div>
+    <div class="transport-between-text">
+      <strong>Farringdon &#8594; the hotel, over the Millennium Bridge</strong>
+      <span>South down Farringdon Road, past the Victorian arches of <strong>Smithfield Market</strong>, then through the quiet lanes to <strong>St Paul&rsquo;s</strong>, floodlit and all but empty at that hour. Down the steps and straight across the <strong>Millennium Bridge</strong> with the dome behind you and Tate Modern ahead, then along Bankside and up to Borough High Street. About 35 minutes, all of it free, and it is the best night walk in London. Thameslink back to London Bridge in six minutes if it is raining.</span>
+    </div>
+    <span class="transport-badge">~35 min walk</span>
+  </div>
+
+  <div class="tip-box"><strong>You are crossing tomorrow&rsquo;s bridge tonight.</strong> Wednesday morning starts with the same walk in reverse to the cathedral steps for the 10am opening. Seeing St Paul&rsquo;s lit and closed the night before, then climbing the dome the next morning, is the better order.</div>
+
   <div class="dinner-card">
-    <div class="dinner-title">&#127374;&nbsp; Dinner around Seven Dials or Neal&rsquo;s Yard</div>
+    <div class="dinner-title">&#127374;&nbsp; If the Chop House is full</div>
     <div class="dinner-options">
-      <div class="dinner-opt"><b>Seven Dials and Neal&rsquo;s Yard</b> have better food and far fewer tourists than the piazza. Neal&rsquo;s Yard is a hidden courtyard of vivid colour off Shorts Gardens, worth finding even just for the walk through.</div>
-      <div class="dinner-opt"><b>Dishoom Covent Garden</b>, 12 Upper St Martin&rsquo;s Lane, WC2H. Brilliant Bombay cafe food. Expect a queue, it moves and it is worth it.</div>
-      <div class="dinner-opt"><b>Great Queen Street</b>, 32 Great Queen St, WC2B 5AA. Honest, seasonal British cooking. Booking recommended.</div>
+      <div class="dinner-opt"><b>Bouchon Racine</b>, above the Three Compasses, 66 Cowcross St, EC1M 6BP. Candlelit tables and a fairy-lit conservatory, and repeatedly named London&rsquo;s most romantic restaurant. The catch is the booking: phone only, 9 to 11am, opening thirty days ahead, so you would be calling around 6 September.</div>
+      <div class="dinner-opt"><b>Luca</b>, 88 St John St, EC1M 4EH. Michelin-starred Italian cooking with British produce. Beautiful, and the biggest spend on the list at roughly &pound;95pp for the tasting menu before wine.</div>
+      <div class="dinner-opt"><b>Morito</b>, 32 Exmouth Market, EC1R 4QE. Moorish small plates, tiny and lively rather than intimate, and the easiest of the three to get into at short notice.</div>
     </div>
   </div>
 
@@ -614,13 +785,16 @@
   <div class="day-section-header">
     <span class="day-number">Day 4</span>
     <div class="day-title-block">
-      <div class="day-title">The City &amp; the Tower</div>
-      <div class="day-date">Wednesday, 7 October 2026</div>
+      <div class="day-title">St Paul&rsquo;s, then the Studio Tour</div>
+      <div class="day-date">Wednesday, 7 October 2026 &nbsp;&middot;&nbsp; A cathedral in the morning, Leavesden after dark</div>
     </div>
   </div>
 
-  <div class="slot-label">10:00am, pre-book</div>
+  <div class="tip-box" style="margin-bottom:1.25rem;padding:1rem 1.25rem;background:var(--amber-bg);border:1px solid var(--amber-bd);border-radius:var(--radius);font-size:13px;color:var(--ink2);line-height:1.75;">
+    <strong>The heaviest day of the week on your feet, and the day is built backwards from a 16:30 entry that is now booked and paid.</strong> Dark Arts is the reason: the indoor sets look the same at any hour, but the outdoor Backlot only works after sunset, and 16:30 is the earliest slot that puts you out there in the dark. That leaves the whole morning for St Paul&rsquo;s and the dome climb, a long unhurried lunch in Bloomsbury, and an easy run out to Leavesden. <strong>528 steps and then four hours walking at the studios is a lot of legs</strong>, so treat the dome as optional if the morning runs long. You are home about 9:45pm. The Tower of London and the rest of the City have moved to Friday.
+  </div>
 
+  <div class="slot-label">10:00am, pre-book</div>
   <div class="transport-between">
     <div class="transport-between-icon">&#128666;</div>
     <div class="transport-between-text">
@@ -629,7 +803,6 @@
     </div>
     <span class="transport-badge">10 min walk</span>
   </div>
-
   <div class="activity-card">
     <div class="activity-card-body">
       <div class="activity-info">
@@ -656,23 +829,466 @@
     </div>
   </div>
 
+  <div class="slot-label">Noon, two minutes from the cathedral steps</div>
+
+  <div class="activity-card">
+    <div class="activity-card-body">
+      <div class="activity-info">
+        <div class="activity-type">&#127793;&nbsp; A small City park, free</div>
+        <div class="activity-name">Postman&rsquo;s Park</div>
+        <div class="activity-address">&#128205;&nbsp; King Edward St, London EC1A 7BT &nbsp;&middot;&nbsp; Two minutes north of St Paul&rsquo;s</div>
+        <div class="practical-row">
+          <span class="prac-item"><span class="pric-free">Free</span></span>
+          <span class="prac-item">&#9201;&nbsp; 15 minutes</span>
+        </div>
+        <p class="activity-desc">A small park with a Victorian wall of hand-painted ceramic tiles memorialising ordinary people who died saving others &mdash; a boy who drowned rescuing his brother, a woman who went back into a burning house. Fifteen minutes, and it stays with you. <strong>Leadenhall Market and St Dunstan in the East have moved to Friday</strong>, so do not head east today.</p>
+      </div>
+      <div class="map-area">
+        <iframe src="https://maps.google.com/maps?q=Postmans+Park+London+EC1A+7BT&output=embed" loading="lazy" title="Postmans Park map"></iframe>
+        <a class="map-open-link" href="https://www.google.com/maps/search/?api=1&query=Postmans+Park+London+EC1A" target="_blank">Open in Google Maps &#8599;</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="slot-label">12:45pm to 2:40pm, the long lunch &mdash; Lamb&rsquo;s Conduit Street, Bloomsbury</div>
+  <div class="transport-between">
+    <div class="transport-between-icon">&#128666;</div>
+    <div class="transport-between-text">
+      <strong>Postman&rsquo;s Park &#8594; Lamb&rsquo;s Conduit Street</strong>
+      <span>North-west up Holborn Viaduct and through Bloomsbury, about 20 minutes on foot. It is the right direction anyway &mdash; Lamb&rsquo;s Conduit Street sits between you and Euston, so lunch costs you no backtracking at all.</span>
+    </div>
+    <span class="transport-badge">20 min walk</span>
+  </div>
+  <div class="dinner-card">
+    <div class="dinner-title">&#127829;&nbsp; Nearly two hours at the table, and you have earned it</div>
+    <div class="dinner-options">
+      <div class="dinner-opt"><b>This is the main meal of the day, not a refuel.</b> The 16:30 entry buys you a proper sit-down lunch instead of eating standing up outside a station. After this there is only the Backlot Caf&eacute; midway round the tour, and dinner will be late and small, so eat like it is dinner. <b>Book a table</b> &mdash; a walk-in on a Wednesday is usually fine, but not worth the risk when the clock matters.</div>
+      <div class="dinner-opt"><b>Ciao Bella</b>, 86&ndash;90 Lamb&rsquo;s Conduit St, WC1N 3LG. Big, cheerful, generous Italian plates and a pianist most afternoons. Long-running, good value, and exactly the kind of place you can sit in for two hours without anyone hurrying you.</div>
+      <div class="dinner-opt"><b>The Lamb</b>, 94 Lamb&rsquo;s Conduit St, WC1N 3LZ, if you would rather have the pub version. A Young&rsquo;s house with its original Victorian snob screens still in place around the bar &mdash; pies, a roast, a pint, and a room worth sitting in.</div>
+      <div class="dinner-opt"><b>Worth a look on the way:</b> the <b>Cittie of Yorke</b>, 22 High Holborn, WC1V 6BN, is more or less on the line of the walk. Duck in even if you are not eating &mdash; the back bar is an enormous raftered hall with wine vats over the bar and wooden cubicles down one side.</div>
+      <div class="dinner-opt"><b>If the dome climb overran</b> and you are short of time, skip Bloomsbury and go straight to <b>Drummond Street</b>, two minutes west of Euston: a run of long-standing South Indian places, fast and cheap. The fallback, not the plan.</div>
+    </div>
+  </div>
+
+  <div class="slot-label">Getting there, off Lamb&rsquo;s Conduit Street by 2:40pm</div>
+
+  <div class="activity-card">
+    <div class="activity-card-body">
+      <div class="activity-info">
+        <div class="activity-type">&#128646;&nbsp; Independent travel, not a coach package</div>
+        <div class="activity-name">Euston &#8594; Watford Junction &#8594; the studios</div>
+        <div class="activity-address">&#128205;&nbsp; Euston station, London NW1 &nbsp;&middot;&nbsp; 15 minutes on foot from Lamb&rsquo;s Conduit Street, or Russell Square to Euston Square</div>
+        <div class="practical-row">
+          <span class="prac-item">&#128178;&nbsp; About &pound;12pp return by rail</span>
+          <span class="prac-item">&#9201;&nbsp; About 1hr 15 door to door</span>
+        </div>
+        <p class="activity-desc">Walk up from Lamb&rsquo;s Conduit Street to <strong>Euston</strong> in about 15 minutes. From there a West Coast line train to <strong>Watford Junction</strong>, about 20 minutes. At Watford Junction the <strong>Mullany&rsquo;s shuttle bus</strong> runs to the studios, about 15 minutes, every 20 minutes. <strong>Be on a train out of Euston by 3:00pm</strong> for a 16:30 entry, which puts you at the studios about 4:00pm with the shuttle queue absorbed and half an hour in hand.</p>
+        <ul class="highlights">
+          <li><b>Not the coach packages.</b> The Victoria coach departures run to their own fixed times, which will not match a 16:30 entry. Independent rail is cheaper and far more flexible.</li>
+          <li><b>Coming home is later but not harder.</b> The shuttle runs until well after the last guests are out, and Watford Junction to Euston trains run past 11pm. Nothing about the 16:30 slot puts you at risk of a last train.</li>
+        </ul>
+      </div>
+      <div class="map-area">
+        <iframe src="https://maps.google.com/maps?q=Watford+Junction+Station+Watford&output=embed" loading="lazy" title="Watford Junction map"></iframe>
+        <a class="map-open-link" href="https://www.google.com/maps/search/?api=1&query=Watford+Junction+Station" target="_blank">Open in Google Maps &#8599;</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="slot-label">16:30, the tour</div>
+
+  <div class="activity-card">
+    <div class="activity-card-body">
+      <div class="activity-info">
+        <div class="activity-type">&#129497;&nbsp; Studio tour, booked and paid</div>
+        <div class="activity-name">Warner Bros. Studio Tour London &#8212; The Making of Harry Potter</div>
+        <div class="activity-address">&#128205;&nbsp; Studio Tour Drive, Leavesden, Watford WD25 7LR</div>
+        <div class="practical-row">
+          <span class="prac-item">&#128178;&nbsp; &pound;58.50pp entry only &nbsp;&middot;&nbsp; &pound;117 for two, paid</span>
+          <span class="prac-item">&#128336;&nbsp; 16:30 entry booked, self-paced, allow 4 hours</span>
+          <span class="prac-item">&#9201;&nbsp; Out about 8:30pm</span>
+        </div>
+        <p class="activity-desc">The actual sets, on the actual soundstages: the Great Hall, Diagon Alley, the Hogwarts Express on Platform 9&frac34;, Gringotts, and the 1:24 castle model at the end. Self-paced, so four hours is realistic with the Dark Arts additions.</p>
+        <ul class="highlights">
+          <li><b>Dark Arts, 16 September to 8 November 2026, included in the standard ticket:</b> the Great Hall dressed with over 100 hand-carved pumpkins floating above a Halloween feast, roaming Death Eater processions, Voldemort projections, dimmed lighting throughout, Dementors in the Forbidden Forest, and a Dark Mark trail passport collected on arrival.</li>
+          <li><b>Why 16:30 and not earlier:</b> the soundstages have no windows, so the Great Hall and the Forbidden Forest look identical whatever time you go in. The only part of the tour daylight touches is the outdoor <b>Backlot</b> &mdash; Privet Drive, the Knight Bus, the Hogwarts Bridge, the exterior Dark Mark trail. Self-paced, that lands about two and a half hours in. Sunset on the 7th is <b>6:25pm</b>, so a 16:30 entry reaches it around <b>7pm</b>, properly dark. A 15:00 entry would have walked you out there in full daylight, which is the one thing worth avoiding.</li>
+          <li><b>The cost of the later slot</b> is that you are back at the hotel about 9:45pm rather than 8:15pm. The studios are open until 10pm on Dark Arts dates, so this is well inside normal operating hours, not a scramble.</li>
+          <li><b>Eat on site if you need to:</b> the Food Hall is at the entrance and the <b>Backlot Caf&eacute;</b> is midway round, which is where the Butterbeer is. After a Bloomsbury lunch this is a Butterbeer-and-a-snack stop, not a meal.</li>
+        </ul>
+        <div class="booked-box"><strong>Booked, 24 August 2026 &mdash; reference REDACTED.</strong> Two Adult Advance tickets, 16:30 on Wednesday 7 October, &pound;117.00 paid in full. This was the single most booking-sensitive item on the trip and it landed on the slot the day was designed around. E-tickets came by email: show them on a phone or bring them printed. <strong>Admission is no earlier than 20 minutes before 16:30</strong>, so there is nothing to gain by turning up early &mdash; aim to be at the studios about 4pm and let the shuttle queue absorb the difference. Pre-booked tickets are not refundable and any change carries a &pound;10 administration fee, so the rest of the Wednesday is now built around a fixed point.</div>
+      </div>
+      <div class="map-area">
+        <iframe src="https://maps.google.com/maps?q=Warner+Bros+Studio+Tour+London+Leavesden+WD25+7LR&output=embed" loading="lazy" title="Studio Tour map"></iframe>
+        <a class="map-open-link" href="https://www.google.com/maps/search/?api=1&query=Warner+Bros+Studio+Tour+London+Leavesden+WD25" target="_blank">Open in Google Maps &#8599;</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="slot-label">About 9:45pm, back in central London</div>
+  <div class="dinner-card">
+    <div class="dinner-title">&#127374;&nbsp; A drink and something small, if anything</div>
+    <div class="dinner-options">
+      <div class="dinner-opt">Out of the studios about 8:30pm, shuttle to Watford Junction, and back at the hotel around 9:45pm. Nothing else is planned tonight, and after a two-hour lunch and the Backlot Caf&eacute; you may not want dinner at all.</div>
+      <div class="dinner-opt"><b>If you do:</b> Bermondsey Street has the latest kitchens close to the hotel. Borough High Street is quiet by then and the market itself is long shut.</div>
+      <div class="dinner-opt"><b>Or just a nightcap</b> at the <b>Anchor Bankside</b> by the river, two minutes from the door, and leave it at that.</div>
+    </div>
+  </div>
+
+</section><!-- end day 4 -->
+
+<!-- ═══════════════════════════════ DAY 5 ═══════════════════════════════ -->
+<section class="day-section" id="day5">
+  <div class="day-section-header">
+    <span class="day-number">Day 5</span>
+    <div class="day-title-block">
+      <div class="day-title">Covent Garden, Seven Dials &amp; Soho</div>
+      <div class="day-date">Thursday, 8 October 2026 &nbsp;&middot;&nbsp; Snacks, vintage, oddities, then Totoro</div>
+    </div>
+  </div>
+
+  <div class="tip-box" style="margin-bottom:1.25rem;padding:1rem 1.25rem;background:var(--amber-bg);border:1px solid var(--amber-bd);border-radius:var(--radius);font-size:13px;color:var(--ink2);line-height:1.75;">
+    <strong>The whole day sits in ten streets, and you come back to the hotel to change.</strong> This is the prettiest, densest part of London and almost all of it is covered or indoors, so rain cannot cancel it. The day runs west to east and finishes by Holborn station, which puts you twenty minutes from the hotel at half four. Shower, dress for the evening, and come back out for the show. <strong>Eat properly in the afternoon</strong> &#8212; dinner is after the curtain, or on Tuesday in Clerkenwell.
+  </div>
+
+  <div class="swap-banner">
+    <div class="swap-banner-icon">&#8646;</div>
+    <div class="swap-banner-text">
+      <strong>This is the morning the <a href="#appendix-british-museum">British Museum</a> would take.</strong> It is free, it is open from 10am, and it is an eight-minute walk from Holborn, which is where this day already starts. Swapping it in costs you the first half of what follows &mdash; Neal&rsquo;s Yard, Seven Dials Market and the Endell Street vintage run &mdash; and leaves the Hunterian at 3:15pm and Totoro at 7pm exactly where they are. Written out in full in the <a href="#appendix-british-museum">appendix at the foot of the page</a>. Nothing here is booked, so this is a call you can make the night before.
+    </div>
+  </div>
+
+  <div class="slot-label">9:45am</div>
+
+  <div class="transport-between">
+    <div class="transport-between-icon">&#128666;</div>
+    <div class="transport-between-text">
+      <strong>Hotel &#8594; Covent Garden</strong>
+      <span>Northern line from London Bridge to Bank, then the Central line to Holborn, about 20 minutes on the trains and 30 door to door. Holborn is five minutes from Seven Dials and five from Drury Lane, so the same route works all day.</span>
+    </div>
+    <span class="transport-badge">~30 min</span>
+  </div>
+
+  <div class="slot-label">10:30am, before it fills up</div>
+
+  <div class="activity-card">
+    <div class="activity-card-body">
+      <div class="activity-info">
+        <div class="activity-type">&#127752;&nbsp; The photograph, free</div>
+        <div class="activity-name">Neal&rsquo;s Yard &amp; Seven Dials</div>
+        <div class="activity-address">&#128205;&nbsp; Neal&rsquo;s Yard, London WC2H 9DP &nbsp;&middot;&nbsp; Off Shorts Gardens, Covent Garden</div>
+        <div class="practical-row">
+          <span class="prac-item"><span class="pric-free">Free</span></span>
+          <span class="prac-item">&#128336;&nbsp; Go early, it is tiny</span>
+          <span class="prac-item">&#9201;&nbsp; 45 minutes</span>
+        </div>
+        <p class="activity-desc">A hidden courtyard off Monmouth Street painted in rainbow colours, and small enough that four people make it feel busy &#8212; early is the difference between a photo of the two of you and a photo of the two of you and a queue. <strong>Neal&rsquo;s Yard Remedies</strong> on the corner: let her smell everything, it takes twenty minutes and costs nothing. Then out into <strong>Seven Dials</strong>, seven streets radiating from a sundial pillar, with Monmouth Street and Neal Street the good ones.</p>
+      </div>
+      <div class="map-area">
+        <iframe src="https://maps.google.com/maps?q=Neals+Yard+London+WC2H+9DP&output=embed" loading="lazy" title="Neals Yard map"></iframe>
+        <a class="map-open-link" href="https://www.google.com/maps/search/?api=1&query=Neals+Yard+London+WC2H" target="_blank">Open in Google Maps &#8599;</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="slot-label">11:00am, first snack</div>
+
+  <div class="activity-card">
+    <div class="activity-card-body">
+      <div class="activity-info">
+        <div class="activity-type">&#129472;&nbsp; Food hall, no booking</div>
+        <div class="activity-name">Seven Dials Market</div>
+        <div class="activity-address">&#128205;&nbsp; 35 Earlham St, London WC2H 9LD &nbsp;&middot;&nbsp; Two minutes from Neal&rsquo;s Yard</div>
+        <div class="practical-row">
+          <span class="prac-item">&#128178;&nbsp; A few pounds a plate</span>
+          <span class="prac-item">&#9201;&nbsp; 45 minutes</span>
+        </div>
+        <p class="activity-desc">A 1920s banana warehouse turned food hall. The reason to go in is <strong>Pick &amp; Cheese</strong>, a conveyor-belt cheese bar where plates of British cheese go past on a belt and you take what you want. A shared, slightly silly, very good thing to do together at eleven in the morning.</p>
+      </div>
+      <div class="map-area">
+        <iframe src="https://maps.google.com/maps?q=Seven+Dials+Market+Earlham+Street+London+WC2H+9LD&output=embed" loading="lazy" title="Seven Dials Market map"></iframe>
+        <a class="map-open-link" href="https://www.google.com/maps/search/?api=1&query=Seven+Dials+Market+London+WC2H" target="_blank">Open in Google Maps &#8599;</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="slot-label">12:00pm, the vintage run</div>
+
+  <div class="activity-card">
+    <div class="activity-card-body">
+      <div class="activity-info">
+        <div class="activity-type">&#128087;&nbsp; Vintage, free to browse</div>
+        <div class="activity-name">Endell Street &amp; Earlham Street vintage</div>
+        <div class="activity-address">&#128205;&nbsp; Endell St and Earlham St, London WC2H &nbsp;&middot;&nbsp; All within three minutes of each other</div>
+        <div class="practical-row">
+          <span class="prac-item"><span class="pric-free">Free</span>&nbsp; to browse</span>
+          <span class="prac-item">&#9201;&nbsp; 45 minutes</span>
+        </div>
+        <p class="activity-desc">Not Brick Lane&rsquo;s volume, but good stuff and a nice browse rather than a slog. Sunday is the day for quantity; this is the day for quality.</p>
+        <ul class="highlights">
+          <li><b>Blackout II</b>, 51 Endell Street. Proper vintage, 1920s through the 80s.</li>
+          <li><b>Rokit</b>, 42 Shelton Street.</li>
+          <li><b>The Vintage Showroom</b>, Earlham Street.</li>
+          <li><b>Benjamin Pollock&rsquo;s Toyshop</b> in the Market Building sells Victorian paper toy theatres and puppets. Five minutes, purely for the strangeness of it.</li>
+        </ul>
+      </div>
+      <div class="map-area">
+        <iframe src="https://maps.google.com/maps?q=Endell+Street+Covent+Garden+London+WC2H&output=embed" loading="lazy" title="Endell Street map"></iframe>
+        <a class="map-open-link" href="https://www.google.com/maps/search/?api=1&query=Endell+Street+Covent+Garden+London" target="_blank">Open in Google Maps &#8599;</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="slot-label">12:45pm</div>
+
+  <div class="activity-card">
+    <div class="activity-card-body">
+      <div class="activity-info">
+        <div class="activity-type">&#128218;&nbsp; Victorian book alley, free</div>
+        <div class="activity-name">Cecil Court</div>
+        <div class="activity-address">&#128205;&nbsp; Cecil Ct, London WC2N 4EZ &nbsp;&middot;&nbsp; Off Charing Cross Road, three minutes from the piazza</div>
+        <div class="practical-row">
+          <span class="prac-item"><span class="pric-free">Free</span></span>
+          <span class="prac-item">&#9201;&nbsp; 30 minutes</span>
+        </div>
+        <p class="activity-desc">A Victorian pedestrian alley of antiquarian booksellers, old map and print dealers, a magic-poster shop, and <strong>Watkins Books</strong>, an occult and esoteric bookshop trading since 1893. It is frequently named as an inspiration for Diagon Alley, which lands nicely the day before the Studio Tour. About as photogenic a street as London has.</p>
+      </div>
+      <div class="map-area">
+        <iframe src="https://maps.google.com/maps?q=Cecil+Court+London+WC2N+4EZ&output=embed" loading="lazy" title="Cecil Court map"></iframe>
+        <a class="map-open-link" href="https://www.google.com/maps/search/?api=1&query=Cecil+Court+London+WC2N" target="_blank">Open in Google Maps &#8599;</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="slot-label">1:15pm, the sugar crawl</div>
+
+  <div class="activity-card">
+    <div class="activity-card-body">
+      <div class="activity-info">
+        <div class="activity-type">&#127851;&nbsp; Chocolate, cake and daftness</div>
+        <div class="activity-name">The Covent Garden sugar crawl</div>
+        <div class="activity-address">&#128205;&nbsp; Covent Garden and Soho, London WC2 &nbsp;&middot;&nbsp; All within ten minutes on foot</div>
+        <div class="practical-row">
+          <span class="prac-item">&#128178;&nbsp; A few pounds a stop</span>
+          <span class="prac-item">&#9201;&nbsp; 45 minutes, or as long as you like</span>
+        </div>
+        <p class="activity-desc">Graze rather than sit. This doubles as lunch, which matters today because dinner is late.</p>
+        <ul class="highlights">
+          <li><b>Venchi</b>, James Street. Italian chocolate with a chocolate waterfall running in the window.</li>
+          <li><b>Ladur&eacute;e</b> in the Market Building, for macarons.</li>
+          <li><b>Bageriet</b>, 24 Rose Street. A Swedish bakery barely wider than a corridor: cardamom buns and princess cake. Easy to walk straight past.</li>
+          <li><b>Maison Bertaux</b>, 28 Greek Street in Soho. Going since 1871, London&rsquo;s oldest French patisserie, all wonky floors and cake in the window.</li>
+          <li><b>M&amp;M&rsquo;s World</b> on Leicester Square, five minutes away, four floors of it, if she wants the full carefree-and-silly version.</li>
+        </ul>
+      </div>
+      <div class="map-area">
+        <iframe src="https://maps.google.com/maps?q=Venchi+James+Street+Covent+Garden+London&output=embed" loading="lazy" title="Covent Garden sweets map"></iframe>
+        <a class="map-open-link" href="https://www.google.com/maps/search/?api=1&query=Covent+Garden+Piazza+London+WC2E" target="_blank">Open in Google Maps &#8599;</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="slot-label">2:00pm</div>
+
+  <div class="activity-card">
+    <div class="activity-card-body">
+      <div class="activity-info">
+        <div class="activity-type">&#127917;&nbsp; Piazza &amp; buskers, free</div>
+        <div class="activity-name">Covent Garden Piazza</div>
+        <div class="activity-address">&#128205;&nbsp; Covent Garden Piazza, London WC2E 8RF</div>
+        <div class="practical-row">
+          <span class="prac-item"><span class="pric-free">Free</span></span>
+          <span class="prac-item">&#9201;&nbsp; 45 minutes</span>
+        </div>
+        <p class="activity-desc">The Apple Market under the glass roof, and the licensed buskers: opera singers in the lower courtyard and street performers under the portico of St Paul&rsquo;s, the Actors&rsquo; Church, where Punch and Judy was first recorded in 1662. Free, fun, and dry.</p>
+      </div>
+      <div class="map-area">
+        <iframe src="https://maps.google.com/maps?q=Covent+Garden+Piazza+London+WC2E+8RF&output=embed" loading="lazy" title="Covent Garden Piazza map"></iframe>
+        <a class="map-open-link" href="https://www.google.com/maps/search/?api=1&query=Covent+Garden+Piazza+London+WC2E" target="_blank">Open in Google Maps &#8599;</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="slot-label">2:45pm, nobody in Covent Garden bothers walking down here</div>
+
+  <div class="activity-card">
+    <div class="activity-card-body">
+      <div class="activity-info">
+        <div class="activity-type">&#9970;&nbsp; Courtyard &amp; river terrace, free</div>
+        <div class="activity-name">Somerset House</div>
+        <div class="activity-address">&#128205;&nbsp; Strand, London WC2R 1LA &nbsp;&middot;&nbsp; Eight minutes from the piazza</div>
+        <div class="practical-row">
+          <span class="prac-item"><span class="pric-free">Free</span></span>
+          <span class="prac-item">&#9201;&nbsp; 30 minutes</span>
+        </div>
+        <p class="activity-desc">Walk into the courtyard where 55 fountains come straight up out of the stone, and out onto the River Terrace above the Thames. Free, and almost nobody in Covent Garden bothers to walk the eight minutes down to it.</p>
+      </div>
+      <div class="map-area">
+        <iframe src="https://maps.google.com/maps?q=Somerset+House+Strand+London+WC2R+1LA&output=embed" loading="lazy" title="Somerset House map"></iframe>
+        <a class="map-open-link" href="https://www.google.com/maps/search/?api=1&query=Somerset+House+London+WC2R" target="_blank">Open in Google Maps &#8599;</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="slot-label">3:15pm, free, closes at 5</div>
+
+  <div class="activity-card">
+    <div class="activity-card-body">
+      <div class="activity-info">
+        <div class="activity-type">&#129516;&nbsp; The oddity, free timed entry</div>
+        <div class="activity-name">Hunterian Museum</div>
+        <div class="activity-address">&#128205;&nbsp; Royal College of Surgeons, 38-43 Lincoln&rsquo;s Inn Fields, London WC2A 3PE</div>
+        <div class="practical-row">
+          <span class="prac-item"><span class="pric-free">Free</span>&nbsp; (book a timed slot)</span>
+          <span class="prac-item">&#128336;&nbsp; Tuesday to Saturday, closes 5pm</span>
+          <span class="prac-item">&#9201;&nbsp; 45 to 60 minutes</span>
+        </div>
+        <p class="activity-desc">John Hunter&rsquo;s 18th-century anatomical and pathological collection: thousands of specimen jars, surgical instruments, and the whole uncomfortable sweep of pre-anaesthetic surgery. If the Narrenturm in Vienna was her kind of place, this is the London equivalent, and it is free. Book the timed ticket at hunterianmuseum.org.</p>
+      </div>
+      <div class="map-area">
+        <iframe src="https://maps.google.com/maps?q=Hunterian+Museum+Lincolns+Inn+Fields+London+WC2A+3PE&output=embed" loading="lazy" title="Hunterian Museum map"></iframe>
+        <a class="map-open-link" href="https://www.google.com/maps/search/?api=1&query=Hunterian+Museum+London+WC2A" target="_blank">Open in Google Maps &#8599;</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="slot-label">4:15pm, five minutes from the Hunterian</div>
+
+  <div class="activity-card">
+    <div class="activity-card-body">
+      <div class="activity-info">
+        <div class="activity-type">&#127918;&nbsp; Handmade arcade, about a fiver</div>
+        <div class="activity-name">Novelty Automation</div>
+        <div class="activity-address">&#128205;&nbsp; 1a Princeton St, London WC1R 4AX &nbsp;&middot;&nbsp; Five minutes from Lincoln&rsquo;s Inn Fields, by Holborn station</div>
+        <div class="practical-row">
+          <span class="prac-item">&#128178;&nbsp; About &pound;5 for a bag of tokens</span>
+          <span class="prac-item">&#128336;&nbsp; Usually Tuesday to Saturday, check first</span>
+          <span class="prac-item">&#9201;&nbsp; 30 minutes</span>
+        </div>
+        <p class="activity-desc">A one-room arcade of handmade coin-operated machines built by Tim Hunkin. You buy a bag of tokens and play things like <em>Test Your Nerve</em>, <em>Money Laundering</em>, <em>Divorce</em> and <em>Frisk a Nuclear Power Station</em>. Satirical, beautifully engineered, and mostly designed to be played by two people, one of whom is laughing at the other. The most fun thirty minutes in central London.</p>
+        <div class="tip-box"><strong>If you want a pre-theatre drink instead:</strong> cut this and leave Holborn at four. Novelty Automation will still be there another day, and the Salisbury will not wait.</div>
+      </div>
+      <div class="map-area">
+        <iframe src="https://maps.google.com/maps?q=Novelty+Automation+Princeton+Street+London+WC1R+4AX&output=embed" loading="lazy" title="Novelty Automation map"></iframe>
+        <a class="map-open-link" href="https://www.google.com/maps/search/?api=1&query=Novelty+Automation+London+WC1R" target="_blank">Open in Google Maps &#8599;</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="transport-between">
+    <div class="transport-between-icon">&#128703;</div>
+    <div class="transport-between-text">
+      <strong>Holborn &#8594; hotel, shower and change</strong>
+      <span>Leave Holborn about 4:45pm, Central line to Bank and the Northern line to London Bridge. In the room by roughly 5:15pm, which gives an hour to shower, dress for the evening and sit down for twenty minutes. Back out at 6:15pm.</span>
+    </div>
+    <span class="transport-badge">~30 min</span>
+  </div>
+
+  <div class="slot-label">6:30pm, if there is time</div>
+  <div class="dinner-card">
+    <div class="dinner-title">&#127864;&nbsp; A drink before the show</div>
+    <div class="dinner-options">
+      <div class="dinner-opt"><b>The Lamb &amp; Flag</b>, 33 Rose St, WC2E 9EB. Tiny, low-beamed, one of Covent Garden&rsquo;s oldest, and hard to find, which is half the pleasure.</div>
+      <div class="dinner-opt"><b>The Salisbury</b>, 90 St Martin&rsquo;s Lane, WC2N 4AP. A Victorian gin palace with etched glass, red velvet and bronze nymphs holding the lamps.</div>
+      <div class="dinner-opt"><b>In your seats by 6:45pm.</b> Doors are usually half an hour before curtain.</div>
+    </div>
+  </div>
+
+  <div class="slot-label">7:00pm, the evening</div>
+
+  <div class="activity-card">
+    <div class="activity-card-body">
+      <div class="activity-info">
+        <div class="activity-type">&#127917;&nbsp; Theatre, book six weeks ahead</div>
+        <div class="activity-name">My Neighbour Totoro, Gillian Lynne Theatre</div>
+        <div class="activity-address">&#128205;&nbsp; 166 Drury Lane, London WC2B 5PW &nbsp;&middot;&nbsp; Covent Garden or Holborn station</div>
+        <div class="practical-row">
+          <span class="prac-item">&#128178;&nbsp; From about &pound;25 &nbsp;&middot;&nbsp; Book direct with LW Theatres</span>
+          <span class="prac-item">&#128336;&nbsp; 7:00pm, runs about 2hr 30 with an interval</span>
+          <span class="prac-item">&#9201;&nbsp; Book by late August</span>
+        </div>
+        <p class="activity-desc">The stage adaptation of the Studio Ghibli film, and a genuine spectacle: six Olivier Awards, puppetry by Jim Henson&rsquo;s Creature Shop and Basil Twist, and Joe Hisaishi&rsquo;s score played live by an onstage band.</p>
+        <ul class="highlights">
+          <li><b>Booking:</b> Book direct with LW Theatres, no booking fees. Book six weeks ahead for 20% off evening performances, so late August.</li>
+          <li><b>Day seats:</b> There are also &pound;25 day seats in the stalls released for every performance if you would rather chance it on the day.</li>
+          <li><b>Check the running time when you book.</b> At roughly two and a half hours you are out around 9:40pm and back at Borough for about 10:20pm.</li>
+        </ul>
+        <div class="tip-box"><strong>Why Thursday:</strong> No Saturday-evening pressure, and Thursday evenings are the least child-heavy performances.</div>
+      </div>
+      <div class="map-area">
+        <iframe src="https://maps.google.com/maps?q=Gillian+Lynne+Theatre+166+Drury+Lane+London+WC2B+5PW&output=embed" loading="lazy" title="Gillian Lynne Theatre map"></iframe>
+        <a class="map-open-link" href="https://www.google.com/maps/search/?api=1&query=Gillian+Lynne+Theatre+London+WC2B" target="_blank">Open in Google Maps &#8599;</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="tip-box" style="margin-top:1.25rem;padding:1rem 1.25rem;background:var(--amber-bg);border:1px solid var(--amber-bd);border-radius:var(--radius);font-size:13px;color:var(--ink2);line-height:1.75;">
+    <strong>Why dinner is not tonight.</strong> A 7pm curtain means a pre-theatre table at about 5:15pm, and there is no version where you get back to Southwark, shower, change and still eat before the show. So <strong>the whole romantic evening sits on Tuesday the 6th</strong>, with no curtain to run for. It cannot be moved here: the Quality Chop House stops serving at 9:45pm, which is roughly when you would be leaving the theatre, and Clerkenwell is the wrong side of town from the Gillian Lynne. Tonight, eat properly in the afternoon and have something late and easy near the theatre afterwards.
+  </div>
+
+</section><!-- end day 5 -->
+
+<!-- ═══════════════════════════════ DAY 6 ═══════════════════════════════ -->
+<section class="day-section" id="day6">
+  <div class="day-section-header">
+    <span class="day-number">Day 6</span>
+    <div class="day-title-block">
+      <div class="day-title">The City &amp; the Tower</div>
+      <div class="day-date">Friday, 9 October 2026 &nbsp;&middot;&nbsp; One walk east, no tube all day</div>
+    </div>
+  </div>
+
+  <div class="tip-box" style="margin-bottom:1.25rem;padding:1rem 1.25rem;background:var(--amber-bg);border:1px solid var(--amber-bd);border-radius:var(--radius);font-size:13px;color:var(--ink2);line-height:1.75;">
+    <strong>The tidiest day of the week.</strong> Borough Market at full Friday strength on the doorstep, then a single walk east through the City to the Tower, up the Sky Garden at sunset, and back along the river in the dark. <strong>No trains, no tube, two bookings</strong> &mdash; the Tower at 2pm, and a free Sky Garden slot released three weeks out. This day picked up the City after the Studio Tour moved to Wednesday, and it is much better for it: everything is within walking distance of the hotel and you are home for a normal dinner.
+  </div>
+
+  <div class="slot-label">Morning, on the doorstep</div>
+
+  <div class="activity-card">
+    <div class="activity-card-body">
+      <div class="activity-info">
+        <div class="activity-type">&#127857;&nbsp; Market at full strength</div>
+        <div class="activity-name">Borough Market, Friday</div>
+        <div class="activity-address">&#128205;&nbsp; 8 Southwark St, London SE1 1TL &nbsp;&middot;&nbsp; 4-minute walk from the hotel</div>
+        <div class="practical-row">
+          <span class="prac-item"><span class="pric-free">Free</span>&nbsp; to wander</span>
+          <span class="prac-item">&#128336;&nbsp; Friday is a full trading day</span>
+          <span class="prac-item">&#9201;&nbsp; A slow morning</span>
+        </div>
+        <p class="activity-desc">Lie in, then Borough Market at full trading strength. Friday is a full market day, unlike the limited Monday you saw on the first afternoon. This is the market as it actually is &mdash; the cheesemongers, the fish, the doughnuts at Bread Ahead, Monmouth for coffee. Graze rather than sit down; lunch is at Leadenhall.</p>
+      </div>
+      <div class="map-area">
+        <iframe src="https://maps.google.com/maps?q=Borough+Market+London+SE1+1TL&output=embed" loading="lazy" title="Borough Market map"></iframe>
+        <a class="map-open-link" href="https://www.google.com/maps/search/?api=1&query=Borough+Market+London+SE1" target="_blank">Open in Google Maps &#8599;</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="transport-between">
+    <div class="transport-between-icon">&#128694;</div>
+    <div class="transport-between-text">
+      <strong>Borough Market &#8594; the City, on foot over London Bridge</strong>
+      <span>Straight out of the market and over London Bridge, which puts the whole City in front of you. About fifteen minutes to Leadenhall. Nothing today needs a train.</span>
+    </div>
+    <span class="transport-badge">15 min walk</span>
+  </div>
+
   <div class="slot-label">Late morning, east through the City on foot</div>
 
   <div class="activity-card">
     <div class="activity-card-body">
       <div class="activity-info">
-        <div class="activity-type">&#127793;&nbsp; Three small City stops, all free</div>
-        <div class="activity-name">Postman&rsquo;s Park, Leadenhall Market &amp; St Dunstan in the East</div>
-        <div class="activity-address">&#128205;&nbsp; Between St Paul&rsquo;s and the Tower &nbsp;&middot;&nbsp; A walking chain east through the City</div>
+        <div class="activity-type">&#127963;&nbsp; Two City stops, both free</div>
+        <div class="activity-name">Leadenhall Market &amp; St Dunstan in the East</div>
+        <div class="activity-address">&#128205;&nbsp; Between Bank and the Tower &nbsp;&middot;&nbsp; A walking chain east through the City</div>
         <div class="practical-row">
           <span class="prac-item"><span class="pric-free">Free</span></span>
-          <span class="prac-item">&#9201;&nbsp; About 1.5 hours with the walking</span>
+          <span class="prac-item">&#128336;&nbsp; Leadenhall is best on a working weekday</span>
+          <span class="prac-item">&#9201;&nbsp; About an hour with the walking</span>
         </div>
-        <p class="activity-desc">Three easy stops on the way to the Tower, each a few minutes apart. Do them in order as you head east and finish near the river.</p>
+        <p class="activity-desc">Two easy stops a few minutes apart, both on the way to the Tower. Friday is the right day for Leadenhall: the City is working and the market is alive rather than shuttered.</p>
         <ul class="highlights">
-          <li><b>Postman&rsquo;s Park:</b> A small park with a Victorian wall of ceramic tiles memorialising ordinary people who died saving others. Ten minutes, and it stays with you.</li>
-          <li><b>Leadenhall Market:</b> A Victorian glass and ironwork arcade, used as Diagon Alley in the first Harry Potter film.</li>
-          <li><b>St Dunstan in the East:</b> A church bombed in the Blitz, left as a ruin and taken over by a garden. Free, tiny, nearly empty, and the most romantic corner in the City.</li>
+          <li><b>Leadenhall Market:</b> A Victorian glass and ironwork arcade in maroon and gold, used as Diagon Alley in the first Harry Potter film &mdash; which lands rather well two days after Leavesden.</li>
+          <li><b>St Dunstan in the East:</b> A church bombed in the Blitz, left as a ruin and taken over by a garden growing up through the windows. Free, tiny, nearly empty, and the most romantic corner in the City.</li>
         </ul>
       </div>
       <div class="map-area">
@@ -682,17 +1298,16 @@
     </div>
   </div>
 
-  <div class="slot-label">Lunch, the City or Leadenhall</div>
+  <div class="slot-label">Lunch, under the Leadenhall roof</div>
   <div class="dinner-card">
     <div class="dinner-title">&#127829;&nbsp; Lunch options</div>
     <div class="dinner-options">
-      <div class="dinner-opt"><b>Leadenhall Market</b> has pubs and lunch spots under the Victorian roof. Good on a weekday when the City is working.</div>
-      <div class="dinner-opt"><b>Bermondsey or Borough</b> are close if you would rather eat back near the river before the Tower.</div>
+      <div class="dinner-opt"><b>Leadenhall Market</b> has pubs and lunch spots under the Victorian roof. Good on a Friday when the City is working and the place has a crowd in it.</div>
+      <div class="dinner-opt"><b>Or graze at Borough</b> before you set off, and go straight through to the Tower.</div>
     </div>
   </div>
 
   <div class="slot-label">2:00pm, pre-book</div>
-
   <div class="activity-card">
     <div class="activity-card-body">
       <div class="activity-info">
@@ -721,7 +1336,6 @@
   </div>
 
   <div class="slot-label">Late afternoon</div>
-
   <div class="activity-card">
     <div class="activity-card-body">
       <div class="activity-info">
@@ -732,10 +1346,10 @@
           <span class="prac-item"><span class="pric-free">Free</span>&nbsp; to cross &amp; to visit</span>
           <span class="prac-item">&#9201;&nbsp; 45 minutes for both</span>
         </div>
-        <p class="activity-desc">Walk Tower Bridge on foot, which is free. Skip the paid Exhibition unless you specifically want the glass-floor walkways. Then head to the Garden at 120, a free rooftop garden five minutes away with no booking and no security queue, reliably emptier than the Sky Garden.</p>
+        <p class="activity-desc">Walk Tower Bridge on foot, which is free. Skip the paid Exhibition unless you specifically want the glass-floor walkways. Then head north into the City for the Garden at 120, a free open-air rooftop five minutes away with no booking and no security queue &mdash; and the fallback if the Sky Garden slots below have gone.</p>
         <ul class="highlights">
           <li><b>Tower Bridge:</b> Free to cross. Stand on the south approach for the classic photo.</li>
-          <li><b>Garden at 120:</b> Free rooftop, open access, no booking, better and quieter than the Sky Garden.</li>
+          <li><b>Garden at 120:</b> Free rooftop, open access, no booking, and open to the sky rather than under glass. Quieter than the Sky Garden and directly across the street from it.</li>
         </ul>
       </div>
       <div class="map-area">
@@ -745,11 +1359,39 @@
     </div>
   </div>
 
+  <div class="slot-label">Sunset, about 6:20pm &#8212; free, but book it weeks ahead</div>
+
+  <div class="activity-card">
+    <div class="activity-card-body">
+      <div class="activity-info">
+        <div class="activity-type">&#127796;&nbsp; Glasshouse on floor 35, free with a timed slot</div>
+        <div class="activity-name">Sky Garden, the Walkie Talkie</div>
+        <div class="activity-address">&#128205;&nbsp; 1 Sky Garden Walk, 20 Fenchurch St, London EC3M 8AF &nbsp;&middot;&nbsp; Two minutes from the Garden at 120</div>
+        <div class="practical-row">
+          <span class="prac-item"><span class="pric-free">Free</span>&nbsp; (timed slot, book at skygarden.london)</span>
+          <span class="prac-item">&#128336;&nbsp; Free slots release about 3 weeks ahead and go fast</span>
+          <span class="prac-item">&#9201;&nbsp; 1 hour</span>
+        </div>
+        <p class="activity-desc">Three storeys of terraced planting under a curved glass roof on the 35th floor, with an open-air terrace on the south side and the river straight below it. It is the highest thing in London you can get into for nothing, and on this day it is two minutes from where you are already standing &mdash; so the walk home along the Thames Path starts from up here instead of from street level. Aim for a slot around sunset: the Shard and Tower Bridge light up on one side, St Paul&rsquo;s and the City on the other.</p>
+        <ul class="highlights">
+          <li><b>Book the moment the slots open.</b> They are released roughly three weeks ahead on skygarden.london and the sunset slots are the first to go. Put it in the <a href="checklist.html">checklist</a> as a diary reminder rather than a task you can do today.</li>
+          <li><b>Photo ID and airport-style security</b> at the entrance on Philpot Lane. Allow ten minutes to get up, and no large bags.</li>
+          <li><b>If the free slots are gone,</b> book a table at the <b>Darwin Brasserie</b> or one of the bars up there instead, which gets you in without a visitor ticket &mdash; or just use the Garden at 120 above, which needs nothing at all.</li>
+          <li><b>The terrace is genuinely outdoors</b> and 155 metres up in October. Bring the coat you were going to walk home in anyway.</li>
+        </ul>
+      </div>
+      <div class="map-area">
+        <iframe src="https://maps.google.com/maps?q=Sky+Garden+20+Fenchurch+Street+London+EC3M+8AF&output=embed" loading="lazy" title="Sky Garden map"></iframe>
+        <a class="map-open-link" href="https://www.google.com/maps/search/?api=1&query=Sky+Garden+20+Fenchurch+Street+London+EC3M+8AF" target="_blank">Open in Google Maps &#8599;</a>
+      </div>
+    </div>
+  </div>
+
   <div class="transport-between">
     <div class="transport-between-icon">&#128694;</div>
     <div class="transport-between-text">
-      <strong>The City &#8594; Hotel, Thames Path at dusk</strong>
-      <span>Walk home along the Thames Path, about 25 minutes at dusk with the City lit up behind you. One of the better evening walks in London.</span>
+      <strong>The City &#8594; Hotel, Thames Path in the dark</strong>
+      <span>Down out of the Sky Garden and home along the Thames Path, about 25 minutes with the City lit up behind you. One of the better evening walks in London, and better still straight after an hour spent looking down on the same view.</span>
     </div>
     <span class="transport-badge">25 min walk</span>
   </div>
@@ -760,256 +1402,7 @@
     <div class="dinner-options">
       <div class="dinner-opt"><b>Bermondsey Street</b>, SE1, has a strong run of independent restaurants a short walk from the hotel.</div>
       <div class="dinner-opt"><b>Borough Market</b> area for something quick and good close to the door.</div>
-    </div>
-  </div>
-
-</section><!-- end day 4 -->
-
-<!-- ═══════════════════════════════ DAY 5 ═══════════════════════════════ -->
-<section class="day-section" id="day5">
-  <div class="day-section-header">
-    <span class="day-number">Day 5</span>
-    <div class="day-title-block">
-      <div class="day-title">Greenwich by River, then Totoro</div>
-      <div class="day-date">Thursday, 8 October 2026 &nbsp;&middot;&nbsp; A half-day out and a proper evening</div>
-    </div>
-  </div>
-
-  <div class="slot-label">9:30am, Thames Clipper east</div>
-
-  <div class="transport-between">
-    <div class="transport-between-icon">&#128676;</div>
-    <div class="transport-between-text">
-      <strong>Hotel &#8594; Bankside Pier &#8594; Greenwich Pier</strong>
-      <span>Walk 5 minutes to Bankside Pier and take the Thames Clipper east to Greenwich, about 40 minutes. The river journey is half the point: the City skyline, Canary Wharf, and the O2. Tap contactless on the pier, about &pound;9pp, runs every 20 to 30 minutes.</span>
-    </div>
-    <span class="transport-badge">~45 min total</span>
-  </div>
-
-  <div class="slot-label">10:15am, pre-book</div>
-
-  <div class="activity-card">
-    <div class="activity-card-body">
-      <div class="activity-info">
-        <div class="activity-type">&#9973;&nbsp; Historic ship, pre-book</div>
-        <div class="activity-name">Cutty Sark</div>
-        <div class="activity-address">&#128205;&nbsp; King William Walk, London SE10 9HT &nbsp;&middot;&nbsp; 3-minute walk from Greenwich Pier</div>
-        <div class="practical-row">
-          <span class="prac-item">&#128178;&nbsp; Combined ticket with the Observatory &nbsp;&middot;&nbsp; Book: rmg.co.uk</span>
-          <span class="prac-item">&#128336;&nbsp; From 10am</span>
-          <span class="prac-item">&#9201;&nbsp; About 1 hour</span>
-        </div>
-        <p class="activity-desc">The last surviving Victorian tea clipper, built in 1869 and raised on a glass base so you walk underneath the copper hull before climbing aboard. Book the combined ticket with the Royal Observatory at rmg.co.uk to save a little.</p>
-      </div>
-      <div class="map-area">
-        <iframe src="https://maps.google.com/maps?q=Cutty+Sark+Greenwich+SE10+9HT&output=embed" loading="lazy" title="Cutty Sark map"></iframe>
-        <a class="map-open-link" href="https://www.google.com/maps/search/?api=1&query=Cutty+Sark+Greenwich+SE10+9HT" target="_blank">Open in Google Maps &#8599;</a>
-      </div>
-    </div>
-  </div>
-
-  <div class="slot-label">11:30am, free and nearly empty</div>
-
-  <div class="activity-card">
-    <div class="activity-card-body">
-      <div class="activity-info">
-        <div class="activity-type">&#128694;&nbsp; Victorian foot tunnel, free</div>
-        <div class="activity-name">Greenwich Foot Tunnel &amp; Island Gardens</div>
-        <div class="activity-address">&#128205;&nbsp; Cutty Sark Gardens, London SE10 9HT &nbsp;&middot;&nbsp; Beside the Cutty Sark</div>
-        <div class="practical-row">
-          <span class="prac-item"><span class="pric-free">Free</span></span>
-          <span class="prac-item">&#9201;&nbsp; 20 minutes each way</span>
-        </div>
-        <p class="activity-desc">A tiled Victorian tunnel that runs 370 metres under the Thames. Take the lift down, walk through, and come up the other side at Island Gardens, where you get the classic painted view back across the water at the Old Royal Naval College. Almost nobody bothers, which is exactly why it is worth doing.</p>
-      </div>
-      <div class="map-area">
-        <iframe src="https://maps.google.com/maps?q=Greenwich+Foot+Tunnel+London+SE10&output=embed" loading="lazy" title="Greenwich Foot Tunnel map"></iframe>
-        <a class="map-open-link" href="https://www.google.com/maps/search/?api=1&query=Greenwich+Foot+Tunnel+London+SE10" target="_blank">Open in Google Maps &#8599;</a>
-      </div>
-    </div>
-  </div>
-
-  <div class="slot-label">Lunch, Greenwich Market</div>
-  <div class="dinner-card">
-    <div class="dinner-title">&#127829;&nbsp; Lunch &amp; a browse</div>
-    <div class="dinner-options">
-      <div class="dinner-opt"><b>Greenwich Market</b>, SE10 9HZ. Covered, good street food, and good browsing afterward. Five minutes from the pier.</div>
-    </div>
-  </div>
-
-  <div class="slot-label">1:30pm, up through the park</div>
-
-  <div class="activity-card">
-    <div class="activity-card-body">
-      <div class="activity-info">
-        <div class="activity-type">&#128506;&nbsp; Observatory &amp; the Prime Meridian, pre-book</div>
-        <div class="activity-name">Royal Observatory Greenwich</div>
-        <div class="activity-address">&#128205;&nbsp; Blackheath Ave, London SE10 8XJ &nbsp;&middot;&nbsp; 10-minute uphill walk from the market</div>
-        <div class="practical-row">
-          <span class="prac-item">&#128178;&nbsp; Combined with Cutty Sark &nbsp;&middot;&nbsp; Book: rmg.co.uk</span>
-          <span class="prac-item">&#128336;&nbsp; From 10am</span>
-          <span class="prac-item">&#9201;&nbsp; About 1.5 hours</span>
-        </div>
-        <p class="activity-desc">The home of Greenwich Mean Time and the Prime Meridian. Stand with one foot in each hemisphere, and take in the view from the hill back over the Naval College to Canary Wharf, the classic London panorama.</p>
-      </div>
-      <div class="map-area">
-        <iframe src="https://maps.google.com/maps?q=Royal+Observatory+Greenwich+SE10+8XJ&output=embed" loading="lazy" title="Royal Observatory map"></iframe>
-        <a class="map-open-link" href="https://www.google.com/maps/search/?api=1&query=Royal+Observatory+Greenwich+SE10+8XJ" target="_blank">Open in Google Maps &#8599;</a>
-      </div>
-    </div>
-  </div>
-
-  <div class="activity-card">
-    <div class="activity-card-body">
-      <div class="activity-info">
-        <div class="activity-type">&#127795;&nbsp; Park, free</div>
-        <div class="activity-name">Greenwich Park &amp; the Flower Garden</div>
-        <div class="activity-address">&#128205;&nbsp; Greenwich Park, London SE10 8QY</div>
-        <div class="practical-row">
-          <span class="prac-item"><span class="pric-free">Free</span></span>
-          <span class="prac-item">&#9201;&nbsp; As long as you like before the boat back</span>
-        </div>
-        <p class="activity-desc">With the light schedule today, there is real time here. The Flower Garden in the southeast corner is the best part of the park and most visitors never reach it. There is a small deer enclosure in the Wilderness alongside it, and the chestnut avenues are turning in October.</p>
-      </div>
-      <div class="map-area">
-        <iframe src="https://maps.google.com/maps?q=Greenwich+Park+Flower+Garden+London+SE10&output=embed" loading="lazy" title="Greenwich Park map"></iframe>
-        <a class="map-open-link" href="https://www.google.com/maps/search/?api=1&query=Greenwich+Park+London+SE10" target="_blank">Open in Google Maps &#8599;</a>
-      </div>
-    </div>
-  </div>
-
-  <div class="transport-between">
-    <div class="transport-between-icon">&#128676;</div>
-    <div class="transport-between-text">
-      <strong>Greenwich &#8594; Bankside, then shower &amp; change</strong>
-      <span>Clipper back to Bankside around 3:30pm, arriving about 4:15pm. Shower, change, and sit down for twenty minutes before the evening.</span>
-    </div>
-    <span class="transport-badge">~45 min</span>
-  </div>
-
-  <div class="slot-label">5:30pm, dinner in Covent Garden</div>
-  <div class="dinner-card">
-    <div class="dinner-title">&#127374;&nbsp; Early dinner near the theatre</div>
-    <div class="dinner-options">
-      <div class="dinner-opt"><b>Seven Dials</b>, ten minutes from the theatre. Eat early so you are not rushing the 7pm curtain.</div>
-    </div>
-  </div>
-
-  <div class="slot-label">7:00pm, the evening</div>
-
-  <div class="activity-card">
-    <div class="activity-card-body">
-      <div class="activity-info">
-        <div class="activity-type">&#127917;&nbsp; Theatre, book six weeks ahead</div>
-        <div class="activity-name">My Neighbour Totoro, Gillian Lynne Theatre</div>
-        <div class="activity-address">&#128205;&nbsp; 166 Drury Lane, London WC2B 5PW &nbsp;&middot;&nbsp; Covent Garden or Holborn station</div>
-        <div class="practical-row">
-          <span class="prac-item">&#128178;&nbsp; From about &pound;25 &nbsp;&middot;&nbsp; Book direct with LW Theatres</span>
-          <span class="prac-item">&#128336;&nbsp; 7:00pm, runs 2hr 30 with an interval</span>
-          <span class="prac-item">&#9201;&nbsp; Book by late August</span>
-        </div>
-        <p class="activity-desc">The stage adaptation of the Studio Ghibli film, and a genuine spectacle: six Olivier Awards, puppetry by Jim Henson&rsquo;s Creature Shop and Basil Twist, and Joe Hisaishi&rsquo;s score played live by an onstage band.</p>
-        <ul class="highlights">
-          <li><b>Booking:</b> Book direct with LW Theatres, no booking fees. Book six weeks ahead for 20% off evening performances, so late August.</li>
-          <li><b>Day seats:</b> There are also &pound;25 day seats in the stalls released for every performance if you would rather chance it on the day.</li>
-        </ul>
-        <div class="tip-box"><strong>Why Thursday:</strong> No Saturday-evening pressure, and Thursday evenings are the least child-heavy performances.</div>
-      </div>
-      <div class="map-area">
-        <iframe src="https://maps.google.com/maps?q=Gillian+Lynne+Theatre+166+Drury+Lane+London+WC2B+5PW&output=embed" loading="lazy" title="Gillian Lynne Theatre map"></iframe>
-        <a class="map-open-link" href="https://www.google.com/maps/search/?api=1&query=Gillian+Lynne+Theatre+London+WC2B" target="_blank">Open in Google Maps &#8599;</a>
-      </div>
-    </div>
-  </div>
-
-</section><!-- end day 5 -->
-
-<!-- ═══════════════════════════════ DAY 6 ═══════════════════════════════ -->
-<section class="day-section" id="day6">
-  <div class="day-section-header">
-    <span class="day-number">Day 6</span>
-    <div class="day-title-block">
-      <div class="day-title">Harry Potter Studio Tour, Dark Arts</div>
-      <div class="day-date">Friday, 9 October 2026 &nbsp;&middot;&nbsp; The most booking-sensitive day of the trip</div>
-    </div>
-  </div>
-
-  <div class="tip-box" style="margin-bottom:1.25rem;padding:1rem 1.25rem;background:var(--amber-bg);border:1px solid var(--amber-bd);border-radius:var(--radius);font-size:13px;color:var(--ink2);line-height:1.75;">
-    <strong>Book this the day you read it.</strong> October Dark Arts slots sell out first and there are no tickets at the door. Entry is from about &pound;58.50pp. This is the single most booking-sensitive item in the whole trip.
-  </div>
-
-  <div class="slot-label">Morning, free</div>
-
-  <div class="activity-card">
-    <div class="activity-card-body">
-      <div class="activity-info">
-        <div class="activity-type">&#127857;&nbsp; Market at full strength</div>
-        <div class="activity-name">Borough Market, Friday</div>
-        <div class="activity-address">&#128205;&nbsp; 8 Southwark St, London SE1 1TL &nbsp;&middot;&nbsp; 4-minute walk from the hotel</div>
-        <div class="practical-row">
-          <span class="prac-item"><span class="pric-free">Free</span>&nbsp; to wander</span>
-          <span class="prac-item">&#128336;&nbsp; Friday is a full trading day</span>
-          <span class="prac-item">&#9201;&nbsp; A slow morning</span>
-        </div>
-        <p class="activity-desc">Lie in, then Borough Market at full trading strength. Friday is a full market day, unlike the limited Monday you saw earlier in the week. This is the market as it actually is, and a good breakfast before the trip out west.</p>
-      </div>
-      <div class="map-area">
-        <iframe src="https://maps.google.com/maps?q=Borough+Market+London+SE1+1TL&output=embed" loading="lazy" title="Borough Market map"></iframe>
-        <a class="map-open-link" href="https://www.google.com/maps/search/?api=1&query=Borough+Market+London+SE1" target="_blank">Open in Google Maps &#8599;</a>
-      </div>
-    </div>
-  </div>
-
-  <div class="slot-label">Getting there, leave central London about 11:45am</div>
-
-  <div class="arrival-card">
-    <div class="arrival-card-header">
-      <h3>&#128646;&nbsp; Travel independently, not the coach package</h3>
-    </div>
-    <div class="arrival-rows">
-      <div class="arrival-row">
-        <div class="arrival-row-icon">&#128646;</div>
-        <div class="arrival-row-content">
-          <strong>Euston &#8594; Watford Junction &#8594; the studios</strong>
-          <span class="step">From the hotel, take the Northern line to Euston. From <strong>Euston</strong>, a West Coast line train to <strong>Watford Junction</strong>, about 20 minutes.</span>
-          <span class="step">At Watford Junction, the <strong>Mullany&rsquo;s shuttle bus</strong> runs to the studios, about 15 minutes, every 20 minutes.</span>
-          <span class="step">This is cheaper and far more flexible than the Victoria coach packages, which run to their own fixed departures that will not match a 13:30 entry slot. Leave central London around 11:45am for a 13:30 tour.</span>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="slot-label">13:30, the tour</div>
-
-  <div class="activity-card">
-    <div class="activity-card-body">
-      <div class="activity-info">
-        <div class="activity-type">&#129497;&nbsp; Studio tour, pre-book, no door tickets</div>
-        <div class="activity-name">Warner Bros. Studio Tour, The Making of Harry Potter</div>
-        <div class="activity-address">&#128205;&nbsp; Studio Tour Drive, Leavesden, Watford WD25 7LR</div>
-        <div class="practical-row">
-          <span class="prac-item">&#128178;&nbsp; From &pound;58.50pp entry only &nbsp;&middot;&nbsp; Book: wbstudiotour.co.uk</span>
-          <span class="prac-item">&#128336;&nbsp; 13:30 entry, self-paced</span>
-          <span class="prac-item">&#9201;&nbsp; 3 to 4 hours</span>
-        </div>
-        <p class="activity-desc">Self-paced and generous: the Great Hall, Diagon Alley, Platform 9&frac34;, Dumbledore&rsquo;s office, the Forbidden Forest, the Hogwarts model, and the Backlot for butterbeer.</p>
-        <ul class="highlights">
-          <li><b>Dark Arts, 16 September to 8 November 2026, included in the standard ticket:</b> the Great Hall dressed with over 100 hand-carved pumpkins floating above a Halloween feast, roaming Death Eater processions, Voldemort projections, dimmed lighting throughout, Dementors in the Forbidden Forest, and a Dark Mark trail passport collected on arrival.</li>
-          <li><b>Why 13:30 beats the morning slot:</b> you will be in the Forbidden Forest around 15:30 and walking out into a dark car park, with sunset at 18:15. The whole Dark Arts dressing lands differently in the dark.</li>
-        </ul>
-      </div>
-      <div class="map-area">
-        <iframe src="https://maps.google.com/maps?q=Warner+Bros+Studio+Tour+London+Leavesden+WD25+7LR&output=embed" loading="lazy" title="Studio Tour map"></iframe>
-        <a class="map-open-link" href="https://www.google.com/maps/search/?api=1&query=Warner+Bros+Studio+Tour+London+Leavesden+WD25" target="_blank">Open in Google Maps &#8599;</a>
-      </div>
-    </div>
-  </div>
-
-  <div class="slot-label">About 7:00pm, back in central London</div>
-  <div class="dinner-card">
-    <div class="dinner-title">&#127374;&nbsp; Late, easy dinner near the hotel</div>
-    <div class="dinner-options">
-      <div class="dinner-opt">Nothing else is planned tonight. A relaxed dinner near the hotel around Borough or Bankside, then an early night.</div>
+      <div class="dinner-opt"><b>An early-ish night suits.</b> Tomorrow is Kew from the 10am opening, which means leaving the hotel at 9:15am.</div>
     </div>
   </div>
 
@@ -1020,40 +1413,49 @@
   <div class="day-section-header">
     <span class="day-number">Day 7</span>
     <div class="day-title-block">
-      <div class="day-title">Kew, Petersham &amp; Richmond Park</div>
-      <div class="day-date">Saturday, 10 October 2026 &nbsp;&middot;&nbsp; One District line, west, all day</div>
+      <div class="day-title">Kew, Petersham &amp; Richmond Hill</div>
+      <div class="day-date">Saturday, 10 October 2026 &nbsp;&middot;&nbsp; Glasshouses, a long lunch, and the protected view</div>
     </div>
   </div>
 
-  <div class="slot-label">10:00am</div>
+  <div class="tip-box" style="margin-bottom:1.25rem;padding:1rem 1.25rem;background:var(--amber-bg);border:1px solid var(--amber-bd);border-radius:var(--radius);font-size:13px;color:var(--ink2);line-height:1.75;">
+    <strong>Two bookings, and the day has an arc.</strong> Warm glasshouses in the morning, a long lunch under climbing plants, a river walk, then a sunset over the Thames. Mid-October is close to peak autumn colour at Kew, and the two great Victorian glasshouses turn a cold grey day from a problem into an asset. Book <strong>Kew</strong> and <strong>Petersham Nurseries</strong>; everything else is free and needs nothing.
+  </div>
+
+  <div class="slot-label">9:15am, aim to be at the gate for opening</div>
 
   <div class="transport-between">
     <div class="transport-between-icon">&#128666;</div>
     <div class="transport-between-text">
       <strong>Hotel &#8594; Kew Gardens</strong>
-      <span>District line from Embankment (toward Richmond) to Kew Gardens, about 50 minutes, then a 7-minute walk. No changes and no doubling back all day.</span>
+      <span>District line from Embankment toward Richmond to Kew Gardens, about 50 minutes, then five minutes to Victoria Gate. No changes and no doubling back all day. <strong>Be there for the 10:00 opening</strong> &#8212; the first hour is the quietest and the low autumn light through the glass is the best of the day. The Studio Tour moved to Wednesday, so last night was a normal one and this start is realistic.</span>
     </div>
     <span class="transport-badge">~1 hour</span>
   </div>
 
+  <div class="slot-label">10:00am to about 1:00pm, book online</div>
+
   <div class="activity-card">
     <div class="activity-card-body">
       <div class="activity-info">
-        <div class="activity-type">&#127807;&nbsp; Botanic gardens, walk-up</div>
+        <div class="activity-type">&#127807;&nbsp; Botanic gardens, book ahead online</div>
         <div class="activity-name">Kew Gardens</div>
         <div class="activity-address">&#128205;&nbsp; Kew, Richmond, London TW9 3AE &nbsp;&middot;&nbsp; Kew Gardens station (District line, Overground)</div>
         <div class="practical-row">
-          <span class="prac-item">&#128178;&nbsp; About &pound;15pp</span>
+          <span class="prac-item">&#128178;&nbsp; About &pound;15 to &pound;22pp &nbsp;&middot;&nbsp; Book: kew.org</span>
           <span class="prac-item">&#128336;&nbsp; From 10am</span>
-          <span class="prac-item">&#9201;&nbsp; A good half-day</span>
+          <span class="prac-item">&#9201;&nbsp; Three hours, one loop</span>
         </div>
-        <p class="activity-desc">Mid-October is the right time: autumn colour through the arboretum, and the glasshouses are warm if it turns. Do not try to cover 300 acres. The good half-day is the glasshouses and the central walk.</p>
+        <p class="activity-desc">Do not try to cover 300 acres. Three hours, one loop, and four things worth doing as a pair rather than as two people walking near each other. Advance online tickets are cheaper than the gate.</p>
         <ul class="highlights">
-          <li><b>Palm House:</b> Victorian iron and glass, tropical and humid, with a spiral staircase up to the walkway.</li>
-          <li><b>Temperate House:</b> The largest Victorian glasshouse in the world.</li>
-          <li><b>Treetop Walkway:</b> 18 metres up in the canopy.</li>
-          <li><b>The Great Broad Walk Borders</b> and the lake, at whatever pace suits.</li>
+          <li><b>Palm House first.</b> The 1848 glasshouse, and on a cold morning it hits you like a wall of warm wet air &#8212; the glass mists, the light goes green. Take the spiral staircase up to the walkway around the canopy. You are up in the palms with almost nobody else there at ten in the morning, it is 25&deg;C, and it is the warmest, most enveloping twenty minutes of the day. This is the photograph.</li>
+          <li><b>Waterlily House</b> next door is tiny, hotter still, and takes five minutes.</li>
+          <li><b>The Great Broad Walk Borders</b> &#8212; 320 metres of double herbaceous border, the longest in the country, running down toward the <b>Temperate House</b>, twice the size of the Palm House and the largest surviving Victorian glasshouse anywhere.</li>
+          <li><b>The Sackler Crossing.</b> A low bronze-and-granite bridge that curves across the lake in an S, with bronze fins along the sides that seem to open and close as you walk. Autumn colour on both banks, reflections underneath. If you take one picture of the two of you at Kew, take it here.</li>
+          <li><b>The Hive.</b> A 17-metre aluminium lattice wired to a real beehive elsewhere in the gardens, so it hums and glows in time with the actual bees. Lie down on the glass floor underneath and look up. Free, ten minutes, and the kind of thing you will both still bring up later.</li>
+          <li><b>The Treetop Walkway</b> puts you 18 metres up in the canopy for 200 metres, which in mid-October is the whole point. Then the <b>Japanese Gateway</b> and the <b>Pagoda</b> with its golden dragons if you have time in hand.</li>
         </ul>
+        <div class="tip-box"><strong>Check when you book:</strong> Kew Palace is usually closed by October, and the Pagoda interior has its own seasonal opening. Neither is load-bearing.</div>
       </div>
       <div class="map-area">
         <iframe src="https://maps.google.com/maps?q=Kew+Gardens+Richmond+London+TW9+3AE&output=embed" loading="lazy" title="Kew Gardens map"></iframe>
@@ -1063,15 +1465,15 @@
   </div>
 
   <div class="transport-between">
-    <div class="transport-between-icon">&#128666;</div>
+    <div class="transport-between-icon">&#128694;</div>
     <div class="transport-between-text">
-      <strong>Kew &#8594; Petersham (via Richmond)</strong>
-      <span>District line two stops on to Richmond, then a walk along the river or a short taxi to Petersham.</span>
+      <strong>Kew &#8594; Richmond Bridge &#8594; Petersham, on foot along the river</strong>
+      <span>District line two stops to Richmond, then walk down to Richmond Bridge and pick up the Thames towpath south. About 25 minutes to Petersham, past moored boats and rowers, with Petersham Meadows opening out on your left. Flat, quiet, and one of the loveliest walks in London &#8212; this is the connective tissue of the day, not just transit. The 65 bus does it in five minutes if the weather is against you.</span>
     </div>
-    <span class="transport-badge">~20 min</span>
+    <span class="transport-badge">~40 min</span>
   </div>
 
-  <div class="slot-label">About 1:00pm, book well ahead</div>
+  <div class="slot-label">2:00pm, book well ahead</div>
 
   <div class="activity-card">
     <div class="activity-card-body">
@@ -1080,10 +1482,13 @@
         <div class="activity-name">Petersham Nurseries</div>
         <div class="activity-address">&#128205;&nbsp; Church Ln, off Petersham Rd, Richmond TW10 7AB</div>
         <div class="practical-row">
-          <span class="prac-item">&#128178;&nbsp; About &pound;35 to &pound;60pp &nbsp;&middot;&nbsp; Book well ahead</span>
+          <span class="prac-item">&#128178;&nbsp; About &pound;35 to &pound;60pp &nbsp;&middot;&nbsp; Book: petershamnurseries.com</span>
           <span class="prac-item">&#9201;&nbsp; 1.5 to 2 hours</span>
         </div>
-        <p class="activity-desc">The restaurant holds a Green Michelin Star and sits in a pergola with flowers growing over it. The afternoon tea is served in a separate glasshouse. It fills up, so book well ahead.</p>
+        <p class="activity-desc"><strong>Book the Caf&eacute; for 2pm, not the Teahouse.</strong> It is a working glasshouse with plants growing up the frame and over the tables, mismatched furniture on a dirt floor, and a Green Michelin Star. Long lunch, no rush &#8212; this is the sit-down centre of the day and the point at which she gets to stop walking.</p>
+        <ul class="highlights">
+          <li><b>Then the shop</b>, which people underestimate: candles, antique glass, worn garden furniture, dried flowers. Exactly her kind of browse, and a far nicer place to buy something than a market stall.</li>
+        </ul>
         <div class="tip-box"><strong>If it is full:</strong> Richmond has a very strong pub scene and the riverside terraces are the thing. No loss either way.</div>
       </div>
       <div class="map-area">
@@ -1093,48 +1498,54 @@
     </div>
   </div>
 
-  <div class="slot-label">About 3:00pm, arriving at the right time for the rut</div>
+  <div class="slot-label">About 3:30pm, arriving at the right time for the rut</div>
 
   <div class="activity-card">
     <div class="activity-card-body">
       <div class="activity-info">
         <div class="activity-type">&#129420;&nbsp; Deer park, free</div>
         <div class="activity-name">Richmond Park</div>
-        <div class="activity-address">&#128205;&nbsp; Enter at Richmond Gate, Richmond TW10 5HP</div>
+        <div class="activity-address">&#128205;&nbsp; Up through Petersham Meadows, in at Petersham Gate, TW10</div>
         <div class="practical-row">
           <span class="prac-item"><span class="pric-free">Free</span></span>
           <span class="prac-item">&#128336;&nbsp; 7am to dusk</span>
-          <span class="prac-item">&#9201;&nbsp; 2 to 3 hours</span>
+          <span class="prac-item">&#9201;&nbsp; 2 hours</span>
         </div>
-        <p class="activity-desc">2,500 acres with about 630 red and fallow deer roaming loose. October is the rut, when red stags and fallow bucks roar, bark and clash antlers competing for females. Late afternoon, an hour or two before sunset, is when the deer are most active and the light is best, so you arrive at exactly the right time.</p>
+        <p class="activity-desc">2,500 acres with about 630 red and fallow deer roaming loose. <strong>October is the rut</strong>, when red stags and fallow bucks roar, bark and clash antlers competing for females. It is free, it is extraordinary, and it only happens in the few weeks you happen to be here. Late afternoon, an hour or two before sunset, is when the deer are most active and the light is best, so you arrive at exactly the right time.</p>
         <ul class="highlights">
-          <li><b>Route:</b> In at Richmond Gate, along toward Pen Ponds where the deer congregate, and back. Pembroke Lodge has a cafe if you need one.</li>
+          <li><b>King Henry&rsquo;s Mound</b>, behind Pembroke Lodge, is the small secret: a gap cut through a hedge that frames <b>St Paul&rsquo;s Cathedral ten miles away</b>. The sightline is protected by law. You have to know it is there to find it, which is most of its charm.</li>
+          <li><b>Route:</b> in at Petersham Gate, up to Pembroke Lodge and the Mound, on toward Pen Ponds where the deer congregate, then out at Richmond Gate. Pembroke Lodge has a caf&eacute; but it closes early in autumn.</li>
         </ul>
-        <div class="tip-box"><strong>Safety, take it seriously:</strong> Keep a minimum of 50 metres from the deer at all times. During the rut the stags are pumped with testosterone, weigh up to 200kg and can reach 30mph. Watch from a distance and do not approach for photographs.</div>
+        <div class="tip-box"><strong>Safety, take it seriously:</strong> Keep a minimum of 50 metres from the deer at all times. During the rut the stags are pumped with testosterone, weigh up to 200kg and can reach 30mph. Watch from a distance, never get between a stag and the herd, and do not approach for photographs.</div>
       </div>
       <div class="map-area">
-        <iframe src="https://maps.google.com/maps?q=Richmond+Park+Richmond+Gate+London+TW10&output=embed" loading="lazy" title="Richmond Park map"></iframe>
-        <a class="map-open-link" href="https://www.google.com/maps/search/?api=1&query=Richmond+Park+Richmond+Gate+London+TW10" target="_blank">Open in Google Maps &#8599;</a>
+        <iframe src="https://maps.google.com/maps?q=Pembroke+Lodge+Richmond+Park+London+TW10&output=embed" loading="lazy" title="Richmond Park map"></iframe>
+        <a class="map-open-link" href="https://www.google.com/maps/search/?api=1&query=Richmond+Park+Pembroke+Lodge+London+TW10" target="_blank">Open in Google Maps &#8599;</a>
       </div>
     </div>
   </div>
 
-  <div class="slot-label">About 5:45pm, sunset 6:12pm</div>
+  <div class="slot-label">About 5:30pm, sunset 6:12pm</div>
 
   <div class="activity-card">
     <div class="activity-card-body">
       <div class="activity-info">
         <div class="activity-type">&#127749;&nbsp; The protected view, free</div>
         <div class="activity-name">Richmond Hill at sunset</div>
-        <div class="activity-address">&#128205;&nbsp; Richmond Hill, Richmond TW10 6RN</div>
+        <div class="activity-address">&#128205;&nbsp; Terrace Gardens, Richmond Hill, Richmond TW10 6RN</div>
         <div class="practical-row">
           <span class="prac-item"><span class="pric-free">Free</span></span>
           <span class="prac-item">&#128336;&nbsp; Sunset about 6:12pm</span>
+          <span class="prac-item">&#9201;&nbsp; An hour</span>
         </div>
-        <p class="activity-desc">The view from the terrace over the Thames meadows is the only view in England protected by its own Act of Parliament. The Roebuck pub is right there, so take a drink out onto the promenade opposite and watch the light go.</p>
+        <p class="activity-desc">Come out of the park at Richmond Gate and walk down to the Terrace Gardens. This is the <strong>only view in England protected by its own Act of Parliament</strong> &#8212; the Richmond, Ham and Petersham Open Spaces Act of 1902. Turner painted it and so did Reynolds. It faces west down a bend in the Thames with the meadows and the cows below, and on a clear October evening it goes gold and then pink. It is the best place on this entire trip to stand next to her and not say anything.</p>
+        <ul class="highlights">
+          <li><b>The Roebuck</b> is right there on the hill &#8212; people take their drinks across the road to the terrace wall.</li>
+          <li><b>The Petersham Hotel</b> on Nightingale Lane does a drink or an afternoon tea with the same view from indoors if it is cold.</li>
+        </ul>
       </div>
       <div class="map-area">
-        <iframe src="https://maps.google.com/maps?q=Richmond+Hill+Terrace+Richmond+TW10+6RN&output=embed" loading="lazy" title="Richmond Hill map"></iframe>
+        <iframe src="https://maps.google.com/maps?q=Terrace+Gardens+Richmond+Hill+TW10+6RN&output=embed" loading="lazy" title="Richmond Hill map"></iframe>
         <a class="map-open-link" href="https://www.google.com/maps/search/?api=1&query=Richmond+Hill+Terrace+Richmond+TW10" target="_blank">Open in Google Maps &#8599;</a>
       </div>
     </div>
@@ -1144,9 +1555,13 @@
   <div class="dinner-card">
     <div class="dinner-title">&#127374;&nbsp; Dinner in Richmond, or the District line back</div>
     <div class="dinner-options">
-      <div class="dinner-opt"><b>Richmond</b> has plenty of riverside options for a relaxed dinner before the ride home.</div>
-      <div class="dinner-opt"><b>Back to central:</b> Richmond to Southwark is about 45 minutes on the District line.</div>
+      <div class="dinner-opt"><b>Eat in Richmond.</b> Ten minutes down the hill, plenty of riverside options. Going straight from that view onto a Tube is a waste of the mood.</div>
+      <div class="dinner-opt"><b>Back to central:</b> Richmond to Southwark is about 45 minutes on the District line whenever you are ready.</div>
     </div>
+  </div>
+
+  <div class="tip-box" style="margin-top:1.25rem;padding:1rem 1.25rem;background:var(--amber-bg);border:1px solid var(--amber-bd);border-radius:var(--radius);font-size:13px;color:var(--ink2);line-height:1.75;">
+    <strong>If the forecast turns.</strong> The day splits cleanly. <strong>Kew survives rain</strong> &#8212; the Palm House, Temperate House and Waterlily House are the reason to be there anyway, and wet glass is atmospheric. <strong>Petersham survives rain</strong>; it is a glasshouse. What dies is the towpath walk, the deer and the Richmond Hill sunset. The wet-weather version is Kew until two, a long lunch at Petersham, the 65 bus back into Richmond, and the Petersham Hotel lounge or an early return to town. Decide in the week beforehand &#8212; nothing here needs committing before then except the two tickets.
   </div>
 
 </section><!-- end day 7 -->
@@ -1156,12 +1571,16 @@
   <div class="day-section-header">
     <span class="day-number">Day 8</span>
     <div class="day-title-block">
-      <div class="day-title">East End &amp; Hampstead</div>
-      <div class="day-date">Sunday, 11 October 2026 &nbsp;&middot;&nbsp; Last full London day before the train north</div>
+      <div class="day-title">The East End: Thrifting, Flowers &amp; a Rooftop Sunset</div>
+      <div class="day-date">Sunday, 11 October 2026 &nbsp;&middot;&nbsp; A slow meander, five sit-downs, ending on a roof</div>
     </div>
   </div>
 
-  <div class="slot-label">8:00am, Sundays only, go early</div>
+  <div class="tip-box" style="margin-bottom:1.25rem;padding:1rem 1.25rem;background:var(--amber-bg);border:1px solid var(--amber-bd);border-radius:var(--radius);font-size:13px;color:var(--ink2);line-height:1.75;">
+    <strong>This is a meander, not a route.</strong> Sunday in the East End is the best thrifting in Britain, and the whole day sits inside about a mile and a half of walking. It is built around five sit-downs with shopping between them, so nothing below is a schedule &#8212; if a shop is good, stay in it. The one fixed point is the end: sunset is about 6:10pm, and you want to be on the Boundary roof with a drink in hand before it.
+  </div>
+
+  <div class="slot-label">8:45am, Sundays only, go early</div>
 
   <div class="activity-card">
     <div class="activity-card-body">
@@ -1172,9 +1591,14 @@
         <div class="practical-row">
           <span class="prac-item"><span class="pric-free">Free</span></span>
           <span class="prac-item">&#128336;&nbsp; Sundays only, about 8am to 3pm</span>
-          <span class="prac-item">&#9201;&nbsp; Go at eight</span>
+          <span class="prac-item">&#9201;&nbsp; 1.5 to 2 hours</span>
         </div>
-        <p class="activity-desc">Emphatically a morning thing. By 11am you can barely move, so go at eight: traders shouting, the whole street a tunnel of flowers, small shops opening up behind the stalls. One of the best free mornings in London.</p>
+        <p class="activity-desc">Emphatically a morning thing. By 11am you can barely move, so go early: traders shouting, the whole street a tunnel of flowers, and the small shops opening up behind the stalls. <strong>Buy her flowers and carry them for the rest of the day.</strong> It costs about a tenner and she will end up photographed with them a dozen times without either of you planning it.</p>
+        <ul class="highlights">
+          <li><b>Vintage Heaven</b>, 82 Columbia Road. Floor-to-ceiling old English china and glass, with a tearoom called the Cake Hole at the back. Sit-down number one.</li>
+          <li><b>Ezra Street</b>, a cobbled courtyard just off the main drag: coffee, pastries, junk stalls and usually a jazz band. Jones Dairy for a bacon sandwich.</li>
+          <li><b>Angela Flanders</b>, no. 96. A small independent perfumer, worth ten minutes of smelling everything.</li>
+        </ul>
       </div>
       <div class="map-area">
         <iframe src="https://maps.google.com/maps?q=Columbia+Road+Flower+Market+London+E2+7RG&output=embed" loading="lazy" title="Columbia Road map"></iframe>
@@ -1183,96 +1607,156 @@
     </div>
   </div>
 
-  <div class="slot-label">Mid-morning, ten minutes&rsquo; walk</div>
+  <div class="transport-between">
+    <div class="transport-between-icon">&#128694;</div>
+    <div class="transport-between-text">
+      <strong>Columbia Road &#8594; Brick Lane</strong>
+      <span>A ten-minute walk south through Bethnal Green and down into the top of Brick Lane. No trains, no tapping in.</span>
+    </div>
+    <span class="transport-badge">10 min walk</span>
+  </div>
+
+  <div class="slot-label">11:00am, the main event, take three hours over it</div>
 
   <div class="activity-card">
     <div class="activity-card-body">
       <div class="activity-info">
-        <div class="activity-type">&#129508;&nbsp; A London institution</div>
-        <div class="activity-name">Brick Lane, Beigel Bake &amp; Spitalfields</div>
-        <div class="activity-address">&#128205;&nbsp; 159 Brick Lane, London E1 6SB &nbsp;&middot;&nbsp; North end of Brick Lane</div>
+        <div class="activity-type">&#128087;&nbsp; Vintage &amp; thrift, free to browse</div>
+        <div class="activity-name">Brick Lane &amp; the Old Truman Brewery</div>
+        <div class="activity-address">&#128205;&nbsp; 91 Brick Lane, London E1 6QL &nbsp;&middot;&nbsp; Shoreditch High Street or Aldgate East station</div>
         <div class="practical-row">
-          <span class="prac-item">&#128336;&nbsp; Beigel Bake open 24 hours</span>
-          <span class="prac-item">&#128178;&nbsp; Salt beef bagel about &pound;5</span>
-          <span class="prac-item">&#9201;&nbsp; 1 to 1.5 hours</span>
+          <span class="prac-item"><span class="pric-free">Free</span>&nbsp; to browse</span>
+          <span class="prac-item">&#128336;&nbsp; Sunday is the full-strength day</span>
+          <span class="prac-item">&#9201;&nbsp; 3 hours, unhurried</span>
         </div>
-        <p class="activity-desc">A salt beef bagel at Beigel Bake at the north end: open 24 hours, about &pound;5, a proper institution. Then the street art around Hanbury Street and Princelet Street, and Old Spitalfields Market.</p>
+        <p class="activity-desc">The densest concentration of secondhand clothing in the country, and on a Sunday all of it is open at once. Work south down the lane and dip into the side streets. Nothing here needs booking and nothing here is expensive.</p>
+        <ul class="highlights">
+          <li><b>Brick Lane Vintage Market</b> &#8212; basement of the Old Truman Brewery. Dense, cheap, by the rail.</li>
+          <li><b>Blitz London</b>, 55 Hanbury Street. Two floors, run like a proper vintage department store.</li>
+          <li><b>Absolute Vintage</b>, also Hanbury Street, for the wall of several hundred pairs of shoes.</li>
+          <li><b>Atika</b>, <b>Rokit</b> and <b>Beyond Retro</b> on Cheshire Street; <b>Traid</b> for actual charity-shop prices.</li>
+          <li><b>Rough Trade East</b> on Dray Walk for records, and <b>Backyard Market</b> and <b>Sunday UpMarket</b> for makers and bric-a-brac.</li>
+        </ul>
       </div>
       <div class="map-area">
-        <iframe src="https://maps.google.com/maps?q=Beigel+Bake+159+Brick+Lane+London&output=embed" loading="lazy" title="Beigel Bake map"></iframe>
-        <a class="map-open-link" href="https://www.google.com/maps/search/?api=1&query=Beigel+Bake+159+Brick+Lane+London+E1" target="_blank">Open in Google Maps &#8599;</a>
+        <iframe src="https://maps.google.com/maps?q=Old+Truman+Brewery+Brick+Lane+London+E1+6QL&output=embed" loading="lazy" title="Brick Lane map"></iframe>
+        <a class="map-open-link" href="https://www.google.com/maps/search/?api=1&query=Old+Truman+Brewery+Brick+Lane+London+E1" target="_blank">Open in Google Maps &#8599;</a>
       </div>
     </div>
-  </div>
-
-  <div class="slot-label">1:00pm, free timed slot</div>
-
-  <div class="transport-between">
-    <div class="transport-between-icon">&#128666;</div>
-    <div class="transport-between-text">
-      <strong>Shoreditch &#8594; British Museum</strong>
-      <span>About 25 minutes across town. Book a free timed slot online for the museum before you go.</span>
-    </div>
-    <span class="transport-badge">~25 min</span>
   </div>
 
   <div class="activity-card">
     <div class="activity-card-body">
       <div class="activity-info">
-        <div class="activity-type">&#127963;&nbsp; Museum, free timed entry</div>
-        <div class="activity-name">British Museum</div>
-        <div class="activity-address">&#128205;&nbsp; Great Russell St, London WC1B 3DG &nbsp;&middot;&nbsp; Tottenham Court Road or Holborn station</div>
+        <div class="activity-type">&#127851;&nbsp; Sit-down two, about &pound;5</div>
+        <div class="activity-name">Dark Sugars Cocoa House</div>
+        <div class="activity-address">&#128205;&nbsp; 141 Brick Lane, London E1 6SB</div>
         <div class="practical-row">
-          <span class="prac-item"><span class="pric-free">Free</span>&nbsp; (book a timed slot)</span>
-          <span class="prac-item">&#9201;&nbsp; 2 hours of highlights, then leave</span>
+          <span class="prac-item">&#128178;&nbsp; About &pound;5</span>
+          <span class="prac-item">&#9201;&nbsp; 20 minutes</span>
         </div>
-        <p class="activity-desc">Two hours of highlights, not a full sweep: the Great Court, the Rosetta Stone, the Assyrian lion hunt reliefs, the Egyptian galleries, and the Parthenon sculptures. Then leave. Nobody has ever benefited from a fourth hour in the British Museum.</p>
-        <div class="tip-box"><strong>Alternative if you would rather something small and strange:</strong> Sir John Soane&rsquo;s Museum, ten minutes away at Lincoln&rsquo;s Inn Fields. Free, no booking, Wednesday to Sunday 10 to 5, capacity capped at 90 so there may be a short queue. An architect&rsquo;s house left exactly as he died in it in 1837, crammed to the ceiling with antiquities including a pharaoh&rsquo;s sarcophagus in the basement.</div>
+        <p class="activity-desc">The hot chocolate arrives buried under a landslide of shaved chocolate curls in three colours, and they keep piling it on while you watch. Cheap, ridiculous, and the best photograph of the day that is not made of neon.</p>
       </div>
       <div class="map-area">
-        <iframe src="https://maps.google.com/maps?q=British+Museum+London+WC1B+3DG&output=embed" loading="lazy" title="British Museum map"></iframe>
-        <a class="map-open-link" href="https://www.google.com/maps/search/?api=1&query=British+Museum+London+WC1B" target="_blank">Open in Google Maps &#8599;</a>
+        <iframe src="https://maps.google.com/maps?q=Dark+Sugars+Cocoa+House+Brick+Lane+London+E1&output=embed" loading="lazy" title="Dark Sugars map"></iframe>
+        <a class="map-open-link" href="https://www.google.com/maps/search/?api=1&query=Dark+Sugars+Brick+Lane+London+E1" target="_blank">Open in Google Maps &#8599;</a>
       </div>
     </div>
   </div>
 
-  <div class="slot-label">4:00pm</div>
-
-  <div class="transport-between">
-    <div class="transport-between-icon">&#128666;</div>
-    <div class="transport-between-text">
-      <strong>Central London &#8594; Hampstead</strong>
-      <span>Northern line to Hampstead, about 30 minutes. Hampstead is the deepest station on the network, so use the lift rather than the 320 stairs.</span>
+  <div class="slot-label">Lunch, sit-down three, whenever you are hungry</div>
+  <div class="dinner-card">
+    <div class="dinner-title">&#129508;&nbsp; Eat on the lane</div>
+    <div class="dinner-options">
+      <div class="dinner-opt"><b>Beigel Bake</b>, 159 Brick Lane. Open 24 hours, salt beef bagel about &pound;5, and a queue out the door at 2am on a Tuesday. A proper institution.</div>
+      <div class="dinner-opt"><b>The Truman food halls</b> &#8212; Sunday UpMarket and the Boiler House. Dozens of stalls under one roof, ideal for grazing between shops rather than committing to a meal.</div>
+      <div class="dinner-opt"><b>Brick Lane curry houses</b> if you want to sit down properly. Haggling at the door is part of it.</div>
     </div>
-    <span class="transport-badge">~30 min</span>
   </div>
+
+  <div class="slot-label">About 2:00pm, five minutes off the lane</div>
 
   <div class="activity-card">
     <div class="activity-card-body">
       <div class="activity-info">
-        <div class="activity-type">&#127794;&nbsp; Heath &amp; the best sunset view, free</div>
-        <div class="activity-name">Hampstead Heath &amp; Parliament Hill</div>
-        <div class="activity-address">&#128205;&nbsp; Hampstead Heath, London NW3 &nbsp;&middot;&nbsp; Hampstead station (Northern line)</div>
+        <div class="activity-type">&#127968;&nbsp; Street art &amp; a 1720s street, free</div>
+        <div class="activity-name">Hanbury Street murals &amp; Fournier Street</div>
+        <div class="activity-address">&#128205;&nbsp; Fournier St, London E1 6QE &nbsp;&middot;&nbsp; One minute west of Brick Lane</div>
         <div class="practical-row">
           <span class="prac-item"><span class="pric-free">Free</span></span>
-          <span class="prac-item">&#128336;&nbsp; Sunset about 6:10pm</span>
-          <span class="prac-item">&#9201;&nbsp; 1.5 to 2 hours</span>
+          <span class="prac-item">&#9201;&nbsp; 30 minutes</span>
         </div>
-        <p class="activity-desc">Walk across the Heath, which is woodland and rough grassland rather than a manicured park, and does not feel like a city. Aim for Parliament Hill around 5:45pm for sunset. This is the view: not the Shard, not the Eye, but a grassy hill with the whole city laid out below and Londoners walking dogs past you. Free, and the one that people who actually live there recommend.</p>
+        <p class="activity-desc">The Shoreditch murals change constantly, and the giant heron Roa painted down the side of a building on Hanbury Street has been there for years. Walk the side streets with your eyes up. Then turn onto <strong>Fournier Street</strong> and change century entirely: a perfectly preserved terrace of 1720s Huguenot silk-weavers&rsquo; houses, wide upper windows built to throw light onto the looms, black railings, nothing modern in sight. The most atmospheric street in East London, and it takes five minutes to walk. The Ten Bells sits on the corner with its Victorian tiling intact.</p>
       </div>
       <div class="map-area">
-        <iframe src="https://maps.google.com/maps?q=Parliament+Hill+Hampstead+Heath+London+NW5&output=embed" loading="lazy" title="Parliament Hill map"></iframe>
-        <a class="map-open-link" href="https://www.google.com/maps/search/?api=1&query=Parliament+Hill+Hampstead+Heath+London" target="_blank">Open in Google Maps &#8599;</a>
+        <iframe src="https://maps.google.com/maps?q=Fournier+Street+London+E1+6QE&output=embed" loading="lazy" title="Fournier Street map"></iframe>
+        <a class="map-open-link" href="https://www.google.com/maps/search/?api=1&query=Fournier+Street+London+E1" target="_blank">Open in Google Maps &#8599;</a>
       </div>
     </div>
   </div>
 
-  <div class="slot-label">Evening</div>
+  <div class="slot-label">3:00pm, sit-down four</div>
+
+  <div class="activity-card">
+    <div class="activity-card-body">
+      <div class="activity-info">
+        <div class="activity-type">&#127978;&nbsp; Two more markets, free</div>
+        <div class="activity-name">Old Spitalfields &amp; Petticoat Lane</div>
+        <div class="activity-address">&#128205;&nbsp; 16 Horner Square, London E1 6EW &nbsp;&middot;&nbsp; Liverpool Street station</div>
+        <div class="practical-row">
+          <span class="prac-item"><span class="pric-free">Free</span>&nbsp; to browse</span>
+          <span class="prac-item">&#128336;&nbsp; Petticoat Lane is Sundays only</span>
+          <span class="prac-item">&#9201;&nbsp; 2 hours, and eat through it</span>
+        </div>
+        <p class="activity-desc">Sunday is Old Spitalfields at its antiques-and-vintage best, under a Victorian iron roof so the weather does not matter. This is the eating stop of the afternoon, so go in hungry and graze rather than order one thing: the market&rsquo;s food traders run down one whole side of it, and sit-down four is whatever you both cannot walk past. <strong>Humble Crumble</strong> is the one people queue for &#8212; crumble in a cup, absurd portions of it &#8212; with <strong>Crosstown</strong> for doughnuts and a dozen hot-food stalls either side. Then <strong>Petticoat Lane</strong> on Middlesex Street, five minutes south, which runs Sundays only and is the proper old East End cheap-and-cheerful version: no boutique gloss, just volume.</p>
+      </div>
+      <div class="map-area">
+        <iframe src="https://maps.google.com/maps?q=Old+Spitalfields+Market+London+E1+6EW&output=embed" loading="lazy" title="Old Spitalfields Market map"></iframe>
+        <a class="map-open-link" href="https://www.google.com/maps/search/?api=1&query=Old+Spitalfields+Market+London+E1" target="_blank">Open in Google Maps &#8599;</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="transport-between">
+    <div class="transport-between-icon">&#128694;</div>
+    <div class="transport-between-text">
+      <strong>Petticoat Lane &#8594; Redchurch Street, on foot</strong>
+      <span>Back up through Spitalfields, onto Brick Lane, then left at the top onto Redchurch Street. About twelve minutes, all of it through streets you would want to be walking down anyway. No train, no tickets, no rush.</span>
+    </div>
+    <span class="transport-badge">~12 min</span>
+  </div>
+
+  <div class="slot-label">5:30pm, the finale &#8212; sunset on a Shoreditch roof</div>
+
+  <div class="activity-card">
+    <div class="activity-card-body">
+      <div class="activity-info">
+        <div class="activity-type">&#127864;&nbsp; Sit-down five &#8212; rooftop cocktails at sunset</div>
+        <div class="activity-name">Boundary Rooftop</div>
+        <div class="activity-address">&#128205;&nbsp; 2&ndash;4 Boundary St, entrance on Redchurch Street, London E2 7DD</div>
+        <div class="practical-row">
+          <span class="prac-item">&#128178;&nbsp; About &pound;17 a cocktail &nbsp;&middot;&nbsp; roughly &pound;35pp for two each</span>
+          <span class="prac-item">&#128336;&nbsp; Sunset is about 6:10pm &nbsp;&middot;&nbsp; 18+, cashless</span>
+          <span class="prac-item">&#9201;&nbsp; 1.5 hours</span>
+        </div>
+        <p class="activity-desc">The roof of the Boundary looks 360 degrees across Shoreditch and the City &#8212; the Gherkin, the Cheesegrater and 22 Bishopsgate all coming on as the light goes &#8212; and the glass Orangery at one end means a cold October evening is still a comfortable one to sit out in. Be up there by half five so you are sitting down before the sky turns rather than queuing through it. Two cocktails each, no timetable, and the whole East End day behind you.</p>
+        <div class="tip-box"><strong>Worth checking first.</strong> The rooftop runs seasonal hours and closes to bad weather, so ring or check boundary.london in the week before to confirm it is open that Sunday, and book a table if they are taking them. If it is shut, <strong>The Culpeper</strong> has a small walled roof garden at the corner of Old Spitalfields, three minutes from where you are already standing.</div>
+      </div>
+      <div class="map-area">
+        <iframe src="https://maps.google.com/maps?q=Boundary+Shoreditch+2-4+Boundary+Street+London+E2+7DD&output=embed" loading="lazy" title="Boundary Rooftop map"></iframe>
+        <a class="map-open-link" href="https://www.google.com/maps/search/?api=1&query=Boundary+Rooftop+Shoreditch+London" target="_blank">Open in Google Maps &#8599;</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="slot-label">Evening, and only if you want it</div>
   <div class="dinner-card">
-    <div class="dinner-title">&#127374;&nbsp; Dinner in Hampstead village, or back to Bankside</div>
+    <div class="dinner-title">&#127374;&nbsp; Dinner is optional tonight, then pack</div>
     <div class="dinner-options">
-      <div class="dinner-opt"><b>Hampstead village</b> has good pubs and restaurants a short walk from the Heath.</div>
-      <div class="dinner-opt"><b>Pack tonight:</b> the Edinburgh train is tomorrow morning. Lay everything out before dinner so the morning is easy.</div>
+      <div class="dinner-opt"><b>You will have eaten your way through Spitalfields at three o&rsquo;clock</b>, so leave dinner undecided and call it over the second cocktail. Neither answer is wrong.</div>
+      <div class="dinner-opt"><b>If you are hungry:</b> you are already standing on <b>Redchurch Street</b>, five minutes from Shoreditch High Street station and full of good, unfussy places. Nothing here needs booking on a Sunday.</div>
+      <div class="dinner-opt"><b>If you are not:</b> Shoreditch High Street back to London Bridge is about twenty minutes, and an early night before the Edinburgh train is no bad thing.</div>
+      <div class="dinner-opt"><b>Pack tonight:</b> the Edinburgh train is tomorrow morning. Lay everything out when you get in, so the morning is easy.</div>
     </div>
   </div>
 
@@ -1391,6 +1875,7 @@
         <ul class="highlights">
           <li><b>Granary Square:</b> The fountains and the steps down to the canal, coffee at any of the places around the square.</li>
           <li><b>If it rains:</b> the British Library is 5 minutes from the hotel and free. The Treasures gallery holds Magna Carta, Beowulf and the Lindisfarne Gospels in one room, and takes 30 minutes.</li>
+          <li><b>Or the <a href="#appendix-british-museum">British Museum</a>:</b> 20 minutes on foot or five on the bus, free, and open from 10am. With an evening flight there is time for both &mdash; breakfast on the canal at nine, the museum at ten, back for the noon check-out. The <a href="#appendix-british-museum">appendix</a> has a short route that fits in two hours.</li>
         </ul>
         <div class="tip-box"><strong>Bags:</strong> Check out by noon and leave bags at the hotel desk rather than dragging them around. Collect on the way to the Tube.</div>
       </div>
@@ -1418,6 +1903,344 @@
 
 </section><!-- end day 14 -->
 
+
+<!-- ═════════════════════════ APPENDIX: WINDSOR SWAP-IN DAY ═════════════════════════ -->
+<div class="appendix-divider">
+  <div class="appendix-kicker">Appendix &nbsp;&middot;&nbsp; Not in the plan</div>
+  <div class="appendix-heading">Optional swap-in: a day at Windsor</div>
+  <p class="appendix-blurb">Everything above this line is the itinerary. Everything below it is a spare day, written out in full so it can be dropped straight in if you decide you want it. Nothing here is booked and nothing above depends on it.</p>
+</div>
+
+<section class="day-section appendix-section" id="appendix-windsor">
+  <div class="day-section-header">
+    <span class="day-number">Spare day</span>
+    <div class="day-title-block">
+      <div class="day-title">Windsor Castle &amp; Eton</div>
+      <div class="day-date">A spare day, not pinned to a date &nbsp;&middot;&nbsp; Drops into the 8th, 9th or 10th</div>
+    </div>
+  </div>
+
+  <div class="swap-banner">
+    <div class="swap-banner-icon">&#8646;</div>
+    <div class="swap-banner-text">
+      <strong>What this is.</strong> A complete spare day, written out in full and <strong>deliberately not attached to a date</strong>, so it can be dropped in wherever it suits. It is the one properly grand thing the fortnight otherwise misses: the oldest occupied castle in the world, still a working royal residence, about an hour from the hotel door. Nothing above depends on it and nothing here is booked. If you do take it, read <em>Which day it can go on</em> immediately below &mdash; the castle&rsquo;s closing days do most of the deciding for you &mdash; and <em>What changes elsewhere</em> at the foot of the section.
+    </div>
+  </div>
+
+  <div class="tip-box" style="margin-bottom:1.5rem;padding:1rem 1.25rem;background:var(--amber-bg);border:1px solid var(--amber-bd);border-radius:var(--radius);font-size:13px;color:var(--ink2);line-height:1.75;">
+    <strong>Which day it can go on.</strong> Two closures rule out most of the week before you get to weigh anything up. <strong>Windsor Castle is closed on Tuesdays and Wednesdays</strong>, which kills the 6th and the 7th &mdash; and note that this means <strong>Windsor can no longer be swapped for the Studio Tour</strong>, which now sits on Wednesday the 7th. <strong>St George&rsquo;s Chapel is closed to visitors on Sundays</strong> for services, and the 11th is the Sunday-only markets anyway, so that goes too. The 5th is arrival day and the 12th is the train north. <strong>That leaves Thursday the 8th, Friday the 9th and Saturday the 10th</strong>, and each costs you something different &mdash; the table at the foot of this section sets out which.
+  </div>
+
+  <div class="tip-box" style="margin-bottom:1.5rem;">
+    <strong>October is the right month for it, whichever day you pick.</strong> The <strong>Semi-State Rooms</strong> &mdash; George IV&rsquo;s private apartments, and the most extravagantly decorated rooms in the castle &mdash; are open October to March and shut from April to September. An autumn visit gets you more of the building than a summer one, not less. The Long Walk turns gold in mid-October for the same reason. Book online at <strong>rct.uk</strong> a few weeks ahead; check the current adult price when you do, it sits around &pound;30 to &pound;33pp.
+  </div>
+  <div class="slot-label">Morning, leave the hotel about 8:45am</div>
+
+  <div class="arrival-card">
+    <div class="arrival-card-header">
+      <h3>&#128646;&nbsp; Getting to Windsor &#8212; two routes, take the simpler one</h3>
+    </div>
+    <div class="arrival-rows">
+      <div class="arrival-row">
+        <div class="arrival-row-icon">&#9989;</div>
+        <div class="arrival-row-content">
+          <strong>Recommended: Waterloo &#8594; Windsor &amp; Eton Riverside, direct</strong>
+          <span class="step">London Bridge to <strong>Waterloo</strong> is one stop on the Jubilee line, about 3 minutes from the hotel end.</span>
+          <span class="step">From Waterloo, a <strong>direct train, no changes, about 55 minutes</strong>. Trains run roughly every half hour.</span>
+          <span class="step">Riverside station comes out beside the Thames, a <strong>5-minute walk</strong> to the castle up through the town. No connection to miss, no platform sprint, and you can sleep on it.</span>
+        </div>
+      </div>
+      <div class="arrival-row">
+        <div class="arrival-row-icon">&#9201;</div>
+        <div class="arrival-row-content">
+          <strong>Faster on paper: Paddington &#8594; Slough &#8594; Windsor &amp; Eton Central</strong>
+          <span class="step">Fast train to <strong>Slough</strong>, then a <strong>shuttle</strong> across to Windsor &amp; Eton Central, about 6 minutes. Roughly 35 to 40 minutes of train time.</span>
+          <span class="step">But Paddington is 30 minutes from Southwark before you start, which cancels most of the saving. <strong>Central station is closer to the castle gate</strong>, which is the real advantage.</span>
+          <span class="step">Both stations are inside the <strong>Oyster and contactless area</strong>, so you can tap in and out with the same card you use all week. No advance ticket needed.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="slot-label">10:00am, opening &#8212; the castle</div>
+
+  <div class="activity-card">
+    <div class="activity-card-body">
+      <div class="activity-info">
+        <div class="activity-type">&#128737;&nbsp; Pre-book, allow most of the day</div>
+        <div class="activity-name">Windsor Castle</div>
+        <div class="activity-address">&#128205;&nbsp; Windsor SL4 1NJ &nbsp;&middot;&nbsp; 5 to 10 minutes on foot from either station</div>
+        <div class="practical-row">
+          <span class="prac-item">&#128178;&nbsp; About &pound;30 to &pound;33pp &nbsp;&middot;&nbsp; Book: rct.uk</span>
+          <span class="prac-item">&#128336;&nbsp; 10:00 to 17:15, last admission 16:00</span>
+          <span class="prac-item">&#9201;&nbsp; 3 to 4 hours</span>
+        </div>
+        <p class="activity-desc">Nine hundred and fifty years of continuous occupation on the same lump of chalk above the Thames, begun by William the Conqueror and still a working royal residence. It is not a ruin and it is not a museum: the flag over the Round Tower tells you whether the King is in. Go in at opening, take the free audio guide, and do not rush the state rooms.</p>
+        <ul class="highlights">
+          <li><b>The State Apartments:</b> St George&rsquo;s Hall with the ceiling of Garter knights&rsquo; arms, the Waterloo Chamber, the Grand Reception Room, and rooms hung with Rembrandt, Rubens, Van Dyck and Canaletto. Much of this was rebuilt after the 1992 fire and the restoration is close to invisible.</li>
+          <li><b>The Semi-State Rooms, October to March only:</b> George IV&rsquo;s private apartments, and the most extravagantly decorated rooms in the whole castle. Shut all summer. This is the single best reason to come in October.</li>
+          <li><b>Queen Mary&rsquo;s Dolls&rsquo; House:</b> a 1920s house built at one twelfth scale with running water, working lifts, electricity, tiny bottles of real wine in the cellar and a library of miniature books written by hand by actual authors. Quietly the most astonishing thing in the building.</li>
+          <li><b>St George&rsquo;s Chapel:</b> the Garter stalls with their banners, the fan vaulting, and the tombs &mdash; Henry VIII, Charles I, Queen Elizabeth II and the Duke of Edinburgh. Open Monday to Saturday to visitors, closed Sundays. Included in the ticket.</li>
+          <li><b>Changing the Guard, 11:00:</b> it does <b>not</b> run daily, and Friday is often not a guard day. Check householddivision.org.uk in the week beforehand rather than planning the morning around it. Free to watch from outside the walls if it is on.</li>
+        </ul>
+        <div class="tip-box"><strong>Bags and security:</strong> airport-style screening at the entrance and no large bags allowed inside. Travel with one small bag between you and you will walk straight through.</div>
+      </div>
+      <div class="map-area">
+        <iframe src="https://maps.google.com/maps?q=Windsor+Castle+Windsor+SL4+1NJ&output=embed" loading="lazy" title="Windsor Castle map"></iframe>
+        <a class="map-open-link" href="https://www.google.com/maps/search/?api=1&query=Windsor+Castle+Windsor+SL4+1NJ" target="_blank">Open in Google Maps &#8599;</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="slot-label">About 1:30pm, lunch in the town</div>
+
+  <div class="dinner-card">
+    <div class="dinner-title">&#127860;&nbsp; Where to eat, all within five minutes of the gate</div>
+    <div class="dinner-options">
+      <div class="dinner-opt"><b>The Two Brewers</b>, 34 Park Street, SL4 1LB. A 17th-century pub sitting right at the gates of the Long Walk, low ceilings and open fires. <b>Adults only</b> and small, so it does not take large groups &mdash; get there before the castle empties out. The obvious choice if you want the day to feel like the day.</div>
+      <div class="dinner-opt"><b>Gilbey&rsquo;s</b>, 82&ndash;83 High Street, Eton SL4 6AF. Over the bridge on the Eton side, a proper long lunch with a courtyard. Book if you want this one.</div>
+      <div class="dinner-opt"><b>The Crooked House</b>, 51 High Street, SL4 1LR. A visibly buckled 1687 building leaning into its neighbour, doing tea and cakes. Worth a photograph whether or not you go in &mdash; check it is trading, it has opened and closed more than once.</div>
+      <div class="dinner-opt"><b>Quick and cheap:</b> Windsor Royal Station, the converted Victorian trainshed at Central station, has a run of cafes under the glass roof.</div>
+    </div>
+  </div>
+
+  <div class="slot-label">Afternoon, on foot &#8212; the two things you do not pay for</div>
+
+  <div class="activity-card">
+    <div class="activity-card-body">
+      <div class="activity-info">
+        <div class="activity-type">&#127807;&nbsp; Free, and the best view of the castle</div>
+        <div class="activity-name">The Long Walk</div>
+        <div class="activity-address">&#128205;&nbsp; Park Street gates, Windsor SL4 1LU &nbsp;&middot;&nbsp; 4-minute walk from the castle exit</div>
+        <div class="practical-row">
+          <span class="prac-item"><span class="pric-free">Free</span></span>
+          <span class="prac-item">&#128336;&nbsp; Open daily, dawn to dusk</span>
+          <span class="prac-item">&#9201;&nbsp; 40 minutes is plenty</span>
+        </div>
+        <p class="activity-desc">A dead-straight avenue of elms and planes running <b>2.65 miles</b> from the castle&rsquo;s George IV Gate to the Copper Horse statue on Snow Hill, laid out by Charles II. You do not need to walk it all &mdash; and in October you should not, because the light goes. <b>Twenty minutes out is enough:</b> turn around there and the castle is framed at the end of the avenue with deer grazing off to the sides, which is the photograph of the day and the one most visitors never take because they never leave the walls.</p>
+        <ul class="highlights">
+          <li><b>Autumn is the point.</b> Mid-October is when the avenue turns, and the whole thing runs gold down the middle of Windsor Great Park.</li>
+          <li><b>Red deer</b> range in the park either side of the avenue. Keep your distance, especially in October &mdash; the rut is on, same as at Richmond.</li>
+          <li><b>If you want the full walk to the Copper Horse,</b> allow an hour each way and start straight after lunch rather than after the castle.</li>
+        </ul>
+      </div>
+      <div class="map-area">
+        <iframe src="https://maps.google.com/maps?q=The+Long+Walk+Windsor+Great+Park+SL4&output=embed" loading="lazy" title="The Long Walk map"></iframe>
+        <a class="map-open-link" href="https://www.google.com/maps/search/?api=1&query=The+Long+Walk+Windsor+SL4" target="_blank">Open in Google Maps &#8599;</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="activity-card">
+    <div class="activity-card-body">
+      <div class="activity-info">
+        <div class="activity-type">&#127967;&nbsp; Free, across the river</div>
+        <div class="activity-name">Windsor Bridge &amp; Eton High Street</div>
+        <div class="activity-address">&#128205;&nbsp; Eton, Windsor SL4 6AF &nbsp;&middot;&nbsp; 10-minute walk from the castle</div>
+        <div class="practical-row">
+          <span class="prac-item"><span class="pric-free">Free</span></span>
+          <span class="prac-item">&#9201;&nbsp; 45 minutes</span>
+        </div>
+        <p class="activity-desc">Cross the Thames on the cast-iron <b>Windsor Bridge</b>, pedestrian only since the 1970s, and the noise stops. <b>Eton High Street</b> is a single narrow run of antique dealers, second-hand bookshops, galleries and old pubs, with boys in tailcoats occasionally crossing it. It takes about half an hour to walk end to end and it is the quietest, most unexpectedly pleasant part of the day.</p>
+        <ul class="highlights">
+          <li><b>Eton College</b> sits at the far end. It is a working school and public access is limited &mdash; the walk up to the gates and the chapel from outside is the realistic version.</li>
+          <li><b>The view back from the bridge</b> is the classic one: the river, the boathouses, and the castle stacked up on the hill above the rooftops. Best in late afternoon light.</li>
+        </ul>
+      </div>
+      <div class="map-area">
+        <iframe src="https://maps.google.com/maps?q=Windsor+Bridge+Eton+High+Street+SL4+6AF&output=embed" loading="lazy" title="Eton High Street map"></iframe>
+        <a class="map-open-link" href="https://www.google.com/maps/search/?api=1&query=Eton+High+Street+Windsor+SL4+6AF" target="_blank">Open in Google Maps &#8599;</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="slot-label">About 5:00pm, back to London</div>
+
+  <div class="transport-between">
+    <div class="transport-between-icon">&#128646;</div>
+    <div class="transport-between-text">
+      <strong>Windsor &amp; Eton Riverside &#8594; Waterloo &#8594; the hotel</strong>
+      <span>Leave Windsor around 5pm and you are back at Southwark by about 6:30pm, changed and eating by half seven. That early finish is the thing to hold on to &mdash; it is what makes this day droppable onto a Thursday with a 7pm curtain, which almost no other day trip manages. Sunset is around 6:20pm all week, so you lose the light on the train whatever you do.</span>
+    </div>
+    <span class="transport-badge">~1hr 15 door to door</span>
+  </div>
+
+  <div class="dinner-card">
+    <div class="dinner-title">&#127374;&nbsp; Dinner back on your own patch</div>
+    <div class="dinner-options">
+      <div class="dinner-opt"><b>Padella</b>, 6 Southwark Street, SE1 1TQ. Hand-rolled pasta, tiny plates, famously good and famously queued &mdash; a 6:30pm arrival is about the only time you get in without an hour standing up. Two minutes from the hotel.</div>
+      <div class="dinner-opt"><b>The Anchor Bankside</b>, 34 Park Street, SE1 9EF. Riverside pub with a Thames terrace, if you would rather sit outside with a coat on and look at the water.</div>
+      <div class="dinner-opt"><b>Or fold in a view.</b> You are home early and changed, and the <a href="#day2">London Eye</a> is a twenty-minute walk west along the South Bank &mdash; a good use of an evening that has come back to you, if the last rotation has not already gone.</div>
+      <div class="dinner-opt"><b>If you took the Thursday:</b> skip all of the above. You are back at 6:30pm, changed by 6:50pm, and in your seats at the Gillian Lynne for <a href="#day5">Totoro</a> at 7pm. Eat afterwards.</div>
+    </div>
+  </div>
+
+  <div class="slot-label">If you swap this in</div>
+
+  <div class="arrival-card">
+    <div class="arrival-card-header">
+      <h3>&#9998;&nbsp; What changes elsewhere, day by day</h3>
+    </div>
+    <div class="arrival-rows">
+      <div class="arrival-row">
+        <div class="arrival-row-icon">&#127917;</div>
+        <div class="arrival-row-content">
+          <strong>On Thursday the 8th &mdash; costs you Covent Garden, keeps Totoro</strong>
+          <span class="step">Windsor is home by 6:30pm, so the <strong>7pm curtain still works</strong> with twenty minutes to change. What you lose is the whole of <a href="#day5">Day 5</a>: Neal&rsquo;s Yard, Seven Dials Market, the vintage run, Cecil Court, the sugar crawl, the Hunterian and Novelty Automation. That is the day built most deliberately around what she actually likes, so this is the most expensive of the three swaps despite being the neatest on paper. It is also tight: no lingering over lunch, and the Long Walk gets trimmed.</span>
+        </div>
+      </div>
+      <div class="arrival-row">
+        <div class="arrival-row-icon">&#127983;</div>
+        <div class="arrival-row-content">
+          <strong>On Friday the 9th &mdash; costs you the Tower of London</strong>
+          <span class="step">Friday is now <a href="#day6">the City and the Tower</a>, and there is nowhere left to put the Tower: Wednesday is full with the Studio Tour and the castle is shut Tuesday. So this swap really reads as <strong>Windsor instead of the Tower of London, Leadenhall, St Dunstan in the East, the Sky Garden and the Garden at 120</strong>. Borough Market goes too &mdash; a 10am castle opening means an 8:45am departure &mdash; though you already have Borough on the Monday. Two grand historic sites, pick one.</span>
+        </div>
+      </div>
+      <div class="arrival-row">
+        <div class="arrival-row-icon">&#127807;</div>
+        <div class="arrival-row-content">
+          <strong>On Saturday the 10th &mdash; costs you Kew, and it is the cleanest trade</strong>
+          <span class="step">Like for like: one full day out of central London swapped for another, and the two bookings you would cancel (<strong>Kew and Petersham Nurseries</strong>) are the two easiest to cancel on the whole trip. Nothing else in the week shifts by a minute. The argument against is variety &mdash; Windsor and Kew both end in long avenues of trees with deer off to the sides, so you are trading a garden day for a castle day rather than adding a new flavour. The argument for is that a castle is a castle and she has never seen one.</span>
+        </div>
+      </div>
+      <div class="arrival-row">
+        <div class="arrival-row-icon">&#128176;</div>
+        <div class="arrival-row-content">
+          <strong>What it does to the money</strong>
+          <span class="step">Windsor is about <strong>&pound;30 to &pound;33pp entry</strong>, and rail is inside contactless so there is no advance fare to buy. Against the Thursday it <em>adds</em> roughly &pound;30pp, since Day 5 is almost entirely free. Against the Friday it is near enough level with the Tower&rsquo;s &pound;35pp. Against the Saturday it is level again, &pound;20 for Kew plus &pound;50 for Petersham against a castle ticket and pub lunch. Update the <a href="cost_actual.html">cost sheet</a> for whichever date you commit to.</span>
+        </div>
+      </div>
+      <div class="arrival-row">
+        <div class="arrival-row-icon">&#128197;</div>
+        <div class="arrival-row-content">
+          <strong>Decide before you book, not after</strong>
+          <span class="step"><strong>Windsor itself is not booking-sensitive</strong> &mdash; a few weeks ahead is fine and it never needs to go near the urgent end of the <a href="checklist.html">checklist</a>. But the things it would displace are: the Studio Tour tickets are now booked and non-refundable, and Petersham and the Tower both want booking within the fortnight. So make this call early even though the castle will wait for you.</span>
+        </div>
+      </div>
+      <div class="arrival-row">
+        <div class="arrival-row-icon">&#9989;</div>
+        <div class="arrival-row-content">
+          <strong>If you want a recommendation</strong>
+          <span class="step"><strong>Saturday the 10th</strong>, on the grounds that it is the only one of the three where nothing else in the week has to move and no hard-to-rebook ticket is at risk. Thursday costs you the best-tailored day of the trip; Friday costs you the Tower with nowhere to put it. But all three work, and the honest answer is that the current week is strong without Windsor in it &mdash; this is here as an option, not a gap that needs filling.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="tip-box" style="margin-top:1.25rem;padding:1rem 1.25rem;background:var(--amber-bg);border:1px solid var(--amber-bd);border-radius:var(--radius);font-size:13px;color:var(--ink2);line-height:1.75;">
+    <strong>Bad weather version.</strong> Windsor holds up better in rain than most day trips &mdash; the State Apartments, the Dolls&rsquo; House and St George&rsquo;s Chapel are three or four hours entirely indoors. Drop the Long Walk and Eton, eat a long lunch at the Two Brewers, and come home early. The day still works. That also makes it a reasonable <strong>late substitution</strong>: if the forecast ruins the Saturday, this is a better wet-weather day than Richmond Park.
+  </div>
+
+</section><!-- end appendix: Windsor -->
+
+<!-- ═════════════════════════ APPENDIX: BRITISH MUSEUM SWAP-IN ═════════════════════════ -->
+<div class="appendix-divider">
+  <div class="appendix-kicker">Appendix &nbsp;&middot;&nbsp; Not in the plan</div>
+  <div class="appendix-heading">Optional swap-in: the British Museum</div>
+  <p class="appendix-blurb">The other thing the fortnight deliberately leaves out. Half a day rather than a whole one, free, and it fits into three different mornings without moving anything that is booked. Written out here so the choice is a real one rather than an oversight.</p>
+</div>
+
+<section class="day-section appendix-section" id="appendix-british-museum">
+  <div class="day-section-header">
+    <span class="day-number">Half a day</span>
+    <div class="day-title-block">
+      <div class="day-title">The British Museum</div>
+      <div class="day-date">A spare half-day, not pinned to a date &nbsp;&middot;&nbsp; Drops into the 8th, the 6th or the 17th</div>
+    </div>
+  </div>
+
+  <div class="swap-banner">
+    <div class="swap-banner-icon">&#8646;</div>
+    <div class="swap-banner-text">
+      <strong>Why it is down here and not up there.</strong> The week was cut deliberately toward <strong>natural history over art and antiquities</strong> &mdash; the blue whale on the 6th, the Hunterian on the 8th, Kew on the 10th. The British Museum is the biggest thing that decision left out, and unlike Windsor it costs nothing and only needs a morning, so it is the cheapest swap on the page in every sense. <strong>The most natural home for it is Thursday the 8th</strong>, where it is an eight-minute walk from everything else on that day. See <em>Where it swaps in</em> at the foot of this section.
+    </div>
+  </div>
+
+  <div class="tip-box" style="margin-bottom:1.5rem;padding:1rem 1.25rem;background:var(--amber-bg);border:1px solid var(--amber-bd);border-radius:var(--radius);font-size:13px;color:var(--ink2);line-height:1.75;">
+    <strong>It is free, it is open every day, and it is three minutes from Holborn.</strong> No closing days to plan around and no ticket to buy, which is what makes it droppable at short notice &mdash; including on the morning itself if the weather turns. Standard hours are <strong>10am to 5pm daily, with a late opening on Fridays to about 8:30pm</strong>; check britishmuseum.org for the day you pick. Entry is free and no booking is required, though reserving a free timed slot online saves a wait at the security line on a busy weekend. Only the temporary exhibitions are ticketed, and none of what follows is in one.
+  </div>
+
+  <div class="slot-label">10:00am, opening &#8212; and go in through the back</div>
+
+  <div class="activity-card">
+    <div class="activity-card-body">
+      <div class="activity-info">
+        <div class="activity-type">&#127963;&nbsp; Free, no booking, half a day</div>
+        <div class="activity-name">The British Museum</div>
+        <div class="activity-address">&#128205;&nbsp; Great Russell Street, London WC1B 3DG &nbsp;&middot;&nbsp; Holborn, Tottenham Court Road or Russell Square</div>
+        <div class="practical-row">
+          <span class="prac-item"><span class="pric-free">Free</span>&nbsp; (donations invited)</span>
+          <span class="prac-item">&#128336;&nbsp; About 10am to 5pm daily, late on Fridays</span>
+          <span class="prac-item">&#9201;&nbsp; 3 hours, and that is a disciplined visit</span>
+        </div>
+        <p class="activity-desc">Eight million objects, of which you are going to see about twelve, and the only way to enjoy it is to accept that in advance. Pick a route, walk past everything else, and leave while you still like the building. The <strong>Great Court</strong> alone is worth the trip: Europe&rsquo;s largest covered square, a lattice of glass thrown over the old courtyard with the circular Reading Room standing in the middle of it.</p>
+        <ul class="highlights">
+          <li><b>The Rosetta Stone,</b> Room 4. The reason anyone can read hieroglyphs. It is smaller than expected and there is always a scrum around it &mdash; go straight there at opening and it is nearly yours.</li>
+          <li><b>The Assyrian lion hunt reliefs,</b> Room 10a. Carved 645 BC, and the single most extraordinary room in the building. Almost always quiet, because everyone else is queuing for the Rosetta Stone.</li>
+          <li><b>Egyptian sculpture and the mummies,</b> Rooms 4 and 61 to 63. The colossal head of Ramesses II downstairs, then the coffins and cat mummies upstairs.</li>
+          <li><b>The Parthenon sculptures,</b> Room 18. Whatever you think about where they ought to be, standing in front of them is the argument.</li>
+          <li><b>Sutton Hoo,</b> Room 41. The helmet, and a ship burial dug out of a Suffolk field in 1939.</li>
+          <li><b>The Lewis Chessmen,</b> Room 40. Ninety-odd walrus-ivory chess pieces from the Isle of Lewis, all of them furious. Five minutes, and the most purely enjoyable case in the museum.</li>
+        </ul>
+        <div class="tip-box"><strong>Strategy:</strong> In at 10am through the <strong>Montague Place</strong> entrance at the back rather than the main Great Russell Street steps &mdash; same museum, a fraction of the queue. Rosetta Stone first, Assyria second, then upstairs to Egypt, Sutton Hoo and the chessmen, then the Parthenon on the way out. Out by one o&rsquo;clock.</div>
+      </div>
+      <div class="map-area">
+        <iframe src="https://maps.google.com/maps?q=British+Museum+Great+Russell+Street+London+WC1B+3DG&output=embed" loading="lazy" title="British Museum map"></iframe>
+        <a class="map-open-link" href="https://www.google.com/maps/search/?api=1&query=British+Museum+London+WC1B+3DG" target="_blank">Open in Google Maps &#8599;</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="slot-label">Where it swaps in</div>
+
+  <div class="arrival-card">
+    <div class="arrival-card-header">
+      <h3>&#9998;&nbsp; Three places it fits, and what each one costs you</h3>
+    </div>
+    <div class="arrival-rows">
+      <div class="arrival-row">
+        <div class="arrival-row-icon">&#9989;</div>
+        <div class="arrival-row-content">
+          <strong>Recommended &mdash; Thursday the 8th, the first half of <a href="#day5">Day 5</a></strong>
+          <span class="step">The museum is <strong>an eight-minute walk from Holborn station</strong>, which is where that whole day already starts and ends, so nothing needs a new journey. Go in at the 10am opening, out at one, and rejoin the day at Cecil Court and the chocolate crawl with the Hunterian still at 3:15pm and Totoro still at 7pm.</span>
+          <span class="step"><strong>What it costs you:</strong> the morning half &mdash; <strong>Neal&rsquo;s Yard first thing, Seven Dials Market and the Endell Street vintage run</strong>. That is a real loss, and Neal&rsquo;s Yard in particular only works early. A partial version: Neal&rsquo;s Yard at 9:45am as planned, into the museum at 10:30am for two hours rather than three, and skip Seven Dials Market instead. Tight, but it keeps the photograph.</span>
+          <span class="step"><strong>Watch the collision:</strong> Thursday is also one of the three days <a href="#appendix-windsor">Windsor</a> can go on. You cannot have both. If Windsor takes the Thursday, the museum moves to one of the two below.</span>
+        </div>
+      </div>
+      <div class="arrival-row">
+        <div class="arrival-row-icon">&#129430;</div>
+        <div class="arrival-row-content">
+          <strong>Tuesday the 6th &mdash; instead of the Natural History Museum, and think hard about it</strong>
+          <span class="step">A clean like-for-like: a free 2pm museum slot swapped for a free museum morning, with Westminster, Horse Guards, the parks and the Clerkenwell evening all untouched. Cancel the <a href="#day3">NHM timed ticket</a>, do Westminster in the morning as planned, and take Holborn to the museum after lunch instead of South Kensington.</span>
+          <span class="step"><strong>What it costs you:</strong> <strong>the blue whale, the dinosaurs and Hintze Hall</strong> &mdash; and that swap is the exact one the week was built to avoid. The Natural History Museum is also the better building of the two and the better afternoon with someone you want to enjoy it with. Take this option only if antiquities genuinely beat dinosaurs for both of you.</span>
+        </div>
+      </div>
+      <div class="arrival-row">
+        <div class="arrival-row-icon">&#9992;&#65039;</div>
+        <div class="arrival-row-content">
+          <strong>Saturday the 17th &mdash; the last morning, and the flight time allows it</strong>
+          <span class="step">The option that costs nothing at all. <strong>QR 012 leaves Terminal 4 at 19:25</strong>, with bags to be collected from the hotel by about 3pm, so the last morning is genuinely free. The museum is <strong>about twenty minutes on foot from the King&rsquo;s Cross hotel</strong>, or five on the 59, 91 or 168 bus down Southampton Row. In at 10am, two hours on the ground floor, back for the noon check-out and leave the bags at the desk.</span>
+          <span class="step"><strong>What it costs you:</strong> only the <a href="#day14">canal towpath and Granary Square</a> morning, which is a pleasant hour rather than a fixture &mdash; and you can have both, with breakfast on the canal at nine and the museum at ten. The one discipline is to take the short route rather than the full three hours: Rosetta Stone, Assyria, Egypt, out. If it is raining, the British Library five minutes from the hotel is the easier version of the same idea.</span>
+        </div>
+      </div>
+      <div class="arrival-row">
+        <div class="arrival-row-icon">&#128176;</div>
+        <div class="arrival-row-content">
+          <strong>What it does to the money</strong>
+          <span class="step"><strong>Nothing.</strong> Entry is free on any of the three dates, and every day it displaces is either free itself or already inside the travel budget. The one thing to actually do is <strong>cancel the free ticket you are no longer using</strong> &mdash; the Natural History Museum slot on the 6th if you take that option &mdash; so someone else can have it. Nothing on the <a href="cost_actual.html">cost sheet</a> changes either way.</span>
+        </div>
+      </div>
+      <div class="arrival-row">
+        <div class="arrival-row-icon">&#128337;</div>
+        <div class="arrival-row-content">
+          <strong>You can decide this one late</strong>
+          <span class="step">Unlike Windsor, this needs no advance commitment: free entry, no booking, open every day, and nothing that displaces it is non-refundable except the NHM slot, which is free to cancel. <strong>It is a legitimate wet-weather substitution on the morning itself.</strong> If the 8th turns out to be pouring and the East End thrifting has already soaked you, three dry hours in Bloomsbury is a better use of it than Endell Street in the rain.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section><!-- end appendix: British Museum -->
 </main>
 
 <!-- FOOTER -->
