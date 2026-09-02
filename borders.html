@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Border Packs - Heathrow &amp; Dublin, October 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#f7f5f1;--surface:#fff;--surface2:#f0ede8;--border:#e2ddd6;
+    --ink:#1a1814;--ink2:#4a4640;--ink3:#8a857d;
+    --amber:#b5762a;--amber-bg:#fdf6ec;--amber-bd:#e8d0a0;
+    --green:#2a6e4a;--navy:#1a3a6b;--radius:10px;
+  }
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+  body{background:var(--bg);color:var(--ink);font-family:'Inter',sans-serif;line-height:1.65;}
+
+  .nav{background:var(--surface);border-bottom:1px solid var(--border);padding:0 5vw;position:sticky;top:0;z-index:50;}
+  .nav-inner{max-width:820px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;}
+  .nav-back{font-size:12.5px;color:var(--amber);text-decoration:none;padding:13px 0;font-weight:500;}
+  .nav-back:hover{text-decoration:underline;}
+  .nav-meta{font-size:12px;color:var(--ink3);font-weight:500;}
+
+  .main{max-width:820px;margin:0 auto;padding:2.5rem 5vw 5rem;}
+
+  .page-head{border-bottom:2px solid var(--amber);padding-bottom:1.5rem;margin-bottom:2rem;}
+  .ph-label{font-size:10.5px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--amber);margin-bottom:.6rem;}
+  .ph-title{font-family:'Playfair Display',serif;font-size:clamp(2rem,5vw,3rem);font-weight:400;line-height:1.1;margin-bottom:.6rem;}
+  .ph-sub{font-size:.95rem;color:var(--ink2);max-width:52ch;}
+
+  .shape{display:flex;flex-wrap:wrap;gap:1px;background:var(--border);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;margin:1.5rem 0 2.5rem;}
+  .leg{flex:1 1 12rem;background:var(--surface);padding:.85rem 1rem;border-top:3px solid var(--border);}
+  .leg.uk{border-top-color:var(--navy);}
+  .leg.ie{border-top-color:var(--green);}
+  .leg.hm{border-top-color:var(--amber);}
+  .leg-dt{font-size:9.5px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--ink3);}
+  .leg-pl{font-family:'Playfair Display',serif;font-size:1.15rem;margin:1px 0 2px;}
+  .leg-no{font-size:11.5px;color:var(--ink3);line-height:1.5;}
+
+  .section-title{font-size:10.5px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--ink3);margin-bottom:.9rem;}
+
+  .rules{background:var(--amber-bg);border:1px solid var(--amber-bd);border-radius:var(--radius);padding:1.25rem 1.5rem;margin-bottom:2.5rem;}
+  .rules h2{font-family:'Playfair Display',serif;font-size:1.25rem;font-weight:400;margin-bottom:.85rem;}
+  .rules ol{padding-left:1.15rem;display:flex;flex-direction:column;gap:.6rem;}
+  .rules li{font-size:.9rem;color:var(--ink2);}
+  .rules li b{color:var(--ink);font-weight:600;}
+
+  .pack{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;margin-bottom:2.5rem;}
+  .pack-head{padding:1.25rem 1.5rem;border-bottom:1px solid var(--border);position:relative;}
+  .pack-bar{position:absolute;top:0;left:0;width:4px;height:100%;}
+  .pack-uk .pack-bar{background:var(--navy);}
+  .pack-ie .pack-bar{background:var(--green);}
+  .pack-name{font-family:'Playfair Display',serif;font-size:1.65rem;font-weight:400;line-height:1.1;}
+  .pack-when{font-size:11.5px;font-weight:600;letter-spacing:.05em;color:var(--ink3);margin-top:3px;}
+  .pack-sub{font-size:12.5px;color:var(--ink3);margin-top:.5rem;}
+
+  .ask{padding:.95rem 1.5rem;font-size:.9rem;color:var(--ink2);border-bottom:1px solid var(--border);}
+  .pack-uk .ask{background:#f2f5fa;}
+  .pack-ie .ask{background:#eef5f1;}
+  .ask b{color:var(--ink);font-weight:600;}
+
+  .pack-body{padding:1.5rem;}
+  .block{margin-bottom:1.75rem;}
+  .block:last-child{margin-bottom:0;}
+  .block-h{font-size:10px;font-weight:600;letter-spacing:.15em;text-transform:uppercase;color:var(--ink3);border-bottom:1px solid var(--border);padding-bottom:.4rem;margin-bottom:.85rem;}
+
+  .docs{list-style:none;display:flex;flex-direction:column;gap:.55rem;}
+  .docs li{position:relative;padding-left:1.65rem;font-size:.88rem;color:var(--ink2);}
+  .docs li::before{content:'';position:absolute;left:0;top:.34rem;width:.8rem;height:.8rem;border:1.5px solid var(--ink3);border-radius:2px;}
+  .docs li.key::before{border-color:var(--amber);border-width:2px;}
+  .docs li b{color:var(--ink);font-weight:600;}
+
+  .qa{display:flex;flex-direction:column;gap:.8rem;}
+  .q{padding-bottom:.8rem;border-bottom:1px dashed var(--border);}
+  .q:last-child{border-bottom:none;padding-bottom:0;}
+  .q-q{font-weight:600;font-size:.9rem;margin-bottom:2px;}
+  .q-a{font-size:.87rem;color:var(--ink2);}
+  .q-a em{font-style:normal;font-weight:600;color:var(--amber);}
+
+  .callout{background:var(--amber-bg);border:1px solid var(--amber-bd);border-radius:6px;padding:1rem 1.15rem;margin-bottom:1.5rem;}
+  .callout h4{font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:400;margin-bottom:.45rem;}
+  .callout p{font-size:.87rem;color:var(--ink2);margin-bottom:.5rem;}
+  .callout p:last-child{margin-bottom:0;}
+  .say{background:var(--surface);border:1px solid var(--border);border-radius:4px;padding:.65rem .8rem;font-size:.85rem;color:var(--ink);font-style:italic;}
+  .fill{color:var(--amber);font-weight:600;}
+
+  footer{border-top:1px solid var(--border);padding:1.5rem 5vw;text-align:center;font-size:11.5px;color:var(--ink3);}
+
+  @media print{
+    body{background:#fff;font-size:10.5pt;}
+    .nav,footer{display:none;}
+    .main{max-width:100%;padding:0;}
+    .pack{page-break-inside:avoid;border:1px solid #999;}
+    .pack-ie{page-break-before:always;}
+    .callout,.rules,.say,.leg{background:#f7f7f7 !important;}
+    @page{size:A4 portrait;margin:1.4cm;}
+  }
+</style>
+</head>
+<body>
+
+<nav class="nav"><div class="nav-inner">
+  <a href="index.html" class="nav-back">&#8592; Full itinerary</a>
+  <span class="nav-meta">Border packs</span>
+</div></nav>
+
+<main class="main">
+
+  <div class="page-head">
+    <p class="ph-label">Carry this &middot; Jenifer G. Aban</p>
+    <h1 class="ph-title">Heathrow, then Dublin</h1>
+    <p class="ph-sub">Two borders, two different asks, two different sets of evidence. Print both &mdash; the Dublin pack starts on a new sheet.</p>
+  </div>
+
+  <div class="shape">
+    <div class="leg uk">
+      <div class="leg-dt">5 &ndash; 16 Oct</div>
+      <div class="leg-pl">United Kingdom</div>
+      <div class="leg-no">London, then <span class="fill">[second week TBC]</span></div>
+    </div>
+    <div class="leg ie">
+      <div class="leg-dt">16 Oct &rarr; January</div>
+      <div class="leg-pl">Ireland</div>
+      <div class="leg-no">Blarney, Co. Cork. Christmas and New Year.</div>
+    </div>
+    <div class="leg hm">
+      <div class="leg-dt">Early January</div>
+      <div class="leg-pl">Home</div>
+      <div class="leg-no">Manila via Doha. <span class="fill">[departure airport TBC]</span></div>
+    </div>
+  </div>
+
+  <div class="rules">
+    <h2>Five rules that matter more than any answer below</h2>
+    <ol>
+      <li><b>Say what is true on the day.</b> Not what was true in July. Officers spot discrepancies between the story, the ticket and the documents &mdash; that is what causes refusals, not a clumsy answer.</li>
+      <li><b>Nothing in the July application was false.</b> You were employed, you were planning a fortnight in London and Edinburgh, you meant to go home to your job. All true when written. Plans changed afterwards. That is a change of circumstances, not a misrepresentation, and there is nothing to be defensive about.</li>
+      <li><b>Do not memorise a script.</b> Know the real plan &mdash; dates, addresses, who is paying, what you are going back to. Recited answers sound rehearsed and invite harder questions.</li>
+      <li><b>Answer what is asked, in the order it is asked, then stop.</b> You are not withholding anything by not delivering a three-month itinerary in reply to &ldquo;how long are you here for?&rdquo;</li>
+      <li><b>Two borders, two asks.</b> At Heathrow you are asking for <b>eleven days in the UK</b>. That is an easy case. The long stay is an Irish question, asked at Dublin.</li>
+    </ol>
+  </div>
+
+  <p class="section-title">Pack one</p>
+
+  <section class="pack pack-uk">
+    <div class="pack-head">
+      <div class="pack-bar"></div>
+      <h2 class="pack-name">Heathrow Terminal 4</h2>
+      <p class="pack-when">Monday 5 October &middot; 06:25 &middot; QR011 from Doha</p>
+      <p class="pack-sub">Arriving alone. Simon waits in arrivals and cannot come through.</p>
+    </div>
+    <div class="ask">
+      <b>What you are asking for:</b> entry as a visitor from 5 to 16 October, then onward to Ireland. A Philippine passport is not eGate-eligible, so you will see an officer in person &mdash; that is normal. Allow 60 to 90 minutes from the aircraft door to arrivals.
+    </div>
+    <div class="pack-body">
+
+      <div class="callout">
+        <h4>The strongest thing you own is your receipts</h4>
+        <p>The Tower of London, St Paul&rsquo;s, &pound;117 of Warner Bros. Studio Tour tickets, &pound;270 of stalls seats for Totoro, and eight prepaid nights on Borough High Street. Timed, paid, non-refundable.</p>
+        <p>Nobody buys that as camouflage. It is unarguable proof that the UK visit is genuine and not a stepping stone to somewhere else. Print the confirmations and keep them near the top of the folder.</p>
+      </div>
+
+      <div class="block">
+        <p class="block-h">Documents &mdash; printed, in one folder</p>
+        <ul class="docs">
+          <li class="key"><b>Passport</b> &mdash; the exact one the eVisa is linked to. No other passport.</li>
+          <li class="key"><b>UKVI share code</b>, generated in the last few days, printed. Plus the eVisa decision letter.</li>
+          <li class="key"><b>The 2025 Irish visa and entry stamp</b> &mdash; tab the page. Strongest single document you carry, and it matters at both borders.</li>
+          <li class="key"><b>Paid UK bookings</b> &mdash; Studio Tour, Totoro, the Tower, St Paul&rsquo;s, Premier Inn.</li>
+          <li>A copy of the July application letter, so what you say now is consistent with what was written then.</li>
+          <li>Boarding pass for QR011, plus the <b>onward flight to Dublin</b> on 16 October.</li>
+          <li>The <b>January flight home</b>, confirmed and changeable.</li>
+          <li>Premier Inn, 135 Borough High Street SE1 1NP &mdash; prepaid by Simon, &pound;1,340, 8 nights. Plus <span class="fill">[second-week accommodation, 12&ndash;16 Oct]</span>.</li>
+          <li><b>Simon&rsquo;s letter:</b> who he is, the relationship since November 2022, that he is sponsoring and hosting, his address at Knocknalyre, Blarney, Co. Cork T23 T635, and his phone number. Signed, with a copy of his passport photo page.</li>
+          <li>Sponsorship evidence &mdash; his bank statements, and her own savings.</li>
+          <li>Relationship evidence &mdash; photographs across 2022 to 2026, and the Cebu, Manila and Ireland trips.</li>
+          <li>Evidence about the guardians: shared address, and the support provided.</li>
+          <li>Travel insurance covering the whole period, not a two-week policy.</li>
+          <li><b>Simon&rsquo;s phone number written on paper.</b> Phones are put away in the hall.</li>
+        </ul>
+      </div>
+
+      <div class="callout">
+        <h4>Do this before leaving the desk</h4>
+        <p>Ask for an ink stamp. The UK border has gone digital and standard visitors are often not stamped, but an officer can stamp on request. This is what Dublin will ask for as proof of prior UK entry.</p>
+        <p class="say">&ldquo;I&rsquo;ll be travelling on to Ireland during this trip and I need evidence of my UK entry. Could you stamp my passport, please?&rdquo;</p>
+        <p>If they decline, that is fine &mdash; keep every boarding pass and the hotel receipt instead. Do not argue about it.</p>
+      </div>
+
+      <div class="block">
+        <p class="block-h">What they will ask</p>
+        <div class="qa">
+          <div class="q"><p class="q-q">What is the purpose of your visit?</p><p class="q-a">A holiday with your partner. One sentence.</p></div>
+          <div class="q"><p class="q-q">How long are you staying in the UK?</p><p class="q-a">Until the 16th, then flying to Dublin. <em>This is the answer that makes the conversation easy.</em> The onward ticket proves it.</p></div>
+          <div class="q"><p class="q-q">And after Ireland?</p><p class="q-a">Home in January &mdash; give the date. If the flight leaves from Heathrow, say so plainly: you come back through to catch it. If it leaves Dublin, simpler still.</p></div>
+          <div class="q"><p class="q-q">Where are you staying?</p><p class="q-a">The Premier Inn on Borough High Street for the first eight nights, booked and paid by Simon. Then <span class="fill">[second week]</span>.</p></div>
+          <div class="q"><p class="q-q">Who is paying for this trip?</p><p class="q-a">Simon, as sponsor &mdash; the same arrangement declared in the application. Say it plainly; being sponsored is normal for a visitor.</p></div>
+          <div class="q"><p class="q-q">What do you do for work?</p><p class="q-a"><em>Whatever is true on 5 October.</em> If the redundancy has not taken effect: employed at IBM Business Services, on leave. If it has: say so, and that this trip comes before looking for work. Do not hide it. Then move to what you are going back to &mdash; the guardians, the home, the savings.</p></div>
+          <div class="q"><p class="q-q">Have you travelled before?</p><p class="q-a">Yes &mdash; Ireland in 2025, on an Irish visa, home on time. Volunteer this. It is the best thing you can tell any immigration officer.</p></div>
+        </div>
+      </div>
+
+      <div class="callout">
+        <h4>If you are taken to a side room</h4>
+        <p>This is further examination. It is not a refusal and it happens routinely. You wait, then are interviewed properly, and your bag or phone may be looked at. Stay calm, keep every answer the same as at the desk, and if you do not know something say so rather than guessing. They may telephone Simon &mdash; which is why his number is on paper.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <p class="section-title">Pack two</p>
+
+  <section class="pack pack-ie">
+    <div class="pack-head">
+      <div class="pack-bar"></div>
+      <h2 class="pack-name">Dublin Airport</h2>
+      <p class="pack-when">Friday 16 October &middot; morning flight from Heathrow</p>
+      <p class="pack-sub">Arriving with Simon, then travelling on to Blarney. This is the harder of the two borders &mdash; the long stay is decided here.</p>
+    </div>
+    <div class="ask">
+      <b>What you are asking for:</b> entry under the <b>Short Stay Visa Waiver Programme</b>, for a stay until the January flight. Dublin is the right port: busiest in the country, its Border Management Unit handles the waiver routinely, and the written confirmations on record came from Dublin specifically.
+    </div>
+    <div class="pack-body">
+
+      <div class="callout">
+        <h4>Ask for a date, not for ninety days</h4>
+        <p>The realistic risk here is not refusal &mdash; it is being granted a short period. An officer comfortable with you but cautious about the maximum might stamp thirty days, and the plan collapses in November.</p>
+        <p>So do not request &ldquo;ninety days&rdquo;. Name the departure date and put the ticket on the counter. Arriving on 16 October, ninety days runs to about <b>14 January</b>, so a flight in the first or second week of January sits comfortably inside &mdash; you are asking for less than the maximum, which is an easier grant.</p>
+        <p><b>Watch the deadline:</b> the programme requires entry to Ireland by <b>31 October 2026</b>. The 16th clears it by a fortnight. If the UK leg slips, that date does not move.</p>
+      </div>
+
+      <div class="block">
+        <p class="block-h">Documents &mdash; on top of the folder, in this order</p>
+        <ul class="docs">
+          <li class="key"><b>Passport, open at the 2025 Irish visa and stamp.</b> Lead with this. She has held an Irish visa, entered on it, and left on time. Nothing else in the folder is worth as much here.</li>
+          <li class="key"><b>Proof of entering the UK first</b> &mdash; the Heathrow stamp if given, otherwise the QR011 boarding pass, the Premier Inn receipt and the Heathrow&ndash;Dublin boarding pass together.</li>
+          <li class="key"><b>UK eVisa</b> and a share code. There is no sticker in the passport and that is correct &mdash; the Irish visa service&rsquo;s own Philippines notice of 29 June 2026 lists &ldquo;valid UK visa (or E-visa)&rdquo; as acceptable. <b>Print that notice and bring it.</b></li>
+          <li>Printed copy of the Irish Immigration Service page on the Short Stay Visa Waiver Programme.</li>
+          <li class="key">The <b>January flight home</b>, confirmed. The evidence of leaving. If it departs Heathrow rather than Dublin, say so plainly &mdash; she flies to London a couple of days beforehand.</li>
+          <li>Simon&rsquo;s letter and passport copy, naming Knocknalyre, Blarney as the address.</li>
+          <li>Sponsorship and funds &mdash; his statements and her savings, covering the whole stay.</li>
+          <li>Evidence about the guardians: that she lives with them, and supports them.</li>
+          <li>Travel insurance covering the full period through to January.</li>
+          <li>Relationship evidence, as at Heathrow.</li>
+        </ul>
+      </div>
+
+      <div class="block">
+        <p class="block-h">What they will ask</p>
+        <div class="qa">
+          <div class="q"><p class="q-q">Have you been to Ireland before?</p><p class="q-a">Yes &mdash; in 2025, on a visa granted by the Irish Immigration Service, sponsored by Simon, and home on time. <em>Say this early, even if the question arrives in a different shape.</em> It answers the officer&rsquo;s real concern before they have to ask it.</p></div>
+          <div class="q"><p class="q-q">How long do you want to stay?</p><p class="q-a">Give the January date and say the flight is booked. Hand over the ticket. Definite, with evidence.</p></div>
+          <div class="q"><p class="q-q">Why so long?</p><p class="q-a">To spend Christmas and New Year with your partner, and there is time because you are between jobs. True, and not disqualifying &mdash; but it is why the next answer matters most.</p></div>
+          <div class="q"><p class="q-q">What are you going back to?</p><p class="q-a"><em>This is the question the whole thing turns on.</em> The guardians who raised her, whom she lives with and supports. The home and savings in Daet. Have the evidence in hand, not just the words.</p></div>
+          <div class="q"><p class="q-q">Where will you stay?</p><p class="q-a">Simon&rsquo;s home, Knocknalyre, Blarney, Co. Cork. He is an Irish citizen and he is standing next to her. Let him give the address and confirm the sponsorship.</p></div>
+          <div class="q"><p class="q-q">Who is supporting you?</p><p class="q-a">Simon, plus her own savings. The same arrangement as the 2025 trip that was approved.</p></div>
+          <div class="q"><p class="q-q">What is your permission to be here?</p><p class="q-a">A UK Standard Visitor visa, entered the UK at Heathrow on 5 October, travelling under the Short Stay Visa Waiver Programme. Hand over the printed notice at this point.</p></div>
+        </div>
+      </div>
+
+      <div class="callout">
+        <h4>Check the stamp before walking away</h4>
+        <p>Make sure the date is legible. Whatever it says is the deadline, and overstaying it would be far more damaging than a shorter trip.</p>
+        <p>If it is less than asked for, take it without arguing and move the January flight forward to sit inside the granted period. That is the reason to book it on a changeable fare.</p>
+      </div>
+
+      <div class="callout">
+        <h4>At the airline desk in London</h4>
+        <p>Check in at the desk rather than online, and have the printed Irish notice out before anyone asks. Gate staff are increasingly familiar with the waiver, but if one says an Irish visa is needed, ask them politely to check with their duty manager or the destination station rather than accepting a refusal.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <p class="section-title">Before she flies</p>
+
+  <div class="rules">
+    <ol>
+      <li><b>Settle the January flight.</b> Ask Qatar in this order: reissue the return to depart Dublin; or add the Dublin&ndash;Heathrow sector to the existing ticket as a connection with bags checked through; or keep the Heathrow departure and book a separate hop, flying over a day early. Confirmed and changeable either way &mdash; both borders will ask to see it.</li>
+      <li><b>Book the second UK week</b>, 12 to 16 October. Nothing is reserved after the Southwark checkout.</li>
+      <li><b>Change Simon&rsquo;s return leg.</b> It is currently booked London to Cork on 17 October. He needs to be on the same Dublin flight as Jenifer on the 16th &mdash; he is part of the evidence at that border.</li>
+      <li><b>Generate a fresh UKVI share code</b> a few days before departure, and print it.</li>
+      <li><b>Print everything.</b> Phones go away at the desk and airport wifi fails at the worst moment.</li>
+      <li><b>Tab the passport</b> at the 2025 Irish visa page. It is the key document at both borders.</li>
+      <li><b>Buy insurance through to January</b>, not a single short trip.</li>
+      <li><b>Settle the redundancy question.</b> If the job has ended, take advice on notifying UKVI before travelling &mdash; having told them is a stronger position than not.</li>
+    </ol>
+  </div>
+
+</main>
+
+<footer>Border packs &middot; Simon &amp; Jenifer &middot; Heathrow 5 Oct &middot; Dublin 16 Oct</footer>
+
+</body>
+</html>
