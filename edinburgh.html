@@ -3,53 +3,73 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Edinburgh - Simon & Jenifer, October 2026</title>
+<title>Edinburgh - Simon &amp; Jenifer, October 2026</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
-  :root{--bg:#f7f5f1;--surface:#fff;--surface2:#f0ede8;--border:#e2ddd6;--ink:#1a1814;--ink2:#4a4640;--ink3:#8a857d;--amber:#b5762a;--amber-bg:#fdf6ec;--amber-bd:#e8d0a0;--green:#2a6e4a;--radius:10px;--city-color:#2a6e4a;}
+  :root {
+    --bg:#f7f5f1; --surface:#fff; --surface2:#f0ede8; --border:#e2ddd6;
+    --ink:#1a1814; --ink2:#4a4640; --ink3:#8a857d;
+    --amber:#b5762a; --amber-bg:#fdf6ec; --amber-bd:#e8d0a0;
+    --green:#2a6e4a; --blue:#2a4e8a; --rust:#8c4a26; --radius:10px;
+    --city-color:#2a6e4a;
+  }
   *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
   html{scroll-behavior:smooth;}
   body{background:var(--bg);color:var(--ink);font-family:'Inter',sans-serif;font-weight:400;line-height:1.65;}
+
+  /* BACK NAV */
   .back-nav{background:var(--surface);border-bottom:1px solid var(--border);padding:0 5vw;}
   .back-nav-inner{max-width:860px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:10px 0;}
-  .back-link{font-size:12px;font-weight:500;color:var(--ink3);text-decoration:none;}
+  .back-link{font-size:12px;font-weight:500;color:var(--ink3);text-decoration:none;display:flex;align-items:center;gap:6px;}
   .back-link:hover{color:var(--amber);}
   .trip-crumb{font-size:12px;color:var(--ink3);}
   .trip-crumb a{color:var(--ink3);text-decoration:none;}
   .trip-crumb a:hover{color:var(--amber);}
+
+  /* HERO */
   .hero{background:#1a1814;padding:3.5rem 5vw 3rem;position:relative;overflow:hidden;}
-  .hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 80% at 85% 40%,rgba(42,110,74,.2) 0%,transparent 60%);pointer-events:none;}
+  .hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 80% at 85% 40%,rgba(42,110,74,.28) 0%,transparent 60%),radial-gradient(ellipse 40% 60% at 10% 80%,rgba(181,118,42,.12) 0%,transparent 55%);pointer-events:none;}
   .hero-inner{max-width:860px;margin:0 auto;position:relative;}
-  .hero-label{font-size:11px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:#6abf8a;margin-bottom:.75rem;}
+  .hero-label{font-size:11px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:#63a888;margin-bottom:.75rem;}
   .hero-title{font-family:'Playfair Display',serif;font-size:clamp(2.2rem,6vw,4rem);font-weight:400;line-height:1.05;color:#f0ebe0;margin-bottom:.75rem;}
   .hero-meta{font-size:.9rem;color:#9a9288;line-height:1.7;}
   .hero-stats{display:flex;gap:2rem;flex-wrap:wrap;margin-top:1.75rem;padding-top:1.75rem;border-top:1px solid rgba(255,255,255,.09);}
   .hs-l{font-size:10px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:#5a5248;display:block;margin-bottom:2px;}
   .hs-v{font-family:'Playfair Display',serif;font-size:1.2rem;color:#f0ebe0;}
+
+  /* DAY NAV */
   .day-nav{background:var(--surface);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:50;overflow-x:auto;}
-  .day-nav-inner{max-width:860px;margin:0 auto;display:flex;padding:0 5vw;min-width:max-content;}
+  .day-nav-inner{max-width:860px;margin:0 auto;display:flex;align-items:center;padding:0 5vw;min-width:max-content;}
   .day-nav a{display:block;padding:12px 16px;font-size:12px;font-weight:500;color:var(--ink3);text-decoration:none;white-space:nowrap;border-bottom:2px solid transparent;transition:all .2s;}
-  .day-nav a:hover{color:var(--ink);}
+  .day-nav a:hover{color:var(--ink);border-bottom-color:var(--border);}
   .day-nav a.active{color:var(--city-color);border-bottom-color:var(--city-color);}
+
+  /* MAIN */
   .main{max-width:860px;margin:0 auto;padding:0 5vw 6rem;}
+
+  /* DAY SECTION */
   .day-section{padding-top:3rem;}
   .day-section-header{display:flex;align-items:flex-start;gap:1rem;margin-bottom:1.75rem;padding-bottom:1.25rem;border-bottom:2px solid var(--city-color);}
   .day-number{font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--city-color);background:rgba(42,110,74,.08);padding:3px 8px;border-radius:4px;white-space:nowrap;margin-top:4px;}
   .day-title{font-family:'Playfair Display',serif;font-size:1.6rem;font-weight:400;color:var(--ink);line-height:1.1;}
   .day-date{font-size:12px;color:var(--ink3);margin-top:3px;font-weight:500;}
+
+  /* SLOT LABEL */
   .slot-label{font-size:10px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--amber);margin:1.5rem 0 .75rem;display:flex;align-items:center;gap:8px;}
   .slot-label::after{content:'';flex:1;height:1px;background:var(--border);}
+
+  /* ACTIVITY CARD */
   .activity-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;margin-bottom:.75rem;}
   .activity-card-body{display:grid;grid-template-columns:1fr 300px;gap:0;}
   .activity-info{padding:1.25rem 1.5rem;}
   .activity-type{font-size:10px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--ink3);margin-bottom:.4rem;}
   .activity-name{font-family:'Playfair Display',serif;font-size:1.25rem;font-weight:400;color:var(--ink);margin-bottom:.5rem;line-height:1.2;}
-  .activity-address{font-size:12px;color:var(--ink3);margin-bottom:.75rem;}
+  .activity-address{font-size:12px;color:var(--ink3);margin-bottom:.75rem;display:flex;align-items:flex-start;gap:5px;}
   .practical-row{display:flex;gap:1rem;flex-wrap:wrap;margin-bottom:.75rem;}
   .prac-item{font-size:11.5px;color:var(--ink2);display:flex;align-items:center;gap:4px;}
-  .pric-free{color:var(--green);font-weight:600;}
+  .prac-item .pric-free{color:var(--green);font-weight:600;}
   .activity-desc{font-size:13px;color:var(--ink2);line-height:1.7;margin-bottom:.75rem;}
   .highlights{list-style:none;margin:0;padding:0;}
   .highlights li{font-size:12.5px;color:var(--ink2);padding:3px 0 3px 16px;position:relative;line-height:1.5;}
@@ -57,43 +77,24 @@
   .highlights li b{color:var(--ink);font-weight:500;}
   .tip-box{background:var(--amber-bg);border:1px solid var(--amber-bd);border-radius:6px;padding:.6rem .85rem;margin-top:.75rem;font-size:12px;color:var(--ink2);line-height:1.6;}
   .tip-box strong{color:var(--amber);font-weight:600;}
+  .booked-box{background:#eef6f1;border:1px solid #b8dfc8;border-radius:6px;padding:.6rem .85rem;margin-top:.75rem;font-size:12px;color:var(--ink2);line-height:1.6;}
+  .booked-box strong{color:var(--green);font-weight:600;}
+  .warn-box{background:#fbeee9;border:1px solid #e3bda9;border-radius:6px;padding:.6rem .85rem;margin-top:.75rem;font-size:12px;color:var(--ink2);line-height:1.6;}
+  .warn-box strong{color:var(--rust);font-weight:600;}
   .map-area{position:relative;height:100%;min-height:240px;background:#eee;border-left:1px solid var(--border);}
   .map-area iframe{display:block;width:100%;height:100%;min-height:240px;border:0;}
-  .map-open-link{display:block;padding:8px 12px;background:var(--surface2);border-top:1px solid var(--border);font-size:11px;font-weight:500;color:var(--city-color);text-decoration:none;text-align:center;}
+  .map-open-link{display:block;padding:8px 12px;background:var(--surface2);border-top:1px solid var(--border);font-size:11px;font-weight:500;color:var(--blue);text-decoration:none;text-align:center;}
   .map-open-link:hover{background:var(--border);}
-  .transport-between{display:flex;align-items:center;gap:12px;padding:.8rem 1.25rem;background:var(--surface2);border:1px solid var(--border);border-radius:var(--radius);margin:.75rem 0;}
+
+  /* TRANSPORT BETWEEN STOPS */
+  .transport-between{display:flex;align-items:center;gap:12px;padding:.8rem 1.25rem;background:var(--surface2);border:1px solid var(--border);border-radius:var(--radius);margin:.75rem 0;font-size:13px;color:var(--ink2);}
   .transport-between-icon{width:32px;height:32px;background:var(--surface);border:1px solid var(--border);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.9rem;flex-shrink:0;}
-  .transport-between-text{flex:1;font-size:13px;color:var(--ink2);}
+  .transport-between-text{flex:1;}
   .transport-between-text strong{display:block;font-size:13px;font-weight:600;color:var(--ink);margin-bottom:2px;}
   .transport-between-text span{font-size:12px;color:var(--ink3);}
   .transport-badge{font-size:10.5px;font-weight:600;padding:2px 8px;border-radius:20px;background:rgba(42,110,74,.08);color:var(--city-color);white-space:nowrap;flex-shrink:0;}
-  .hotel-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;margin-bottom:.75rem;}
-  .hotel-card-body{display:grid;grid-template-columns:1fr 300px;gap:0;}
-  .hotel-info{padding:1.25rem 1.5rem;}
-  .hotel-badge{font-size:10px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--ink3);margin-bottom:.4rem;}
-  .hotel-name{font-family:'Playfair Display',serif;font-size:1.2rem;color:var(--ink);margin-bottom:.5rem;}
-  .hotel-address{font-size:12px;color:var(--ink3);margin-bottom:.75rem;}
-  .hotel-detail{font-size:13px;color:var(--ink2);line-height:1.7;list-style:none;}
-  .hotel-detail li{padding:2px 0 2px 14px;position:relative;}
-  .hotel-detail li::before{content:"\00B7";position:absolute;left:0;color:var(--amber);}
-  .dinner-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:1.1rem 1.5rem;margin-bottom:.75rem;}
-  .dinner-title{font-size:13px;font-weight:600;color:var(--ink);margin-bottom:.5rem;}
-  .dinner-options{display:flex;flex-direction:column;gap:6px;}
-  .dinner-opt{font-size:12.5px;color:var(--ink2);line-height:1.6;}
-  .dinner-opt b{color:var(--ink);font-weight:500;}
-  .page-footer{border-top:1px solid var(--border);padding:1.75rem 5vw;max-width:860px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;}
-  .footer-brand{font-family:'Playfair Display',serif;font-size:.9rem;color:var(--ink2);}
-  .next-city-link{font-size:13px;font-weight:500;color:var(--city-color);text-decoration:none;}
-  .prev-city-link{font-size:13px;font-weight:500;color:var(--ink3);text-decoration:none;}
-  @media(max-width:700px){
-    .activity-card-body,.hotel-card-body{grid-template-columns:1fr;}
-    .map-area{min-height:200px;border-left:none;border-top:1px solid var(--border);}
-    .map-area iframe{min-height:200px;}
-    .back-nav,.hero,.main{padding-left:1.25rem;padding-right:1.25rem;}
-    .back-nav-inner{padding-left:0;padding-right:0;}
-    .day-nav-inner{padding-left:1.25rem;}
-    .page-footer{padding-left:1.25rem;padding-right:1.25rem;}
-  }
+
+  /* ARRIVAL CARD */
   .arrival-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;margin-bottom:.75rem;}
   .arrival-card-header{padding:.85rem 1.25rem;border-bottom:1px solid var(--border);background:rgba(42,110,74,.04);}
   .arrival-card-header h3{font-size:13px;font-weight:600;color:var(--ink);}
@@ -103,6 +104,87 @@
   .arrival-row-content{font-size:13px;color:var(--ink2);line-height:1.6;}
   .arrival-row-content strong{color:var(--ink);font-weight:500;}
   .arrival-row-content .step{display:block;padding:2px 0;}
+
+  /* HOTEL CARD */
+  .hotel-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;margin-bottom:.75rem;}
+  .hotel-card-body{display:grid;grid-template-columns:1fr 300px;gap:0;}
+  .hotel-info{padding:1.25rem 1.5rem;}
+  .hotel-badge{font-size:10px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--ink3);margin-bottom:.4rem;}
+  .hotel-name{font-family:'Playfair Display',serif;font-size:1.2rem;color:var(--ink);margin-bottom:.5rem;}
+  .hotel-address{font-size:12px;color:var(--ink3);margin-bottom:.75rem;}
+  .hotel-detail{font-size:13px;color:var(--ink2);line-height:1.7;list-style:none;}
+  .hotel-detail li{padding:2px 0 2px 14px;position:relative;}
+  .hotel-detail li::before{content:"\00B7";position:absolute;left:0;color:var(--amber);}
+
+  /* DINNER CARD */
+  .dinner-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:1.1rem 1.5rem;margin-bottom:.75rem;}
+  .dinner-title{font-size:13px;font-weight:600;color:var(--ink);margin-bottom:.5rem;}
+  .dinner-options{display:flex;flex-direction:column;gap:5px;}
+  .dinner-opt{font-size:12.5px;color:var(--ink2);line-height:1.6;}
+  .dinner-opt b{color:var(--ink);font-weight:500;}
+
+  /* CHOICE GRID */
+  .choice-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:1px;background:var(--border);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;margin-bottom:.75rem;}
+  .choice{background:var(--surface);padding:1rem 1.15rem;}
+  .choice-h{font-size:12.5px;font-weight:600;color:var(--ink);margin-bottom:.3rem;}
+  .choice-m{font-size:11px;color:var(--city-color);font-weight:600;margin-bottom:.4rem;}
+  .choice p{font-size:12px;color:var(--ink2);line-height:1.6;}
+
+  /* TIMELINE (departure morning) */
+  .timeline{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;margin-bottom:.75rem;}
+  .tl-row{display:grid;grid-template-columns:92px 1fr;border-bottom:1px solid var(--border);}
+  .tl-row:last-child{border-bottom:none;}
+  .tl-time{padding:.75rem 1rem;font-size:13px;font-weight:600;color:var(--city-color);background:var(--surface2);border-right:1px solid var(--border);}
+  .tl-what{padding:.75rem 1.25rem;font-size:12.5px;color:var(--ink2);line-height:1.65;}
+  .tl-what b{color:var(--ink);font-weight:600;}
+
+  /* BOOKING TABLE */
+  .booktable{width:100%;border-collapse:collapse;font-size:12.5px;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;}
+  .booktable th,.booktable td{text-align:left;padding:10px 12px;border-bottom:1px solid var(--border);vertical-align:top;color:var(--ink2);line-height:1.6;}
+  .booktable thead th{font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink3);font-weight:600;background:var(--surface2);}
+  .booktable tr:last-child td{border-bottom:none;}
+  .booktable td b{color:var(--ink);font-weight:600;}
+
+  /* BIG ALERT */
+  .alert{background:var(--surface);border:1px solid var(--amber-bd);border-left:4px solid var(--amber);border-radius:var(--radius);padding:1.25rem 1.5rem;margin:1.5rem 0;}
+  .alert h3{font-size:14px;font-weight:600;color:var(--ink);margin-bottom:.5rem;font-family:'Inter',sans-serif;}
+  .alert p{font-size:13px;color:var(--ink2);line-height:1.75;margin-bottom:.6rem;}
+  .alert p:last-child{margin-bottom:0;}
+  .alert.alert-rust{border-left-color:var(--rust);border-color:#e3bda9;}
+
+  /* APPENDIX */
+  .appendix-divider{margin:5rem 0 0;padding-top:2.5rem;border-top:3px double var(--border);text-align:center;}
+  .appendix-kicker{font-size:10px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--amber);margin-bottom:.6rem;}
+  .appendix-heading{font-family:'Playfair Display',serif;font-size:1.9rem;font-weight:400;color:var(--ink);line-height:1.15;margin-bottom:.6rem;}
+  .appendix-blurb{font-size:13px;color:var(--ink2);line-height:1.75;max-width:620px;margin:0 auto;}
+  .appendix-section{position:relative;padding:2rem 1.5rem 2.25rem;margin-top:2rem;background:rgba(181,118,42,.035);border:1px dashed var(--amber-bd);border-radius:var(--radius);}
+  .appendix-section .day-section-header{border-bottom-color:var(--amber);}
+  .appendix-section .day-number{color:var(--amber);background:rgba(181,118,42,.1);}
+  .optional-flag{display:inline-block;font-size:9.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--amber);background:rgba(181,118,42,.1);border:1px solid var(--amber-bd);padding:2px 7px;border-radius:3px;vertical-align:middle;margin-left:8px;}
+  .optional-card{border-style:dashed;border-color:var(--amber-bd);background:rgba(181,118,42,.03);}
+
+  /* FOOTER */
+  .page-footer{border-top:1px solid var(--border);padding:1.75rem 5vw;max-width:860px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;}
+  .footer-brand{font-family:'Playfair Display',serif;font-size:.9rem;color:var(--ink2);}
+  .next-city-link{font-size:13px;font-weight:500;color:var(--blue);text-decoration:none;display:flex;align-items:center;gap:6px;}
+  .next-city-link:hover{color:var(--amber);}
+
+  @media(max-width:700px){
+    .activity-card-body,.hotel-card-body{grid-template-columns:1fr;}
+    .map-area{min-height:200px;border-left:none;border-top:1px solid var(--border);}
+    .map-area iframe{min-height:200px;}
+    .back-nav,.hero,.main{padding-left:1.25rem;padding-right:1.25rem;}
+    .back-nav-inner{padding-left:0;padding-right:0;}
+    .day-nav-inner{padding-left:1.25rem;padding-right:1.25rem;}
+    .hero-stats{gap:1.25rem;}
+    .page-footer{padding-left:1.25rem;padding-right:1.25rem;}
+    .practical-row{gap:.6rem;}
+    .tl-row{grid-template-columns:74px 1fr;}
+    .booktable thead{display:none;}
+    .booktable tr{display:block;border-bottom:1px solid var(--border);padding:8px 0;}
+    .booktable td{display:block;border:0;padding:3px 12px;}
+  }
+
   /* CITY NAVIGATION GRID */
   .city-nav{margin:1.5rem 0 2.5rem;}
   .city-nav-label{font-size:10px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--ink3);margin-bottom:.75rem;}
@@ -120,36 +202,45 @@
 </head>
 <body>
 
+<!-- BACK NAV -->
 <div class="back-nav">
   <div class="back-nav-inner">
     <a href="index.html" class="back-link">&#8592; Full itinerary</a>
     <span class="trip-crumb">
       <a href="london.html">London</a> &nbsp;&middot;&nbsp;
+      <a href="york.html">York</a> &nbsp;&middot;&nbsp;
       <strong>Edinburgh</strong>
     </span>
   </div>
 </div>
 
+<!-- HERO -->
 <section class="hero">
   <div class="hero-inner">
-    <p class="hero-label">City 2 of 2 &nbsp;&middot;&nbsp; Days 9 to 12</p>
+    <p class="hero-label">City 3 of 3 &nbsp;&middot;&nbsp; Days 11 to 14 &nbsp;&middot;&nbsp; the last leg</p>
     <h1 class="hero-title">Edinburgh</h1>
-    <p class="hero-meta">12 to 16 October 2026 &nbsp;&middot;&nbsp; 4 nights &nbsp;&middot;&nbsp; Radisson Blu Edinburgh, on the Royal Mile</p>
+    <p class="hero-meta">14 to 17 October 2026 &nbsp;&middot;&nbsp; 3 nights &nbsp;&middot;&nbsp; A capital built on a dead volcano, then a 7am flight to Cork and the Irish border</p>
     <div class="hero-stats">
-      <div><span class="hs-l">Arrives from</span><span class="hs-v">London (train)</span></div>
-      <div><span class="hs-l">Returns to</span><span class="hs-v">London (train)</span></div>
-      <div><span class="hs-l">Getting around</span><span class="hs-v">Walking / bus</span></div>
-      <div><span class="hs-l">Bus card</span><span class="hs-v">Contactless works</span></div>
+      <div><span class="hs-l">In from York</span><span class="hs-v">Wed 14 Oct</span></div>
+      <div><span class="hs-l">Flight to Cork</span><span class="hs-v">Sat 17, 07:00</span></div>
+      <div><span class="hs-l">Getting around</span><span class="hs-v">On foot &amp; ScotRail</span></div>
+      <div><span class="hs-l">Sunset</span><span class="hs-v">About 6:15pm</span></div>
+      <div><span class="hs-l">Scottish schools</span><span class="hs-v">October break &mdash; check</span></div>
     </div>
   </div>
 </section>
 
+<!-- DAY NAV -->
 <div class="day-nav">
   <div class="day-nav-inner">
-    <a href="#day9">Day 9 &nbsp;&middot;&nbsp; 12 Oct (Mon)</a>
-    <a href="#day10">Day 10 &nbsp;&middot;&nbsp; 13 Oct (Tue)</a>
-    <a href="#day11">Day 11 &nbsp;&middot;&nbsp; 14 Oct (Wed)</a>
-    <a href="#day12">Day 12 &nbsp;&middot;&nbsp; 15 Oct (Thu)</a>
+    <a href="#day11">Day 11 &nbsp;&middot;&nbsp; 14 Oct</a>
+    <a href="#day12">Day 12 &nbsp;&middot;&nbsp; 15 Oct</a>
+    <a href="#day13">Day 13 &nbsp;&middot;&nbsp; 16 Oct</a>
+    <a href="#day14">Day 14 &nbsp;&middot;&nbsp; 17 Oct</a>
+    <a href="#stay">Where to stay</a>
+    <a href="#booking">Booking order</a>
+    <a href="#appendix-lastnight" style="color:var(--amber);">Appendix &nbsp;&middot;&nbsp; The last night</a>
+    <a href="#appendix-swaps" style="color:var(--amber);">Appendix &nbsp;&middot;&nbsp; Swap-ins</a>
   </div>
 </div>
 
@@ -159,479 +250,746 @@
     <p class="city-nav-label">City guides</p>
     <div class="city-nav-grid">
       <a href="index.html" class="cn-card"><span class="cn-home-icon">&#8592;</span><div class="cn-info"><div class="cn-name">All Cities</div><div class="cn-meta">4 to 17 Oct</div></div></a>
-      <a href="london.html" class="cn-card"><div class="cn-dot" style="background:#2a4e8a"></div><div class="cn-info"><div class="cn-name">London</div><div class="cn-meta">Days 1 to 8, 13 to 14 &middot; 9 nights</div></div></a>
-      <a href="edinburgh.html" class="cn-card cn-active"><div class="cn-dot" style="background:#2a6e4a"></div><div class="cn-info"><div class="cn-name">Edinburgh</div><div class="cn-meta">Days 9 to 12 &middot; 4 nights</div></div></a>
+      <a href="london.html" class="cn-card"><div class="cn-dot" style="background:#2a4e8a"></div><div class="cn-info"><div class="cn-name">London</div><div class="cn-meta">Days 1 to 8 &middot; 8 nights</div></div></a>
+      <a href="york.html" class="cn-card"><div class="cn-dot" style="background:#8c4a26"></div><div class="cn-info"><div class="cn-name">York</div><div class="cn-meta">Days 9 to 11 &middot; 2 nights</div></div></a>
+      <a href="edinburgh.html" class="cn-card cn-active"><div class="cn-dot" style="background:#2a6e4a"></div><div class="cn-info"><div class="cn-name">Edinburgh</div><div class="cn-meta">Days 11 to 14 &middot; 3 nights</div></div></a>
     </div>
   </div>
 
-<!-- ═══ DAY 9 ═══ -->
-<section class="day-section" id="day9">
+  <div class="alert alert-rust">
+    <h3>&#9888;&#65039;&nbsp; The 07:00 flight on Saturday governs this whole leg</h3>
+    <p>Everything below is built backwards from a <strong>07:00 departure from Edinburgh Airport on Saturday 17 October</strong>. That means being at the terminal by about <strong>05:15</strong>, which in turn means either a 04:00 alarm and a pre-booked taxi from the Old Town, or &mdash; the recommendation &mdash; <strong>moving to an airport hotel after dinner on the Friday</strong>. It is the single biggest structural decision on this page, so it has an appendix of its own: <a href="#appendix-lastnight" style="color:var(--rust);font-weight:600;">The last night &#8594;</a></p>
+    <p>The reason it matters more than a normal early flight: <strong>the morning of the 17th is not just a travel morning, it is the Irish border.</strong> She presents at Cork immigration under the Short Stay Visa Waiver Programme at around half eight, having to be calm, clear and organised with a folder of documents. Doing that on three hours&rsquo; sleep is a bad trade for one extra evening in a city-centre bed.</p>
+    <p><strong>Confirm the exact departure time before booking anything around it.</strong> If it is not 07:00, the Friday changes shape and this page should be re-timed.</p>
+  </div>
+
+  <div class="alert">
+    <h3>&#128197;&nbsp; Two things to check this week</h3>
+    <p><strong>1. The Scottish school October break.</strong> Edinburgh&rsquo;s schools usually take their October holiday in exactly this middle-of-the-month week, and if 2026 follows the pattern the city will be busier and dearer than a normal October, with the good mid-range rooms going first. <strong>Verify the City of Edinburgh Council holiday dates</strong>, then book the beds accordingly. York is unaffected &mdash; English half term is later in the month.</p>
+    <p><strong>2. The baggage on the Cork flight.</strong> She arrived from Manila with 25kg checked on Qatar, and she is not going home afterwards &mdash; she is moving to Blarney until January. A short regional hop like Edinburgh&ndash;Cork prices hold baggage aggressively and it is <strong>far cheaper added at booking than at the airport</strong>. Sort the allowance when you buy the ticket, not on the morning.</p>
+  </div>
+
+<!-- ═══════════════════════════════ DAY 11 ═══════════════════════════════ -->
+<section class="day-section" id="day11">
   <div class="day-section-header">
-    <span class="day-number">Day 9</span>
-    <div>
-      <div class="day-title">North</div>
-      <div class="day-date">Monday, 12 October 2026 &nbsp;&middot;&nbsp; Travel day from London</div>
+    <span class="day-number">Day 11</span>
+    <div class="day-title-block">
+      <div class="day-title">Arrival, and a Hill at Sunset</div>
+      <div class="day-date">Wednesday, 14 October 2026 &nbsp;&middot;&nbsp; In from York mid-afternoon</div>
     </div>
   </div>
 
-  <div class="slot-label">Morning, check out and travel</div>
+  <div class="tip-box" style="margin-bottom:1.25rem;padding:1rem 1.25rem;font-size:13px;line-height:1.75;">
+    <strong>Half a day, and one hill.</strong> The train gets in mid-afternoon, so today is check in, drop everything, and go straight up Calton Hill for sunset at about a quarter past six &mdash; which hands you the entire city in one look before you have walked a step of it. Nothing is booked, nothing is timed, and dinner is wherever you fancy. Tomorrow is the big day.
+  </div>
+
+  <div class="slot-label">Mid-afternoon &#8212; out of Waverley</div>
 
   <div class="arrival-card">
-    <div class="arrival-card-header"><h3>&#128646;&nbsp; London to Edinburgh, LNER direct</h3></div>
+    <div class="arrival-card-header">
+      <h3>&#128646;&nbsp; Waverley &#8594; the Royal Mile</h3>
+    </div>
     <div class="arrival-rows">
       <div class="arrival-row">
-        <div class="arrival-row-icon">&#127968;</div>
+        <div class="arrival-row-icon">&#128642;</div>
         <div class="arrival-row-content">
-          <strong>Check out of the Premier Inn, Bankside</strong>
-          <span class="step">Check-out is by <strong>noon</strong>. Pack the night before. Tube to <strong>King&rsquo;s Cross</strong>: Jubilee line from Southwark, change at Waterloo for the Northern line to King&rsquo;s Cross, about 25 minutes. Allow time to find the platform.</span>
-        </div>
-      </div>
-      <div class="arrival-row">
-        <div class="arrival-row-icon">&#128646;</div>
-        <div class="arrival-row-content">
-          <strong>LNER, King&rsquo;s Cross to Edinburgh Waverley</strong>
-          <span class="step">Direct train, no changes. Journey time about <strong>4hr 20min</strong>. Take a mid-morning departure to arrive early-to-mid afternoon. Advance fares open about 12 weeks ahead, so set a reminder for mid-July 2026.</span>
-          <span class="step"><strong>Seat tip:</strong> book a table seat on the <strong>east side</strong> and eat on board. The stretch along the Northumberland coast past Alnmouth and Berwick runs right along the cliff edge and is one of the great British rail journeys.</span>
-        </div>
-      </div>
-      <div class="arrival-row">
-        <div class="arrival-row-icon">&#128652;</div>
-        <div class="arrival-row-content">
-          <strong>Edinburgh Waverley to the Radisson Blu</strong>
-          <span class="step">The hotel is an 8-minute walk uphill from Waverley, on the Royal Mile itself. Exit at the Market Street exit and walk up through the Old Town closes, or up Waverley Bridge onto the Mile.</span>
+          <strong>Edinburgh Waverley is in a hole, and that is the whole trick to it</strong>
+          <span class="step">The station sits at the bottom of a valley between the Old Town on one side and the New Town on the other, so you do not walk out of it, you <strong>climb out of it</strong>. There are three ways up and they go to different places: <strong>Market Street</strong> (Old Town, the low end), <strong>the Waverley Steps up to Princes Street</strong> (New Town, shops, trams), and the ramp up to the <strong>Royal Mile</strong> at the top.</span>
+          <span class="step">For anywhere on the Royal Mile, follow signs to <strong>Market Street</strong> and go up Cockburn Street &mdash; a curling Victorian street of record shops that delivers you onto the High Street. About eight minutes with bags, and it is uphill the whole way. This is your first taste of the fact that <strong>Edinburgh is a city of stairs</strong>.</span>
+          <span class="step">If the bags are heavy or it is raining hard, there is a taxi rank inside the station on Waverley Bridge. Five minutes and about &pound;8 to anywhere in the Old Town.</span>
         </div>
       </div>
     </div>
   </div>
 
-  <div class="slot-label">Hotel</div>
-  <div class="hotel-card">
-    <div class="hotel-card-body">
-      <div class="hotel-info">
-        <div class="hotel-badge">&#127968;&nbsp; Base for nights 9 to 12 &nbsp;&middot;&nbsp; 4-star</div>
-        <div class="hotel-name">Radisson Blu Hotel Edinburgh</div>
-        <div class="hotel-address">&#128205;&nbsp; 80 High Street, Edinburgh EH1 1TH &nbsp;&middot;&nbsp; On the Royal Mile, 8-minute walk from Waverley</div>
-        <ul class="hotel-detail">
-          <li>Check-in from <strong>3pm</strong>, check-out by <strong>noon</strong> on 16 Oct, luggage storage available all day</li>
-          <li>On the Royal Mile itself: the castle is uphill to the right, Holyrood Palace downhill to the left. Every Old Town activity here is within a 15-minute walk</li>
-          <li>Reliable 4-star quality, spacious by Edinburgh city-centre standards, good breakfast</li>
-        </ul>
-        <div class="tip-box" style="margin-top:.75rem"><strong>Alternatives at a similar standard:</strong> Kimpton Charlotte Square (a restored Georgian townhouse in the New Town, elegant and quiet, about 12 minutes from Waverley), or The Scotsman Hotel (a converted Victorian newspaper building on North Bridge, 3 minutes from Waverley).</div>
-      </div>
-      <div class="map-area">
-        <iframe src="https://maps.google.com/maps?q=Radisson+Blu+Hotel+Edinburgh+80+High+Street+EH1+1TH&output=embed" loading="lazy" title="Radisson Blu Edinburgh"></iframe>
-        <a class="map-open-link" href="https://www.google.com/maps/search/?api=1&query=Radisson+Blu+Hotel+Edinburgh+80+High+Street+EH1" target="_blank">Open in Google Maps &#8599;</a>
-      </div>
-    </div>
-  </div>
-
-  <div class="slot-label">Afternoon, first walk</div>
+  <div class="slot-label">Sunset, about 6:15pm &#8212; the best free hour in Edinburgh</div>
 
   <div class="activity-card">
     <div class="activity-card-body">
       <div class="activity-info">
-        <div class="activity-type">&#127981;&nbsp; Old Town orientation, free</div>
-        <div class="activity-name">The Royal Mile &amp; its closes</div>
-        <div class="activity-address">&#128205;&nbsp; Royal Mile, Edinburgh EH1 &nbsp;&middot;&nbsp; Hotel front door</div>
+        <div class="activity-type">&#9968;&nbsp; Hill &amp; monuments, free</div>
+        <div class="activity-name">Calton Hill</div>
+        <div class="activity-address">&#128205;&nbsp; Calton Hill, Edinburgh EH7 5AA &nbsp;&middot;&nbsp; 15 minutes on foot from Waverley</div>
         <div class="practical-row">
           <span class="prac-item"><span class="pric-free">Free</span></span>
-          <span class="prac-item">&#9201;&nbsp; A slow afternoon</span>
+          <span class="prac-item">&#128336;&nbsp; Open all hours</span>
+          <span class="prac-item">&#9201;&nbsp; An hour, including the climb</span>
         </div>
-        <p class="activity-desc">The best possible use of a first afternoon: the Royal Mile and its closes, the narrow alleys branching off both sides, each one going somewhere unexpected. No plan needed.</p>
+        <p class="activity-desc">Walk east along Princes Street and keep going onto <strong>Waterloo Place</strong>; about two minutes past the old Royal High School there is a wide stone staircase up on the left. Five minutes of steps and you are on a low, flat summit covered in improbable neoclassical monuments &mdash; including the <strong>National Monument</strong>, a half-finished Parthenon abandoned in 1829 when the money ran out, which Edinburgh has been quietly embarrassed about ever since.</p>
         <ul class="highlights">
-          <li><b>Advocates Close:</b> steps down from the Mile with views over the city and Princes Street Gardens.</li>
-          <li><b>Dunbar&rsquo;s Close Garden:</b> a hidden 17th-century walled garden behind a close door, usually quiet.</li>
+          <li><b>You see everything at once.</b> The whole Old Town skyline along the ridge with the castle at the end of it, Arthur&rsquo;s Seat and Salisbury Crags to the south, the New Town&rsquo;s grid below, and the Firth of Forth and Fife beyond. This is the postcard, and it costs nothing.</li>
+          <li><b>Go up before sunset, not after.</b> Sunset is about 6:15 in mid-October; be up there by six. The good half hour is the one <em>after</em> the sun goes, when the castle floodlights come on and the sky is still blue.</li>
+          <li><b>The Dugald Stewart Monument</b>, the little round temple on the western edge, is the exact spot every photograph of Edinburgh is taken from. It frames the Old Town perfectly.</li>
+          <li><b>The Nelson Monument</b>, the upturned telescope, can be climbed for a few pounds during the day &mdash; not needed, the hill itself is high enough.</li>
         </ul>
-      </div>
-      <div class="map-area">
-        <iframe src="https://maps.google.com/maps?q=Royal+Mile+Edinburgh+EH1&output=embed" loading="lazy" title="Royal Mile map"></iframe>
-        <a class="map-open-link" href="https://www.google.com/maps/search/?api=1&query=Royal+Mile+Edinburgh+EH1" target="_blank">Open in Google Maps &#8599;</a>
-      </div>
-    </div>
-  </div>
-
-  <div class="slot-label">Evening, sunset about 6:25pm</div>
-
-  <div class="activity-card">
-    <div class="activity-card-body">
-      <div class="activity-info">
-        <div class="activity-type">&#9968;&nbsp; Viewpoint, free, 5-minute climb</div>
-        <div class="activity-name">Calton Hill (if light remains)</div>
-        <div class="activity-address">&#128205;&nbsp; Calton Hill, Edinburgh EH7 5AA &nbsp;&middot;&nbsp; East end of Princes Street</div>
-        <div class="practical-row">
-          <span class="prac-item"><span class="pric-free">Free</span></span>
-          <span class="prac-item">&#128336;&nbsp; Sunset about 6:25pm</span>
-        </div>
-        <p class="activity-desc">If light remains after checking in, Calton Hill is a five-minute climb from the east end of Princes Street for 360-degree views over the whole city. If you would rather leave it, day 10 catches it at sunset instead.</p>
+        <div class="tip-box"><strong>Wear the coat you would wear on a boat.</strong> It is only 103 metres but it is completely exposed and the wind comes straight off the North Sea. This is the single most reliably freezing hour of the trip and it is worth being dressed for, because you will want to stay up there longer than you expect.</div>
       </div>
       <div class="map-area">
         <iframe src="https://maps.google.com/maps?q=Calton+Hill+Edinburgh+EH7+5AA&output=embed" loading="lazy" title="Calton Hill map"></iframe>
-        <a class="map-open-link" href="https://www.google.com/maps/search/?api=1&query=Calton+Hill+Edinburgh+EH7" target="_blank">Open in Google Maps &#8599;</a>
+        <a class="map-open-link" href="https://www.google.com/maps/search/?api=1&query=Calton+Hill+Edinburgh" target="_blank">Open in Google Maps &#8599;</a>
       </div>
     </div>
   </div>
 
   <div class="dinner-card">
-    <div class="dinner-title">&#127374;&nbsp; Dinner, the Grassmarket</div>
+    <div class="dinner-title">&#127374;&nbsp; Dinner &#8212; warm, casual, nothing booked</div>
     <div class="dinner-options">
-      <div class="dinner-opt"><b>Grassmarket</b>, the square under the castle rock, is surrounded by restaurants and is a good introduction to the Old Town on a first night.</div>
-      <div class="dinner-opt"><b>Maxie&rsquo;s Bistro</b>, 5B Johnston Terrace, EH1 2PW. Overlooking the Grassmarket, with a terrace and castle view. Booking recommended.</div>
-      <div class="dinner-opt"><b>Vittoria on the Bridge</b>, 19 George IV Bridge, EH1 1EN. An Edinburgh Italian institution, wood-fired pizza and pasta, good value, a short walk up from the Grassmarket.</div>
+      <div class="dinner-opt"><b>Makars Gourmet Mash Bar</b>, Bank Street, at the top of the Mound. Haggis, neeps and tatties done properly and without irony, plus about nine kinds of mash. Cheap, warm, filling, and the correct first meal in Scotland. Ten minutes down from Calton Hill.</div>
+      <div class="dinner-opt"><b>The Cafe Royal</b>, 19 West Register Street. A Victorian oyster bar two minutes from Calton Hill &mdash; marble, stained glass, tiled portraits of inventors, and a circular island bar. Go for the room even if you only have a drink. Food is decent pub-plus.</div>
+      <div class="dinner-opt"><b>Dishoom</b>, 3a St Andrew Square. Bombay-Irani cafe in a beautiful room, five minutes from the hill. It does not take small bookings in the evening and the queue can be an hour &mdash; go at half five or not at all.</div>
+      <div class="dinner-opt"><b>The Bow Bar</b>, 80 West Bow. Not dinner &mdash; no food to speak of &mdash; but if you want one whisky in a proper Edinburgh bar with three hundred of them on the wall and nobody playing music, this is the one.</div>
     </div>
   </div>
-</section><!-- end day 9 -->
 
-<!-- ═══ DAY 10 ═══ -->
-<section class="day-section" id="day10">
+</section><!-- end day 11 -->
+
+<!-- ═══════════════════════════════ DAY 12 ═══════════════════════════════ -->
+<section class="day-section" id="day12">
   <div class="day-section-header">
-    <span class="day-number">Day 10</span>
-    <div>
-      <div class="day-title">The Castle &amp; the Old Town</div>
-      <div class="day-date">Tuesday, 13 October 2026</div>
+    <span class="day-number">Day 12</span>
+    <div class="day-title-block">
+      <div class="day-title">Castle to Summit, All Downhill</div>
+      <div class="day-date">Thursday, 15 October 2026 &nbsp;&middot;&nbsp; The big day &mdash; and it needs no transport at all</div>
     </div>
   </div>
 
-  <div class="slot-label">9:30am, pre-book, it sells out in October</div>
+  <div class="tip-box" style="margin-bottom:1.25rem;padding:1rem 1.25rem;font-size:13px;line-height:1.75;">
+    <strong>The whole day runs down one street.</strong> You start at the top of the Royal Mile at the castle gates, walk its length losing height the entire way, and finish by climbing the volcano at the bottom of it. <strong>No backtracking, no buses, no tickets except the first one.</strong> Two things are booked in advance: the 9:30 castle slot and dinner. Everything in between is a wander with a direction.
+  </div>
+
+  <div class="slot-label">9:30am, at the doors &#8212; the only quiet window</div>
 
   <div class="activity-card">
     <div class="activity-card-body">
       <div class="activity-info">
-        <div class="activity-type">&#127963;&nbsp; Castle, pre-book timed entry</div>
+        <div class="activity-type">&#127984;&nbsp; Fortress, ticketed &amp; timed</div>
         <div class="activity-name">Edinburgh Castle</div>
-        <div class="activity-address">&#128205;&nbsp; Castlehill, Edinburgh EH1 2NG &nbsp;&middot;&nbsp; 10-minute walk uphill from the hotel</div>
+        <div class="activity-address">&#128205;&nbsp; Castlehill, Edinburgh EH1 2NG &nbsp;&middot;&nbsp; 12 minutes up the Royal Mile</div>
         <div class="practical-row">
-          <span class="prac-item">&#128178;&nbsp; About &pound;22pp &nbsp;&middot;&nbsp; Book: edinburghcastle.scot</span>
-          <span class="prac-item">&#128336;&nbsp; Open 9:30am, arrive at opening</span>
-          <span class="prac-item">&#9201;&nbsp; 2.5 to 3 hours</span>
+          <span class="prac-item">&#128176;&nbsp; About &pound;20&ndash;22 each, cheaper booked direct</span>
+          <span class="prac-item">&#128336;&nbsp; 9:30&ndash;17:00 in October, last entry 16:00</span>
+          <span class="prac-item">&#9201;&nbsp; Two hours</span>
         </div>
-        <p class="activity-desc">Built on a volcanic rock above the city, the castle dominates Edinburgh from every angle. Arrive at opening. The Crown Jewels, the Stone of Destiny, St Margaret&rsquo;s Chapel, and views from the ramparts across the Firth of Forth. The One O&rsquo;Clock Gun fires at 1pm daily except Sunday.</p>
+        <p class="activity-desc">Go at the doors rather than later. <strong>9:30 to about 11:00 is the only quiet window of the day</strong>, and in a Scottish school holiday week that matters more than usual. The castle sits on a volcanic plug 130-odd metres above the city, and the thing to understand before you go in is that <strong>it is a fortress, not a palace</strong> &mdash; gun batteries, a garrison, a war memorial and a prison, arranged up a rock. It is a genuinely different animal from the Tower of London, which you have already done.</p>
         <ul class="highlights">
-          <li><b>The Honours of Scotland:</b> the oldest crown jewels in the British Isles, the crown, sword and sceptre.</li>
-          <li><b>The Stone of Destiny:</b> the ancient coronation stone, returned to Scotland in 1996.</li>
-          <li><b>St Margaret&rsquo;s Chapel:</b> the oldest building in Edinburgh, from about 1130.</li>
-          <li><b>The One O&rsquo;Clock Gun:</b> fired at 1pm from the Half Moon Battery. Stand on the esplanade at 12:58pm.</li>
+          <li><b>St Margaret&rsquo;s Chapel</b> &mdash; a single tiny room from about 1130, and the oldest building in Edinburgh. Twenty seconds to walk through and the best thing up there.</li>
+          <li><b>The Honours of Scotland</b> in the Crown Room: the crown, sceptre and sword of state, the oldest crown jewels in Britain. <b>Worth checking they are on display</b> &mdash; the Crown Room has had closures for refurbishment.</li>
+          <li><b>The Stone of Destiny is no longer here.</b> It moved to the new Perth Museum in 2024 and it is not coming back. Most guidebooks and half the internet still say otherwise. Do not go looking for it.</li>
+          <li><b>The Scottish National War Memorial</b> is the one people walk past and the one that lands hardest. Silent, and no photography.</li>
+          <li><b>The views from the Argyle and Mills Mount batteries</b> are half the ticket &mdash; straight down over the New Town to the Forth.</li>
         </ul>
-        <div class="tip-box"><strong>Strategy:</strong> arrive at opening to beat the queue for the Crown Jewels, which builds fast. Do the jewels first, then the Great Hall, then the ramparts.</div>
+        <div class="tip-box"><strong>Book direct with Historic Environment Scotland.</strong> It is cheaper than the gate, it guarantees the time slot, and 9:30 slots in a holiday week do go. Resellers charge a premium for the same ticket.</div>
+        <div class="tip-box"><strong>The One O&rsquo;Clock Gun</strong> is fired from the Mills Mount battery at 13:00 every day except Sunday. It is extremely loud and everybody jumps, including the people who knew it was coming. If you are still up there at one, stand where you can see the crowd rather than the gun.</div>
       </div>
       <div class="map-area">
-        <iframe src="https://maps.google.com/maps?q=Edinburgh+Castle+Castlehill+Edinburgh+EH1+2NG&output=embed" loading="lazy" title="Edinburgh Castle"></iframe>
-        <a class="map-open-link" href="https://www.google.com/maps/search/?api=1&query=Edinburgh+Castle+EH1+2NG" target="_blank">Open in Google Maps &#8599;</a>
+        <iframe src="https://maps.google.com/maps?q=Edinburgh+Castle+Castlehill+Edinburgh+EH1+2NG&output=embed" loading="lazy" title="Edinburgh Castle map"></iframe>
+        <a class="map-open-link" href="https://www.google.com/maps/search/?api=1&query=Edinburgh+Castle" target="_blank">Open in Google Maps &#8599;</a>
       </div>
     </div>
   </div>
 
-  <div class="slot-label">Lunch, down a close near the castle</div>
-  <div class="dinner-card">
-    <div class="dinner-title">&#127829;&nbsp; Lunch options</div>
-    <div class="dinner-options">
-      <div class="dinner-opt"><b>The Jolly Judge</b>, 7A James Court, off Lawnmarket, EH1 2PB. Down a close just below the castle. Low-ceilinged, quiet, and off the tourist flow. Good for soup and a sandwich.</div>
-      <div class="dinner-opt"><b>Cannonball Restaurant</b>, 356 Castlehill, EH1 2NE. Right at the castle entrance, with views over the esplanade.</div>
+  <div class="transport-between">
+    <div class="transport-between-icon">&#129462;</div>
+    <div class="transport-between-text">
+      <strong>Castle esplanade &#8594; down the Royal Mile</strong>
+      <span>Walk out of the gates and keep going downhill. Castlehill becomes the Lawnmarket becomes the High Street becomes the Canongate, and it is one straight mile from the castle to Holyrood. Everything for the rest of the day is on it or one minute off it. You will not need a map, only the instruction &ldquo;keep going down&rdquo;.</span>
     </div>
+    <span class="transport-badge">All downhill</span>
   </div>
 
-  <div class="slot-label">Afternoon, the Old Town, slowly</div>
+  <div class="slot-label">Late morning &#8212; off the Mile and down the hill</div>
 
   <div class="activity-card">
     <div class="activity-card-body">
       <div class="activity-info">
-        <div class="activity-type">&#9962;&nbsp; Cathedral, free</div>
-        <div class="activity-name">St Giles&rsquo; Cathedral</div>
-        <div class="activity-address">&#128205;&nbsp; High Street, Edinburgh EH1 1RE &nbsp;&middot;&nbsp; On the Royal Mile, 5 minutes from the castle</div>
+        <div class="activity-type">&#127968;&nbsp; Streets &amp; a graveyard, free</div>
+        <div class="activity-name">Victoria Street, the Grassmarket &amp; Greyfriars Kirkyard</div>
+        <div class="activity-address">&#128205;&nbsp; West Bow / Victoria Street, Edinburgh EH1 2HE &nbsp;&middot;&nbsp; 5 minutes below the Lawnmarket</div>
         <div class="practical-row">
-          <span class="prac-item"><span class="pric-free">Free</span>&nbsp; entry</span>
-          <span class="prac-item">&#9201;&nbsp; 30 to 45 minutes</span>
+          <span class="prac-item"><span class="pric-free">Free</span></span>
+          <span class="prac-item">&#9201;&nbsp; An hour and a half, wandering</span>
         </div>
-        <p class="activity-desc">The High Kirk of Edinburgh. The nave is impressive, but the Thistle Chapel inside is worth the small extra: a tiny, ornately carved chapel crammed with heraldic detail, Scotland&rsquo;s equivalent of the Order of the Garter chapel at Windsor.</p>
+        <p class="activity-desc">A hundred metres down the Lawnmarket, turn right and drop down <strong>Victoria Street</strong> &mdash; a curved terrace of brightly painted shopfronts on a steep bend, with a raised walkway above the shops on one side. It sweeps down into the <strong>Grassmarket</strong>, a wide square under the south face of the castle rock that spent several centuries as the place they hanged people and now spends its time as the place they serve lunch.</p>
+        <ul class="highlights">
+          <li><b>The Vennel</b>, a narrow flight of steps off the west end of the Grassmarket, gives the single best photograph of the castle in the city &mdash; the whole rock framed between tenement walls. Two minutes, and almost everybody misses it.</li>
+          <li><b>Greyfriars Kirkyard</b>, up Candlemaker Row from the Grassmarket &mdash; a beautiful, faintly sinister 16th-century graveyard on a slope, full of table tombs and mort-safes. <b>Free.</b> Bobby the dog is at the gate; the &ldquo;Tom Riddell&rdquo; headstone is deeper in, if that is of interest.</li>
+          <li><b>Oink</b> on Victoria Street does hog roast rolls for about six quid and is the correct cheap lunch if you would rather not sit down.</li>
+          <li><b>Mary&rsquo;s Milk Bar</b> in the Grassmarket makes gelato in small batches in front of you. There is often a queue and it is usually worth it.</li>
+        </ul>
       </div>
       <div class="map-area">
-        <iframe src="https://maps.google.com/maps?q=St+Giles+Cathedral+High+Street+Edinburgh+EH1+1RE&output=embed" loading="lazy" title="St Giles Cathedral"></iframe>
+        <iframe src="https://maps.google.com/maps?q=Victoria+Street+Edinburgh+EH1+2HE&output=embed" loading="lazy" title="Victoria Street map"></iframe>
+        <a class="map-open-link" href="https://www.google.com/maps/search/?api=1&query=Victoria+Street+Edinburgh" target="_blank">Open in Google Maps &#8599;</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="slot-label">Lunch &#8212; take your time, the afternoon is a climb</div>
+
+  <div class="dinner-card">
+    <div class="dinner-title">&#127859;&nbsp; Somewhere in the Grassmarket or back up on the Mile</div>
+    <div class="dinner-options">
+      <div class="dinner-opt"><b>The Last Drop</b> or <b>The White Hart Inn</b>, Grassmarket. Old pubs with proper lunches, both trading on being extremely old and both fine for it. The White Hart claims 1516.</div>
+      <div class="dinner-opt"><b>Oink</b>, Victoria Street. A hog roast roll, eaten on a wall. Six pounds, five minutes, and you have the whole afternoon back.</div>
+      <div class="dinner-opt"><b>The Piemaker</b>, South Bridge, if you are heading down past the museum. Exactly what it says, and about four pounds.</div>
+      <div class="dinner-opt"><b>Clarinda&rsquo;s Tea Room</b>, 69 Canongate &mdash; near the bottom of the Mile, small and old-fashioned, and the last decent stop before Holyrood if you are running late.</div>
+    </div>
+  </div>
+
+  <div class="slot-label">Early afternoon &#8212; keep walking down</div>
+
+  <div class="activity-card">
+    <div class="activity-card-body">
+      <div class="activity-info">
+        <div class="activity-type">&#9962;&nbsp; The rest of the Mile, mostly free</div>
+        <div class="activity-name">St Giles&rsquo;, the closes, and down to Holyrood</div>
+        <div class="activity-address">&#128205;&nbsp; High Street, Edinburgh EH1 1RE &nbsp;&middot;&nbsp; The middle third of the Royal Mile</div>
+        <div class="practical-row">
+          <span class="prac-item"><span class="pric-free">Free</span>&nbsp; (small charge to photograph inside St Giles&rsquo;)</span>
+          <span class="prac-item">&#9201;&nbsp; An hour, drifting</span>
+        </div>
+        <p class="activity-desc">The stretch between the Grassmarket and Holyrood is the part to do slowly rather than tick off. <strong>St Giles&rsquo; Cathedral</strong> is free to enter and worth twenty minutes for the <strong>Thistle Chapel</strong> alone &mdash; a tiny 1911 chapel with carved stalls, absurd amounts of detail, and a stone angel playing the bagpipes.</p>
+        <ul class="highlights">
+          <li><b>The closes</b> are the point of the Royal Mile. Duck down any of them &mdash; Advocate&rsquo;s Close, Anchor Close, Fleshmarket Close &mdash; and you drop into stepped alleys between seven-storey tenements with the New Town suddenly visible at the bottom. They are free, they are everywhere, and they are more Edinburgh than any of the attractions.</li>
+          <li><b>The Real Mary King&rsquo;s Close</b> (about &pound;23, timed, book ahead) takes you into sealed-off closes underneath the City Chambers. Genuinely good, an hour long, and the obvious rainy-day substitute for Arthur&rsquo;s Seat.</li>
+          <li><b>Gladstone&rsquo;s Land</b> on the Lawnmarket &mdash; a 17th-century tenement restored floor by floor, about &pound;10, and a rare chance to see how the Old Town actually lived.</li>
+          <li><b>Holyrood Palace</b> is at the bottom (about &pound;20). Worth it if you want the interiors and Mary Queen of Scots&rsquo; chambers &mdash; but it is two hours you have earmarked for a volcano, so treat it as an either/or.</li>
+        </ul>
+      </div>
+      <div class="map-area">
+        <iframe src="https://maps.google.com/maps?q=St+Giles+Cathedral+High+Street+Edinburgh+EH1+1RE&output=embed" loading="lazy" title="St Giles Cathedral map"></iframe>
         <a class="map-open-link" href="https://www.google.com/maps/search/?api=1&query=St+Giles+Cathedral+Edinburgh" target="_blank">Open in Google Maps &#8599;</a>
       </div>
     </div>
   </div>
 
-  <div class="transport-between">
-    <div class="transport-between-icon">&#128694;</div>
-    <div class="transport-between-text">
-      <strong>St Giles&rsquo; &#8594; Victoria Street &#8594; The Vennel &#8594; Greyfriars</strong>
-      <span>Walk west along the Mile, turn down George IV Bridge, then onto the curve of Victoria Street to the Grassmarket. The Vennel is a stepped alley off the Grassmarket. Greyfriars is a few minutes back up Candlemaker Row. About 20 minutes of walking with stops.</span>
-    </div>
-    <span class="transport-badge">15 to 20 min</span>
-  </div>
+  <div class="slot-label">Afternoon, from about 2:30 &#8212; the volcano</div>
 
   <div class="activity-card">
     <div class="activity-card-body">
       <div class="activity-info">
-        <div class="activity-type">&#127981;&nbsp; Streets &amp; kirkyard, free</div>
-        <div class="activity-name">Victoria Street, The Vennel &amp; Greyfriars Kirkyard</div>
-        <div class="activity-address">&#128205;&nbsp; Victoria St to Greyfriars, Edinburgh EH1 2QQ</div>
-        <div class="practical-row">
-          <span class="prac-item"><span class="pric-free">Free</span></span>
-          <span class="prac-item">&#9201;&nbsp; 1 to 1.5 hours for all three</span>
-        </div>
-        <p class="activity-desc">Three free stops close together, all worth the time.</p>
-        <ul class="highlights">
-          <li><b>Victoria Street:</b> the curved, coloured street said to have inspired Diagon Alley. Walk slowly and look back up the curve from the Grassmarket end.</li>
-          <li><b>The Vennel:</b> a stepped alley off the Grassmarket with the best castle photograph in the city, free and nearly empty.</li>
-          <li><b>Greyfriars Kirkyard:</b> Greyfriars Bobby at the top of Candlemaker Row, and a lot of familiar surnames on the headstones.</li>
-        </ul>
-      </div>
-      <div class="map-area">
-        <iframe src="https://maps.google.com/maps?q=The+Vennel+Steps+Edinburgh+EH1&output=embed" loading="lazy" title="The Vennel map"></iframe>
-        <a class="map-open-link" href="https://www.google.com/maps/search/?api=1&query=The+Vennel+Edinburgh+EH1" target="_blank">Open in Google Maps &#8599;</a>
-      </div>
-    </div>
-  </div>
-
-  <div class="slot-label">Late afternoon, free, and the rain contingency for the trip</div>
-
-  <div class="activity-card">
-    <div class="activity-card-body">
-      <div class="activity-info">
-        <div class="activity-type">&#127963;&nbsp; Museum, free</div>
-        <div class="activity-name">National Museum of Scotland</div>
-        <div class="activity-address">&#128205;&nbsp; Chambers St, Edinburgh EH1 1JF &nbsp;&middot;&nbsp; 8-minute walk from the hotel</div>
-        <div class="practical-row">
-          <span class="prac-item"><span class="pric-free">Free</span></span>
-          <span class="prac-item">&#128336;&nbsp; 10am to 5pm</span>
-          <span class="prac-item">&#9201;&nbsp; 1.5 to 2 hours</span>
-        </div>
-        <p class="activity-desc">One of the best museums in Britain. The Grand Gallery atrium, the T. rex cast, and Dolly the Sheep are the reason to go, and the roof terrace has a castle view most visitors never find. This is also your rain contingency for the whole trip.</p>
-      </div>
-      <div class="map-area">
-        <iframe src="https://maps.google.com/maps?q=National+Museum+of+Scotland+Chambers+Street+Edinburgh+EH1+1JF&output=embed" loading="lazy" title="National Museum of Scotland map"></iframe>
-        <a class="map-open-link" href="https://www.google.com/maps/search/?api=1&query=National+Museum+of+Scotland+Edinburgh+EH1" target="_blank">Open in Google Maps &#8599;</a>
-      </div>
-    </div>
-  </div>
-
-  <div class="slot-label">Evening, Calton Hill at sunset if you missed it</div>
-  <div class="dinner-card">
-    <div class="dinner-title">&#127374;&nbsp; Sunset, then dinner</div>
-    <div class="dinner-options">
-      <div class="dinner-opt"><b>Calton Hill</b> for sunset if you did not catch it on arrival, a five-minute climb from the east end of Princes Street.</div>
-      <div class="dinner-opt"><b>Timberyard</b>, 10 Lady Lawson St, EH3 9DS. A seasonal Scottish tasting menu in a converted warehouse, one of the city&rsquo;s most interesting restaurants. Book ahead.</div>
-    </div>
-  </div>
-</section><!-- end day 10 -->
-
-<!-- ═══ DAY 11 ═══ -->
-<section class="day-section" id="day11">
-  <div class="day-section-header">
-    <span class="day-number">Day 11</span>
-    <div>
-      <div class="day-title">Arthur&rsquo;s Seat &amp; One Spa</div>
-      <div class="day-date">Wednesday, 14 October 2026</div>
-    </div>
-  </div>
-
-  <div class="slot-label">8:00am, sunrise about 7:35am</div>
-
-  <div class="activity-card">
-    <div class="activity-card-body">
-      <div class="activity-info">
-        <div class="activity-type">&#9968;&nbsp; Hill walk, free</div>
+        <div class="activity-type">&#9968;&nbsp; Extinct volcano, free</div>
         <div class="activity-name">Arthur&rsquo;s Seat</div>
-        <div class="activity-address">&#128205;&nbsp; Holyrood Park, Edinburgh EH8 8HG &nbsp;&middot;&nbsp; Start from Holyrood, at the foot of the Mile</div>
+        <div class="activity-address">&#128205;&nbsp; Holyrood Park, Edinburgh EH8 8AZ &nbsp;&middot;&nbsp; Start from the car park beside Holyrood Palace</div>
         <div class="practical-row">
           <span class="prac-item"><span class="pric-free">Free</span></span>
-          <span class="prac-item">&#128336;&nbsp; About 45 minutes up the main path</span>
-          <span class="prac-item">&#9201;&nbsp; 2 to 2.5 hours round trip</span>
+          <span class="prac-item">&#9201;&nbsp; 45 min up, 2 hrs round trip</span>
+          <span class="prac-item">&#128337;&nbsp; 251m &mdash; be off the hill by 5pm</span>
         </div>
-        <p class="activity-desc">An extinct volcano in the middle of the city, 251 metres, about 45 minutes up the main path from Holyrood. Views over Edinburgh, the Forth and the Pentlands, the finest in the city. Sunrise is about 7:35am so an 8am start gets good light.</p>
-        <div class="tip-box"><strong>Bring a windproof layer:</strong> it is always windy at the top, and colder than the forecast. Waterproof footwear is worth it, the path can be damp.</div>
-      </div>
-      <div class="map-area">
-        <iframe src="https://maps.google.com/maps?q=Arthur's+Seat+Holyrood+Park+Edinburgh+EH8&output=embed" loading="lazy" title="Arthur's Seat map"></iframe>
-        <a class="map-open-link" href="https://www.google.com/maps/search/?api=1&query=Arthurs+Seat+Edinburgh+EH8" target="_blank">Open in Google Maps &#8599;</a>
-      </div>
-    </div>
-  </div>
-
-  <div class="slot-label">Late morning, coffee well earned</div>
-
-  <div class="activity-card">
-    <div class="activity-card-body">
-      <div class="activity-info">
-        <div class="activity-type">&#127963;&nbsp; Palace exterior &amp; abbey ruins, free to view</div>
-        <div class="activity-name">Holyrood Palace &amp; Abbey ruins</div>
-        <div class="activity-address">&#128205;&nbsp; Canongate, Edinburgh EH8 8DX &nbsp;&middot;&nbsp; Foot of the Royal Mile</div>
-        <div class="practical-row">
-          <span class="prac-item"><span class="pric-free">Free</span>&nbsp; (to view)</span>
-          <span class="prac-item">&#9201;&nbsp; 20 to 30 minutes</span>
-        </div>
-        <p class="activity-desc">Down past Holyrood Palace and the free-to-view Abbey ruins on the way back into town. Coffee at the foot of the Royal Mile, well earned after the climb.</p>
-      </div>
-      <div class="map-area">
-        <iframe src="https://maps.google.com/maps?q=Palace+of+Holyroodhouse+Edinburgh+EH8+8DX&output=embed" loading="lazy" title="Holyrood Palace map"></iframe>
-        <a class="map-open-link" href="https://www.google.com/maps/search/?api=1&query=Palace+of+Holyroodhouse+Edinburgh+EH8" target="_blank">Open in Google Maps &#8599;</a>
-      </div>
-    </div>
-  </div>
-
-  <div class="slot-label">Afternoon, book 2 to 3 weeks ahead</div>
-
-  <div class="activity-card">
-    <div class="activity-card-body">
-      <div class="activity-info">
-        <div class="activity-type">&#128704;&nbsp; Spa, day access, book ahead</div>
-        <div class="activity-name">One Spa at the Sheraton Grand</div>
-        <div class="activity-address">&#128205;&nbsp; 8 Conference Sq, Festival Square, Edinburgh EH3 8AN</div>
-        <div class="practical-row">
-          <span class="prac-item">&#128178;&nbsp; About &pound;80 to &pound;150pp &nbsp;&middot;&nbsp; Book: onespa.com</span>
-          <span class="prac-item">&#128336;&nbsp; Day access, no hotel stay required</span>
-          <span class="prac-item">&#9201;&nbsp; An afternoon</span>
-        </div>
-        <p class="activity-desc">Day access with no hotel stay required. The rooftop hydropool faces the castle, outdoor and heated, in October. The best-earned afternoon of the Edinburgh stay after a morning up the hill.</p>
-        <div class="tip-box"><strong>Booking:</strong> book 2 to 3 weeks ahead and put both treatments in the same slot so you are in together. Confirm the rooftop hydropool is included in the day pass.</div>
-      </div>
-      <div class="map-area">
-        <iframe src="https://maps.google.com/maps?q=One+Spa+Sheraton+Grand+Edinburgh+EH3+8AN&output=embed" loading="lazy" title="One Spa map"></iframe>
-        <a class="map-open-link" href="https://www.google.com/maps/search/?api=1&query=One+Spa+Sheraton+Grand+Edinburgh+EH3" target="_blank">Open in Google Maps &#8599;</a>
-      </div>
-    </div>
-  </div>
-
-  <div class="slot-label">Evening, sunset about 6:05pm</div>
-  <div class="dinner-card">
-    <div class="dinner-title">&#127374;&nbsp; Princes Street Gardens, then the New Town</div>
-    <div class="dinner-options">
-      <div class="dinner-opt"><b>Princes Street Gardens</b> on the walk back, where the castle view at dusk is the best in the city.</div>
-      <div class="dinner-opt"><b>Dinner on George Street or Thistle Street</b> in the New Town, a strong run of restaurants a short walk from the gardens.</div>
-    </div>
-  </div>
-</section><!-- end day 11 -->
-
-<!-- ═══ DAY 12 ═══ -->
-<section class="day-section" id="day12">
-  <div class="day-section-header">
-    <span class="day-number">Day 12</span>
-    <div>
-      <div class="day-title">Leith, Britannia &amp; Dean Village</div>
-      <div class="day-date">Thursday, 15 October 2026 &nbsp;&middot;&nbsp; Last full day in Scotland</div>
-    </div>
-  </div>
-
-  <div class="slot-label">10:00am, pre-book the 10am slot</div>
-
-  <div class="transport-between">
-    <div class="transport-between-icon">&#128652;</div>
-    <div class="transport-between-text">
-      <strong>Royal Mile &#8594; Leith</strong>
-      <span>Bus 16 or the tram down to Leith, about 20 minutes. Contactless works on both.</span>
-    </div>
-    <span class="transport-badge">~20 min</span>
-  </div>
-
-  <div class="activity-card">
-    <div class="activity-card-body">
-      <div class="activity-info">
-        <div class="activity-type">&#128674;&nbsp; Royal yacht, pre-book</div>
-        <div class="activity-name">Royal Yacht Britannia</div>
-        <div class="activity-address">&#128205;&nbsp; Ocean Terminal, Leith, Edinburgh EH6 6JJ</div>
-        <div class="practical-row">
-          <span class="prac-item">&#128178;&nbsp; About &pound;20pp &nbsp;&middot;&nbsp; Book: royalyachtbritannia.co.uk</span>
-          <span class="prac-item">&#128336;&nbsp; Book the 10am slot</span>
-          <span class="prac-item">&#9201;&nbsp; Allow 2 hours</span>
-        </div>
-        <p class="activity-desc">The royal family&rsquo;s floating home from 1954 to 1997, preserved exactly: the state rooms, the surprisingly small private cabins, the engine room. The audio guide is included and very well done. Book the 10am slot so the afternoon is free for Dean Village.</p>
-      </div>
-      <div class="map-area">
-        <iframe src="https://maps.google.com/maps?q=Royal+Yacht+Britannia+Ocean+Terminal+Leith+EH6+6JJ&output=embed" loading="lazy" title="Royal Yacht Britannia map"></iframe>
-        <a class="map-open-link" href="https://www.google.com/maps/search/?api=1&query=Royal+Yacht+Britannia+Leith+EH6+6JJ" target="_blank">Open in Google Maps &#8599;</a>
-      </div>
-    </div>
-  </div>
-
-  <div class="transport-between">
-    <div class="transport-between-icon">&#128652;</div>
-    <div class="transport-between-text">
-      <strong>Leith &#8594; Stockbridge</strong>
-      <span>Bus 16 back toward the centre, get off at Canonmills, about 15 minutes. Stockbridge is the most pleasant neighbourhood in the city.</span>
-    </div>
-    <span class="transport-badge">~15 min</span>
-  </div>
-
-  <div class="slot-label">Lunch, Stockbridge</div>
-  <div class="dinner-card">
-    <div class="dinner-title">&#127829;&nbsp; Lunch in Stockbridge</div>
-    <div class="dinner-options">
-      <div class="dinner-opt"><b>The Scran &amp; Scallie</b>, 1 Comely Bank Rd, EH4 1DT. Tom Kitchin&rsquo;s relaxed pub restaurant, excellent Scottish pub food. Book ahead.</div>
-      <div class="dinner-opt"><b>St Stephen Street</b>, the whole street is worth a slow walk with a strong run of independents, and there is no wrong choice on it.</div>
-    </div>
-  </div>
-
-  <div class="slot-label">Afternoon, free, the loveliest walk in the city</div>
-
-  <div class="activity-card">
-    <div class="activity-card-body">
-      <div class="activity-info">
-        <div class="activity-type">&#127807;&nbsp; Riverside walk, free</div>
-        <div class="activity-name">Water of Leith Walkway to Dean Village</div>
-        <div class="activity-address">&#128205;&nbsp; Start: Stockbridge, EH4 1LR &nbsp;&middot;&nbsp; End: Dean Village, EH4 3BQ</div>
-        <div class="practical-row">
-          <span class="prac-item"><span class="pric-free">Free</span></span>
-          <span class="prac-item">&#128336;&nbsp; Open at all times</span>
-          <span class="prac-item">&#9201;&nbsp; About 45 minutes at an easy pace</span>
-        </div>
-        <p class="activity-desc">The path drops into a hidden gorge below the New Town and the city vanishes completely. St Bernard&rsquo;s Well is on the way, and Dean Village at the end is a former mill village almost no visitor finds. Quietly one of the loveliest walks in any British city.</p>
+        <p class="activity-desc">The Royal Mile delivers you to the foot of it, which is the whole reason the day is built this way. Arthur&rsquo;s Seat is an extinct volcano sitting in a public park in the middle of a capital city, 251 metres up, and from the top you get Edinburgh, the Forth, Fife, and on a clear day the Pentlands and the Bass Rock. <strong>Afternoon is genuinely better than morning here:</strong> by three o&rsquo;clock in October the light has gone low and gold across the whole city, and you are walking up into it rather than out of it.</p>
         <ul class="highlights">
-          <li><b>St Bernard&rsquo;s Well:</b> a Roman-style mineral spring pavilion from 1789 on the riverbank.</li>
-          <li><b>Dean Village:</b> 17th-century mill buildings around a medieval bridge. The view from Dean Bridge looking down is the one everybody photographs.</li>
+          <li><b>Take the eastern route, not the crags.</b> From the Holyrood car park, follow the path around to the left and up through the valley &mdash; the long, gradual approach known as the Dry Dam and Piper&rsquo;s Walk. It is the gentlest way and the easiest to follow.</li>
+          <li><b>The Radical Road under Salisbury Crags is closed</b> and has been for years because of rockfall. Do not plan a route along it and ignore any guidebook that suggests it &mdash; the barriers are real.</li>
+          <li><b>The last section is bare rock</b> and it is slick when wet and genuinely windy at the top. Boots or decent trainers, not the shoes you wore for dinner. There is no shame in stopping at the false summit or at the top of the crags &mdash; the view is 90% as good.</li>
+          <li><b>Coming down the far side</b> brings you out at <b>Duddingston</b>, where the <b>Sheep Heid Inn</b> has been serving since the 1360s and has a skittle alley in the back. It is a lovely finish, and it puts you 30 minutes and a bus ride from the Old Town rather than 10 minutes &mdash; a good trade if you are not in a hurry, a bad one if dinner is at seven.</li>
         </ul>
-        <div class="tip-box"><strong>If it rains:</strong> swap this for the National Museum of Scotland if you have not already been, or simply do it in drizzle, the gorge is atmospheric either way.</div>
+        <div class="warn-box"><strong>Sunset is about 6:15, so be starting down by 5:00 at the latest.</strong> There is no lighting in Holyrood Park, the ground is uneven, and coming off a rocky summit in the dark is how people get hurt on this hill every year. Take a phone with charge.</div>
       </div>
       <div class="map-area">
-        <iframe src="https://maps.google.com/maps?q=Dean+Village+Edinburgh+EH4+3BQ&output=embed" loading="lazy" title="Dean Village map"></iframe>
-        <a class="map-open-link" href="https://www.google.com/maps/search/?api=1&query=Dean+Village+Edinburgh+EH4+3BQ" target="_blank">Open in Google Maps &#8599;</a>
+        <iframe src="https://maps.google.com/maps?q=Arthur's+Seat+Holyrood+Park+Edinburgh+EH8+8AZ&output=embed" loading="lazy" title="Arthur's Seat map"></iframe>
+        <a class="map-open-link" href="https://www.google.com/maps/search/?api=1&query=Arthur's+Seat+Edinburgh" target="_blank">Open in Google Maps &#8599;</a>
       </div>
     </div>
   </div>
 
-  <div class="slot-label">Optional, book ahead</div>
+  <div class="slot-label">Evening &#8212; the one dinner you book</div>
 
   <div class="activity-card">
     <div class="activity-card-body">
       <div class="activity-info">
-        <div class="activity-type">&#127981;&nbsp; Guided tour, optional</div>
-        <div class="activity-name">The Real Mary King&rsquo;s Close</div>
-        <div class="activity-address">&#128205;&nbsp; 2 Warriston&rsquo;s Close, High St, Edinburgh EH1 1PG &nbsp;&middot;&nbsp; On the Royal Mile</div>
+        <div class="activity-type">&#127864;&nbsp; Dinner, booked in advance &nbsp;&middot;&nbsp; the pick</div>
+        <div class="activity-name">The Devil&rsquo;s Advocate</div>
+        <div class="activity-address">&#128205;&nbsp; 9 Advocate&rsquo;s Close, 357 High Street, Edinburgh EH1 1PS</div>
         <div class="practical-row">
-          <span class="prac-item">&#128178;&nbsp; About &pound;22pp &nbsp;&middot;&nbsp; Book ahead</span>
-          <span class="prac-item">&#9201;&nbsp; About 1 hour</span>
+          <span class="prac-item">&#128176;&nbsp; About &pound;25&ndash;30 a main</span>
+          <span class="prac-item">&#128336;&nbsp; Book now &mdash; a Thursday in the holiday week will fill</span>
+          <span class="prac-item">&#9201;&nbsp; Two hours</span>
         </div>
-        <p class="activity-desc">A guided tour of 17th-century streets buried beneath the City Chambers on the Royal Mile. Atmospheric and genuinely good, and a fitting last afternoon activity if the weather turns. Book ahead.</p>
+        <p class="activity-desc">Down a steep close off the Royal Mile, in a converted Victorian pump house &mdash; bare stone walls, low light, a mezzanine dining room above a bar carrying several hundred whiskies. It is intimate rather than grand, which after Le Caf&eacute; du March&eacute; in London is the right second act: the same idea &mdash; a hidden room down an alley &mdash; done in an entirely different accent. Scottish produce, cooked properly, without ceremony.</p>
+        <div class="tip-box"><strong>Getting there from Holyrood:</strong> walk back up the Royal Mile, which is about 20 minutes uphill, or take the number 35 bus if the legs have gone. Advocate&rsquo;s Close is on the north side of the High Street just below St Giles&rsquo; &mdash; easy to walk past, so look for the archway.</div>
       </div>
       <div class="map-area">
-        <iframe src="https://maps.google.com/maps?q=The+Real+Mary+King's+Close+Edinburgh+EH1+1PG&output=embed" loading="lazy" title="Mary King's Close map"></iframe>
-        <a class="map-open-link" href="https://www.google.com/maps/search/?api=1&query=Real+Mary+Kings+Close+Edinburgh+EH1" target="_blank">Open in Google Maps &#8599;</a>
+        <iframe src="https://maps.google.com/maps?q=The+Devil's+Advocate+Advocate's+Close+Edinburgh+EH1+1PS&output=embed" loading="lazy" title="The Devil's Advocate map"></iframe>
+        <a class="map-open-link" href="https://www.google.com/maps/search/?api=1&query=Devil's+Advocate+Advocate's+Close+Edinburgh" target="_blank">Open in Google Maps &#8599;</a>
       </div>
     </div>
   </div>
 
-  <div class="slot-label">Evening, last dinner in Scotland</div>
   <div class="dinner-card">
-    <div class="dinner-title">&#127374;&nbsp; Book somewhere worth the occasion</div>
+    <div class="dinner-title">&#127863;&nbsp; If you would rather go bigger, or smaller</div>
     <div class="dinner-options">
-      <div class="dinner-opt"><b>Timberyard</b>, 10 Lady Lawson St, EH3 9DS. One of Edinburgh&rsquo;s most acclaimed restaurants, the right room for a last night. Book well in advance.</div>
-      <div class="dinner-opt"><b>The Kitchin</b>, 78 Commercial Quay, Leith, EH6 6LX. Michelin-starred, and you will have passed it this morning on the way to Britannia.</div>
-      <div class="dinner-opt"><b>Wedgwood the Restaurant</b>, 267 Canongate, EH8 8BQ. Closer to the hotel on the lower Royal Mile, seasonal Scottish, easier to get into at short notice.</div>
+      <div class="dinner-opt"><b>Bigger &mdash; The Witchery by the Castle</b>, Castlehill. The most theatrical dining room in Scotland: oak panelling, tapestries, candles, and the Secret Garden room downstairs. Roughly &pound;50&ndash;70 a head and worth every penny for the room alone. Thirty seconds from the castle gates, so it can also be lunch. <b>Books out weeks ahead.</b></div>
+      <div class="dinner-opt"><b>Bigger &mdash; Ondine</b>, 2 George IV Bridge. The best seafood in the city, oyster bar at the counter, and a five-minute walk from Greyfriars.</div>
+      <div class="dinner-opt"><b>Smaller &mdash; The Scran &amp; Scallie</b>, Stockbridge. Tom Kitchin&rsquo;s gastropub &mdash; excellent food, no formality, and a twenty-minute walk or a short bus out of the Old Town.</div>
+      <div class="dinner-opt"><b>Smaller &mdash; Howies</b>, Victoria Street. Reliable Scottish cooking at a set price, five minutes from everything, and it can usually take a table at short notice.</div>
     </div>
   </div>
 
-  <div class="tip-box" style="margin:1.5rem 0;padding:1rem 1.25rem;background:var(--amber-bg);border:1px solid var(--amber-bd);border-radius:var(--radius);font-size:13px;color:var(--ink2);line-height:1.75;">
-    <strong>Tonight:</strong> pack. Tomorrow morning (Fri 16 Oct) you check out by noon and take the LNER south from Waverley to London King&rsquo;s Cross, about 4hr 20min. Book a table seat on the east side again. The final London night is on the <a href="london.html#day13">London page</a>.
+  <div class="alert">
+    <h3>&#9998;&nbsp; If that is too much for one day</h3>
+    <p>It is a full day &mdash; a two-hour fortress, a mile of street and a 251-metre climb &mdash; and this is meant to be a holiday. Two clean ways to lighten it, both of which cost you nothing structurally.</p>
+    <p><strong>Drop Arthur&rsquo;s Seat.</strong> Calton Hill on Wednesday has already given you the view from above. Replace it with the <strong>Water of Leith walkway from Stockbridge to Dean Village</strong> &mdash; flat, about an hour, a wooded gorge and a cluster of old mill buildings hidden below the New Town, and one of the prettiest corners of any British city. Or the <strong>National Museum of Scotland</strong>, free, ten minutes away, with a roof terrace.</p>
+    <p><strong>Or drop the castle.</strong> You have already done the Tower of London this fortnight, and if two big ticketed fortresses in ten days is one too many, this is the honest place to save the money. <strong>Surgeons&rsquo; Hall Museums</strong> on Nicolson Street &mdash; Edinburgh&rsquo;s anatomy and pathology collection, and the sibling of the Hunterian you already visited &mdash; would fill the morning for a third of the price and none of the crowds. Check its opening days first; they vary by season.</p>
   </div>
 
 </section><!-- end day 12 -->
+
+<!-- ═══════════════════════════════ DAY 13 ═══════════════════════════════ -->
+<section class="day-section" id="day13">
+  <div class="day-section-header">
+    <span class="day-number">Day 13</span>
+    <div class="day-title-block">
+      <div class="day-title">The Last Day &mdash; Sea, or Shelter</div>
+      <div class="day-date">Friday, 16 October 2026 &nbsp;&middot;&nbsp; Decide at breakfast, and be back by half four</div>
+    </div>
+  </div>
+
+  <div class="tip-box" style="margin-bottom:1.25rem;padding:1rem 1.25rem;font-size:13px;line-height:1.75;">
+    <strong>Friday has a hard back edge.</strong> Whatever you do in the morning, <strong>be back at the hotel by about 16:30</strong>, because the evening has three jobs: the folder, the packing, and getting out to the airport. That is not a lot of time, and the border in the morning is not the moment to discover that something did not print. So the morning is deliberately a half-day, not a full one &mdash; take a good one and come back.
+  </div>
+
+  <div class="slot-label">Decide at breakfast &#8212; look out of the window and pick</div>
+
+  <div class="choice-grid">
+    <div class="choice">
+      <div class="choice-m">If it is clear &mdash; the full version</div>
+      <div class="choice-h">North Berwick</div>
+      <p>33 minutes each way, a proper seaside town, a gannet colony on a white volcanic island a mile offshore, and a hill you can climb in half an hour. The best of the three, and the one that costs the most day.</p>
+    </div>
+    <div class="choice">
+      <div class="choice-m">If it is clear but you are tired</div>
+      <div class="choice-h">South Queensferry</div>
+      <p>20 minutes each way. A single village street on the water underneath the 1890 Forth Bridge, which is one of the great structures on earth. Half the travel, most of the sea, and back for lunch.</p>
+    </div>
+    <div class="choice">
+      <div class="choice-m">If it is wet</div>
+      <div class="choice-h">Stay in the city</div>
+      <p>The National Museum of Scotland is free, enormous and genuinely excellent, and its roof terrace has one of the best views in Edinburgh. Ten minutes from the Old Town, no trains, no weather.</p>
+    </div>
+  </div>
+
+  <div class="activity-card">
+    <div class="activity-card-body">
+      <div class="activity-info">
+        <div class="activity-type">&#127958;&nbsp; Seaside town, half-day trip &nbsp;&middot;&nbsp; the pick if it is fine</div>
+        <div class="activity-name">North Berwick</div>
+        <div class="activity-address">&#128205;&nbsp; Trains from Edinburgh Waverley &nbsp;&middot;&nbsp; roughly every half hour, 33 minutes</div>
+        <div class="practical-row">
+          <span class="prac-item">&#128176;&nbsp; About &pound;8&ndash;10 return each</span>
+          <span class="prac-item">&#9201;&nbsp; Out at 9:30, back by 15:00</span>
+          <span class="prac-item">&#128694;&nbsp; Station to the beach: 10 minutes</span>
+        </div>
+        <p class="activity-desc">A proper little Scottish seaside town at the end of a branch line &mdash; a working harbour, two sandy bays either side of it, a high street of independent shops, and the sea on three sides. The station is five minutes from the high street and ten from the beach, so there is no faff at the other end. It is the sort of place that makes the last day of a trip feel like a holiday rather than a countdown.</p>
+        <ul class="highlights">
+          <li><b>The Scottish Seabird Centre</b> at the harbour (about &pound;11) has live remote cameras trained on <b>Bass Rock</b>, the white volcanic island a mile offshore that holds one of the world&rsquo;s largest northern gannet colonies. You drive the cameras yourself. It sounds underwhelming and it is not.</li>
+          <li><b>North Berwick Law</b> &mdash; a 187-metre volcanic cone behind the town, half an hour up. From the top: the whole Firth of Forth, Bass Rock, Tantallon Castle on its cliff, and Arthur&rsquo;s Seat as a bump on the western horizon where you were standing yesterday. There is a whale jawbone at the summit. <b>Only if the legs are willing</b> &mdash; you climbed a volcano yesterday.</li>
+          <li><b>Lunch by the water</b> at the Rocketeer or the Lobster Shack by the harbour, then coffee at Steampunk on the high street.</li>
+          <li><b>Get the 14:00-ish train back</b> at the latest. Do not push this &mdash; the whole point of choosing a half-day is arriving back with the afternoon intact.</li>
+        </ul>
+      </div>
+      <div class="map-area">
+        <iframe src="https://maps.google.com/maps?q=North+Berwick+Harbour+East+Lothian&output=embed" loading="lazy" title="North Berwick map"></iframe>
+        <a class="map-open-link" href="https://www.google.com/maps/search/?api=1&query=North+Berwick+Scotland" target="_blank">Open in Google Maps &#8599;</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="activity-card optional-card">
+    <div class="activity-card-body">
+      <div class="activity-info">
+        <div class="activity-type">&#128739;&nbsp; Village &amp; bridges <span class="optional-flag">The shorter sea day</span></div>
+        <div class="activity-name">South Queensferry &amp; the Forth Bridge</div>
+        <div class="activity-address">&#128205;&nbsp; Train to Dalmeny, then 10 minutes downhill &nbsp;&middot;&nbsp; about 20 minutes from Waverley</div>
+        <div class="practical-row">
+          <span class="prac-item">&#128176;&nbsp; About &pound;6&ndash;8 return each</span>
+          <span class="prac-item">&#9201;&nbsp; Out at 10, back for lunch or just after</span>
+        </div>
+        <p class="activity-desc">Twenty minutes on a train and you are standing on a cobbled village street on the shore of the Forth, with the <strong>Forth Bridge</strong> &mdash; the 1890 cantilever railway bridge, a UNESCO World Heritage Site and probably the most recognisable piece of engineering in Scotland &mdash; going straight over your head in red steel. Three bridges, one after another, span the estuary here across a century and a half of engineering. It is a genuinely astonishing thing to stand under and it takes almost no effort to reach.</p>
+        <ul class="highlights">
+          <li><b>The Hawes Inn</b>, right under the bridge, is where Robert Louis Stevenson wrote part of <i>Kidnapped</i> &mdash; and it is exactly where you want lunch.</li>
+          <li><b>Walk east along the shore</b> under the bridge for the best view of all three spans at once.</li>
+          <li>This is the right choice if Thursday was hard on the legs. It is a stroll, not an expedition, and you are back in the city by early afternoon with hours in hand.</li>
+        </ul>
+      </div>
+      <div class="map-area">
+        <iframe src="https://maps.google.com/maps?q=South+Queensferry+Forth+Bridge+Edinburgh&output=embed" loading="lazy" title="South Queensferry map"></iframe>
+        <a class="map-open-link" href="https://www.google.com/maps/search/?api=1&query=South+Queensferry+Forth+Bridge" target="_blank">Open in Google Maps &#8599;</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="activity-card optional-card">
+    <div class="activity-card-body">
+      <div class="activity-info">
+        <div class="activity-type">&#127963;&nbsp; Museum, free <span class="optional-flag">The wet version</span></div>
+        <div class="activity-name">National Museum of Scotland</div>
+        <div class="activity-address">&#128205;&nbsp; Chambers Street, Edinburgh EH1 1JF &nbsp;&middot;&nbsp; 10 minutes from the Royal Mile</div>
+        <div class="practical-row">
+          <span class="prac-item"><span class="pric-free">Free</span></span>
+          <span class="prac-item">&#9201;&nbsp; Two to three hours</span>
+        </div>
+        <p class="activity-desc">Free, enormous, and one of the best museums in Britain &mdash; a Victorian glass-roofed grand gallery joined onto a modern sandstone building, covering Scottish history, natural history, science and world cultures without ever being boring. Dolly the sheep is here. So is the Lewis Chessmen hoard. And the <strong>roof terrace on the seventh floor</strong> is free, almost always empty, and gives one of the best views in the city &mdash; castle, Old Town, Salisbury Crags, all at once.</p>
+        <div class="tip-box"><strong>Nearby, and also indoors:</strong> the <b>Scottish National Gallery</b> on the Mound (free), <b>Surgeons&rsquo; Hall Museums</b> five minutes east, and the <b>Real Mary King&rsquo;s Close</b>, which is underground and therefore weatherproof by definition.</div>
+      </div>
+      <div class="map-area">
+        <iframe src="https://maps.google.com/maps?q=National+Museum+of+Scotland+Chambers+Street+Edinburgh+EH1+1JF&output=embed" loading="lazy" title="National Museum of Scotland map"></iframe>
+        <a class="map-open-link" href="https://www.google.com/maps/search/?api=1&query=National+Museum+of+Scotland" target="_blank">Open in Google Maps &#8599;</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="slot-label">16:30 &#8212; the folder hour, and it is not optional</div>
+
+  <div class="alert alert-rust">
+    <h3>&#128193;&nbsp; Build the Cork folder tonight, not at the airport</h3>
+    <p>The Border Management Unit&rsquo;s advice was specific: carry <em>&ldquo;copies of her airlines tickets and bookings in and out of the UK as proof of travel&rdquo;</em>, and be ready to <em>&ldquo;present her E-visa digitally on her mobile phone&rdquo;</em>. Tomorrow morning there will be no time and no printer. So the last hour of the holiday is admin, and it is the most valuable hour of the week.</p>
+    <p><strong>Print at the hotel reception</strong> &mdash; almost every Edinburgh hotel will run off a few pages if you ask at the desk. Ask on <strong>Thursday</strong>, not Friday night, so that if their printer is broken you have a day to find a print shop rather than an hour.</p>
+    <p><strong>Everything goes in hand luggage.</strong> Not the hold bag. If a bag goes astray between Edinburgh and Cork, the evidence must not go with it.</p>
+  </div>
+
+  <div class="activity-card">
+    <div class="activity-card-body">
+      <div class="activity-info">
+        <div class="activity-type">&#9989;&nbsp; The checklist for tonight</div>
+        <div class="activity-name">What goes in the folder</div>
+        <div class="activity-address">&#128205;&nbsp; The full pack, with the questions and answers, is on the borders page</div>
+        <p class="activity-desc">This is the short version to work through on the Friday evening. The complete document list, the framing for the officer, and what to say to each question are on the <a href="borders.html" style="color:var(--amber);font-weight:600;">borders page &#8594;</a></p>
+        <ul class="highlights">
+          <li><b>The BMU email, printed.</b> Their written answer on exactly these facts, confirming Cork or Dublin. It goes on top.</li>
+          <li><b>Tickets and bookings in and out of the UK</b> &mdash; the Manila&ndash;Heathrow booking, and tomorrow&rsquo;s Edinburgh&ndash;Cork boarding passes.</li>
+          <li><b>The UK accommodation trail</b> &mdash; the Southwark, York and Edinburgh hotel confirmations. Together they show a continuous, ordinary two-week holiday, which is the thing the officer is actually assessing.</li>
+          <li><b>A fresh UKVI share code</b>, generated in the last day or two, printed &mdash; plus the eVisa loaded on the phone <b>and</b> screenshotted as a PDF in case the page will not load in the hall.</li>
+          <li><b>Printed copies</b> of the Irish Immigration Service page on the Short Stay Visa Waiver Programme, and the Philippines visa-service notice listing a UK e-visa as acceptable.</li>
+          <li><b>The January onward flight</b>, Simon&rsquo;s letter and passport copy, funds, insurance through to January, and the passport tabbed at the 2025 Irish visa.</li>
+          <li><b>Phones charged to 100% overnight, and a power bank in the bag.</b> A flat phone at that desk is a genuinely bad outcome.</li>
+        </ul>
+        <div class="tip-box"><strong>Check in at the airline desk tomorrow rather than online.</strong> It puts a human being in front of the documents in Edinburgh, where a question about the waiver can be resolved calmly, instead of at the gate ten minutes before boarding. This is the same advice as for the London leg and it still applies.</div>
+      </div>
+      <div class="map-area">
+        <iframe src="https://maps.google.com/maps?q=Edinburgh+Airport+EH12+9DN&output=embed" loading="lazy" title="Edinburgh Airport map"></iframe>
+        <a class="map-open-link" href="https://www.google.com/maps/search/?api=1&query=Edinburgh+Airport" target="_blank">Open in Google Maps &#8599;</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="slot-label">Evening &#8212; dinner, then out to the airport</div>
+
+  <div class="dinner-card">
+    <div class="dinner-title">&#127860;&nbsp; Last dinner in Scotland &#8212; early, close, and unbooked</div>
+    <div class="dinner-options">
+      <div class="dinner-opt"><b>Eat at about six.</b> Not because the food is better, but because you want to be collecting bags by half eight and on a tram by nine. Somewhere five minutes from the hotel.</div>
+      <div class="dinner-opt"><b>Makars Mash Bar</b>, <b>Howies</b> on Victoria Street, or <b>The Albanach</b> on the High Street &mdash; all warm, all close, none of them needing a reservation on a Friday if you go early.</div>
+      <div class="dinner-opt"><b>One last whisky at The Bow Bar</b> on West Bow if you want a proper full stop. Then go &mdash; the alarm is at quarter past five.</div>
+    </div>
+  </div>
+
+  <div class="transport-between">
+    <div class="transport-between-icon">&#128649;</div>
+    <div class="transport-between-text">
+      <strong>About 21:00 &#8212; Old Town &#8594; Edinburgh Airport hotel</strong>
+      <span>Collect the bags, walk to <strong>St Andrew Square</strong> or Princes Street, and take the <strong>tram</strong> to the airport &mdash; about 30 minutes to the terminal, and the airport hotels are a two to five minute walk from the door. Last trams out to the airport run until roughly 10:45pm, but <strong>check the final departure on the day</strong> and give yourself a clear hour of margin. A taxi is 25 minutes and about &pound;25&ndash;30 if you miss it or the bags are unmanageable.</span>
+    </div>
+    <span class="transport-badge">~30 min</span>
+  </div>
+
+  <div class="tip-box"><strong>Why this beats staying in town:</strong> it converts a 04:00 alarm and a pre-booked taxi into a 05:15 alarm and a five-minute walk, on the morning she has to be sharp at an immigration desk. You keep the whole Friday and the whole Friday evening in Edinburgh &mdash; you are only giving up the last few hours of sleep-adjacent time in a city-centre bed. The full comparison, including how to do it the other way if you would rather, is in <a href="#appendix-lastnight" style="color:var(--amber);font-weight:600;">the appendix</a>.</div>
+
+</section><!-- end day 13 -->
+
+<!-- ═══════════════════════════════ DAY 14 ═══════════════════════════════ -->
+<section class="day-section" id="day14">
+  <div class="day-section-header">
+    <span class="day-number">Day 14</span>
+    <div class="day-title-block">
+      <div class="day-title">Edinburgh to Cork</div>
+      <div class="day-date">Saturday, 17 October 2026 &nbsp;&middot;&nbsp; 07:00 departure &mdash; and the Irish border</div>
+    </div>
+  </div>
+
+  <div class="alert alert-rust">
+    <h3>&#9992;&#65039;&nbsp; This is the day the whole plan turns on</h3>
+    <p>Two weeks of holiday end at a desk at Cork Airport at about half past eight in the morning. The Border Management Unit has confirmed in writing that <strong>Cork may be used</strong> for entry under the Short Stay Visa Waiver Programme &mdash; but they were equally clear that they do not pre-clear anyone, so the decision is made in the hall, by one officer, on the day.</p>
+    <p>Everything on this page has been arranged so that you arrive at that desk rested, unhurried and organised. Treat the morning as one continuous operation rather than a flight followed by a formality.</p>
+  </div>
+
+  <div class="slot-label">The morning, from the airport hotel</div>
+
+  <div class="timeline">
+    <div class="tl-row"><div class="tl-time">05:15</div><div class="tl-what"><b>Alarm.</b> Bags were packed last night, the folder is in the hand luggage, both phones charged overnight. Nothing to decide.</div></div>
+    <div class="tl-row"><div class="tl-time">05:35</div><div class="tl-what"><b>Walk to the terminal.</b> Two to five minutes from any of the airport hotels. No taxi, no tram, no timetable.</div></div>
+    <div class="tl-row"><div class="tl-time">05:45</div><div class="tl-what"><b>Bag drop, at the desk.</b> Not the machine, and not online check-in. Have the printed Irish notice and the BMU email accessible before anyone asks. Regional carriers typically close bag drop <b>40 to 45 minutes</b> before departure &mdash; confirm your airline&rsquo;s exact cut-off when you book, and treat it as the real deadline rather than the 07:00.</div></div>
+    <div class="tl-row"><div class="tl-time">06:05</div><div class="tl-what"><b>Security.</b> Edinburgh at six on a Saturday is usually quick, but October Saturdays are a peak leisure slot and it can surprise you. This is the hour the whole airport-hotel decision buys you.</div></div>
+    <div class="tl-row"><div class="tl-time">06:30</div><div class="tl-what"><b>Gate.</b> Sunrise is not until about a quarter to eight, so you take off in the dark. Sleep on the flight rather than reading the folder &mdash; she should walk off that aircraft rested, not rehearsed into a state.</div></div>
+    <div class="tl-row"><div class="tl-time">07:00</div><div class="tl-what"><b>Depart Edinburgh.</b> Roughly 1hr 20min to Cork. Same time zone, so no clock change.</div></div>
+    <div class="tl-row"><div class="tl-time">~08:20</div><div class="tl-what"><b>Land at Cork.</b> Follow the arrivals signs to immigration. <b>Simon goes to the desk with her, not through the EU channel ahead of her</b> &mdash; he is part of the evidence and he holds the address and the sponsorship.</div></div>
+    <div class="tl-row"><div class="tl-time">~08:30</div><div class="tl-what"><b>Immigration.</b> The full brief, the documents in order, and the answer to every question they will ask, is on the <a href="borders.html" style="color:var(--amber);font-weight:600;">borders page</a>. <b>Name the January departure date rather than asking for ninety days</b>, and put the onward ticket on the counter. Check the stamp is legible before walking away.</div></div>
+    <div class="tl-row"><div class="tl-time">~09:15</div><div class="tl-what"><b>On to Blarney.</b> About 25 minutes by road from the airport. <b>Pre-book the car or the taxi</b> &mdash; after that morning nobody wants to work out a bus change in the arrivals hall. Then it is done, and she is home for Christmas.</div></div>
+  </div>
+
+  <div class="activity-card">
+    <div class="activity-card-body">
+      <div class="activity-info">
+        <div class="activity-type">&#128994;&nbsp; What Cork buys you, and what it costs</div>
+        <div class="activity-name">Saturday morning at a small airport</div>
+        <p class="activity-desc">Worth being clear-eyed about the trade you have made, because it is a real one and it is fine.</p>
+        <ul class="highlights">
+          <li><b>What you gain:</b> you land 25 minutes from the house instead of three hours away, with no Dublin&ndash;Cork train at the end of a 5am start. On the day of a long move, that is worth a great deal.</li>
+          <li><b>What you give up:</b> the original reason for choosing Friday the 16th was staffing &mdash; a weekday desk at a bigger airport sees waiver cases routinely. <b>Cork is small and Saturday is quiet</b>, so the officer may well need to check with a supervisor. <b>That is normal and it is not a bad sign.</b> Expect it, be patient, do not fill the silence, and have the printed BMU email on top of the folder so the answer is in the room already.</li>
+          <li><b>The deadline is intact.</b> Entry under the programme must happen by <b>31 October 2026</b>. The 17th clears that by a fortnight, which is the margin that matters if anything slips.</li>
+        </ul>
+      </div>
+      <div class="map-area">
+        <iframe src="https://maps.google.com/maps?q=Cork+Airport+Cork+T12+CD44&output=embed" loading="lazy" title="Cork Airport map"></iframe>
+        <a class="map-open-link" href="https://www.google.com/maps/search/?api=1&query=Cork+Airport" target="_blank">Open in Google Maps &#8599;</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="alert">
+    <h3>&#128260;&nbsp; If the 07:00 does not fly</h3>
+    <p>Edinburgh&ndash;Cork is a thin route &mdash; likely one rotation a day, and possibly not every day &mdash; so a cancellation cannot be fixed by waiting for the next one. Know the fallback before you need it, because you will be working it out at six in the morning.</p>
+    <p><strong>The fallback is Dublin, and the border is not compromised by taking it.</strong> BMU named <em>&ldquo;either Cork or Dublin airport&rdquo;</em> in writing, so switching does not weaken anything. Edinburgh&ndash;Dublin has several flights a day on more than one airline, and from Dublin it is a train from Heuston to Cork in about two and a half hours, or a bus. Longer and more tiring, but it works, and it still lands the entry on the 17th.</p>
+    <p><strong>And if the whole day goes:</strong> the programme deadline is 31 October. There is a two-week cushion. Rebook for the 18th or 19th rather than forcing anything, and change the Blarney arrival rather than the border.</p>
+  </div>
+
+  <div class="tip-box"><strong>Simon&rsquo;s ticket needs changing, and it is on the critical path.</strong> His return is currently booked <strong>London to Cork on 17 October</strong>. He needs to be on this Edinburgh flight, on the same booking or at least the same aircraft &mdash; he is part of the evidence at that desk, and an officer asking &ldquo;who are you travelling with?&rdquo; should be able to see him standing there with a matching boarding pass. Sort this at the same time as buying her ticket, not afterwards.</div>
+
+</section><!-- end day 14 -->
+
+<!-- ═══════════════════════════════ WHERE TO STAY ═══════════════════════════════ -->
+<section class="day-section" id="stay">
+  <div class="day-section-header">
+    <span class="day-number">Beds</span>
+    <div class="day-title-block">
+      <div class="day-title">Where to Stay</div>
+      <div class="day-date">Two nights in the Old Town, one at the airport &mdash; none of it booked yet</div>
+    </div>
+  </div>
+
+  <div class="hotel-card">
+    <div class="hotel-card-body">
+      <div class="hotel-info">
+        <div class="hotel-badge">&#127968;&nbsp; Nights 11 and 12 &nbsp;&middot;&nbsp; 14 and 15 October</div>
+        <div class="hotel-name">The Old Town, two nights</div>
+        <div class="hotel-address">&#128205;&nbsp; Anywhere between Waverley and the Royal Mile</div>
+        <ul class="hotel-detail">
+          <li><strong>Radisson Blu Hotel Edinburgh</strong>, 80 High Street &mdash; on the Royal Mile itself, eight minutes uphill from Waverley. Walk out of the door into the middle of Thursday&rsquo;s day. About &pound;170&ndash;240</li>
+          <li><strong>Motel One Edinburgh&ndash;Royal</strong>, Market Street &mdash; directly below the Old Town, two minutes from Waverley, modern and unusually good value for where it is. About &pound;120&ndash;170. <strong>The value pick</strong></li>
+          <li><strong>Ten Hill Place</strong>, Southside &mdash; quiet, excellent beds, ten minutes from the Royal Mile and next door to Surgeons&rsquo; Hall. About &pound;140&ndash;190</li>
+          <li><strong>The location that matters</strong> is being able to walk to the castle on Thursday morning and back from Holyrood on Thursday evening. Anywhere on or just below the Mile does that</li>
+        </ul>
+        <div class="tip-box"><strong>Book these first, today.</strong> If the Scottish October break falls in this week, the mid-range Old Town rooms are the thing that goes, and everything else on this page is flexible around them.</div>
+      </div>
+      <div class="map-area">
+        <iframe src="https://maps.google.com/maps?q=80+High+Street+Edinburgh+EH1+1TH&output=embed" loading="lazy" title="Old Town hotels map"></iframe>
+        <a class="map-open-link" href="https://www.google.com/maps/search/?api=1&query=Royal+Mile+Edinburgh" target="_blank">Open in Google Maps &#8599;</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="hotel-card">
+    <div class="hotel-card-body">
+      <div class="hotel-info">
+        <div class="hotel-badge">&#9992;&#65039;&nbsp; Night 13 &nbsp;&middot;&nbsp; 16 October &nbsp;&middot;&nbsp; the recommendation</div>
+        <div class="hotel-name">Edinburgh Airport, one night</div>
+        <div class="hotel-address">&#128205;&nbsp; Edinburgh Airport, EH12 &nbsp;&middot;&nbsp; walking distance from the terminal</div>
+        <ul class="hotel-detail">
+          <li><strong>Moxy Edinburgh Airport</strong> &mdash; about three minutes on foot from the terminal door. Small rooms, late bar, and exactly right for one short night. Usually the cheapest of the walkable ones</li>
+          <li><strong>Hilton Edinburgh Airport</strong> &mdash; the closest of all, a couple of minutes from the terminal. Pay the difference if you want a proper bed for the last night</li>
+          <li><strong>Premier Inn Edinburgh Airport</strong> &mdash; cheaper again, but check whether the one you are booking is walkable or needs a shuttle. <strong>On this particular morning, walkable is the whole point</strong> &mdash; do not save &pound;15 and reintroduce a transfer at half five</li>
+          <li>Book a room with an <strong>early breakfast or a grab-bag</strong> if it is offered, or accept that breakfast happens airside</li>
+        </ul>
+        <div class="tip-box"><strong>Check the walk, not the map pin.</strong> &ldquo;Edinburgh Airport&rdquo; appears in the name of hotels several miles away at Newbridge and Ingliston. Before booking, confirm it is a genuine walk from the terminal in the dark with suitcases &mdash; that is the entire reason you are out there.</div>
+      </div>
+      <div class="map-area">
+        <iframe src="https://maps.google.com/maps?q=Edinburgh+Airport+terminal+EH12+9DN&output=embed" loading="lazy" title="Edinburgh Airport hotels map"></iframe>
+        <a class="map-open-link" href="https://www.google.com/maps/search/?api=1&query=hotels+near+Edinburgh+Airport+terminal" target="_blank">Open in Google Maps &#8599;</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════ BOOKING ═══════════════════════════════ -->
+<section class="day-section" id="booking">
+  <div class="day-section-header">
+    <span class="day-number">Edinburgh</span>
+    <div class="day-title-block">
+      <div class="day-title">Book in This Order</div>
+      <div class="day-date">Five weeks out &mdash; the order matters more than the speed</div>
+    </div>
+  </div>
+
+  <table class="booktable">
+    <thead><tr><th>What</th><th>When</th><th>Why in this order</th></tr></thead>
+    <tbody>
+      <tr><td><b>Edinburgh &#8594; Cork, Sat 17</b></td><td>First, today</td><td><b>Everything else hangs off this.</b> Confirm the exact departure time, that it flies that Saturday, and the hold baggage allowance &mdash; then build the Friday around it. <b>Put Simon on the same flight at the same time</b> and release his London&ndash;Cork leg.</td></tr>
+      <tr><td><b>The two Old Town nights</b></td><td>Today</td><td>14 and 15 October. If the Scottish October break lands in this week, this is the thing that sells out.</td></tr>
+      <tr><td><b>The airport hotel, Fri 16</b></td><td>Today</td><td>Only a handful of rooms are genuinely walkable from the terminal, and a 7am Saturday departure is exactly when other people want them too.</td></tr>
+      <tr><td><b>The Devil&rsquo;s Advocate, Thu 15</b></td><td>This week</td><td>Evening, table for two. A Thursday in a holiday week will fill.</td></tr>
+      <tr><td><b>Edinburgh Castle, Thu 15, 9:30</b></td><td>This week</td><td>Direct with Historic Environment Scotland &mdash; cheaper than the gate and it locks the quiet slot. Check whether the Crown Room is open.</td></tr>
+      <tr><td><b>Advance rail: York &#8594; Edinburgh</b></td><td>This week</td><td>Wed 14 Oct, midday, right-hand seat. Covered on the <a href="york.html#booking" style="color:var(--amber);">York page</a>.</td></tr>
+      <tr><td><b>Ask the hotel about printing</b></td><td>Thu 15</td><td>Not Friday night. If their printer is broken you want a day to find an alternative, not an hour.</td></tr>
+      <tr><td><b>Fresh UKVI share code</b></td><td>~14 Oct</td><td>Generate it a couple of days before the border and print it. Codes expire.</td></tr>
+      <tr><td><b>North Berwick / Queensferry train</b></td><td>On the day</td><td>Turn-up-and-go, contactless. No reason to commit before you have seen the Friday forecast.</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<!-- ═══════════════════════════════ APPENDICES ═══════════════════════════════ -->
+<div class="appendix-divider">
+  <p class="appendix-kicker">Appendices</p>
+  <h2 class="appendix-heading">The last night, and the alternatives</h2>
+  <p class="appendix-blurb">One decision that changes the shape of Friday, and a shelf of swap-ins for the days that do not go to plan.</p>
+</div>
+
+<section class="day-section appendix-section" id="appendix-lastnight">
+  <div class="day-section-header">
+    <span class="day-number">Appendix A</span>
+    <div class="day-title-block">
+      <div class="day-title">The Last Night: Airport or Old Town</div>
+      <div class="day-date">Friday 16 October, and the 07:00 on Saturday</div>
+    </div>
+  </div>
+
+  <p class="activity-desc" style="margin-bottom:1rem;">Both versions work. The recommendation is the airport, and the reason is the border rather than the flight &mdash; but it is a genuine choice and the case for staying in town is not silly.</p>
+
+  <div class="choice-grid">
+    <div class="choice">
+      <div class="choice-m">Recommended</div>
+      <div class="choice-h">Airport hotel, Friday night</div>
+      <p><b>05:15 alarm, five-minute walk.</b> Dinner in the Old Town at six, bags at half eight, tram at nine, in the room by ten. You keep the entire Friday and the whole evening in Edinburgh. Cost is roughly a wash: an airport room in October is usually no dearer than an Old Town one in a holiday week, and you save a &pound;30 taxi.</p>
+    </div>
+    <div class="choice">
+      <div class="choice-m">The alternative</div>
+      <div class="choice-h">Stay in the Old Town</div>
+      <p><b>03:45 alarm, pre-booked taxi at 04:20</b>, at the terminal by about 04:50. Do not rely on the tram: its first departure of the day is too late and too tight for a 07:00 flight. The <b>Airlink 100 bus from Waverley Bridge runs through the night</b> and is the reliable public option &mdash; about 30 minutes &mdash; but with three months of luggage a booked taxi is worth the money.</p>
+    </div>
+  </div>
+
+  <div class="alert">
+    <h3>&#9878;&#65039;&nbsp; What actually decides it</h3>
+    <p><strong>It is not the flight, it is what happens ninety minutes after the flight.</strong> A 4am start is survivable for anyone; people do it all the time. But at half past eight she has to stand at an immigration desk and be calm, clear, warm and organised in a conversation that determines whether the next three months happen. Sleep is not a luxury on that morning, it is preparation.</p>
+    <p>The second consideration is luggage. She is not going home after this &mdash; she is moving to Blarney until January, and everything she owns for that period is coming with her. Dragging that out of a city-centre hotel into a taxi at twenty past four in the dark, then out again at the terminal, is a materially worse morning than wheeling it across a car park at twenty to six.</p>
+    <p><strong>Stay in town if:</strong> you find airport hotels genuinely depressing and the last night in a real city matters more to you than an hour and a half of sleep. That is a legitimate answer &mdash; just book the taxi the day before, and confirm it the night before.</p>
+  </div>
+</section>
+
+<section class="day-section appendix-section" id="appendix-swaps">
+  <div class="day-section-header">
+    <span class="day-number">Appendix B</span>
+    <div class="day-title-block">
+      <div class="day-title">Swap-ins</div>
+      <div class="day-date">For rain, tired legs, or a change of mind</div>
+    </div>
+  </div>
+
+  <div class="activity-card optional-card">
+    <div class="activity-card-body">
+      <div class="activity-info">
+        <div class="activity-type">&#127796;&nbsp; River walk, free</div>
+        <div class="activity-name">Water of Leith &amp; Dean Village</div>
+        <div class="activity-address">&#128205;&nbsp; Stockbridge to Dean Village &nbsp;&middot;&nbsp; 20 minutes from the Old Town</div>
+        <div class="practical-row">
+          <span class="prac-item"><span class="pric-free">Free</span></span>
+          <span class="prac-item">&#9201;&nbsp; An hour, flat</span>
+        </div>
+        <p class="activity-desc">The best flat hour in Edinburgh, and the natural replacement for Arthur&rsquo;s Seat if the legs have gone. A wooded river gorge running <em>underneath</em> the New Town, coming out at <strong>Dean Village</strong> &mdash; a cluster of old mill buildings and a millpond in a hollow, five minutes from Princes Street and completely hidden from it. Carry on to St Bernard&rsquo;s Well, a little domed Roman temple over a mineral spring. It is genuinely lovely in the rain.</p>
+      </div>
+      <div class="map-area">
+        <iframe src="https://maps.google.com/maps?q=Dean+Village+Edinburgh+EH4+3BU&output=embed" loading="lazy" title="Dean Village map"></iframe>
+        <a class="map-open-link" href="https://www.google.com/maps/search/?api=1&query=Dean+Village+Edinburgh" target="_blank">Open in Google Maps &#8599;</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="activity-card optional-card">
+    <div class="activity-card-body">
+      <div class="activity-info">
+        <div class="activity-type">&#9875;&nbsp; Ship, ticketed</div>
+        <div class="activity-name">The Royal Yacht Britannia</div>
+        <div class="activity-address">&#128205;&nbsp; Ocean Terminal, Leith EH6 6JJ &nbsp;&middot;&nbsp; 25 minutes by bus from Princes Street</div>
+        <div class="practical-row">
+          <span class="prac-item">&#128176;&nbsp; About &pound;20</span>
+          <span class="prac-item">&#9201;&nbsp; Two to three hours including the journey</span>
+        </div>
+        <p class="activity-desc">The royal family&rsquo;s floating home for forty years, kept exactly as it was &mdash; an audio tour through five decks, from the state apartments to the engine room, and the crew&rsquo;s quarters are as interesting as the royal ones. Indoors, warm, and unaffected by weather. It fills a wet Friday morning better than a museum does because it is a completely different kind of thing.</p>
+        <div class="tip-box"><strong>It eats most of a morning</strong> once you count Leith and back, so it does not combine with a day trip. Take it instead of North Berwick, not as well as.</div>
+      </div>
+      <div class="map-area">
+        <iframe src="https://maps.google.com/maps?q=Royal+Yacht+Britannia+Ocean+Terminal+Leith+EH6+6JJ&output=embed" loading="lazy" title="Royal Yacht Britannia map"></iframe>
+        <a class="map-open-link" href="https://www.google.com/maps/search/?api=1&query=Royal+Yacht+Britannia+Edinburgh" target="_blank">Open in Google Maps &#8599;</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="activity-card optional-card">
+    <div class="activity-card-body">
+      <div class="activity-info">
+        <div class="activity-type">&#9962;&nbsp; Chapel, ticketed</div>
+        <div class="activity-name">Rosslyn Chapel</div>
+        <div class="activity-address">&#128205;&nbsp; Roslin, Midlothian EH25 9PU &nbsp;&middot;&nbsp; About 50 minutes on the Lothian 37 bus</div>
+        <div class="practical-row">
+          <span class="prac-item">&#128176;&nbsp; About &pound;12</span>
+          <span class="prac-item">&#9201;&nbsp; Half a day with the travel</span>
+        </div>
+        <p class="activity-desc">A small 15th-century chapel carved to an almost hallucinatory degree &mdash; every surface, inside and out, covered in foliage, angels, dragons and the famous Apprentice Pillar. Famous now for the wrong reasons, and worth going for the right ones: it is genuinely unlike any other building in Britain. The bus goes from the city centre and takes about fifty minutes, which is the only real objection.</p>
+      </div>
+      <div class="map-area">
+        <iframe src="https://maps.google.com/maps?q=Rosslyn+Chapel+Roslin+Midlothian+EH25+9PU&output=embed" loading="lazy" title="Rosslyn Chapel map"></iframe>
+        <a class="map-open-link" href="https://www.google.com/maps/search/?api=1&query=Rosslyn+Chapel" target="_blank">Open in Google Maps &#8599;</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="activity-card optional-card">
+    <div class="activity-card-body">
+      <div class="activity-info">
+        <div class="activity-type">&#129514;&nbsp; Anatomy museum, ticketed</div>
+        <div class="activity-name">Surgeons&rsquo; Hall Museums</div>
+        <div class="activity-address">&#128205;&nbsp; Nicolson Street, Edinburgh EH8 9DW &nbsp;&middot;&nbsp; 10 minutes from the Royal Mile</div>
+        <div class="practical-row">
+          <span class="prac-item">&#128176;&nbsp; About &pound;10</span>
+          <span class="prac-item">&#9201;&nbsp; 90 minutes</span>
+        </div>
+        <p class="activity-desc">The sibling of the Hunterian you saw in London: one of the largest surgical pathology collections in the world, plus the history of surgery in Edinburgh and a room on Burke and Hare that is exactly as grim as you would hope. <strong>The obvious substitute if you decide to skip Edinburgh Castle</strong> &mdash; a third of the price, none of the crowds, and a direct follow-on from something you have already enjoyed. Check the opening days before you go; they vary with the season.</p>
+      </div>
+      <div class="map-area">
+        <iframe src="https://maps.google.com/maps?q=Surgeons+Hall+Museums+Nicolson+Street+Edinburgh+EH8+9DW&output=embed" loading="lazy" title="Surgeons Hall map"></iframe>
+        <a class="map-open-link" href="https://www.google.com/maps/search/?api=1&query=Surgeons+Hall+Museums+Edinburgh" target="_blank">Open in Google Maps &#8599;</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="activity-card optional-card">
+    <div class="activity-card-body">
+      <div class="activity-info">
+        <div class="activity-type">&#127794;&nbsp; Botanic garden, grounds free</div>
+        <div class="activity-name">Royal Botanic Garden Edinburgh</div>
+        <div class="activity-address">&#128205;&nbsp; Arboretum Place, Edinburgh EH3 5NZ &nbsp;&middot;&nbsp; 20 minutes from the city centre</div>
+        <div class="practical-row">
+          <span class="prac-item"><span class="pric-free">Grounds free</span>&nbsp; glasshouses ticketed</span>
+          <span class="prac-item">&#9201;&nbsp; Two hours</span>
+        </div>
+        <p class="activity-desc">Seventy acres, free to walk, with a famous view back to the Old Town skyline across the lawn. The Victorian glasshouses are the warm part and are ticketed separately &mdash; <strong>but check what is open</strong>, because the glasshouse complex has been through a long restoration with sections closed at various points. Combines naturally with Stockbridge and the Water of Leith into one flat, green half-day.</p>
+      </div>
+      <div class="map-area">
+        <iframe src="https://maps.google.com/maps?q=Royal+Botanic+Garden+Edinburgh+Arboretum+Place+EH3+5NZ&output=embed" loading="lazy" title="Royal Botanic Garden map"></iframe>
+        <a class="map-open-link" href="https://www.google.com/maps/search/?api=1&query=Royal+Botanic+Garden+Edinburgh" target="_blank">Open in Google Maps &#8599;</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="tip-box" style="margin-top:2.5rem;font-size:12px;">
+  <strong>A standing caveat.</strong> Prices, opening hours, service times, tram and bus first-and-last departures, and which airline flies Edinburgh&ndash;Cork on a given Saturday all move. Everything on this page is a starting point written on 3 September 2026 &mdash; <strong>confirm each one with the operator before you book around it</strong>, and especially the flight time, the bag-drop cut-off and the last tram.
+</div>
+
 </main>
 
+<!-- FOOTER -->
 <div class="page-footer">
-  <span class="footer-brand">Edinburgh &nbsp;&middot;&nbsp; Days 9 to 12 &nbsp;&middot;&nbsp; 12 to 16 Oct</span>
-  <div style="display:flex;gap:1.5rem;">
-    <a href="london.html" class="prev-city-link">&#8592; London</a>
-    <a href="london.html#day13" class="next-city-link">Back to London &#8594;</a>
-  </div>
+  <span class="footer-brand">Edinburgh &nbsp;&middot;&nbsp; Days 11 to 14 &nbsp;&middot;&nbsp; 14 to 17 Oct</span>
+  <a href="borders.html" class="next-city-link">Next: the border packs &#8594;</a>
 </div>
 
 <script>
@@ -641,12 +999,13 @@
     entries.forEach(e => {
       if (e.isIntersecting) {
         navLinks.forEach(l => l.classList.remove('active'));
-        const active = document.querySelector('.day-nav a[href="#' + e.target.id + '"]');
+        const active = document.querySelector(`.day-nav a[href="#${e.target.id}"]`);
         if (active) active.classList.add('active');
       }
     });
   }, { rootMargin: '-40% 0px -55% 0px' });
   sections.forEach(s => observer.observe(s));
 </script>
+
 </body>
 </html>
